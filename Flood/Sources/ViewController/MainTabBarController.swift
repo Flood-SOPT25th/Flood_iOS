@@ -1,5 +1,5 @@
 //
-//  BookmarkViewController.swift
+//  MainTabBarController.swift
 //  Flood
 //
 //  Created by Junhyeon on 2019/12/23.
@@ -8,16 +8,8 @@
 
 import UIKit
 
-class BookmarkViewController: UIViewController {
-    
-    // MARK: - UI components
-
-    
-    // MARK: - Variables and Properties
-
-    
-    // MARK: - Life Cycle
-
+class MainTabBarController: UITabBarController {
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -24,6 +24,7 @@
 		5ED2094223B03C8300540877 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094123B03C8300540877 /* AddArticleViewController.swift */; };
 		5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094323B03C9400540877 /* AlarmViewController.swift */; };
 		5ED2094623B03C9F00540877 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094523B03C9F00540877 /* MypageViewController.swift */; };
+		5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094823B05A1500540877 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		5ED2094123B03C8300540877 /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
 		5ED2094323B03C9400540877 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		5ED2094523B03C9F00540877 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		5ED2094823B05A1500540877 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B350A24B804B2C72EA66E070 /* Pods-Flood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flood.debug.xcconfig"; path = "Target Support Files/Pods-Flood/Pods-Flood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				5ED2094123B03C8300540877 /* AddArticleViewController.swift */,
 				5ED2094323B03C9400540877 /* AlarmViewController.swift */,
 				5ED2094523B03C9F00540877 /* MypageViewController.swift */,
+				5ED2094823B05A1500540877 /* MainTabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				5EA3E04E23AF9A0200CAB6F2 /* AppDelegate.swift in Sources */,
 				5EA3E05023AF9A0200CAB6F2 /* SceneDelegate.swift in Sources */,
+				5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */,
 				5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */,
 				5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */,
 				5ED2093E23B03C6E00540877 /* MainViewController.swift in Sources */,

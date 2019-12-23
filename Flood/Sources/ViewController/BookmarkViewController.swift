@@ -23,4 +23,7 @@ class BookmarkViewController: UIViewController {
 
     }
     
+    // MARK: -Helpers
+
+    
 }

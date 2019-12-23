@@ -25,6 +25,9 @@
 		5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094323B03C9400540877 /* AlarmViewController.swift */; };
 		5ED2094623B03C9F00540877 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094523B03C9F00540877 /* MypageViewController.swift */; };
 		5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094823B05A1500540877 /* MainTabBarController.swift */; };
+		5ED2094B23B0D1A000540877 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094A23B0D1A000540877 /* Service.swift */; };
+		5ED2094D23B0D1A800540877 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094C23B0D1A800540877 /* Model.swift */; };
+		5ED2094F23B0D1B200540877 /* Exensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094E23B0D1B200540877 /* Exensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		5ED2094323B03C9400540877 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		5ED2094523B03C9F00540877 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		5ED2094823B05A1500540877 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5ED2094A23B0D1A000540877 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5ED2094C23B0D1A800540877 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5ED2094E23B0D1B200540877 /* Exensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exensions.swift; sourceTree = "<group>"; };
 		B350A24B804B2C72EA66E070 /* Pods-Flood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flood.debug.xcconfig"; path = "Target Support Files/Pods-Flood/Pods-Flood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,7 @@
 		5EA3E06423B031E000CAB6F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5ED2094E23B0D1B200540877 /* Exensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		5EA3E06523B031EA00CAB6F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5ED2094C23B0D1A800540877 /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 		5EA3E06623B031EE00CAB6F2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5ED2094A23B0D1A000540877 /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -315,7 +324,10 @@
 				5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */,
 				5ED2093E23B03C6E00540877 /* MainViewController.swift in Sources */,
 				5ED2094023B03C7700540877 /* BookmarkViewController.swift in Sources */,
+				5ED2094B23B0D1A000540877 /* Service.swift in Sources */,
+				5ED2094D23B0D1A800540877 /* Model.swift in Sources */,
 				5ED2094223B03C8300540877 /* AddArticleViewController.swift in Sources */,
+				5ED2094F23B0D1B200540877 /* Exensions.swift in Sources */,
 				5ED2094623B03C9F00540877 /* MypageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

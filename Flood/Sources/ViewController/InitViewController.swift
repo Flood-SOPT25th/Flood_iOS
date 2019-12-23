@@ -21,5 +21,7 @@ class InitViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
+
+    // MARK: -Helpers
+
 }

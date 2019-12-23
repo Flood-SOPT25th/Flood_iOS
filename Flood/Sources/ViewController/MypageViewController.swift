@@ -17,10 +17,13 @@ class MypageViewController: UIViewController {
 
     
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
+    // MARK: -Helpers
 
+    
 }

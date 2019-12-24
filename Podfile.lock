@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.8.2)
+  - Tagging (0.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - Tagging
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Tagging
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Tagging: 51afaf28d0d49ea7cf8600b2bda33cb7bff1c5ff
 
-PODFILE CHECKSUM: 29f400565880aa4b6a3c35936481523bddb39e24
+PODFILE CHECKSUM: a84ca9496fd7158405632a6276befbf813d1f95b
 
 COCOAPODS: 1.7.3

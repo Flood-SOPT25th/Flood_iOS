@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (4.8.2)
+  - FMPhotoPicker (0.8.2)
+  - Tagging (0.5.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - FMPhotoPicker (~> 0.8)
+  - Tagging
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FMPhotoPicker
+    - Tagging
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FMPhotoPicker: abc6559e4cdcb84cc2fc2f62dcdbdeca7cacbf6c
+  Tagging: 51afaf28d0d49ea7cf8600b2bda33cb7bff1c5ff
 
-PODFILE CHECKSUM: 29f400565880aa4b6a3c35936481523bddb39e24
+PODFILE CHECKSUM: 3d46780ab3643b67c8a34cbf85dae1b6eacd46a8
 
 COCOAPODS: 1.7.3

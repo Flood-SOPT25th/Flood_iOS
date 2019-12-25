@@ -3,82 +3,232 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01BA8472F25D39F718F71557EDC8DD /* ParameterEncoding.swift */; };
-		132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06639F7A76DB8A9D0D0E41CDD7A6684 /* Notifications.swift */; };
-		1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 341BDAD0026CDA8E7BCE35AC122E1C8C /* Alamofire-dummy.m */; };
-		1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE3D7EDCA41F256D471B40BBFD3FCE /* MultipartFormData.swift */; };
-		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640F61D5BEE8132009BAEAA65B587A4 /* SessionDelegate.swift */; };
-		3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5460AD0F6241621B45A17AB23A8E5B7 /* NetworkReachabilityManager.swift */; };
-		46458304A01913F5F00F2F2D84F50EE7 /* Pods-Flood-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E98002666F6491A40BA75755846C5877 /* Pods-Flood-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C73835F016EEE1A4595D81133838D5E /* Pods-Flood-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A8F778A4889B588541B30EBDEB2753 /* Pods-Flood-dummy.m */; };
-		53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33115EC2A5164913C68F8BD170389EEE /* Validation.swift */; };
-		64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD807F155301ECA538A2C1C296E1186D /* Result.swift */; };
+		0011846A21D9D06DBB2858AC782FC8A9 /* FMPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFE5630D3DC474B3BDA0E41DD4E8B1 /* FMPhotoViewController.swift */; };
+		047EE76B9A5B4A7244F0CA90415E9403 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		05548F53FF963AFC13FD80787BC56441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667F35EB048258793278886771CB8B4 /* ParameterEncoding.swift */; };
+		11462901441F0AB3967D6F845FB0B532 /* FMZoomOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C5EE09307FE060A43D5D9DF6E1091A /* FMZoomOutAnimationController.swift */; };
+		117EE22AE05A17D259792567A10B5872 /* FMPhotoPickerBatchSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA22EBFD18E7927B2636FD0BD8403F0E /* FMPhotoPickerBatchSelector.swift */; };
+		132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA876C91331B08DD393C10F9BFF6A426 /* Notifications.swift */; };
+		135C8A7116DBD065F4DDB4F902B4A843 /* FMPhotoPickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8189EC810DED1459FAFDC6F5A0BF50F /* FMPhotoPickerConfig.swift */; };
+		13AE7D009EC14690898E14CD5A3D18DB /* FMPhotoInteractionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101667BC374F3BC742BDC96093CFF860 /* FMPhotoInteractionAnimator.swift */; };
+		17959CBB89185942A4BE8679665B42E8 /* FMPlaybackControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58283635629EBB27EDE617EBAC764AEC /* FMPlaybackControlView.swift */; };
+		1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2EAE38AC3C9A5A7D0FE7B3434651F4 /* Alamofire-dummy.m */; };
+		1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891986ABDCCD4029C3784A46FF8E430F /* MultipartFormData.swift */; };
+		1BAE78EACC3E1A0BBDA65A3E098D63BD /* FMPhotoPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D53C65D34479750FA51A2795806611B8 /* FMPhotoPickerViewController.xib */; };
+		215C5D4EE550B885B5E4B4A13FE43202 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED056BC6FE541DAE411F4D9B770A1D1 /* Helper.swift */; };
+		235B0C0480DA2A13716D4557BC8F9E01 /* FMPhotoAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A974D723FD020DAE9C181BFAAEE7FC /* FMPhotoAsset.swift */; };
+		272739F6511F775265DD3C7284BB3E7A /* FMCropTranslucencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F0C5D6F737413EF7EC33F71035DEE /* FMCropTranslucencyView.swift */; };
+		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768AA5E3463438F30106E55F3763FD4B /* SessionDelegate.swift */; };
+		31C374FCCE10BB11AA8B58FF5F7B62D9 /* Tagging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35750BB1188EC113F2C119FA5BC2936B /* Tagging.swift */; };
+		33DC26EB921FE96015075E681CB8B487 /* FMAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A4B4800319919933087FCE18132D8 /* FMAlertable.swift */; };
+		3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768C31B6FD27C2E388002863814D49DD /* NetworkReachabilityManager.swift */; };
+		3DC27A9B231ADAE9F6A196B710775DD5 /* FMPhotoPickerImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA490BD219922491196293E13B765890 /* FMPhotoPickerImageCollectionViewCell.xib */; };
+		4F84AE5B5FE3837CBBA2C4CF86868650 /* FMPhotoPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6933BFD4C8F8B42B6A27578C579CB091 /* FMPhotoPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		505C77A791633A1537BD10EB2E0C2EB0 /* TaggingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40AE6FDE647309D2DBCE739A67BE0F /* TaggingModel.swift */; };
+		53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8784EBE787F799942545A52F2E2741B /* Validation.swift */; };
+		5C349BF096F2BB7DDEF4BAA804623BCB /* FMImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1935B52ED7BEFE5DED322D7BC2223ED /* FMImageViewController.swift */; };
+		6055C6D7757C74E3E0F8F1F710DA7B14 /* FMPhotoPickerImageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C7C6302BD084F635E757B559B7B2 /* FMPhotoPickerImageCollectionViewLayout.swift */; };
+		642100DB6A043C91D861953BAA57D268 /* FMPhotosDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AF9DDF6E74C318FF279E463F435D0B /* FMPhotosDataSource.swift */; };
+		64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B5C007819E814925D0AD925C46F8F7 /* Result.swift */; };
+		69A42295510A63C2DE8F0A2656F2897C /* FMCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7868051B0D2B6AD8522141490CA87E /* FMCropView.swift */; };
+		7026A4D349C61D7DDC6863F996542AFB /* FMVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192476326910F69EFEE6486C3BDEA756 /* FMVideoViewController.swift */; };
+		7178F1787BB2EF26D27CAC101804EA5B /* FMCropScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A60E1FADDD0A1A6E26834343DD31EAB /* FMCropScrollView.swift */; };
+		71C03B4AA976C9B55B338F5E8581749F /* FMFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADDB9CFB754B0D5E4DAAA7D4F0AD0C /* FMFilterCell.swift */; };
+		7534127B514914D215D40FD03C77F212 /* FMCropBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10248471A199428408D0718680B8869 /* FMCropBackgroundView.swift */; };
+		76530B17B8CCC0DD9AA63F502557027A /* FMPhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3715CF7A6BA909A84A44DAEBAF070A66 /* FMPhotoPickerViewController.swift */; };
 		7664FD4F59A0C00866CBAE60B0A3AD64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A0E300C04A6DF88D620788FE38780 /* AFError.swift */; };
-		931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E25E371731FAE44F46A9F392CB5D5 /* SessionManager.swift */; };
-		933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DB5272AD01ECD0B09A86818A7754C4 /* Timeline.swift */; };
-		98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D59E1AD3CC394A93392FF3DC8CF2961 /* Request.swift */; };
-		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C759635F88377BD7E2DEDE04C23C62 /* TaskDelegate.swift */; };
-		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C15C076B531E2E7744C358418A0C0B5 /* Alamofire.swift */; };
-		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7F7716086D54E6308EE52C8227B87 /* DispatchQueue+Alamofire.swift */; };
-		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC6858C85690F7AFEA7F6542EE9A69A /* Response.swift */; };
-		DD343E846F9A2564DF7D1A07FE4B87D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B03859BDC36782899379E222720A297 /* ResponseSerialization.swift */; };
-		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4453BE339B79900FDC53E34FE5589CB /* ServerTrustPolicy.swift */; };
-		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D54AEF5647A987180EDAD7E1CEF7387B /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		769CFDC9AD50A19312EDAC0F6DA492BA /* FMPresenterBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6D9E4F4A21DC0979DDD3DE3E37EDC /* FMPresenterBottomView.swift */; };
+		8136A7337373FE90AAD7064AF9F8FFBF /* FMScalingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF07F8A7C07782EE54FD04B44E1914 /* FMScalingImageView.swift */; };
+		827C4A3BBD636B565802D17E17B75A9B /* TaggingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF695146D4F4AEE52195586B2E245BB0 /* TaggingDataSource.swift */; };
+		82A9D3EF3C426106492C730725B9481A /* Tagging-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6994B116FDC71BFB7FC299F9FC2F5AAA /* Tagging-dummy.m */; };
+		83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440FBCC342A85C51DA5437AA3F1BAC6 /* AFError.swift */; };
+		8576C32EBC3F1B717FC524A9BDBD197C /* FMImageEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD7BC57D46F9331379B16FD01E6175E /* FMImageEditorViewController.swift */; };
+		865410195520BB27594A62F2495D24C2 /* InsertableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9926A0FC6505BDE7BD74FF6FD95A333F /* InsertableUIView.swift */; };
+		86E5860F930E22216635D55B7BDEE6B6 /* FMCropCropBoxCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9E651281A50F3F7A693DE06CD39FBA /* FMCropCropBoxCornersView.swift */; };
+		872706659A426AA66138D988003A757E /* FMImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5902369BD941D8C0BE3D9021F58DCB /* FMImageEditor.swift */; };
+		887F09D429C4A107D2AC24A8BF13C9E9 /* FMFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CFBA07DF7C6B739E3AD7DEFFACAE4 /* FMFilter.swift */; };
+		931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B886E84C9ECD083EE191D189010B34 /* SessionManager.swift */; };
+		933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96DBA5035E5E6F0B7F4694BAF618C32 /* Timeline.swift */; };
+		935E933C9759D2D3F08AE9D4268E6A3C /* FMPhotoPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9860675299297EA50947F7A9E0C20EB /* FMPhotoPicker-dummy.m */; };
+		954A3F913662DF0D7C66BC4FA831B07E /* Pods-Flood-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E98002666F6491A40BA75755846C5877 /* Pods-Flood-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96EF6CCFF938C9937903A7328E522588 /* AVPlayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8741151D976513982C1E53AB362C66 /* AVPlayer+Extension.swift */; };
+		98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E393FE5AFE200F94416326D7E31437 /* Request.swift */; };
+		98C72341BF9813274DD7747D96150693 /* FMFilterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72286FD1D87CEA8E459177B66B67B14 /* FMFilterable.swift */; };
+		99C339C5F1FA4D55829166665A08BBAC /* Pods-Flood-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A8F778A4889B588541B30EBDEB2753 /* Pods-Flood-dummy.m */; };
+		9B0A14D569532C98D6B5A5390BBAC3B6 /* UIView+FMPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC5A7E807F23E6271FA15C3347F420E /* UIView+FMPhotoView.swift */; };
+		9DC0939FB97C8C0C99A29F9025592D61 /* FMCropCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934BD69B635E6E16616882D6A982225 /* FMCropCell.swift */; };
+		AD8FF2854B38BFBF5FFB0D5092AD366C /* FMCropMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E7B9053FF35E74DCFDD1D39D4F9C0E /* FMCropMenuView.swift */; };
+		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EC6E9FCFE61411FA3DE6450963F6B /* TaskDelegate.swift */; };
+		B0C62E2A858DA0F9C4AD3523DC1EB68F /* FMPresenterEditMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C86884998758D1A6BE3F78A4A9D120 /* FMPresenterEditMenuView.swift */; };
+		B65AA6AF36BDF29FDBB8B0880B313D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B646B1768DA3F2F035C829F8031B7516 /* Assets.xcassets */; };
+		B94C071BD270E7F28C02B34E0CE1F8B8 /* FMFiltersMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F37D9224C0B38F077B597B0F94F1A5 /* FMFiltersMenuView.swift */; };
+		BA7CAD9D3C6AF72DEEC77E03F3100FFF /* FMPlaybackProgressThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63A3AE78313E64E2EB1D52A1DCC7135 /* FMPlaybackProgressThumbLayer.swift */; };
+		BC4C64928350328CFABD0906036EFCE0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CBE858697421CA0EFFEC59A0E63A40 /* UIImage+Extension.swift */; };
+		BE22C14078B11549E90AD7D07F059EAF /* FMCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C79511189FEBB9FEB1111636FFD02 /* FMCrop.swift */; };
+		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5553B001F83F595A107CB2F9734607 /* Alamofire.swift */; };
+		C078E0F91059DEDCCEB0DA5E8F1C9CBA /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BB9B73FF00DDDD4D6FF3739177F872 /* UIImage+Extensions.swift */; };
+		C167EDBC278ED0EB61309B685AAE58E7 /* FMPlaybackProgressTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B8B79B83E8237684228580E24BAF7F /* FMPlaybackProgressTrackLayer.swift */; };
+		C44429374BBCB377856EAC452B5EEFFF /* FMPhotoPresenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12DC3DFC180F1EB067492146F7DA1C91 /* FMPhotoPresenterViewController.xib */; };
+		C72A411E643E2D24FAED51BEFABF0014 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BC1F702A429ED091AAF0358CAD3FD5 /* TimeInterval+Extension.swift */; };
+		C79A4739E7CCFD3D9F62739249C00A62 /* FMWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AF5BD7BB7339AC60ABD0F59EE6DC22 /* FMWarningView.swift */; };
+		CE08FC8F46A44C50B8361AE434430135 /* FMCropForegroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D265B4E8C5D2985AEF2259FB5D6CAD3 /* FMCropForegroundView.swift */; };
+		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EA872B5B11A20FC62CA2CAB7DB23EE /* DispatchQueue+Alamofire.swift */; };
+		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B72E7D6438A5111D80848507AA29B /* Response.swift */; };
+		D69D86B8E03E6CDB01413B00CFDBFC00 /* Tagging-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982F4EABCB080412321E45523FF78BC /* Tagging-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D85687E177556EEF9B185DC3B9D3ADAB /* FMCroppable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CEC168B1AC9AA99A7CB817392183E3 /* FMCroppable.swift */; };
+		D942EFEEE3A030DF2A21A777177B10A6 /* FMPhotoPresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAFC5A407B2CFE6E660B1D099BCE312 /* FMPhotoPresenterViewController.swift */; };
+		DEDD71E7621355F3C812583CD2153418 /* FMImageEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32CFCC8FBE8664EED7616B626290DC17 /* FMImageEditorViewController.xib */; };
+		E040ABD9E18B8762A6435F39468D3204 /* FMCropCropBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8F61C9F1FCAF3E18FF8EF0D952595 /* FMCropCropBoxView.swift */; };
+		E1E4CBF09FBAFF35EE70D465855CE58F /* FMPhotoPickerImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54FB7BD46445A8C7E57B8B392619AD2 /* FMPhotoPickerImageCollectionViewCell.swift */; };
+		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB63D5CCDA434321D02ECA8B304AA3 /* ResponseSerialization.swift */; };
+		EB2B496EFBEB27D16A9CE476452B6125 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993D617B574BDAC6C707FD9DA7370081 /* Const.swift */; };
+		EC3F61090AED400D19771BF242DA58D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519C10D046479E29374375A5598568 /* ServerTrustPolicy.swift */; };
+		F4D7B36F6DECEED33C22141299D8CD69 /* FMPlaybackProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF6BDCC7571D6C0B848495B005D6F5 /* FMPlaybackProgressView.swift */; };
+		F6016F1DD14682D5119C5066F2F44069 /* FMZoomInAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12C10A12F32FBB05BBED7CCDE3DA8D /* FMZoomInAnimationController.swift */; };
+		F7B6E9AC9F3CDF825D64B2765E21D554 /* FMPresenterTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5AAA5825521008F6EE2ED7AEC1703 /* FMPresenterTopView.swift */; };
+		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01513EBA4813AD176C8BD0064EFFCA5E /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBDA26B2EC1DE3FEDB1D8F9E09914A15 /* FMLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597C7979F6D40E6BEF992255FC4EBD04 /* FMLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CDF5F64C6D0B58C2F9A9AC6EE11240E0 /* PBXContainerItemProxy */ = {
+		AC4737083BBC095B4EEEF00776A61B30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
 			remoteInfo = Alamofire;
 		};
+		D85F19CDA5198F709FF4ECF7A0B874E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 570CFE52129981BE72BB3173D32B9CF9;
+			remoteInfo = Tagging;
+		};
+		E9F942E6540EC36CA1F8826BF33082C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4503BDEA9CC43AE1232C239A05C56DF5;
+			remoteInfo = FMPhotoPicker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D01BA8472F25D39F718F71557EDC8DD /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		01513EBA4813AD176C8BD0064EFFCA5E /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		038A4B4800319919933087FCE18132D8 /* FMAlertable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMAlertable.swift; path = FMPhotoPicker/FMPhotoPicker/source/Utilities/FMAlertable.swift; sourceTree = "<group>"; };
+		03F8B92DE4926D7E2BD2637AAE4025FE /* Tagging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Tagging.framework; path = Tagging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07CBE858697421CA0EFFEC59A0E63A40 /* UIImage+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extension.swift"; path = "FMPhotoPicker/FMPhotoPicker/source/Utilities/UIImage+Extension.swift"; sourceTree = "<group>"; };
+		0982F4EABCB080412321E45523FF78BC /* Tagging-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tagging-umbrella.h"; sourceTree = "<group>"; };
+		0B40AE6FDE647309D2DBCE739A67BE0F /* TaggingModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaggingModel.swift; path = Sources/Tagging/TaggingModel.swift; sourceTree = "<group>"; };
+		0CD7BC57D46F9331379B16FD01E6175E /* FMImageEditorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMImageEditorViewController.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/FMImageEditorViewController.swift; sourceTree = "<group>"; };
+		0D3DF43C7555EB645F41B2485CCBF529 /* FMPhotoPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMPhotoPicker-prefix.pch"; sourceTree = "<group>"; };
+		0E2EAE38AC3C9A5A7D0FE7B3434651F4 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		101667BC374F3BC742BDC96093CFF860 /* FMPhotoInteractionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoInteractionAnimator.swift; path = "FMPhotoPicker/FMPhotoPicker/source/Interaction Animator/FMPhotoInteractionAnimator.swift"; sourceTree = "<group>"; };
+		12DC3DFC180F1EB067492146F7DA1C91 /* FMPhotoPresenterViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FMPhotoPresenterViewController.xib; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/FMPhotoPresenterViewController.xib; sourceTree = "<group>"; };
 		171C04C20485488632F55F73C2542CC9 /* Pods-Flood-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Flood-acknowledgements.plist"; sourceTree = "<group>"; };
-		1C15C076B531E2E7744C358418A0C0B5 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		192476326910F69EFEE6486C3BDEA756 /* FMVideoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMVideoViewController.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Viewer/FMVideoViewController.swift; sourceTree = "<group>"; };
+		1A30C7C6302BD084F635E757B559B7B2 /* FMPhotoPickerImageCollectionViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoPickerImageCollectionViewLayout.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Picker/FMPhotoPickerImageCollectionViewLayout.swift; sourceTree = "<group>"; };
+		1C661124165169FFCCAD6EF1E187351F /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		1E519C10D046479E29374375A5598568 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		28B8B79B83E8237684228580E24BAF7F /* FMPlaybackProgressTrackLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPlaybackProgressTrackLayer.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Views/Progress/FMPlaybackProgressTrackLayer.swift; sourceTree = "<group>"; };
+		31B66C6A55E67DE69594F91B6586BABA /* FMPhotoPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FMPhotoPicker.modulemap; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		32DB5272AD01ECD0B09A86818A7754C4 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		33115EC2A5164913C68F8BD170389EEE /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		341BDAD0026CDA8E7BCE35AC122E1C8C /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		3D7E25E371731FAE44F46A9F392CB5D5 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		32CFCC8FBE8664EED7616B626290DC17 /* FMImageEditorViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FMImageEditorViewController.xib; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/FMImageEditorViewController.xib; sourceTree = "<group>"; };
+		35750BB1188EC113F2C119FA5BC2936B /* Tagging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tagging.swift; path = Sources/Tagging/Tagging.swift; sourceTree = "<group>"; };
+		366561FB4D47B9244CAFA827EAEE6B4D /* Tagging-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Tagging-Info.plist"; sourceTree = "<group>"; };
+		3715CF7A6BA909A84A44DAEBAF070A66 /* FMPhotoPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoPickerViewController.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Picker/FMPhotoPickerViewController.swift; sourceTree = "<group>"; };
+		382C79511189FEBB9FEB1111636FFD02 /* FMCrop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCrop.swift; path = FMPhotoPicker/FMPhotoPicker/source/ImageEditor/Crop/FMCrop.swift; sourceTree = "<group>"; };
+		3A60E1FADDD0A1A6E26834343DD31EAB /* FMCropScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropScrollView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/Crop/FMCropScrollView.swift; sourceTree = "<group>"; };
+		3D265B4E8C5D2985AEF2259FB5D6CAD3 /* FMCropForegroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropForegroundView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/Crop/FMCropForegroundView.swift; sourceTree = "<group>"; };
+		41C6D9E4F4A21DC0979DDD3DE3E37EDC /* FMPresenterBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPresenterBottomView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Views/FMPresenterBottomView.swift; sourceTree = "<group>"; };
+		41F37D9224C0B38F077B597B0F94F1A5 /* FMFiltersMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMFiltersMenuView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/FMFiltersMenuView.swift; sourceTree = "<group>"; };
+		42B886E84C9ECD083EE191D189010B34 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		43EF6BDCC7571D6C0B848495B005D6F5 /* FMPlaybackProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPlaybackProgressView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Views/Progress/FMPlaybackProgressView.swift; sourceTree = "<group>"; };
+		57339CD829BD4093E4BA78BE66520CBA /* FMPhotoPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FMPhotoPicker-Info.plist"; sourceTree = "<group>"; };
+		58283635629EBB27EDE617EBAC764AEC /* FMPlaybackControlView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPlaybackControlView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Views/FMPlaybackControlView.swift; sourceTree = "<group>"; };
+		597C7979F6D40E6BEF992255FC4EBD04 /* FMLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMLoadingView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Utilities/FMLoadingView.swift; sourceTree = "<group>"; };
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FDB63D5CCDA434321D02ECA8B304AA3 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		6933BFD4C8F8B42B6A27578C579CB091 /* FMPhotoPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMPhotoPicker-umbrella.h"; sourceTree = "<group>"; };
+		6994B116FDC71BFB7FC299F9FC2F5AAA /* Tagging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tagging-dummy.m"; sourceTree = "<group>"; };
+		6F5553B001F83F595A107CB2F9734607 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		700F1E90111FDE7B308A936CAF422D94 /* Pods-Flood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Flood.debug.xcconfig"; sourceTree = "<group>"; };
+		729DC02ED0B9605B8F84EC847EBA9080 /* Tagging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tagging.xcconfig; sourceTree = "<group>"; };
 		72A3172D77FB2988BFC99592248AD828 /* Pods-Flood-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Flood-Info.plist"; sourceTree = "<group>"; };
-		75C759635F88377BD7E2DEDE04C23C62 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		7B03859BDC36782899379E222720A297 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		8D5A0E300C04A6DF88D620788FE38780 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		985417470B9341C92A5160D4B2FF2B08 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		9D59E1AD3CC394A93392FF3DC8CF2961 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		72BB9B73FF00DDDD4D6FF3739177F872 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "FMPhotoPicker/FMPhotoPicker/source/Utilities/UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		768AA5E3463438F30106E55F3763FD4B /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		768C31B6FD27C2E388002863814D49DD /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		7B9E651281A50F3F7A693DE06CD39FBA /* FMCropCropBoxCornersView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropCropBoxCornersView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/Crop/FMCropCropBoxCornersView.swift; sourceTree = "<group>"; };
+		7CD8F61C9F1FCAF3E18FF8EF0D952595 /* FMCropCropBoxView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropCropBoxView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/Crop/FMCropCropBoxView.swift; sourceTree = "<group>"; };
+		891986ABDCCD4029C3784A46FF8E430F /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		8E944BD85F77931E7F22712B86464140 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		8F8741151D976513982C1E53AB362C66 /* AVPlayer+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVPlayer+Extension.swift"; path = "FMPhotoPicker/FMPhotoPicker/source/Utilities/AVPlayer+Extension.swift"; sourceTree = "<group>"; };
+		92CE4585BCD5AAAEF50A0C38F5E9387E /* FMPhotoPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMPhotoPicker.xcconfig; sourceTree = "<group>"; };
+		9667F35EB048258793278886771CB8B4 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		9926A0FC6505BDE7BD74FF6FD95A333F /* InsertableUIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsertableUIView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Utilities/InsertableUIView.swift; sourceTree = "<group>"; };
+		993D617B574BDAC6C707FD9DA7370081 /* Const.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Const.swift; path = FMPhotoPicker/FMPhotoPicker/source/Utilities/Const.swift; sourceTree = "<group>"; };
 		9D5BCF3CE2B41839A84416C37326C071 /* Pods-Flood-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Flood-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AD8710F26B62AABFF387E9CA4F6899A4 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		AFF7F7716086D54E6308EE52C8227B87 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		B06639F7A76DB8A9D0D0E41CDD7A6684 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		9EAFC5A407B2CFE6E660B1D099BCE312 /* FMPhotoPresenterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoPresenterViewController.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/FMPhotoPresenterViewController.swift; sourceTree = "<group>"; };
+		A1935B52ED7BEFE5DED322D7BC2223ED /* FMImageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMImageViewController.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Viewer/FMImageViewController.swift; sourceTree = "<group>"; };
+		A5FF07F8A7C07782EE54FD04B44E1914 /* FMScalingImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMScalingImageView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Viewer/FMScalingImageView.swift; sourceTree = "<group>"; };
+		A8609B7D53F6C4E67109E9002C79B964 /* Tagging-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tagging-prefix.pch"; sourceTree = "<group>"; };
+		AE5902369BD941D8C0BE3D9021F58DCB /* FMImageEditor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMImageEditor.swift; path = FMPhotoPicker/FMPhotoPicker/source/ImageEditor/FMImageEditor.swift; sourceTree = "<group>"; };
+		B10248471A199428408D0718680B8869 /* FMCropBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropBackgroundView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/Crop/FMCropBackgroundView.swift; sourceTree = "<group>"; };
 		B3F370B9B23DC34A35A7360EE539823C /* Pods-Flood-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Flood-frameworks.sh"; sourceTree = "<group>"; };
-		BFCE3D7EDCA41F256D471B40BBFD3FCE /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		C4453BE339B79900FDC53E34FE5589CB /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		C9C3EF964FFA8A9F78851B59A8D4FFBC /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		CCC6858C85690F7AFEA7F6542EE9A69A /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		B4BC1F702A429ED091AAF0358CAD3FD5 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Extension.swift"; path = "FMPhotoPicker/FMPhotoPicker/source/Utilities/TimeInterval+Extension.swift"; sourceTree = "<group>"; };
+		B646B1768DA3F2F035C829F8031B7516 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FMPhotoPicker/FMPhotoPicker/source/Assets.xcassets; sourceTree = "<group>"; };
+		B9B5C007819E814925D0AD925C46F8F7 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		BA12C10A12F32FBB05BBED7CCDE3DA8D /* FMZoomInAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMZoomInAnimationController.swift; path = "FMPhotoPicker/FMPhotoPicker/source/Animated Trasitioning/FMZoomInAnimationController.swift"; sourceTree = "<group>"; };
+		C0C86884998758D1A6BE3F78A4A9D120 /* FMPresenterEditMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPresenterEditMenuView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Views/FMPresenterEditMenuView.swift; sourceTree = "<group>"; };
+		C440FBCC342A85C51DA5437AA3F1BAC6 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		C4E37B9EC35C69841ED0DA1C16C0235B /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		C54FB7BD46445A8C7E57B8B392619AD2 /* FMPhotoPickerImageCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoPickerImageCollectionViewCell.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Picker/FMPhotoPickerImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C8189EC810DED1459FAFDC6F5A0BF50F /* FMPhotoPickerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoPickerConfig.swift; path = FMPhotoPicker/FMPhotoPicker/source/Utilities/FMPhotoPickerConfig.swift; sourceTree = "<group>"; };
+		C8E393FE5AFE200F94416326D7E31437 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		C9AF5BD7BB7339AC60ABD0F59EE6DC22 /* FMWarningView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMWarningView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Utilities/FMWarningView.swift; sourceTree = "<group>"; };
+		CA490BD219922491196293E13B765890 /* FMPhotoPickerImageCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FMPhotoPickerImageCollectionViewCell.xib; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Picker/FMPhotoPickerImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		CA876C91331B08DD393C10F9BFF6A426 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		CE3A021EB51AF71D9A4047FEC8B1D8DB /* Tagging.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Tagging.modulemap; sourceTree = "<group>"; };
+		CEADDB9CFB754B0D5E4DAAA7D4F0AD0C /* FMFilterCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMFilterCell.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/FMFilterCell.swift; sourceTree = "<group>"; };
+		CF695146D4F4AEE52195586B2E245BB0 /* TaggingDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaggingDataSource.swift; path = Sources/Tagging/TaggingDataSource.swift; sourceTree = "<group>"; };
 		D015ED6294DCA0865E2021FD3375CC51 /* Pods-Flood.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Flood.modulemap"; sourceTree = "<group>"; };
 		D1A8F778A4889B588541B30EBDEB2753 /* Pods-Flood-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Flood-dummy.m"; sourceTree = "<group>"; };
-		D54AEF5647A987180EDAD7E1CEF7387B /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		DD807F155301ECA538A2C1C296E1186D /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		DE36AED4DF687B2D37BD230D9D2F69B6 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
+		D4B5AAA5825521008F6EE2ED7AEC1703 /* FMPresenterTopView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPresenterTopView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Views/FMPresenterTopView.swift; sourceTree = "<group>"; };
+		D53C65D34479750FA51A2795806611B8 /* FMPhotoPickerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FMPhotoPickerViewController.xib; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Picker/FMPhotoPickerViewController.xib; sourceTree = "<group>"; };
+		D72286FD1D87CEA8E459177B66B67B14 /* FMFilterable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMFilterable.swift; path = FMPhotoPicker/FMPhotoPicker/source/ImageEditor/Filter/FMFilterable.swift; sourceTree = "<group>"; };
+		D7A974D723FD020DAE9C181BFAAEE7FC /* FMPhotoAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoAsset.swift; path = FMPhotoPicker/FMPhotoPicker/source/Data/FMPhotoAsset.swift; sourceTree = "<group>"; };
+		D8AF9DDF6E74C318FF279E463F435D0B /* FMPhotosDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotosDataSource.swift; path = FMPhotoPicker/FMPhotoPicker/source/Data/FMPhotosDataSource.swift; sourceTree = "<group>"; };
+		D96DBA5035E5E6F0B7F4694BAF618C32 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		D9C5EE09307FE060A43D5D9DF6E1091A /* FMZoomOutAnimationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMZoomOutAnimationController.swift; path = "FMPhotoPicker/FMPhotoPicker/source/Animated Trasitioning/FMZoomOutAnimationController.swift"; sourceTree = "<group>"; };
+		DC4CFBA07DF7C6B739E3AD7DEFFACAE4 /* FMFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMFilter.swift; path = FMPhotoPicker/FMPhotoPicker/source/ImageEditor/Filter/FMFilter.swift; sourceTree = "<group>"; };
+		DCCF20AE390854EA4E4B14801A53AE30 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		DED056BC6FE541DAE411F4D9B770A1D1 /* Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = FMPhotoPicker/FMPhotoPicker/source/Utilities/Helper.swift; sourceTree = "<group>"; };
+		E54B72E7D6438A5111D80848507AA29B /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		E63A3AE78313E64E2EB1D52A1DCC7135 /* FMPlaybackProgressThumbLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPlaybackProgressThumbLayer.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Views/Progress/FMPlaybackProgressThumbLayer.swift; sourceTree = "<group>"; };
+		E7011AF8228A13669306DEC8320DD1A6 /* FMPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FMPhotoPicker.framework; path = FMPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8784EBE787F799942545A52F2E2741B /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		E8E7B9053FF35E74DCFDD1D39D4F9C0E /* FMCropMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropMenuView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/FMCropMenuView.swift; sourceTree = "<group>"; };
+		E934BD69B635E6E16616882D6A982225 /* FMCropCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropCell.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/FMCropCell.swift; sourceTree = "<group>"; };
 		E98002666F6491A40BA75755846C5877 /* Pods-Flood-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Flood-umbrella.h"; sourceTree = "<group>"; };
+		EA22EBFD18E7927B2636FD0BD8403F0E /* FMPhotoPickerBatchSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoPickerBatchSelector.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Picker/FMPhotoPickerBatchSelector.swift; sourceTree = "<group>"; };
 		EEDD022052383BF3E12B27DC62588D44 /* Pods-Flood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Flood.release.xcconfig"; sourceTree = "<group>"; };
-		F5460AD0F6241621B45A17AB23A8E5B7 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		F640F61D5BEE8132009BAEAA65B587A4 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		EFC5A7E807F23E6271FA15C3347F420E /* UIView+FMPhotoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+FMPhotoView.swift"; path = "FMPhotoPicker/FMPhotoPicker/source/Utilities/UIView+FMPhotoView.swift"; sourceTree = "<group>"; };
+		F1EA872B5B11A20FC62CA2CAB7DB23EE /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		F27EC6E9FCFE61411FA3DE6450963F6B /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		F4CEC168B1AC9AA99A7CB817392183E3 /* FMCroppable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCroppable.swift; path = FMPhotoPicker/FMPhotoPicker/source/ImageEditor/Crop/FMCroppable.swift; sourceTree = "<group>"; };
+		F9860675299297EA50947F7A9E0C20EB /* FMPhotoPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMPhotoPicker-dummy.m"; sourceTree = "<group>"; };
 		FA414E10CB427622BCBFA22728AD0E64 /* Pods_Flood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Flood.framework; path = "Pods-Flood.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB7868051B0D2B6AD8522141490CA87E /* FMCropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/Crop/FMCropView.swift; sourceTree = "<group>"; };
+		FD7F0C5D6F737413EF7EC33F71035DEE /* FMCropTranslucencyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMCropTranslucencyView.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Editor/Views/Crop/FMCropTranslucencyView.swift; sourceTree = "<group>"; };
+		FECFE5630D3DC474B3BDA0E41DD4E8B1 /* FMPhotoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FMPhotoViewController.swift; path = FMPhotoPicker/FMPhotoPicker/source/Scene/Presenter/Viewer/FMPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,38 +240,90 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38958893189D5BD87E5B561CA73F66FD /* Frameworks */ = {
+		7FD05803805BFC37AA3ACE7D7BF19081 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD343E846F9A2564DF7D1A07FE4B87D1 /* Foundation.framework in Frameworks */,
+				047EE76B9A5B4A7244F0CA90415E9403 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B60286A73835B7F3D3BF487597E5CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05548F53FF963AFC13FD80787BC56441 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6AA4F07FC6291E7CA05964D9FFC2D6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3F61090AED400D19771BF242DA58D4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24023BF1CBB05C5F20F36C36CFBB259E /* Products */ = {
+		002BE89FF5FED1A54503455F624319CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D97600E55B3063B9B3D270DD401F6DF /* Alamofire */,
+				9EDF5230BCA7D8121D26AF585096CB72 /* FMPhotoPicker */,
+				8736121D58330586DA0A61B1F0F7FA66 /* Tagging */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1C3032CC6A3987F5A8E22FCA173D1FEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				E7011AF8228A13669306DEC8320DD1A6 /* FMPhotoPicker.framework */,
 				FA414E10CB427622BCBFA22728AD0E64 /* Pods_Flood.framework */,
+				03F8B92DE4926D7E2BD2637AAE4025FE /* Tagging.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C26875CAEBEFEDA19F66418CD7AE5DB /* Support Files */ = {
+		1FFAD6E8416404F0896E67E3518B388C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AD8710F26B62AABFF387E9CA4F6899A4 /* Alamofire.modulemap */,
-				985417470B9341C92A5160D4B2FF2B08 /* Alamofire.xcconfig */,
-				341BDAD0026CDA8E7BCE35AC122E1C8C /* Alamofire-dummy.m */,
-				DE36AED4DF687B2D37BD230D9D2F69B6 /* Alamofire-Info.plist */,
-				C9C3EF964FFA8A9F78851B59A8D4FFBC /* Alamofire-prefix.pch */,
-				D54AEF5647A987180EDAD7E1CEF7387B /* Alamofire-umbrella.h */,
+				B646B1768DA3F2F035C829F8031B7516 /* Assets.xcassets */,
+				32CFCC8FBE8664EED7616B626290DC17 /* FMImageEditorViewController.xib */,
+				CA490BD219922491196293E13B765890 /* FMPhotoPickerImageCollectionViewCell.xib */,
+				D53C65D34479750FA51A2795806611B8 /* FMPhotoPickerViewController.xib */,
+				12DC3DFC180F1EB067492146F7DA1C91 /* FMPhotoPresenterViewController.xib */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4D97600E55B3063B9B3D270DD401F6DF /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				C440FBCC342A85C51DA5437AA3F1BAC6 /* AFError.swift */,
+				6F5553B001F83F595A107CB2F9734607 /* Alamofire.swift */,
+				F1EA872B5B11A20FC62CA2CAB7DB23EE /* DispatchQueue+Alamofire.swift */,
+				891986ABDCCD4029C3784A46FF8E430F /* MultipartFormData.swift */,
+				768C31B6FD27C2E388002863814D49DD /* NetworkReachabilityManager.swift */,
+				CA876C91331B08DD393C10F9BFF6A426 /* Notifications.swift */,
+				9667F35EB048258793278886771CB8B4 /* ParameterEncoding.swift */,
+				C8E393FE5AFE200F94416326D7E31437 /* Request.swift */,
+				E54B72E7D6438A5111D80848507AA29B /* Response.swift */,
+				5FDB63D5CCDA434321D02ECA8B304AA3 /* ResponseSerialization.swift */,
+				B9B5C007819E814925D0AD925C46F8F7 /* Result.swift */,
+				1E519C10D046479E29374375A5598568 /* ServerTrustPolicy.swift */,
+				768AA5E3463438F30106E55F3763FD4B /* SessionDelegate.swift */,
+				42B886E84C9ECD083EE191D189010B34 /* SessionManager.swift */,
+				F27EC6E9FCFE61411FA3DE6450963F6B /* TaskDelegate.swift */,
+				D96DBA5035E5E6F0B7F4694BAF618C32 /* Timeline.swift */,
+				E8784EBE787F799942545A52F2E2741B /* Validation.swift */,
+				AC16CE675CB3B3805C17903A719F11C7 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		6D8BBAB874586B22A01AFD89DA9B7F63 /* Pods-Flood */ = {
@@ -149,38 +351,104 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		90FDDC7F5D24472360CA259A8D40AE98 /* Pods */ = {
+		8736121D58330586DA0A61B1F0F7FA66 /* Tagging */ = {
 			isa = PBXGroup;
 			children = (
-				ABBD6121E62B33A53CF07892A75F2030 /* Alamofire */,
+				35750BB1188EC113F2C119FA5BC2936B /* Tagging.swift */,
+				CF695146D4F4AEE52195586B2E245BB0 /* TaggingDataSource.swift */,
+				0B40AE6FDE647309D2DBCE739A67BE0F /* TaggingModel.swift */,
+				9220F2663E6FE17E4B75F0A3A54597F0 /* Support Files */,
 			);
-			name = Pods;
+			name = Tagging;
+			path = Tagging;
 			sourceTree = "<group>";
 		};
-		ABBD6121E62B33A53CF07892A75F2030 /* Alamofire */ = {
+		9220F2663E6FE17E4B75F0A3A54597F0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8D5A0E300C04A6DF88D620788FE38780 /* AFError.swift */,
-				1C15C076B531E2E7744C358418A0C0B5 /* Alamofire.swift */,
-				AFF7F7716086D54E6308EE52C8227B87 /* DispatchQueue+Alamofire.swift */,
-				BFCE3D7EDCA41F256D471B40BBFD3FCE /* MultipartFormData.swift */,
-				F5460AD0F6241621B45A17AB23A8E5B7 /* NetworkReachabilityManager.swift */,
-				B06639F7A76DB8A9D0D0E41CDD7A6684 /* Notifications.swift */,
-				0D01BA8472F25D39F718F71557EDC8DD /* ParameterEncoding.swift */,
-				9D59E1AD3CC394A93392FF3DC8CF2961 /* Request.swift */,
-				CCC6858C85690F7AFEA7F6542EE9A69A /* Response.swift */,
-				7B03859BDC36782899379E222720A297 /* ResponseSerialization.swift */,
-				DD807F155301ECA538A2C1C296E1186D /* Result.swift */,
-				C4453BE339B79900FDC53E34FE5589CB /* ServerTrustPolicy.swift */,
-				F640F61D5BEE8132009BAEAA65B587A4 /* SessionDelegate.swift */,
-				3D7E25E371731FAE44F46A9F392CB5D5 /* SessionManager.swift */,
-				75C759635F88377BD7E2DEDE04C23C62 /* TaskDelegate.swift */,
-				32DB5272AD01ECD0B09A86818A7754C4 /* Timeline.swift */,
-				33115EC2A5164913C68F8BD170389EEE /* Validation.swift */,
-				5C26875CAEBEFEDA19F66418CD7AE5DB /* Support Files */,
+				CE3A021EB51AF71D9A4047FEC8B1D8DB /* Tagging.modulemap */,
+				729DC02ED0B9605B8F84EC847EBA9080 /* Tagging.xcconfig */,
+				6994B116FDC71BFB7FC299F9FC2F5AAA /* Tagging-dummy.m */,
+				366561FB4D47B9244CAFA827EAEE6B4D /* Tagging-Info.plist */,
+				A8609B7D53F6C4E67109E9002C79B964 /* Tagging-prefix.pch */,
+				0982F4EABCB080412321E45523FF78BC /* Tagging-umbrella.h */,
 			);
-			name = Alamofire;
-			path = Alamofire;
+			name = "Support Files";
+			path = "../Target Support Files/Tagging";
+			sourceTree = "<group>";
+		};
+		9EDF5230BCA7D8121D26AF585096CB72 /* FMPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8F8741151D976513982C1E53AB362C66 /* AVPlayer+Extension.swift */,
+				993D617B574BDAC6C707FD9DA7370081 /* Const.swift */,
+				038A4B4800319919933087FCE18132D8 /* FMAlertable.swift */,
+				382C79511189FEBB9FEB1111636FFD02 /* FMCrop.swift */,
+				B10248471A199428408D0718680B8869 /* FMCropBackgroundView.swift */,
+				E934BD69B635E6E16616882D6A982225 /* FMCropCell.swift */,
+				7B9E651281A50F3F7A693DE06CD39FBA /* FMCropCropBoxCornersView.swift */,
+				7CD8F61C9F1FCAF3E18FF8EF0D952595 /* FMCropCropBoxView.swift */,
+				3D265B4E8C5D2985AEF2259FB5D6CAD3 /* FMCropForegroundView.swift */,
+				E8E7B9053FF35E74DCFDD1D39D4F9C0E /* FMCropMenuView.swift */,
+				F4CEC168B1AC9AA99A7CB817392183E3 /* FMCroppable.swift */,
+				3A60E1FADDD0A1A6E26834343DD31EAB /* FMCropScrollView.swift */,
+				FD7F0C5D6F737413EF7EC33F71035DEE /* FMCropTranslucencyView.swift */,
+				FB7868051B0D2B6AD8522141490CA87E /* FMCropView.swift */,
+				DC4CFBA07DF7C6B739E3AD7DEFFACAE4 /* FMFilter.swift */,
+				D72286FD1D87CEA8E459177B66B67B14 /* FMFilterable.swift */,
+				CEADDB9CFB754B0D5E4DAAA7D4F0AD0C /* FMFilterCell.swift */,
+				41F37D9224C0B38F077B597B0F94F1A5 /* FMFiltersMenuView.swift */,
+				AE5902369BD941D8C0BE3D9021F58DCB /* FMImageEditor.swift */,
+				0CD7BC57D46F9331379B16FD01E6175E /* FMImageEditorViewController.swift */,
+				A1935B52ED7BEFE5DED322D7BC2223ED /* FMImageViewController.swift */,
+				597C7979F6D40E6BEF992255FC4EBD04 /* FMLoadingView.swift */,
+				D7A974D723FD020DAE9C181BFAAEE7FC /* FMPhotoAsset.swift */,
+				101667BC374F3BC742BDC96093CFF860 /* FMPhotoInteractionAnimator.swift */,
+				EA22EBFD18E7927B2636FD0BD8403F0E /* FMPhotoPickerBatchSelector.swift */,
+				C8189EC810DED1459FAFDC6F5A0BF50F /* FMPhotoPickerConfig.swift */,
+				C54FB7BD46445A8C7E57B8B392619AD2 /* FMPhotoPickerImageCollectionViewCell.swift */,
+				1A30C7C6302BD084F635E757B559B7B2 /* FMPhotoPickerImageCollectionViewLayout.swift */,
+				3715CF7A6BA909A84A44DAEBAF070A66 /* FMPhotoPickerViewController.swift */,
+				9EAFC5A407B2CFE6E660B1D099BCE312 /* FMPhotoPresenterViewController.swift */,
+				D8AF9DDF6E74C318FF279E463F435D0B /* FMPhotosDataSource.swift */,
+				FECFE5630D3DC474B3BDA0E41DD4E8B1 /* FMPhotoViewController.swift */,
+				58283635629EBB27EDE617EBAC764AEC /* FMPlaybackControlView.swift */,
+				E63A3AE78313E64E2EB1D52A1DCC7135 /* FMPlaybackProgressThumbLayer.swift */,
+				28B8B79B83E8237684228580E24BAF7F /* FMPlaybackProgressTrackLayer.swift */,
+				43EF6BDCC7571D6C0B848495B005D6F5 /* FMPlaybackProgressView.swift */,
+				41C6D9E4F4A21DC0979DDD3DE3E37EDC /* FMPresenterBottomView.swift */,
+				C0C86884998758D1A6BE3F78A4A9D120 /* FMPresenterEditMenuView.swift */,
+				D4B5AAA5825521008F6EE2ED7AEC1703 /* FMPresenterTopView.swift */,
+				A5FF07F8A7C07782EE54FD04B44E1914 /* FMScalingImageView.swift */,
+				192476326910F69EFEE6486C3BDEA756 /* FMVideoViewController.swift */,
+				C9AF5BD7BB7339AC60ABD0F59EE6DC22 /* FMWarningView.swift */,
+				BA12C10A12F32FBB05BBED7CCDE3DA8D /* FMZoomInAnimationController.swift */,
+				D9C5EE09307FE060A43D5D9DF6E1091A /* FMZoomOutAnimationController.swift */,
+				DED056BC6FE541DAE411F4D9B770A1D1 /* Helper.swift */,
+				9926A0FC6505BDE7BD74FF6FD95A333F /* InsertableUIView.swift */,
+				B4BC1F702A429ED091AAF0358CAD3FD5 /* TimeInterval+Extension.swift */,
+				07CBE858697421CA0EFFEC59A0E63A40 /* UIImage+Extension.swift */,
+				72BB9B73FF00DDDD4D6FF3739177F872 /* UIImage+Extensions.swift */,
+				EFC5A7E807F23E6271FA15C3347F420E /* UIView+FMPhotoView.swift */,
+				1FFAD6E8416404F0896E67E3518B388C /* Resources */,
+				D1E8AC6FCD802AF939219BAF802CC95A /* Support Files */,
+			);
+			name = FMPhotoPicker;
+			path = FMPhotoPicker;
+			sourceTree = "<group>";
+		};
+		AC16CE675CB3B3805C17903A719F11C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4E37B9EC35C69841ED0DA1C16C0235B /* Alamofire.modulemap */,
+				DCCF20AE390854EA4E4B14801A53AE30 /* Alamofire.xcconfig */,
+				0E2EAE38AC3C9A5A7D0FE7B3434651F4 /* Alamofire-dummy.m */,
+				1C661124165169FFCCAD6EF1E187351F /* Alamofire-Info.plist */,
+				8E944BD85F77931E7F22712B86464140 /* Alamofire-prefix.pch */,
+				01513EBA4813AD176C8BD0064EFFCA5E /* Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -196,10 +464,24 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				90FDDC7F5D24472360CA259A8D40AE98 /* Pods */,
-				24023BF1CBB05C5F20F36C36CFBB259E /* Products */,
+				002BE89FF5FED1A54503455F624319CB /* Pods */,
+				1C3032CC6A3987F5A8E22FCA173D1FEB /* Products */,
 				7D52DE1B880B877DE043A840F3323B4E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D1E8AC6FCD802AF939219BAF802CC95A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				31B66C6A55E67DE69594F91B6586BABA /* FMPhotoPicker.modulemap */,
+				92CE4585BCD5AAAEF50A0C38F5E9387E /* FMPhotoPicker.xcconfig */,
+				F9860675299297EA50947F7A9E0C20EB /* FMPhotoPicker-dummy.m */,
+				57339CD829BD4093E4BA78BE66520CBA /* FMPhotoPicker-Info.plist */,
+				0D3DF43C7555EB645F41B2485CCBF529 /* FMPhotoPicker-prefix.pch */,
+				6933BFD4C8F8B42B6A27578C579CB091 /* FMPhotoPicker-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMPhotoPicker";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -213,6 +495,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		129FDC30134C221857ED52F28AA8EA55 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69D86B8E03E6CDB01413B00CFDBFC00 /* Tagging-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14B4840BF13CCAD695443A63EE80C7D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954A3F913662DF0D7C66BC4FA831B07E /* Pods-Flood-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2582784E4FA6A1AC5D23FC53AC3F6EE2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,30 +519,68 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3BA2729C28A4381EEDCB75C428C6BDF /* Headers */ = {
+		3A7452F4B23322E97ABFC9ABC5315918 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46458304A01913F5F00F2F2D84F50EE7 /* Pods-Flood-umbrella.h in Headers */,
+				4F84AE5B5FE3837CBBA2C4CF86868650 /* FMPhotoPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AED770C8282BD6970DBC37ED48497CAC /* Pods-Flood */ = {
+		4503BDEA9CC43AE1232C239A05C56DF5 /* FMPhotoPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A679E8591BEC664EA71AE1E31B496D4 /* Build configuration list for PBXNativeTarget "Pods-Flood" */;
+			buildConfigurationList = 0B12C2F58D85CFE30A2E334213AA1701 /* Build configuration list for PBXNativeTarget "FMPhotoPicker" */;
 			buildPhases = (
-				E3BA2729C28A4381EEDCB75C428C6BDF /* Headers */,
-				98835AB0AA3381F06CBCDC7BC97B0AD1 /* Sources */,
-				38958893189D5BD87E5B561CA73F66FD /* Frameworks */,
-				75F63E84CF240B0FECA76D87F769C290 /* Resources */,
+				3A7452F4B23322E97ABFC9ABC5315918 /* Headers */,
+				34ADC9BF32967D5A50D34447C9744251 /* Sources */,
+				B6AA4F07FC6291E7CA05964D9FFC2D6D /* Frameworks */,
+				3E412994DB86C9A91CE7D404C8E962EB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				29D8CFF8A9F71535978B8E3F2336B50F /* PBXTargetDependency */,
+			);
+			name = FMPhotoPicker;
+			productName = FMPhotoPicker;
+			productReference = E7011AF8228A13669306DEC8320DD1A6 /* FMPhotoPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		570CFE52129981BE72BB3173D32B9CF9 /* Tagging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDFDC9F6421ED643BEFBC5DAB5EA424B /* Build configuration list for PBXNativeTarget "Tagging" */;
+			buildPhases = (
+				129FDC30134C221857ED52F28AA8EA55 /* Headers */,
+				9CA8E069794B4946FE6B8CCA2DFB6061 /* Sources */,
+				A7B60286A73835B7F3D3BF487597E5CB /* Frameworks */,
+				7D6922D6DECA65D06C662C2A665A5ABD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tagging;
+			productName = Tagging;
+			productReference = 03F8B92DE4926D7E2BD2637AAE4025FE /* Tagging.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AED770C8282BD6970DBC37ED48497CAC /* Pods-Flood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB00BEF70B08D344919449523E9762D4 /* Build configuration list for PBXNativeTarget "Pods-Flood" */;
+			buildPhases = (
+				14B4840BF13CCAD695443A63EE80C7D8 /* Headers */,
+				1F259FF27B16DCA810C61AB736FF32F0 /* Sources */,
+				7FD05803805BFC37AA3ACE7D7BF19081 /* Frameworks */,
+				F20ACDF5F085D6C407978EB152AFD309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				231735F5515F6C8BE8F7490079DB3601 /* PBXTargetDependency */,
+				DFFCD27AF435E048F34503A2BE615D18 /* PBXTargetDependency */,
+				0792D43537BE19B2E9E1674E6ED597C4 /* PBXTargetDependency */,
 			);
 			name = "Pods-Flood";
 			productName = "Pods-Flood";
@@ -279,24 +615,38 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 24023BF1CBB05C5F20F36C36CFBB259E /* Products */;
+			productRefGroup = 1C3032CC6A3987F5A8E22FCA173D1FEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
+				4503BDEA9CC43AE1232C239A05C56DF5 /* FMPhotoPicker */,
 				AED770C8282BD6970DBC37ED48497CAC /* Pods-Flood */,
+				570CFE52129981BE72BB3173D32B9CF9 /* Tagging */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3E412994DB86C9A91CE7D404C8E962EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B65AA6AF36BDF29FDBB8B0880B313D8D /* Assets.xcassets in Resources */,
+				DEDD71E7621355F3C812583CD2153418 /* FMImageEditorViewController.xib in Resources */,
+				3DC27A9B231ADAE9F6A196B710775DD5 /* FMPhotoPickerImageCollectionViewCell.xib in Resources */,
+				1BAE78EACC3E1A0BBDA65A3E098D63BD /* FMPhotoPickerViewController.xib in Resources */,
+				C44429374BBCB377856EAC452B5EEFFF /* FMPhotoPresenterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		473D3E892ABB6C798CFF290644259B34 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,7 +654,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75F63E84CF240B0FECA76D87F769C290 /* Resources */ = {
+		7D6922D6DECA65D06C662C2A665A5ABD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F20ACDF5F085D6C407978EB152AFD309 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,6 +671,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F259FF27B16DCA810C61AB736FF32F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C339C5F1FA4D55829166665A08BBAC /* Pods-Flood-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2DDFD9AC10F181CD7130BDF5F9E0502B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,27 +704,136 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98835AB0AA3381F06CBCDC7BC97B0AD1 /* Sources */ = {
+		34ADC9BF32967D5A50D34447C9744251 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C73835F016EEE1A4595D81133838D5E /* Pods-Flood-dummy.m in Sources */,
+				96EF6CCFF938C9937903A7328E522588 /* AVPlayer+Extension.swift in Sources */,
+				EB2B496EFBEB27D16A9CE476452B6125 /* Const.swift in Sources */,
+				33DC26EB921FE96015075E681CB8B487 /* FMAlertable.swift in Sources */,
+				BE22C14078B11549E90AD7D07F059EAF /* FMCrop.swift in Sources */,
+				7534127B514914D215D40FD03C77F212 /* FMCropBackgroundView.swift in Sources */,
+				9DC0939FB97C8C0C99A29F9025592D61 /* FMCropCell.swift in Sources */,
+				86E5860F930E22216635D55B7BDEE6B6 /* FMCropCropBoxCornersView.swift in Sources */,
+				E040ABD9E18B8762A6435F39468D3204 /* FMCropCropBoxView.swift in Sources */,
+				CE08FC8F46A44C50B8361AE434430135 /* FMCropForegroundView.swift in Sources */,
+				AD8FF2854B38BFBF5FFB0D5092AD366C /* FMCropMenuView.swift in Sources */,
+				D85687E177556EEF9B185DC3B9D3ADAB /* FMCroppable.swift in Sources */,
+				7178F1787BB2EF26D27CAC101804EA5B /* FMCropScrollView.swift in Sources */,
+				272739F6511F775265DD3C7284BB3E7A /* FMCropTranslucencyView.swift in Sources */,
+				69A42295510A63C2DE8F0A2656F2897C /* FMCropView.swift in Sources */,
+				887F09D429C4A107D2AC24A8BF13C9E9 /* FMFilter.swift in Sources */,
+				98C72341BF9813274DD7747D96150693 /* FMFilterable.swift in Sources */,
+				71C03B4AA976C9B55B338F5E8581749F /* FMFilterCell.swift in Sources */,
+				B94C071BD270E7F28C02B34E0CE1F8B8 /* FMFiltersMenuView.swift in Sources */,
+				872706659A426AA66138D988003A757E /* FMImageEditor.swift in Sources */,
+				8576C32EBC3F1B717FC524A9BDBD197C /* FMImageEditorViewController.swift in Sources */,
+				5C349BF096F2BB7DDEF4BAA804623BCB /* FMImageViewController.swift in Sources */,
+				FBDA26B2EC1DE3FEDB1D8F9E09914A15 /* FMLoadingView.swift in Sources */,
+				235B0C0480DA2A13716D4557BC8F9E01 /* FMPhotoAsset.swift in Sources */,
+				13AE7D009EC14690898E14CD5A3D18DB /* FMPhotoInteractionAnimator.swift in Sources */,
+				935E933C9759D2D3F08AE9D4268E6A3C /* FMPhotoPicker-dummy.m in Sources */,
+				117EE22AE05A17D259792567A10B5872 /* FMPhotoPickerBatchSelector.swift in Sources */,
+				135C8A7116DBD065F4DDB4F902B4A843 /* FMPhotoPickerConfig.swift in Sources */,
+				E1E4CBF09FBAFF35EE70D465855CE58F /* FMPhotoPickerImageCollectionViewCell.swift in Sources */,
+				6055C6D7757C74E3E0F8F1F710DA7B14 /* FMPhotoPickerImageCollectionViewLayout.swift in Sources */,
+				76530B17B8CCC0DD9AA63F502557027A /* FMPhotoPickerViewController.swift in Sources */,
+				D942EFEEE3A030DF2A21A777177B10A6 /* FMPhotoPresenterViewController.swift in Sources */,
+				642100DB6A043C91D861953BAA57D268 /* FMPhotosDataSource.swift in Sources */,
+				0011846A21D9D06DBB2858AC782FC8A9 /* FMPhotoViewController.swift in Sources */,
+				17959CBB89185942A4BE8679665B42E8 /* FMPlaybackControlView.swift in Sources */,
+				BA7CAD9D3C6AF72DEEC77E03F3100FFF /* FMPlaybackProgressThumbLayer.swift in Sources */,
+				C167EDBC278ED0EB61309B685AAE58E7 /* FMPlaybackProgressTrackLayer.swift in Sources */,
+				F4D7B36F6DECEED33C22141299D8CD69 /* FMPlaybackProgressView.swift in Sources */,
+				769CFDC9AD50A19312EDAC0F6DA492BA /* FMPresenterBottomView.swift in Sources */,
+				B0C62E2A858DA0F9C4AD3523DC1EB68F /* FMPresenterEditMenuView.swift in Sources */,
+				F7B6E9AC9F3CDF825D64B2765E21D554 /* FMPresenterTopView.swift in Sources */,
+				8136A7337373FE90AAD7064AF9F8FFBF /* FMScalingImageView.swift in Sources */,
+				7026A4D349C61D7DDC6863F996542AFB /* FMVideoViewController.swift in Sources */,
+				C79A4739E7CCFD3D9F62739249C00A62 /* FMWarningView.swift in Sources */,
+				F6016F1DD14682D5119C5066F2F44069 /* FMZoomInAnimationController.swift in Sources */,
+				11462901441F0AB3967D6F845FB0B532 /* FMZoomOutAnimationController.swift in Sources */,
+				215C5D4EE550B885B5E4B4A13FE43202 /* Helper.swift in Sources */,
+				865410195520BB27594A62F2495D24C2 /* InsertableUIView.swift in Sources */,
+				C72A411E643E2D24FAED51BEFABF0014 /* TimeInterval+Extension.swift in Sources */,
+				BC4C64928350328CFABD0906036EFCE0 /* UIImage+Extension.swift in Sources */,
+				C078E0F91059DEDCCEB0DA5E8F1C9CBA /* UIImage+Extensions.swift in Sources */,
+				9B0A14D569532C98D6B5A5390BBAC3B6 /* UIView+FMPhotoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CA8E069794B4946FE6B8CCA2DFB6061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82A9D3EF3C426106492C730725B9481A /* Tagging-dummy.m in Sources */,
+				31C374FCCE10BB11AA8B58FF5F7B62D9 /* Tagging.swift in Sources */,
+				827C4A3BBD636B565802D17E17B75A9B /* TaggingDataSource.swift in Sources */,
+				505C77A791633A1537BD10EB2E0C2EB0 /* TaggingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		29D8CFF8A9F71535978B8E3F2336B50F /* PBXTargetDependency */ = {
+		0792D43537BE19B2E9E1674E6ED597C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Tagging;
+			target = 570CFE52129981BE72BB3173D32B9CF9 /* Tagging */;
+			targetProxy = D85F19CDA5198F709FF4ECF7A0B874E2 /* PBXContainerItemProxy */;
+		};
+		231735F5515F6C8BE8F7490079DB3601 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = CDF5F64C6D0B58C2F9A9AC6EE11240E0 /* PBXContainerItemProxy */;
+			targetProxy = AC4737083BBC095B4EEEF00776A61B30 /* PBXContainerItemProxy */;
+		};
+		DFFCD27AF435E048F34503A2BE615D18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMPhotoPicker;
+			target = 4503BDEA9CC43AE1232C239A05C56DF5 /* FMPhotoPicker */;
+			targetProxy = E9F942E6540EC36CA1F8826BF33082C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1819BE14B3002A718FBFFFE0E621ED03 /* Debug */ = {
+		26E9A7B7CC36D753291E2D3570A8DB18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCCF20AE390854EA4E4B14801A53AE30 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4C4ED16F9C9FB117D5E0ECA2F3430258 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 700F1E90111FDE7B308A936CAF422D94 /* Pods-Flood.debug.xcconfig */;
 			buildSettings = {
@@ -397,9 +871,9 @@
 			};
 			name = Debug;
 		};
-		26E9A7B7CC36D753291E2D3570A8DB18 /* Release */ = {
+		6471174308858DA29188840EE8E0ADBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 985417470B9341C92A5160D4B2FF2B08 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 92CE4585BCD5AAAEF50A0C38F5E9387E /* FMPhotoPicker.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -410,22 +884,61 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FMPhotoPicker/FMPhotoPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMPhotoPicker/FMPhotoPicker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
+				MODULEMAP_FILE = "Target Support Files/FMPhotoPicker/FMPhotoPicker.modulemap";
+				PRODUCT_MODULE_NAME = FMPhotoPicker;
+				PRODUCT_NAME = FMPhotoPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		81670EA4AA7750CF55A4A36B70852FA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEDD022052383BF3E12B27DC62588D44 /* Pods-Flood.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Flood/Pods-Flood-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Flood/Pods-Flood.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -497,12 +1010,10 @@
 			};
 			name = Debug;
 		};
-		B2861C2A5A8FD91A38A43E2DCC128F0E /* Release */ = {
+		A0AFA7E66EAE948285C71DE5DB2D12A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEDD022052383BF3E12B27DC62588D44 /* Pods-Flood.release.xcconfig */;
+			baseConfigurationReference = 729DC02ED0B9605B8F84EC847EBA9080 /* Tagging.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -512,23 +1023,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Flood/Pods-Flood-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Tagging/Tagging-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Tagging/Tagging-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Flood/Pods-Flood.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Tagging/Tagging.modulemap";
+				PRODUCT_MODULE_NAME = Tagging;
+				PRODUCT_NAME = Tagging;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -538,7 +1048,7 @@
 		};
 		B63B8B9A3DC0B86B8560A3526C388A7C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 985417470B9341C92A5160D4B2FF2B08 /* Alamofire.xcconfig */;
+			baseConfigurationReference = DCCF20AE390854EA4E4B14801A53AE30 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -561,6 +1071,76 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEDD302D53906ACAF881F86B074E32D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 729DC02ED0B9605B8F84EC847EBA9080 /* Tagging.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Tagging/Tagging-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Tagging/Tagging-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Tagging/Tagging.modulemap";
+				PRODUCT_MODULE_NAME = Tagging;
+				PRODUCT_NAME = Tagging;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C81D035475BA5D3C028DDF4476FEFF68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92CE4585BCD5AAAEF50A0C38F5E9387E /* FMPhotoPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FMPhotoPicker/FMPhotoPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMPhotoPicker/FMPhotoPicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FMPhotoPicker/FMPhotoPicker.modulemap";
+				PRODUCT_MODULE_NAME = FMPhotoPicker;
+				PRODUCT_NAME = FMPhotoPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -634,6 +1214,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B12C2F58D85CFE30A2E334213AA1701 /* Build configuration list for PBXNativeTarget "FMPhotoPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C81D035475BA5D3C028DDF4476FEFF68 /* Debug */,
+				6471174308858DA29188840EE8E0ADBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -643,11 +1232,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A679E8591BEC664EA71AE1E31B496D4 /* Build configuration list for PBXNativeTarget "Pods-Flood" */ = {
+		CDFDC9F6421ED643BEFBC5DAB5EA424B /* Build configuration list for PBXNativeTarget "Tagging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1819BE14B3002A718FBFFFE0E621ED03 /* Debug */,
-				B2861C2A5A8FD91A38A43E2DCC128F0E /* Release */,
+				BEDD302D53906ACAF881F86B074E32D4 /* Debug */,
+				A0AFA7E66EAE948285C71DE5DB2D12A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -657,6 +1246,15 @@
 			buildConfigurations = (
 				B63B8B9A3DC0B86B8560A3526C388A7C /* Debug */,
 				26E9A7B7CC36D753291E2D3570A8DB18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB00BEF70B08D344919449523E9762D4 /* Build configuration list for PBXNativeTarget "Pods-Flood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C4ED16F9C9FB117D5E0ECA2F3430258 /* Debug */,
+				81670EA4AA7750CF55A4A36B70852FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

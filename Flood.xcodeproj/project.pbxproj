@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		40501875B830FC464BB6DFB8 /* Pods_Flood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDF396692AD089ED72D924 /* Pods_Flood.framework */; };
+		5E64E08C23B309FA00A54B9A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64E08B23B309FA00A54B9A /* UIColor+extension.swift */; };
+		5E64E08E23B3265500A54B9A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64E08D23B3265500A54B9A /* UITextView+Extension.swift */; };
 		5EA3E04E23AF9A0200CAB6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E04D23AF9A0200CAB6F2 /* AppDelegate.swift */; };
 		5EA3E05023AF9A0200CAB6F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E04F23AF9A0200CAB6F2 /* SceneDelegate.swift */; };
 		5EA3E05523AF9A0200CAB6F2 /* Init.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA3E05323AF9A0200CAB6F2 /* Init.storyboard */; };
@@ -27,12 +29,31 @@
 		5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094823B05A1500540877 /* MainTabBarController.swift */; };
 		5ED2094B23B0D1A000540877 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094A23B0D1A000540877 /* Service.swift */; };
 		5ED2094D23B0D1A800540877 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094C23B0D1A800540877 /* Model.swift */; };
-		5ED2094F23B0D1B200540877 /* Exensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094E23B0D1B200540877 /* Exensions.swift */; };
+		5ED2094F23B0D1B200540877 /* UIView+Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094E23B0D1B200540877 /* UIView+Exension.swift */; };
+		5ED2095223B0DF4200540877 /* MypageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2095123B0DF4200540877 /* MypageSettingViewController.swift */; };
+		5ED2095423B185F200540877 /* EditFlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2095323B185F200540877 /* EditFlipViewController.swift */; };
+		5ED2095A23B1B29F00540877 /* MypageFlipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2095923B1B29F00540877 /* MypageFlipCollectionViewCell.swift */; };
+		5ED2096623B22CD900540877 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2095D23B22CCC00540877 /* NotoSansCJKkr-Light.otf */; };
+		5ED2096723B22CD900540877 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2095E23B22CCD00540877 /* NotoSansCJKkr-Black.otf */; };
+		5ED2096823B22CD900540877 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2095F23B22CCF00540877 /* NotoSansCJKkr-Thin.otf */; };
+		5ED2096923B22CD900540877 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2096023B22CD100540877 /* NotoSansCJKkr-Bold.otf */; };
+		5ED2096A23B22CD900540877 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2096123B22CD300540877 /* NotoSansCJKkr-Medium.otf */; };
+		5ED2096B23B22CD900540877 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2096223B22CD400540877 /* NotoSansCJKkr-Regular.otf */; };
+		5ED2096C23B22CD900540877 /* NotoSansMonoCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2096323B22CD600540877 /* NotoSansMonoCJKkr-Regular.otf */; };
+		5ED2096D23B22CD900540877 /* NotoSansMonoCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2096423B22CD800540877 /* NotoSansMonoCJKkr-Bold.otf */; };
+		5ED2096E23B22CD900540877 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2096523B22CD900540877 /* NotoSansCJKkr-DemiLight.otf */; };
+		5ED2097123B22CFE00540877 /* gilroy-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2096F23B22CFD00540877 /* gilroy-light.otf */; };
+		5ED2097223B22CFE00540877 /* gilroy-extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2097023B22CFD00540877 /* gilroy-extrabold.otf */; };
+		5ED2097423B2500000540877 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2097323B2500000540877 /* CALayer+Extensions.swift */; };
+		5ED2097623B266CB00540877 /* UIViewcontroller+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2097523B266CB00540877 /* UIViewcontroller+extensions.swift */; };
+		5ED2097823B26E6000540877 /* CGFloat+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2097723B26E6000540877 /* CGFloat+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3EFDF396692AD089ED72D924 /* Pods_Flood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5170974DAA81C99DE6E088BE /* Pods-Flood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flood.release.xcconfig"; path = "Target Support Files/Pods-Flood/Pods-Flood.release.xcconfig"; sourceTree = "<group>"; };
+		5E64E08B23B309FA00A54B9A /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		5E64E08D23B3265500A54B9A /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		5EA3E04A23AF9A0200CAB6F2 /* Flood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EA3E04D23AF9A0200CAB6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EA3E04F23AF9A0200CAB6F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +75,24 @@
 		5ED2094823B05A1500540877 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5ED2094A23B0D1A000540877 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		5ED2094C23B0D1A800540877 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		5ED2094E23B0D1B200540877 /* Exensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exensions.swift; sourceTree = "<group>"; };
+		5ED2094E23B0D1B200540877 /* UIView+Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Exension.swift"; sourceTree = "<group>"; };
+		5ED2095123B0DF4200540877 /* MypageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageSettingViewController.swift; sourceTree = "<group>"; };
+		5ED2095323B185F200540877 /* EditFlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlipViewController.swift; sourceTree = "<group>"; };
+		5ED2095923B1B29F00540877 /* MypageFlipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageFlipCollectionViewCell.swift; sourceTree = "<group>"; };
+		5ED2095D23B22CCC00540877 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
+		5ED2095E23B22CCD00540877 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
+		5ED2095F23B22CCF00540877 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
+		5ED2096023B22CD100540877 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		5ED2096123B22CD300540877 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		5ED2096223B22CD400540877 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		5ED2096323B22CD600540877 /* NotoSansMonoCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		5ED2096423B22CD800540877 /* NotoSansMonoCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		5ED2096523B22CD900540877 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
+		5ED2096F23B22CFD00540877 /* gilroy-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-light.otf"; sourceTree = "<group>"; };
+		5ED2097023B22CFD00540877 /* gilroy-extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-extrabold.otf"; sourceTree = "<group>"; };
+		5ED2097323B2500000540877 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		5ED2097523B266CB00540877 /* UIViewcontroller+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+extensions.swift"; sourceTree = "<group>"; };
+		5ED2097723B26E6000540877 /* CGFloat+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+extension.swift"; sourceTree = "<group>"; };
 		B350A24B804B2C72EA66E070 /* Pods-Flood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flood.debug.xcconfig"; path = "Target Support Files/Pods-Flood/Pods-Flood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +157,8 @@
 		5EA3E06223AFB15100CAB6F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5ED2094723B0519900540877 /* Storyboard */,
+				5ED2095C23B22C8200540877 /* Fonts */,
+				5ED2094723B0519900540877 /* Storyboards */,
 				5EA3E05623AF9A0700CAB6F2 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -139,7 +178,12 @@
 		5EA3E06423B031E000CAB6F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5ED2094E23B0D1B200540877 /* Exensions.swift */,
+				5ED2094E23B0D1B200540877 /* UIView+Exension.swift */,
+				5ED2097323B2500000540877 /* CALayer+Extensions.swift */,
+				5ED2097523B266CB00540877 /* UIViewcontroller+extensions.swift */,
+				5ED2097723B26E6000540877 /* CGFloat+extension.swift */,
+				5E64E08B23B309FA00A54B9A /* UIColor+extension.swift */,
+				5E64E08D23B3265500A54B9A /* UITextView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,18 +207,18 @@
 		5EA3E06723B031F500CAB6F2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5ED2095B23B216EA00540877 /* AddArticle */,
+				5ED2095023B0DF0A00540877 /* Mypage */,
 				5ED2093B23B03C6200540877 /* InitViewController.swift */,
 				5ED2093D23B03C6E00540877 /* MainViewController.swift */,
 				5ED2093F23B03C7700540877 /* BookmarkViewController.swift */,
-				5ED2094123B03C8300540877 /* AddArticleViewController.swift */,
 				5ED2094323B03C9400540877 /* AlarmViewController.swift */,
-				5ED2094523B03C9F00540877 /* MypageViewController.swift */,
 				5ED2094823B05A1500540877 /* MainTabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		5ED2094723B0519900540877 /* Storyboard */ = {
+		5ED2094723B0519900540877 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				5EA3E05823AF9A0700CAB6F2 /* LaunchScreen.storyboard */,
@@ -185,7 +229,44 @@
 				5ED2093723B035B900540877 /* Alarm.storyboard */,
 				5ED2093523B033BB00540877 /* Mypage.storyboard */,
 			);
-			path = Storyboard;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5ED2095023B0DF0A00540877 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				5ED2094523B03C9F00540877 /* MypageViewController.swift */,
+				5ED2095323B185F200540877 /* EditFlipViewController.swift */,
+				5ED2095123B0DF4200540877 /* MypageSettingViewController.swift */,
+				5ED2095923B1B29F00540877 /* MypageFlipCollectionViewCell.swift */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		5ED2095B23B216EA00540877 /* AddArticle */ = {
+			isa = PBXGroup;
+			children = (
+				5ED2094123B03C8300540877 /* AddArticleViewController.swift */,
+			);
+			path = AddArticle;
+			sourceTree = "<group>";
+		};
+		5ED2095C23B22C8200540877 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5ED2097023B22CFD00540877 /* gilroy-extrabold.otf */,
+				5ED2096F23B22CFD00540877 /* gilroy-light.otf */,
+				5ED2095E23B22CCD00540877 /* NotoSansCJKkr-Black.otf */,
+				5ED2096023B22CD100540877 /* NotoSansCJKkr-Bold.otf */,
+				5ED2096523B22CD900540877 /* NotoSansCJKkr-DemiLight.otf */,
+				5ED2095D23B22CCC00540877 /* NotoSansCJKkr-Light.otf */,
+				5ED2096123B22CD300540877 /* NotoSansCJKkr-Medium.otf */,
+				5ED2096223B22CD400540877 /* NotoSansCJKkr-Regular.otf */,
+				5ED2095F23B22CCF00540877 /* NotoSansCJKkr-Thin.otf */,
+				5ED2096423B22CD800540877 /* NotoSansMonoCJKkr-Bold.otf */,
+				5ED2096323B22CD600540877 /* NotoSansMonoCJKkr-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		6772DA4F233D021CC7E7D50E /* Pods */ = {
@@ -257,14 +338,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED2096723B22CD900540877 /* NotoSansCJKkr-Black.otf in Resources */,
+				5ED2096B23B22CD900540877 /* NotoSansCJKkr-Regular.otf in Resources */,
+				5ED2096D23B22CD900540877 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				5ED2093223B0338A00540877 /* Bookmark.storyboard in Resources */,
 				5ED2093A23B0368600540877 /* AddArticle.storyboard in Resources */,
 				5ED2093623B033BB00540877 /* Mypage.storyboard in Resources */,
 				5ED2093423B033AF00540877 /* Main.storyboard in Resources */,
+				5ED2096923B22CD900540877 /* NotoSansCJKkr-Bold.otf in Resources */,
 				5ED2093823B035B900540877 /* Alarm.storyboard in Resources */,
 				5EA3E05A23AF9A0700CAB6F2 /* LaunchScreen.storyboard in Resources */,
+				5ED2097123B22CFE00540877 /* gilroy-light.otf in Resources */,
+				5ED2096C23B22CD900540877 /* NotoSansMonoCJKkr-Regular.otf in Resources */,
 				5EA3E05723AF9A0700CAB6F2 /* Assets.xcassets in Resources */,
+				5ED2096623B22CD900540877 /* NotoSansCJKkr-Light.otf in Resources */,
+				5ED2096A23B22CD900540877 /* NotoSansCJKkr-Medium.otf in Resources */,
+				5ED2096E23B22CD900540877 /* NotoSansCJKkr-DemiLight.otf in Resources */,
+				5ED2097223B22CFE00540877 /* gilroy-extrabold.otf in Resources */,
 				5EA3E05523AF9A0200CAB6F2 /* Init.storyboard in Resources */,
+				5ED2096823B22CD900540877 /* NotoSansCJKkr-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,15 +412,23 @@
 				5EA3E04E23AF9A0200CAB6F2 /* AppDelegate.swift in Sources */,
 				5EA3E05023AF9A0200CAB6F2 /* SceneDelegate.swift in Sources */,
 				5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */,
+				5E64E08E23B3265500A54B9A /* UITextView+Extension.swift in Sources */,
 				5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */,
 				5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */,
 				5ED2093E23B03C6E00540877 /* MainViewController.swift in Sources */,
 				5ED2094023B03C7700540877 /* BookmarkViewController.swift in Sources */,
+				5ED2097623B266CB00540877 /* UIViewcontroller+extensions.swift in Sources */,
 				5ED2094B23B0D1A000540877 /* Service.swift in Sources */,
+				5ED2095223B0DF4200540877 /* MypageSettingViewController.swift in Sources */,
+				5ED2095A23B1B29F00540877 /* MypageFlipCollectionViewCell.swift in Sources */,
+				5ED2097423B2500000540877 /* CALayer+Extensions.swift in Sources */,
 				5ED2094D23B0D1A800540877 /* Model.swift in Sources */,
 				5ED2094223B03C8300540877 /* AddArticleViewController.swift in Sources */,
-				5ED2094F23B0D1B200540877 /* Exensions.swift in Sources */,
+				5ED2097823B26E6000540877 /* CGFloat+extension.swift in Sources */,
+				5ED2095423B185F200540877 /* EditFlipViewController.swift in Sources */,
+				5ED2094F23B0D1B200540877 /* UIView+Exension.swift in Sources */,
 				5ED2094623B03C9F00540877 /* MypageViewController.swift in Sources */,
+				5E64E08C23B309FA00A54B9A /* UIColor+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

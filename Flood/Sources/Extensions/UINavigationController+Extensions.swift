@@ -6,4 +6,11 @@
 //  Copyright © 2019 Junhyeon. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UINavigationController {
+    
+    func setNavBar() {
+            
+    }
+}

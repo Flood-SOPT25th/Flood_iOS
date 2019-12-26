@@ -71,12 +71,9 @@ class PostViewController: UIViewController {
         // 화면 나갈때 탭바 감추기 해제
         self.tabBarController?.tabBar.isHidden = false
         
-        
     }
     
     // MARK: -Helpers
-    
-    
     
     // X 버튼 function
     @objc func cancelPosting(){
@@ -113,19 +110,13 @@ class PostViewController: UIViewController {
     }
     
     @objc private func keyboardWillHide(_ notification: Notification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keybaordRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keybaordRectangle.height
-            let tabbarHeight = self.tabBarController?.tabBar.frame.size.height
-            let viewOrigin = attachmentView.frame.origin.y
-            
-            if keycnt == true {
-                attachmentView.frame.origin.y = attachmentViewYPosition
-                keycnt = false
-            }
+        if keycnt == true {
+            attachmentView.frame.origin.y = attachmentViewYPosition
+            keycnt = false
         }
     }
 }
+
 
 
 
@@ -164,9 +155,9 @@ extension PostViewController: UITextFieldDelegate {
 extension PostViewController : FMPhotoPickerViewControllerDelegate {
     
     func fmPhotoPickerController(_ picker: FMPhotoPickerViewController, didFinishPickingPhotoWith photos: [UIImage]) {
-                self.dismiss(animated: true, completion: nil)
-//        previewImageView.image = photo
-
+        self.dismiss(animated: true, completion: nil)
+        //        previewImageView.image = photo
+        
     }
     
     

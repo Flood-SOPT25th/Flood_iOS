@@ -47,22 +47,19 @@ class PostViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        addKeyboardNotification()
+        
         // keyboard show
         self.urlTextField.becomeFirstResponder()
         
         // 탭바 감추기
         self.tabBarController?.tabBar.isHidden = true
+        
         self.urlTextField.text = ""
         self.postTextView.text = ""
         self.postTextView.placeholder = "내용을 입력해주세요"
         attachmentViewYPosition = self.attachmentView.frame.origin.y
-        
-        addKeyboardNotification()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endTextFieldEditing)))
-        
-        //        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endTextViewEditing)))
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -103,6 +100,7 @@ class PostViewController: UIViewController {
             let tabbarHeight = self.tabBarController?.tabBar.frame.size.height
             
             if keycnt == false {
+
                 attachmentView.frame.origin.y -= keyboardHeight - tabbarHeight!
                 keycnt = true
             }
@@ -131,11 +129,6 @@ extension PostViewController: UITextViewDelegate {
             }
         }
     }
-    
-    //    @objc func endTextViewEditing(){
-    //    }
-    
-    
     
 }
 

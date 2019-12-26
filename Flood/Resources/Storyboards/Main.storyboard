@@ -85,17 +85,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jj2-wy-Faz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="RcX-hl-Tng"/>
+                    <tabBarItem key="tabBarItem" title="" image="icTabFeed" id="RcX-hl-Tng"/>
                     <size key="freeformSize" width="375" height="2100"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED7-dk-Ybk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1300" y="140.39408866995075"/>
         </scene>
-        <!--AddArticle-->
+        <!--Post-->
         <scene sceneID="9jq-90-1Pu">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="AddArticleVC" storyboardName="AddArticle" id="Vhw-hI-E3I" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="AddArticleVC" storyboardName="Post" id="Vhw-hI-E3I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wYm-3l-uju"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ZY-Mo-4NR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,4 +155,7 @@
             <point key="canvasLocation" x="390" y="141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icTabFeed" width="48" height="48"/>
+    </resources>
 </document>

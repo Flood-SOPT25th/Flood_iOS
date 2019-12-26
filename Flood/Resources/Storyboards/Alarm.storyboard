@@ -26,7 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VJe-ex-LqK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="Syz-Gs-vJf"/>
+                    <tabBarItem key="tabBarItem" title="" image="icTabAlert" id="Syz-Gs-vJf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lt1-yw-GjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -34,4 +34,7 @@
             <point key="canvasLocation" x="197" y="222"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icTabAlert" width="48" height="48"/>
+    </resources>
 </document>

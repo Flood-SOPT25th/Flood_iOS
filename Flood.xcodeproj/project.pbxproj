@@ -19,7 +19,7 @@
 		5ED2093423B033AF00540877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2093323B033AF00540877 /* Main.storyboard */; };
 		5ED2093623B033BB00540877 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2093523B033BB00540877 /* Mypage.storyboard */; };
 		5ED2093823B035B900540877 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2093723B035B900540877 /* Alarm.storyboard */; };
-		5ED2093A23B0368600540877 /* AddArticle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2093923B0368600540877 /* AddArticle.storyboard */; };
+		5ED2093A23B0368600540877 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2093923B0368600540877 /* Post.storyboard */; };
 		5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2093B23B03C6200540877 /* InitViewController.swift */; };
 		5ED2093E23B03C6E00540877 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2093D23B03C6E00540877 /* MainViewController.swift */; };
 		5ED2094023B03C7700540877 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2093F23B03C7700540877 /* BookmarkViewController.swift */; };
@@ -65,7 +65,7 @@
 		5ED2093323B033AF00540877 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5ED2093523B033BB00540877 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
 		5ED2093723B035B900540877 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
-		5ED2093923B0368600540877 /* AddArticle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddArticle.storyboard; sourceTree = "<group>"; };
+		5ED2093923B0368600540877 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		5ED2093B23B03C6200540877 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		5ED2093D23B03C6E00540877 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5ED2093F23B03C7700540877 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 				5EA3E05323AF9A0200CAB6F2 /* Init.storyboard */,
 				5ED2093323B033AF00540877 /* Main.storyboard */,
 				5ED2093123B0338A00540877 /* Bookmark.storyboard */,
-				5ED2093923B0368600540877 /* AddArticle.storyboard */,
+				5ED2093923B0368600540877 /* Post.storyboard */,
 				5ED2093723B035B900540877 /* Alarm.storyboard */,
 				5ED2093523B033BB00540877 /* Mypage.storyboard */,
 			);
@@ -342,7 +342,7 @@
 				5ED2096B23B22CD900540877 /* NotoSansCJKkr-Regular.otf in Resources */,
 				5ED2096D23B22CD900540877 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				5ED2093223B0338A00540877 /* Bookmark.storyboard in Resources */,
-				5ED2093A23B0368600540877 /* AddArticle.storyboard in Resources */,
+				5ED2093A23B0368600540877 /* Post.storyboard in Resources */,
 				5ED2093623B033BB00540877 /* Mypage.storyboard in Resources */,
 				5ED2093423B033AF00540877 /* Main.storyboard in Resources */,
 				5ED2096923B22CD900540877 /* NotoSansCJKkr-Bold.otf in Resources */,

@@ -73,7 +73,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jj2-wy-Faz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="RcX-hl-Tng"/>
+                    <tabBarItem key="tabBarItem" title="" image="icTabFeed" id="RcX-hl-Tng"/>
                     <size key="freeformSize" width="375" height="2100"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED7-dk-Ybk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -143,4 +143,7 @@
             <point key="canvasLocation" x="390" y="141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icTabFeed" width="48" height="48"/>
+    </resources>
 </document>

@@ -28,7 +28,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="42n-Nk-gG3"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="14" minimumInteritemSpacing="0.0" id="n4K-QV-lap">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="14" minimumInteritemSpacing="0.0" id="n4K-QV-lap">
                                                     <size key="itemSize" width="82" height="56"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -41,6 +41,18 @@
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wew-ke-Qrw">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="56"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt2-Th-7iv">
+                                                                    <rect key="frame" x="0.0" y="10" width="82" height="37"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Rt2-Th-7iv" firstAttribute="leading" secondItem="wew-ke-Qrw" secondAttribute="leading" id="28Z-tB-lQ9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Rt2-Th-7iv" secondAttribute="bottom" constant="9" id="ghn-1S-ZU7"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Rt2-Th-7iv" secondAttribute="trailing" id="iD3-gG-Qei"/>
+                                                                <constraint firstItem="Rt2-Th-7iv" firstAttribute="top" secondItem="wew-ke-Qrw" secondAttribute="top" constant="10" id="zkP-lL-67o"/>
+                                                            </constraints>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                 </cells>

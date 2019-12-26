@@ -18,7 +18,7 @@
 > * 5.1.3
 2. 사용한 라이브러리
 > * Alamofire 4.8.2
-> * Tagging 
+> * ~~Tagging~~ 
 > * FMPhotoPicker 0.8
 
 기능 소개

@@ -30,7 +30,19 @@ class MainViewController: UIViewController {
         thisweekTV.separatorInset.left = 0
         postTV.delegate = self
         postTV.dataSource = self
+        //tableviewcell 왼쪽라인 채우기
         postTV.separatorInset.left = 0
+        
+        // 네비게이션 바 배경색 설정 및 경계선 없애는 설정
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        // 탭바 배경색 설정
+        self.tabBarController?.tabBar.backgroundColor = .white
+        self.tabBarController?.tabBar.isTranslucent = false
+        
+        navigationController?.isNavigationBarHidden = true
         
     }
     
@@ -54,6 +66,10 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let MainCatarogyCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCatarogyCell", for: indexPath) as! MainCatarogyCell
+        
+        MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
+        MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
+        MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
         
         return MainCatarogyCell
     }

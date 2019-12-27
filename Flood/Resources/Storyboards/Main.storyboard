@@ -44,7 +44,10 @@
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt2-Th-7iv">
                                                                     <rect key="frame" x="0.0" y="10" width="82" height="37"/>
-                                                                    <state key="normal" title="Button"/>
+                                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" title="Button">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
@@ -64,19 +67,19 @@
                                                 <rect key="frame" x="0.0" y="54" width="375" height="107"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="day month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euX-CV-UDV">
-                                                        <rect key="frame" x="27" y="35" width="77" height="20"/>
+                                                        <rect key="frame" x="27" y="31" width="77" height="20"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hv-Ov-Pvn">
-                                                        <rect key="frame" x="196" y="73" width="44" height="24"/>
+                                                        <rect key="frame" x="196" y="69" width="44" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-KZ-BEa">
-                                                        <rect key="frame" x="24" y="58" width="161" height="43"/>
+                                                        <rect key="frame" x="24" y="54" width="161" height="43"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -87,9 +90,9 @@
                                                     <constraint firstItem="euX-CV-UDV" firstAttribute="leading" secondItem="QjC-mo-zoz" secondAttribute="leading" constant="27" id="2GH-SD-xgq"/>
                                                     <constraint firstItem="bB2-KZ-BEa" firstAttribute="leading" secondItem="QjC-mo-zoz" secondAttribute="leading" constant="24" id="2Zz-y5-Tc0"/>
                                                     <constraint firstItem="5Hv-Ov-Pvn" firstAttribute="leading" secondItem="bB2-KZ-BEa" secondAttribute="trailing" constant="11" id="6gN-or-FbE"/>
-                                                    <constraint firstAttribute="bottom" secondItem="5Hv-Ov-Pvn" secondAttribute="bottom" constant="10" id="I9R-zM-ge6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5Hv-Ov-Pvn" secondAttribute="bottom" constant="14" id="I9R-zM-ge6"/>
                                                     <constraint firstAttribute="height" constant="107" id="b99-xV-mNi"/>
-                                                    <constraint firstAttribute="bottom" secondItem="bB2-KZ-BEa" secondAttribute="bottom" constant="6" id="fSc-mw-3wb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bB2-KZ-BEa" secondAttribute="bottom" constant="10" id="fSc-mw-3wb"/>
                                                     <constraint firstItem="bB2-KZ-BEa" firstAttribute="top" secondItem="euX-CV-UDV" secondAttribute="bottom" constant="3" id="wwI-jt-kTH"/>
                                                 </constraints>
                                             </view>
@@ -1425,12 +1428,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="1Xg-oR-GwM">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" systemItem="add" id="MB9-9G-hoZ"/>
-                            <barButtonItem style="plain" systemItem="play" id="zxc-aW-3YE"/>
+                            <barButtonItem style="plain" systemItem="add" id="MB9-9G-hoZ">
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                            <barButtonItem style="plain" systemItem="play" id="zxc-aW-3YE">
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
+                        <outlet property="commentBtn" destination="J0K-Oa-Yum" id="RIW-g8-v7Q"/>
+                        <outlet property="commentTextField" destination="yQd-9r-JLS" id="coM-PR-Yif"/>
+                        <outlet property="commentViewBottomConstraint" destination="Gwg-t4-Lfu" id="4UX-vP-VkB"/>
                         <outlet property="newssharepostTV" destination="uK6-7r-eXb" id="cfu-Co-EUL"/>
                     </connections>
                 </viewController>

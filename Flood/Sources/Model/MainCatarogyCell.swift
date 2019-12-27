@@ -11,5 +11,5 @@ import UIKit
 class MainCatarogyCell: UICollectionViewCell {
     
     @IBOutlet var maincatarogy: UIButton?
-    
+
 }

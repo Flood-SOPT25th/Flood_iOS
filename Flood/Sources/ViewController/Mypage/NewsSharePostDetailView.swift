@@ -38,6 +38,8 @@ class NewsSharePostDetailView : UIViewController {
 
     }
     
+    
+    
     // MARK: -Helpers
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,7 +77,7 @@ extension NewsSharePostDetailView: UITableViewDelegate {
                   // 이제 이건 순수 레이블의 height 값에다가 위아래 마진 값 16을 더했고
                   // 여분으로 4포인트 정도를 더 줘서 텍스트가 레이블안에서 안짤리도록 한 것!
                   // 저 총합의 값들이 한 셀의 높이가 되는겁니당
-                  return estimatedFrame.height + 69 + 4
+                  return estimatedFrame.height + 98 + 4
                 }
             }
             return 0
@@ -88,7 +90,7 @@ extension NewsSharePostDetailView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return comments.count
     }
     /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -179,7 +181,7 @@ extension NewsSharePostDetailView  {
     
     //내려갈땐 원래 값으로 다시ㅋ
     self.commentViewBottomConstraint.constant = 0
-    //self.tableView.contentInset = .zero
+    self.newssharepostTV.contentInset = .zero
     self.view.setNeedsLayout()
     UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
       self.view.layoutIfNeeded()

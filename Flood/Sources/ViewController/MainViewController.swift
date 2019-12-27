@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         postTV.dataSource = self
         //tableviewcell 왼쪽라인 채우기
         postTV.separatorInset.left = 0
-        
+
         // 네비게이션 바 배경색 설정 및 경계선 없애는 설정
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -47,8 +47,12 @@ class MainViewController: UIViewController {
     }
     
     // MARK: -Helpers
-    
-    
+    /*
+    @IBAction func BookmarkAction(_ sender: UIButton) {
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        view.modalPresentationStyle = .fullScreen
+        self.present(view, animated: true, completion: nil)
+    }*/
 }
 
 // MARK: - UICollectionViewDelegate

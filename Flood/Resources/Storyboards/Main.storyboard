@@ -7,6 +7,14 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansCJKkr-Bold.otf">
+            <string>NotoSansCJKkr-Bold</string>
+        </array>
+        <array key="gilroy-extrabold.otf">
+            <string>Gilroy-ExtraBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="hmD-Lf-zLu">
@@ -44,7 +52,8 @@
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt2-Th-7iv">
                                                                     <rect key="frame" x="0.0" y="10" width="82" height="37"/>
-                                                                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="14"/>
                                                                     <state key="normal" title="Button">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
@@ -67,20 +76,20 @@
                                                 <rect key="frame" x="0.0" y="54" width="375" height="107"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="day month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euX-CV-UDV">
-                                                        <rect key="frame" x="27" y="31" width="77" height="20"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <rect key="frame" x="26.999999999999993" y="21" width="80.333333333333314" height="19.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hv-Ov-Pvn">
-                                                        <rect key="frame" x="196" y="69" width="44" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <rect key="frame" x="214.33333333333334" y="63.333333333333321" width="48.333333333333343" height="29.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-KZ-BEa">
-                                                        <rect key="frame" x="24" y="54" width="161" height="43"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                        <rect key="frame" x="24" y="43.666666666666671" width="179.33333333333334" height="53.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -167,14 +176,14 @@
                                                                         <constraint firstItem="JUB-Yt-5ki" firstAttribute="leading" secondItem="DiO-ZT-EQw" secondAttribute="trailing" constant="8" id="y3i-RQ-boN"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zow-dx-Iqc">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zow-dx-Iqc">
                                                                     <rect key="frame" x="24" y="44" width="240" height="68"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="68" id="Eo8-Nv-qOH"/>
                                                                         <constraint firstAttribute="width" constant="240" id="vQs-5R-Old"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="32"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-4S-Hm4">
@@ -182,8 +191,8 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="150" id="XaZ-p4-uii"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <nil key="textColor"/>
+                                                                    <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="12"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOy-Dq-93f">
@@ -633,7 +642,7 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="301"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <connections>
-                                                                                <segue destination="MWl-sm-us1" kind="show" id="6Gc-RZ-dfj"/>
+                                                                                <segue destination="MWl-sm-us1" kind="show" id="af3-Mo-33b"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
@@ -977,7 +986,7 @@
                                                                             </constraints>
                                                                             <state key="normal" title="Button"/>
                                                                             <connections>
-                                                                                <action selector="postBookmark:" destination="18T-Sb-39W" eventType="touchUpInside" id="dWZ-lT-tKJ"/>
+                                                                                <action selector="postBookmark:" destination="18T-Sb-39W" eventType="touchUpInside" id="U1u-mU-YL0"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
@@ -1414,25 +1423,15 @@
                                     <constraint firstItem="J0K-Oa-Yum" firstAttribute="leading" secondItem="yQd-9r-JLS" secondAttribute="trailing" constant="10" id="vaT-Hz-yyH"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O40-c7-EMO">
-                                <rect key="frame" x="0.0" y="729" width="375" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="6uc-9J-xgq"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="O40-c7-EMO" firstAttribute="leading" secondItem="sVf-hK-Koi" secondAttribute="leading" id="7Ac-ap-trK"/>
                             <constraint firstItem="Ort-ZY-fku" firstAttribute="trailing" secondItem="Fdf-Lx-Av9" secondAttribute="trailing" id="9se-S8-Z6O"/>
-                            <constraint firstItem="Fdf-Lx-Av9" firstAttribute="bottom" secondItem="Ort-ZY-fku" secondAttribute="bottom" id="Gwg-t4-Lfu"/>
-                            <constraint firstItem="Fdf-Lx-Av9" firstAttribute="bottom" secondItem="uK6-7r-eXb" secondAttribute="bottom" constant="58" id="Jo0-RH-ihc"/>
                             <constraint firstItem="Ort-ZY-fku" firstAttribute="leading" secondItem="Fdf-Lx-Av9" secondAttribute="leading" id="XJT-Je-IDj"/>
+                            <constraint firstItem="Fdf-Lx-Av9" firstAttribute="bottom" secondItem="uK6-7r-eXb" secondAttribute="bottom" constant="58" id="Xc6-f5-kop"/>
                             <constraint firstAttribute="trailing" secondItem="uK6-7r-eXb" secondAttribute="trailing" id="gVe-WL-Hvk"/>
-                            <constraint firstAttribute="trailing" secondItem="O40-c7-EMO" secondAttribute="trailing" id="iEh-6S-Hco"/>
                             <constraint firstItem="uK6-7r-eXb" firstAttribute="top" secondItem="sVf-hK-Koi" secondAttribute="top" id="r3r-lz-vSe"/>
-                            <constraint firstItem="O40-c7-EMO" firstAttribute="top" secondItem="Ort-ZY-fku" secondAttribute="bottom" id="yO2-Kt-Nbm"/>
+                            <constraint firstItem="Fdf-Lx-Av9" firstAttribute="bottom" secondItem="Ort-ZY-fku" secondAttribute="bottom" id="w76-1d-JOY"/>
                             <constraint firstItem="uK6-7r-eXb" firstAttribute="leading" secondItem="sVf-hK-Koi" secondAttribute="leading" id="zrr-kx-czi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fdf-Lx-Av9"/>
@@ -1451,7 +1450,7 @@
                     <connections>
                         <outlet property="commentBtn" destination="J0K-Oa-Yum" id="RIW-g8-v7Q"/>
                         <outlet property="commentTextField" destination="yQd-9r-JLS" id="coM-PR-Yif"/>
-                        <outlet property="commentViewBottomConstraint" destination="Gwg-t4-Lfu" id="4UX-vP-VkB"/>
+                        <outlet property="commentViewBottomConstraint" destination="w76-1d-JOY" id="t3y-qE-alD"/>
                         <outlet property="newssharepostTV" destination="uK6-7r-eXb" id="cfu-Co-EUL"/>
                     </connections>
                 </viewController>

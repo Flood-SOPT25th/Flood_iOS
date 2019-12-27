@@ -19,6 +19,7 @@ class PostCell: UITableViewCell {
     //@IBOutlet weak var postBookmark: UIButton!
     @IBOutlet weak var postfilpCount: UILabel!
     
+    
     var delegate = UIViewController()
     
  

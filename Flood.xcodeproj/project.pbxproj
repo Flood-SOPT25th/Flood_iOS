@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40501875B830FC464BB6DFB8 /* Pods_Flood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFDF396692AD089ED72D924 /* Pods_Flood.framework */; };
+		5E2B633523B64160002B4F13 /* PostImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2B633423B64160002B4F13 /* PostImageCVC.swift */; };
 		5E64E08C23B309FA00A54B9A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64E08B23B309FA00A54B9A /* UIColor+extension.swift */; };
 		5E64E08E23B3265500A54B9A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64E08D23B3265500A54B9A /* UITextView+Extension.swift */; };
 		5E64E09223B4A3D500A54B9A /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E64E09123B4A3D500A54B9A /* UINavigationController+Extensions.swift */; };
@@ -24,7 +25,7 @@
 		5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2093B23B03C6200540877 /* InitViewController.swift */; };
 		5ED2093E23B03C6E00540877 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2093D23B03C6E00540877 /* MainViewController.swift */; };
 		5ED2094023B03C7700540877 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2093F23B03C7700540877 /* BookmarkViewController.swift */; };
-		5ED2094223B03C8300540877 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094123B03C8300540877 /* AddArticleViewController.swift */; };
+		5ED2094223B03C8300540877 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094123B03C8300540877 /* PostViewController.swift */; };
 		5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094323B03C9400540877 /* AlarmViewController.swift */; };
 		5ED2094623B03C9F00540877 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094523B03C9F00540877 /* MypageViewController.swift */; };
 		5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094823B05A1500540877 /* MainTabBarController.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		3EFDF396692AD089ED72D924 /* Pods_Flood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5170974DAA81C99DE6E088BE /* Pods-Flood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flood.release.xcconfig"; path = "Target Support Files/Pods-Flood/Pods-Flood.release.xcconfig"; sourceTree = "<group>"; };
+		5E2B633423B64160002B4F13 /* PostImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCVC.swift; sourceTree = "<group>"; };
 		5E64E08B23B309FA00A54B9A /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		5E64E08D23B3265500A54B9A /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		5E64E09123B4A3D500A54B9A /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		5ED2093B23B03C6200540877 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
 		5ED2093D23B03C6E00540877 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5ED2093F23B03C7700540877 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
-		5ED2094123B03C8300540877 /* AddArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
+		5ED2094123B03C8300540877 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		5ED2094323B03C9400540877 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		5ED2094523B03C9F00540877 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		5ED2094823B05A1500540877 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 				3EFDF396692AD089ED72D924 /* Pods_Flood.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E2B633323B64132002B4F13 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				5E2B633423B64160002B4F13 /* PostImageCVC.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		5EA3E04123AF9A0100CAB6F2 = {
@@ -213,6 +223,7 @@
 		5EA3E06523B031EA00CAB6F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E2B633323B64132002B4F13 /* Post */,
 				5ED2094C23B0D1A800540877 /* Model.swift */,
 				A19D25B123B4C28A00B929A6 /* ThisWeekCell.swift */,
 				A19D25B323B4C40100B929A6 /* MainCatarogyCell.swift */,
@@ -236,7 +247,7 @@
 		5EA3E06723B031F500CAB6F2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5ED2095B23B216EA00540877 /* AddArticle */,
+				5ED2095B23B216EA00540877 /* Post */,
 				5ED2095023B0DF0A00540877 /* Mypage */,
 				5ED2093B23B03C6200540877 /* InitViewController.swift */,
 				5ED2093D23B03C6E00540877 /* MainViewController.swift */,
@@ -273,12 +284,12 @@
 			path = Mypage;
 			sourceTree = "<group>";
 		};
-		5ED2095B23B216EA00540877 /* AddArticle */ = {
+		5ED2095B23B216EA00540877 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				5ED2094123B03C8300540877 /* AddArticleViewController.swift */,
+				5ED2094123B03C8300540877 /* PostViewController.swift */,
 			);
-			path = AddArticle;
+			path = Post;
 			sourceTree = "<group>";
 		};
 		5ED2095C23B22C8200540877 /* Fonts */ = {
@@ -461,7 +472,7 @@
 				A164663823B5B78000F18A87 /* NewsSharePostDetailView.swift in Sources */,
 				5ED2094D23B0D1A800540877 /* Model.swift in Sources */,
 				A19D25B223B4C28A00B929A6 /* ThisWeekCell.swift in Sources */,
-				5ED2094223B03C8300540877 /* AddArticleViewController.swift in Sources */,
+				5ED2094223B03C8300540877 /* PostViewController.swift in Sources */,
 				A19D25B823B4D08A00B929A6 /* PicturePostCell.swift in Sources */,
 				5ED2097823B26E6000540877 /* CGFloat+extension.swift in Sources */,
 				5ED2095423B185F200540877 /* EditFlipViewController.swift in Sources */,
@@ -469,6 +480,7 @@
 				5ED2094623B03C9F00540877 /* MypageViewController.swift in Sources */,
 				5E64E08C23B309FA00A54B9A /* UIColor+extension.swift in Sources */,
 				A164663A23B5B7BE00F18A87 /* CommentCell.swift in Sources */,
+				5E2B633523B64160002B4F13 /* PostImageCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

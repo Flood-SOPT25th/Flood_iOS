@@ -16,5 +16,10 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var commentPost: UILabel!
     @IBOutlet weak var commentReply: UILabel!
     
+    override func awakeFromNib() {
+      super.awakeFromNib()
+      
+    }
+    
 }
 

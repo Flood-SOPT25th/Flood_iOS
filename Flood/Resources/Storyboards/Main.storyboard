@@ -1136,11 +1136,11 @@
             <objects>
                 <viewController id="MWl-sm-us1" customClass="NewsSharePostDetailView" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sVf-hK-Koi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-7r-eXb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1420"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsSharePostCell" rowHeight="546" id="nbE-xb-zDh" customClass="NewsSharePostCell" customModule="Flood" customModuleProvider="target">
@@ -1342,7 +1342,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kza-fl-ZM6" secondAttribute="trailing" constant="270.67000000000002" id="AaU-06-efC"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kza-fl-ZM6" secondAttribute="trailing" constant="270" id="AaU-06-efC"/>
                                                         <constraint firstAttribute="bottom" secondItem="9Fu-Oq-dnX" secondAttribute="bottom" constant="27" id="B5P-l9-t4e"/>
                                                         <constraint firstAttribute="width" constant="375" id="Ejf-l0-xph"/>
                                                         <constraint firstAttribute="height" constant="125" id="Lbz-sU-X7z"/>
@@ -1375,7 +1375,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-ZY-fku">
-                                <rect key="frame" x="0.0" y="1359" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="671" width="375" height="58"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-Oa-Yum">
                                         <rect key="frame" x="317" y="9" width="40" height="40"/>
@@ -1404,6 +1404,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="7It-jA-ngc"/>
                                     <constraint firstItem="yQd-9r-JLS" firstAttribute="top" secondItem="Ort-ZY-fku" secondAttribute="top" constant="9" id="KEP-E7-Xbg"/>
                                     <constraint firstAttribute="bottom" secondItem="J0K-Oa-Yum" secondAttribute="bottom" constant="9" id="N2l-8f-0ws"/>
                                     <constraint firstItem="J0K-Oa-Yum" firstAttribute="top" secondItem="Ort-ZY-fku" secondAttribute="top" constant="9" id="d9W-lr-Ien"/>
@@ -1413,15 +1414,25 @@
                                     <constraint firstItem="J0K-Oa-Yum" firstAttribute="leading" secondItem="yQd-9r-JLS" secondAttribute="trailing" constant="10" id="vaT-Hz-yyH"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O40-c7-EMO">
+                                <rect key="frame" x="0.0" y="729" width="375" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6uc-9J-xgq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="O40-c7-EMO" firstAttribute="leading" secondItem="sVf-hK-Koi" secondAttribute="leading" id="7Ac-ap-trK"/>
                             <constraint firstItem="Ort-ZY-fku" firstAttribute="trailing" secondItem="Fdf-Lx-Av9" secondAttribute="trailing" id="9se-S8-Z6O"/>
                             <constraint firstItem="Fdf-Lx-Av9" firstAttribute="bottom" secondItem="Ort-ZY-fku" secondAttribute="bottom" id="Gwg-t4-Lfu"/>
-                            <constraint firstAttribute="bottom" secondItem="uK6-7r-eXb" secondAttribute="bottom" constant="80" id="Jo0-RH-ihc"/>
+                            <constraint firstItem="Fdf-Lx-Av9" firstAttribute="bottom" secondItem="uK6-7r-eXb" secondAttribute="bottom" constant="58" id="Jo0-RH-ihc"/>
                             <constraint firstItem="Ort-ZY-fku" firstAttribute="leading" secondItem="Fdf-Lx-Av9" secondAttribute="leading" id="XJT-Je-IDj"/>
                             <constraint firstAttribute="trailing" secondItem="uK6-7r-eXb" secondAttribute="trailing" id="gVe-WL-Hvk"/>
+                            <constraint firstAttribute="trailing" secondItem="O40-c7-EMO" secondAttribute="trailing" id="iEh-6S-Hco"/>
                             <constraint firstItem="uK6-7r-eXb" firstAttribute="top" secondItem="sVf-hK-Koi" secondAttribute="top" id="r3r-lz-vSe"/>
+                            <constraint firstItem="O40-c7-EMO" firstAttribute="top" secondItem="Ort-ZY-fku" secondAttribute="bottom" id="yO2-Kt-Nbm"/>
                             <constraint firstItem="uK6-7r-eXb" firstAttribute="leading" secondItem="sVf-hK-Koi" secondAttribute="leading" id="zrr-kx-czi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fdf-Lx-Av9"/>
@@ -1436,7 +1447,7 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="1500"/>
+                    <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="commentBtn" destination="J0K-Oa-Yum" id="RIW-g8-v7Q"/>
                         <outlet property="commentTextField" destination="yQd-9r-JLS" id="coM-PR-Yif"/>

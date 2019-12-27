@@ -1128,16 +1128,16 @@
             </objects>
             <point key="canvasLocation" x="390" y="141"/>
         </scene>
-        <!--View Controller-->
+        <!--News Share Post Detail View-->
         <scene sceneID="50F-7d-wq8">
             <objects>
-                <viewController id="MWl-sm-us1" sceneMemberID="viewController">
+                <viewController id="MWl-sm-us1" customClass="NewsSharePostDetailView" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sVf-hK-Koi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-7r-eXb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="920"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1420"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsSharePostCell" rowHeight="546" id="nbE-xb-zDh" customClass="NewsSharePostCell" customModule="Flood" customModuleProvider="target">
@@ -1288,13 +1288,14 @@
                                             <outlet property="newsPost" destination="gYA-9Q-KiP" id="ZaE-Ik-qfP"/>
                                             <outlet property="newsTitle" destination="oS3-pc-fKA" id="6yg-aD-XeR"/>
                                             <outlet property="newsflipCount" destination="9Lh-pv-J9l" id="S3u-pl-H6Z"/>
+                                            <outlet property="newsshareCatarogy" destination="lsB-wP-yha" id="1xR-QL-Wqf"/>
                                             <outlet property="newsshareName" destination="phh-1R-Y4d" id="Ncg-7t-d3h"/>
                                             <outlet property="newssharePost" destination="czF-3J-RTF" id="xhc-Xl-Uqa"/>
                                             <outlet property="newsshareTime" destination="yrm-pH-Cm5" id="imp-w4-1l8"/>
                                             <outlet property="newsshareprofileImg" destination="KEl-LX-jG1" id="ezY-jz-8jo"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="125" id="8k7-TD-I8q" customClass="NewsSharePostCell" customModule="Flood" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="125" id="8k7-TD-I8q" customClass="CommentCell" customModule="Flood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="574" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8k7-TD-I8q" id="GEX-fU-lTp">
@@ -1361,16 +1362,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="newsshareName" destination="3eL-kv-iDn" id="59w-J0-Zya"/>
-                                            <outlet property="newssharePost" destination="kza-fl-ZM6" id="Eyr-q2-CgE"/>
-                                            <outlet property="newsshareTime" destination="s50-3D-ixH" id="jbm-jV-cz5"/>
-                                            <outlet property="newsshareprofileImg" destination="mzX-e3-1kc" id="cl4-Jf-biz"/>
+                                            <outlet property="commentName" destination="3eL-kv-iDn" id="Ocz-TG-2bp"/>
+                                            <outlet property="commentPost" destination="kza-fl-ZM6" id="7qE-s3-fhF"/>
+                                            <outlet property="commentReply" destination="9Fu-Oq-dnX" id="oro-Jz-Xdh"/>
+                                            <outlet property="commentTime" destination="s50-3D-ixH" id="A1g-2C-iOL"/>
+                                            <outlet property="commentprofileImg" destination="mzX-e3-1kc" id="saw-1g-JEJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-ZY-fku">
-                                <rect key="frame" x="0.0" y="859" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="1359" width="375" height="58"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-Oa-Yum">
                                         <rect key="frame" x="317" y="9" width="40" height="40"/>
@@ -1427,7 +1429,10 @@
                             <barButtonItem style="plain" systemItem="play" id="zxc-aW-3YE"/>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1500"/>
+                    <connections>
+                        <outlet property="newssharepostTV" destination="uK6-7r-eXb" id="cfu-Co-EUL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5v-7x-ViQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

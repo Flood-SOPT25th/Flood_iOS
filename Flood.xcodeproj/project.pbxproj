@@ -48,6 +48,11 @@
 		5ED2097423B2500000540877 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2097323B2500000540877 /* CALayer+Extensions.swift */; };
 		5ED2097623B266CB00540877 /* UIViewcontroller+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2097523B266CB00540877 /* UIViewcontroller+extensions.swift */; };
 		5ED2097823B26E6000540877 /* CGFloat+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2097723B26E6000540877 /* CGFloat+extension.swift */; };
+		A19D25B223B4C28A00B929A6 /* ThisWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D25B123B4C28A00B929A6 /* ThisWeekCell.swift */; };
+		A19D25B423B4C40100B929A6 /* MainCatarogyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D25B323B4C40100B929A6 /* MainCatarogyCell.swift */; };
+		A19D25B623B4C9B800B929A6 /* NewsSharePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D25B523B4C9B800B929A6 /* NewsSharePostCell.swift */; };
+		A19D25B823B4D08A00B929A6 /* PicturePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D25B723B4D08A00B929A6 /* PicturePostCell.swift */; };
+		A19D25BA23B4D0A400B929A6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D25B923B4D0A400B929A6 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +100,11 @@
 		5ED2097323B2500000540877 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 		5ED2097523B266CB00540877 /* UIViewcontroller+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+extensions.swift"; sourceTree = "<group>"; };
 		5ED2097723B26E6000540877 /* CGFloat+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+extension.swift"; sourceTree = "<group>"; };
+		A19D25B123B4C28A00B929A6 /* ThisWeekCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisWeekCell.swift; sourceTree = "<group>"; };
+		A19D25B323B4C40100B929A6 /* MainCatarogyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatarogyCell.swift; sourceTree = "<group>"; };
+		A19D25B523B4C9B800B929A6 /* NewsSharePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSharePostCell.swift; sourceTree = "<group>"; };
+		A19D25B723B4D08A00B929A6 /* PicturePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturePostCell.swift; sourceTree = "<group>"; };
+		A19D25B923B4D0A400B929A6 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B350A24B804B2C72EA66E070 /* Pods-Flood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flood.debug.xcconfig"; path = "Target Support Files/Pods-Flood/Pods-Flood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,7 +190,6 @@
 		5EA3E06423B031E000CAB6F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5ED2094E23B0D1B200540877 /* UIView+Exension.swift */,
 				5ED2097323B2500000540877 /* CALayer+Extensions.swift */,
 				5ED2097523B266CB00540877 /* UIViewcontroller+extensions.swift */,
 				5ED2097723B26E6000540877 /* CGFloat+extension.swift */,
@@ -195,6 +204,11 @@
 			isa = PBXGroup;
 			children = (
 				5ED2094C23B0D1A800540877 /* Model.swift */,
+				A19D25B123B4C28A00B929A6 /* ThisWeekCell.swift */,
+				A19D25B323B4C40100B929A6 /* MainCatarogyCell.swift */,
+				A19D25B523B4C9B800B929A6 /* NewsSharePostCell.swift */,
+				A19D25B723B4D08A00B929A6 /* PicturePostCell.swift */,
+				A19D25B923B4D0A400B929A6 /* PostCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +241,7 @@
 				5EA3E05823AF9A0700CAB6F2 /* LaunchScreen.storyboard */,
 				5EA3E05323AF9A0200CAB6F2 /* Init.storyboard */,
 				5ED2093323B033AF00540877 /* Main.storyboard */,
+				5ED2094E23B0D1B200540877 /* UIView+Exension.swift */,
 				5ED2093123B0338A00540877 /* Bookmark.storyboard */,
 				5ED2093923B0368600540877 /* Post.storyboard */,
 				5ED2093723B035B900540877 /* Alarm.storyboard */,
@@ -412,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19D25B423B4C40100B929A6 /* MainCatarogyCell.swift in Sources */,
 				5EA3E04E23AF9A0200CAB6F2 /* AppDelegate.swift in Sources */,
 				5EA3E05023AF9A0200CAB6F2 /* SceneDelegate.swift in Sources */,
 				5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */,
@@ -419,15 +435,19 @@
 				5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */,
 				5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */,
 				5ED2093E23B03C6E00540877 /* MainViewController.swift in Sources */,
+				A19D25B623B4C9B800B929A6 /* NewsSharePostCell.swift in Sources */,
 				5ED2094023B03C7700540877 /* BookmarkViewController.swift in Sources */,
 				5ED2097623B266CB00540877 /* UIViewcontroller+extensions.swift in Sources */,
 				5ED2094B23B0D1A000540877 /* Service.swift in Sources */,
 				5ED2095223B0DF4200540877 /* MypageSettingViewController.swift in Sources */,
 				5ED2095A23B1B29F00540877 /* MypageFlipCollectionViewCell.swift in Sources */,
 				5ED2097423B2500000540877 /* CALayer+Extensions.swift in Sources */,
+				A19D25BA23B4D0A400B929A6 /* PostCell.swift in Sources */,
 				5E64E09223B4A3D500A54B9A /* UINavigationController+Extensions.swift in Sources */,
 				5ED2094D23B0D1A800540877 /* Model.swift in Sources */,
+				A19D25B223B4C28A00B929A6 /* ThisWeekCell.swift in Sources */,
 				5ED2094223B03C8300540877 /* AddArticleViewController.swift in Sources */,
+				A19D25B823B4D08A00B929A6 /* PicturePostCell.swift in Sources */,
 				5ED2097823B26E6000540877 /* CGFloat+extension.swift in Sources */,
 				5ED2095423B185F200540877 /* EditFlipViewController.swift in Sources */,
 				5ED2094F23B0D1B200540877 /* UIView+Exension.swift in Sources */,

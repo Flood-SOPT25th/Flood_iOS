@@ -513,13 +513,13 @@
                                                 <rect key="frame" x="0.0" y="1391" width="375" height="84"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaM-uT-aYN">
-                                                        <rect key="frame" x="24.000000000000007" y="38" width="84.666666666666686" height="43"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                        <rect key="frame" x="24.000000000000007" y="27.666666666666746" width="97.666666666666686" height="53.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9qX-0p-Fo2">
-                                                        <rect key="frame" x="116.66666666666669" y="44" width="32" height="32"/>
+                                                        <rect key="frame" x="129.66666666666666" y="44" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="32" id="snu-hG-qtq"/>
                                                             <constraint firstAttribute="height" constant="32" id="yQX-3c-boe"/>

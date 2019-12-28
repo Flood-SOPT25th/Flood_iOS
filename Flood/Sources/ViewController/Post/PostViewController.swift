@@ -20,6 +20,8 @@ class PostViewController: UIViewController {
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var imagePickerBtn: UIButton!
     @IBOutlet weak var postImageCV: UICollectionView!
+    @IBOutlet weak var attachViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     // MARK: - Variables and Properties
     var keycnt:Bool = false
@@ -36,6 +38,10 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = UserDefaults(suiteName: "group.com.flood.share")
+        defaults?.set("sss", forKey: "share")
+        defaults?.synchronize()
+
         backBtn.addTarget(self, action: #selector(cancelPosting), for: .touchUpInside)
         
         postSetting()
@@ -100,21 +106,34 @@ class PostViewController: UIViewController {
     }
     
     @objc private func keyboardWillShow(_ notification: Notification)  {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keybaordRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keybaordRectangle.height
-            let tabbarHeight = self.tabBarController?.tabBar.frame.size.height
-            if keycnt == false {
-                attachmentView.frame.origin.y -= keyboardHeight - tabbarHeight!
-                keycnt = true
-            }
+        if let info = notification.userInfo {
+            let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+            let curve = info[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+            let keyboardFrame = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            let keyboardHeight = keyboardFrame.height
+            let tabbarHeight = self.tabBarController?.tabBar.frame.size.height ?? 0
+            
+            attachViewBottomConstraint.constant = keyboardHeight - tabbarHeight
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight - tabbarHeight, right: 0)
+            
+            self.view.setNeedsLayout()
+            UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
+                self.view.layoutIfNeeded()
+            })
         }
     }
     
     @objc private func keyboardWillHide(_ notification: Notification) {
-        if keycnt == true {
-            attachmentView.frame.origin.y = attachmentViewYPosition
-            keycnt = false
+        if let info = notification.userInfo {
+            let duration = info[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+            let curve = info[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+            
+            attachViewBottomConstraint.constant = 0
+            scrollView.contentInset = .zero
+            self.view.setNeedsLayout()
+            UIView.animate(withDuration: duration, delay: 0, options: .init(rawValue: curve), animations: {
+                self.view.layoutIfNeeded()
+            })
         }
     }
 }

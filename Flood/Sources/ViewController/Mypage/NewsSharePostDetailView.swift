@@ -154,8 +154,7 @@ extension NewsSharePostDetailView  {
     let duration = notificatoin.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
     let curve = notificatoin.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
     let keyboardSize = (notificatoin.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-    let height = keyboardSize.height - view.safeAreaInsets.bottom
-    
+    let height = keyboardSize.height - (self.tabBarController?.tabBar.frame.size.height ?? 0.0)
     
     //하단 채팅 보내는 뷰의 bottom Constraint이야!
     //위에서 계산한 높이값만큼 contant값을 넣어 주는 것.. 이건 당연 알겠지

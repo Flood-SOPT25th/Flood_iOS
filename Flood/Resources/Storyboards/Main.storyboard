@@ -76,19 +76,19 @@
                                                 <rect key="frame" x="0.0" y="54" width="375" height="107"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="day month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euX-CV-UDV">
-                                                        <rect key="frame" x="26.999999999999993" y="33.333333333333329" width="76.333333333333314" height="18.666666666666671"/>
+                                                        <rect key="frame" x="26.999999999999993" y="22" width="80.333333333333314" height="18.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Gilroy-ExtraBold" family="Gilroy" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hv-Ov-Pvn">
-                                                        <rect key="frame" x="200.33333333333334" y="69.666666666666671" width="44" height="23.333333333333329"/>
+                                                        <rect key="frame" x="214.33333333333334" y="63.333333333333321" width="48.333333333333343" height="29.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-KZ-BEa">
-                                                        <rect key="frame" x="24" y="55" width="165.33333333333334" height="42"/>
+                                                        <rect key="frame" x="24" y="43.666666666666671" width="179.33333333333334" height="53.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="36"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -162,6 +162,8 @@
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
                                                                         <constraint firstItem="1Cf-1K-hdW" firstAttribute="leading" secondItem="JUB-Yt-5ki" secondAttribute="trailing" constant="8" id="09h-wS-rFq"/>
+                                                                        <constraint firstItem="DiO-ZT-EQw" firstAttribute="leading" secondItem="zVE-A6-kIc" secondAttribute="leading" constant="24" id="6ft-6D-pIf"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="DjK-3M-9kH" secondAttribute="bottom" constant="28" id="AN1-n7-TJs"/>
                                                                         <constraint firstItem="DiO-ZT-EQw" firstAttribute="leading" secondItem="DjK-3M-9kH" secondAttribute="leading" id="Asa-5I-RYy"/>
                                                                         <constraint firstAttribute="height" constant="102" id="Bg3-wt-DGb"/>
                                                                         <constraint firstItem="DjK-3M-9kH" firstAttribute="top" secondItem="DiO-ZT-EQw" secondAttribute="bottom" constant="10" id="CHH-3Q-Z3M"/>
@@ -176,7 +178,7 @@
                                                                         <constraint firstItem="JUB-Yt-5ki" firstAttribute="leading" secondItem="DiO-ZT-EQw" secondAttribute="trailing" constant="8" id="y3i-RQ-boN"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zow-dx-Iqc">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zow-dx-Iqc">
                                                                     <rect key="frame" x="24" y="44" width="240" height="68"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="68" id="Eo8-Nv-qOH"/>
@@ -187,7 +189,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-4S-Hm4">
-                                                                    <rect key="frame" x="23" y="261" width="150" height="14"/>
+                                                                    <rect key="frame" x="23" y="260" width="150" height="15"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="150" id="XaZ-p4-uii"/>
                                                                     </constraints>
@@ -241,7 +243,7 @@
                                                             <outlet property="thisweekprofileImg" destination="DiO-ZT-EQw" id="N0h-vl-MaI"/>
                                                         </connections>
                                                     </tableViewCell>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThisWeekCell2" rowHeight="410" id="F2g-7j-SdY" customClass="ThisWeekCell" customModule="Flood" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThisWeekCell2" rowHeight="410" id="F2g-7j-SdY" customClass="ThisWeekCell2" customModule="Flood" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="438" width="375" height="410"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F2g-7j-SdY" id="dDC-an-CI9">
@@ -293,7 +295,9 @@
                                                                     <constraints>
                                                                         <constraint firstItem="Dk6-je-aDB" firstAttribute="top" secondItem="ReG-O9-enf" secondAttribute="bottom" constant="10" id="0dh-w3-Umc"/>
                                                                         <constraint firstItem="Dk6-je-aDB" firstAttribute="top" secondItem="eDM-Hs-S0Y" secondAttribute="bottom" constant="10" id="6Mx-Yf-NcF"/>
+                                                                        <constraint firstItem="ReG-O9-enf" firstAttribute="leading" secondItem="xj8-rU-fkQ" secondAttribute="leading" constant="24" id="KJW-Rz-3tt"/>
                                                                         <constraint firstItem="ReG-O9-enf" firstAttribute="top" secondItem="eDM-Hs-S0Y" secondAttribute="top" id="KjV-wV-dV9"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Dk6-je-aDB" secondAttribute="bottom" constant="28" id="MVq-Qu-p2M"/>
                                                                         <constraint firstItem="ReG-O9-enf" firstAttribute="leading" secondItem="Dk6-je-aDB" secondAttribute="leading" id="SCB-kP-Mhm"/>
                                                                         <constraint firstItem="ReG-O9-enf" firstAttribute="top" secondItem="xj8-rU-fkQ" secondAttribute="top" constant="26" id="Ufo-nh-UmA"/>
                                                                         <constraint firstItem="Dk6-je-aDB" firstAttribute="leading" secondItem="xj8-rU-fkQ" secondAttribute="leading" constant="24" id="WgY-9b-iyr"/>
@@ -360,18 +364,18 @@
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
-                                                            <outlet property="thisweekBookmark" destination="VxK-v6-cYK" id="9o5-pK-8iF"/>
-                                                            <outlet property="thisweekImg" destination="Pfj-Ze-t55" id="svK-Ql-VFf"/>
-                                                            <outlet property="thisweekMore" destination="44c-3e-uvi" id="xVY-Ec-FKE"/>
-                                                            <outlet property="thisweekName" destination="eDM-Hs-S0Y" id="fmi-gr-9IE"/>
-                                                            <outlet property="thisweekPost" destination="Dk6-je-aDB" id="njb-s3-DS6"/>
-                                                            <outlet property="thisweekTime" destination="0kI-QF-RTq" id="lPd-4w-H0P"/>
-                                                            <outlet property="thisweekTitle" destination="itW-99-ET6" id="yS3-eO-RGN"/>
-                                                            <outlet property="thisweekflipCount" destination="AB2-r8-wSy" id="FZX-UO-Sza"/>
-                                                            <outlet property="thisweekprofileImg" destination="ReG-O9-enf" id="kCh-5i-AVB"/>
+                                                            <outlet property="thisweekBookmark2" destination="VxK-v6-cYK" id="QlM-Ie-MaO"/>
+                                                            <outlet property="thisweekImg2" destination="Pfj-Ze-t55" id="4Tr-R1-GwU"/>
+                                                            <outlet property="thisweekMore2" destination="44c-3e-uvi" id="LKm-X7-P41"/>
+                                                            <outlet property="thisweekName2" destination="eDM-Hs-S0Y" id="xkl-JB-JwX"/>
+                                                            <outlet property="thisweekPost2" destination="Dk6-je-aDB" id="Ppe-MR-PVV"/>
+                                                            <outlet property="thisweekTime2" destination="0kI-QF-RTq" id="b2n-aL-DqJ"/>
+                                                            <outlet property="thisweekTitle2" destination="itW-99-ET6" id="kXT-pk-S0h"/>
+                                                            <outlet property="thisweekflipCount2" destination="AB2-r8-wSy" id="35C-hW-Sh6"/>
+                                                            <outlet property="thisweekprofileImg2" destination="ReG-O9-enf" id="9I5-wV-cbt"/>
                                                         </connections>
                                                     </tableViewCell>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThisWeekCell3" rowHeight="410" id="t2h-pw-uAh" customClass="ThisWeekCell" customModule="Flood" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThisWeekCell3" rowHeight="410" id="t2h-pw-uAh" customClass="ThisWeekCell3" customModule="Flood" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="848" width="375" height="410"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t2h-pw-uAh" id="Wen-Nb-Vfj">
@@ -427,6 +431,8 @@
                                                                         <constraint firstItem="5WS-2K-KmD" firstAttribute="top" secondItem="RtA-u5-moO" secondAttribute="bottom" constant="10" id="8jG-Lk-rAM"/>
                                                                         <constraint firstItem="xEK-YV-KZl" firstAttribute="leading" secondItem="RI9-p0-QAb" secondAttribute="trailing" constant="8" id="BMj-dA-tKd"/>
                                                                         <constraint firstAttribute="trailing" secondItem="5WS-2K-KmD" secondAttribute="trailing" constant="24" id="GF7-bp-bmi"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="5WS-2K-KmD" secondAttribute="bottom" constant="28" id="HVa-KV-XCZ"/>
+                                                                        <constraint firstItem="RtA-u5-moO" firstAttribute="leading" secondItem="j1T-og-eLN" secondAttribute="leading" constant="24" id="UPe-8M-y3m"/>
                                                                         <constraint firstItem="RI9-p0-QAb" firstAttribute="centerY" secondItem="xEK-YV-KZl" secondAttribute="centerY" id="hNL-rp-GYG"/>
                                                                         <constraint firstAttribute="width" constant="375" id="lbn-ZF-TkZ"/>
                                                                         <constraint firstItem="RI9-p0-QAb" firstAttribute="leading" secondItem="RtA-u5-moO" secondAttribute="trailing" constant="8" id="mcY-Gm-ejH"/>
@@ -490,15 +496,15 @@
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
-                                                            <outlet property="thisweekBookmark" destination="6wx-ij-sNt" id="T4z-cI-M4O"/>
-                                                            <outlet property="thisweekImg" destination="2tv-i2-kb0" id="RJh-2y-Gvo"/>
-                                                            <outlet property="thisweekMore" destination="hHN-CX-n7c" id="lGF-aD-w6Z"/>
-                                                            <outlet property="thisweekName" destination="RI9-p0-QAb" id="XN6-ox-eMV"/>
-                                                            <outlet property="thisweekPost" destination="5WS-2K-KmD" id="s2E-YK-mPD"/>
-                                                            <outlet property="thisweekTime" destination="xEK-YV-KZl" id="DP1-PR-qG3"/>
-                                                            <outlet property="thisweekTitle" destination="dlj-VY-NUM" id="BqY-6K-6HU"/>
-                                                            <outlet property="thisweekflipCount" destination="7l1-qL-hzC" id="mtV-Ut-L1W"/>
-                                                            <outlet property="thisweekprofileImg" destination="RtA-u5-moO" id="ENE-PP-3at"/>
+                                                            <outlet property="thisweekBookmark3" destination="6wx-ij-sNt" id="Gfz-rD-O1X"/>
+                                                            <outlet property="thisweekImg3" destination="2tv-i2-kb0" id="n75-X6-8hL"/>
+                                                            <outlet property="thisweekMore3" destination="hHN-CX-n7c" id="SLh-Vu-zyb"/>
+                                                            <outlet property="thisweekName3" destination="RI9-p0-QAb" id="7Dg-0T-83k"/>
+                                                            <outlet property="thisweekPost3" destination="5WS-2K-KmD" id="3kS-YS-ySp"/>
+                                                            <outlet property="thisweekTime3" destination="xEK-YV-KZl" id="ifM-4O-zwV"/>
+                                                            <outlet property="thisweekTitle3" destination="dlj-VY-NUM" id="94g-Mw-g7O"/>
+                                                            <outlet property="thisweekflipCount3" destination="7l1-qL-hzC" id="exY-BH-Ksl"/>
+                                                            <outlet property="thisweekprofileImg3" destination="RtA-u5-moO" id="QfN-Lh-y2n"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>

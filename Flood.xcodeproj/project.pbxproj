@@ -32,7 +32,7 @@
 		5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094323B03C9400540877 /* AlarmViewController.swift */; };
 		5ED2094623B03C9F00540877 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094523B03C9F00540877 /* MypageViewController.swift */; };
 		5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094823B05A1500540877 /* MainTabBarController.swift */; };
-		5ED2094B23B0D1A000540877 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094A23B0D1A000540877 /* Service.swift */; };
+		5ED2094B23B0D1A000540877 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094A23B0D1A000540877 /* APIConstants.swift */; };
 		5ED2094D23B0D1A800540877 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094C23B0D1A800540877 /* Model.swift */; };
 		5ED2094F23B0D1B200540877 /* UIView+Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2094E23B0D1B200540877 /* UIView+Exension.swift */; };
 		5ED2095223B0DF4200540877 /* MypageSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2095123B0DF4200540877 /* MypageSettingViewController.swift */; };
@@ -121,7 +121,7 @@
 		5ED2094323B03C9400540877 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		5ED2094523B03C9F00540877 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		5ED2094823B05A1500540877 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		5ED2094A23B0D1A000540877 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5ED2094A23B0D1A000540877 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		5ED2094C23B0D1A800540877 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5ED2094E23B0D1B200540877 /* UIView+Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Exension.swift"; sourceTree = "<group>"; };
 		5ED2095123B0DF4200540877 /* MypageSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageSettingViewController.swift; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 		5EA3E06623B031EE00CAB6F2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				5ED2094A23B0D1A000540877 /* Service.swift */,
+				5ED2094A23B0D1A000540877 /* APIConstants.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -570,7 +570,7 @@
 				5ED2094023B03C7700540877 /* BookmarkViewController.swift in Sources */,
 				5ED2097623B266CB00540877 /* UIViewcontroller+extensions.swift in Sources */,
 				A164663C23B5C18300F18A87 /* Comment.swift in Sources */,
-				5ED2094B23B0D1A000540877 /* Service.swift in Sources */,
+				5ED2094B23B0D1A000540877 /* APIConstants.swift in Sources */,
 				A13763C623B74344001E7EB8 /* ThisWeekCell3.swift in Sources */,
 				A164663E23B5C4F500F18A87 /* UIButton+Extensions.swift in Sources */,
 				5ED2095223B0DF4200540877 /* MypageSettingViewController.swift in Sources */,

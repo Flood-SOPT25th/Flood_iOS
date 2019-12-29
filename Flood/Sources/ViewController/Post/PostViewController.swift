@@ -25,8 +25,6 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var postImageCV: UICollectionView!
     
-    @IBOutlet weak var testIMG: UIImageView!
-    @IBOutlet weak var testBtn: UIButton!
     
     // MARK: - Variables and Properties
     var attachmentViewYPosition:CGFloat = 0
@@ -56,7 +54,6 @@ class PostViewController: UIViewController {
         // button funtion
         backBtn.addTarget(self, action: #selector(cancelPosting), for: .touchUpInside)
         imagePickerBtn.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
-        testBtn.addTarget(self, action: #selector(deleteImg), for: .touchUpInside)
         categoryBtn.addTarget(self, action: #selector(category), for: .touchUpInside)
         
         // delegate 주입
@@ -80,11 +77,6 @@ class PostViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         
         // 삭제버튼 감추기
-        self.testBtn.isHidden = true
-        
-        // 다른화면에서 돌아올때 초기화
-        self.urlTextField.text = ""
-        self.postTextView.text = ""
         self.postTextView.placeholder = "내용을 입력해주세요"
         attachmentViewYPosition = self.attachmentView.frame.origin.y
 //        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(endTextFieldEditing)))
@@ -109,6 +101,11 @@ class PostViewController: UIViewController {
     // X 버튼 function
     @objc func cancelPosting(){
         tabBarController!.selectedIndex = 0
+        
+        // 다른화면에서 돌아올때 초기화
+        self.urlTextField.text = ""
+        self.postTextView.text = ""
+        self.categoryBtn.setTitle("+", for: .normal)
     }
     
     // 게시 버튼 function
@@ -120,15 +117,11 @@ class PostViewController: UIViewController {
         let presentView = self.storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
         presentView.categoryList = categoryList
         presentView.delegate = self
+        categoryBtn.titleLabel?.font = UIFont(name: "NotoSansCJKkr-Medium", size: 1)
         self.present(presentView, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(view, animated: true)
     }
-    
-    @objc func deleteImg() {
-        testIMG.image = nil
-        testBtn.isHidden = true
-    }
-    
+        
 //    @objc func pickImage() {
 //        self.present(self.picker, animated: true) // Controller이기 때문에 present 메서드를 이용해서 컨트롤러 뷰를 띄워준다!
 //
@@ -228,9 +221,11 @@ extension PostViewController : UICollectionViewDataSource {
         cell.backgroundColor = .black
         cell.postIMG.image = pickedIMG[indexPath.row]
         cell.postIMG.backgroundColor = .black
+//        cell.postIMGBtn.
         
         return cell
     }
+    
     
 }
     

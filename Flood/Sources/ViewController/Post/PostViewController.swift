@@ -7,8 +7,6 @@
 //
 
 import UIKit
-//import FMPhotoPicker
-//import Tagging
 
 class PostViewController: UIViewController {
     
@@ -18,13 +16,15 @@ class PostViewController: UIViewController {
     @IBOutlet weak var imagePickerBtn: UIButton!
     @IBOutlet weak var categoryBtn: UIButton!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var attachViewBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var attachmentView: UIView!
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var urlTextField: UITextField!
+    
     @IBOutlet weak var postImageCV: UICollectionView!
-    @IBOutlet weak var attachViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var testIMG: UIImageView!
     @IBOutlet weak var testBtn: UIButton!
     
@@ -37,9 +37,6 @@ class PostViewController: UIViewController {
     
     // 카테고리 리스트
     var categoryList : [String]?
-        
-    // MARK: - Dummy Data
-    
     
     
     // MARK: - Life Cycle
@@ -47,22 +44,26 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 뷰 기본 세팅
+        initSetting()
+        
+        // code for share extension
         let defaults = UserDefaults(suiteName: "group.com.flood.share")
         defaults?.set("sss", forKey: "share")
         defaults?.synchronize()
 
+        
+        // button funtion
         backBtn.addTarget(self, action: #selector(cancelPosting), for: .touchUpInside)
         imagePickerBtn.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
         testBtn.addTarget(self, action: #selector(deleteImg), for: .touchUpInside)
         categoryBtn.addTarget(self, action: #selector(category), for: .touchUpInside)
         
-        initSetting()
-        
+        // delegate 주입
         postTextView.delegate = self
         urlTextField.delegate = self
         postImageCV.delegate = self
         postImageCV.dataSource = self
-        
         picker.delegate = self
         
     }
@@ -70,16 +71,18 @@ class PostViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        addKeyboardNotification()
         
         // keyboard show
+        addKeyboardNotification()
         self.urlTextField.becomeFirstResponder()
         
         // 탭바 감추기
         self.tabBarController?.tabBar.isHidden = true
         
+        // 삭제버튼 감추기
         self.testBtn.isHidden = true
         
+        // 다른화면에서 돌아올때 초기화
         self.urlTextField.text = ""
         self.postTextView.text = ""
         self.postTextView.placeholder = "내용을 입력해주세요"
@@ -92,17 +95,15 @@ class PostViewController: UIViewController {
         
         // 화면 나갈때 탭바 감추기 해제
         self.tabBarController?.tabBar.isHidden = false
-        
     }
     
     // MARK: -Helpers
     
-    // 초기 설정
+    // 초기 설정, 더미데이터 넣기
     @objc func initSetting() {
         attachmentView.layer.addBorder([.top, .bottom], color: .veryLightPinkTwo, width: 1)
         categoryBtn.tintColor = .veryLightPink
-        let tabbarHeight = self.tabBarController?.tabBar.frame.size.height ?? 0
-        categoryList = ["123","456","234","345"]
+        categoryList = ["IT","경제","주식","사회","네이버","카카오","NHN","가고싶다"]
     }
     
     // X 버튼 function
@@ -117,13 +118,10 @@ class PostViewController: UIViewController {
     
     @objc func category() {
         let presentView = self.storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
-        
         presentView.categoryList = categoryList
-
+        presentView.delegate = self
         self.present(presentView, animated: true, completion: nil)
-
 //        self.navigationController?.pushViewController(view, animated: true)
-
     }
     
     @objc func deleteImg() {
@@ -175,6 +173,8 @@ class PostViewController: UIViewController {
     }
 }
 
+// MARK: - UITextViewDelegate
+
 extension PostViewController: UITextViewDelegate {
     
     // TextView의 동적인 크기 변화를 위한 function
@@ -189,6 +189,8 @@ extension PostViewController: UITextViewDelegate {
     }
     
 }
+
+// MARK: - UITextFieldDelegate
 
 extension PostViewController: UITextFieldDelegate {
 
@@ -205,9 +207,13 @@ extension PostViewController: UITextFieldDelegate {
 //    }
 }
 
+// MARK: -UICollectionViewDelegate
+
 extension PostViewController : UICollectionViewDelegate {
     
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension PostViewController : UICollectionViewDataSource {
     
@@ -228,7 +234,7 @@ extension PostViewController : UICollectionViewDataSource {
     
 }
     
-    
+// MARK: - ImagePickerDelegate
 extension PostViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         
     @objc func showImagePickerController() {
@@ -242,14 +248,16 @@ extension PostViewController : UINavigationControllerDelegate, UIImagePickerCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let selectImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            tmpImage = selectImage
+            self.pickedIMG.append(selectImage)
+            self.postImageCV.reloadData()
+            //tmpImage = selectImage
         }
 //        self.pickedIMG.insert(tmpImage!, at: 0)
-        
-        testIMG.image = tmpImage!
-        if testIMG.image != nil {
-            testBtn.isHidden = false
-        }
+//
+//        testIMG.image = tmpImage!
+//        if testIMG.image != nil {
+//            testBtn.isHidden = false
+//        }
         
         dismiss(animated: true, completion:  nil)
     }
@@ -271,5 +279,11 @@ extension PostViewController : UINavigationControllerDelegate, UIImagePickerCont
 //    }
 }
 
+// Category뷰에서 받아오는 delegate
+extension PostViewController: CategoryDelegate {
+    func didSelectCategory(category: String) {
+        self.categoryBtn.setTitle(category, for: .normal)
+    }
+}
 
 

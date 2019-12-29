@@ -8,15 +8,22 @@
 
 import UIKit
 
+protocol CategoryDelegate {
+    func didSelectCategory(category: String)
+}
+
 class CategoryViewController: UIViewController {
 
     // MARK: - UI components
     @IBOutlet weak var categoryTableView: UITableView!
-
+    
+    
     // MARK: - Variables and Properties
 
     var categoryList : [String]!
         
+    var delegate: CategoryDelegate?
+    
     // MARK: - Dummy Data
     
     
@@ -25,20 +32,32 @@ class CategoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.title = "카테고리 선택"
-        
+
         categoryTableView.delegate = self
         self.categoryTableView.separatorStyle = .none
-
+        setNavBar()
+                
         print(categoryList)
         print(categoryList!)
         print(categoryList.count)
+
         
     }
     
     // MARK: -Helpers
-
+    
+    func setNavBar() {
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 375, height: 44))
+        view.addSubview(navBar)
+        
+        let navItem = UINavigationItem(title: "카테고리 선택")
+        navBar.setItems([navItem], animated: false)
+        
+        navBar.setBackgroundImage(UIImage(), for:.default)
+        navBar.shadowImage = UIImage()
+        navBar.layoutIfNeeded()
+        navBar.barTintColor = .white
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -68,18 +87,28 @@ extension CategoryViewController : UITableViewDataSource {
         return cell
     }
 
+    private func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        tableView.sectionHeaderHeight = 44
+
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 18))
+        let label = UILabel(frame: CGRect(x: 20, y: 20, width: 50, height: 50))
+        label.text = "카테고리 선택"
+        label.textColor = .black
+        
+        view.addSubview(label)
+        self.view.addSubview(view)
+
+        return view
+    }
+
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let view = self.storyboard?.instantiateViewController(withIdentifier: "PostViewController") as? PostViewController
-        let categoryText : String? = categoryList![indexPath.row]
-        
-        if let unwrappedName = categoryText {
-            view?.categoryBtn.setTitle(unwrappedName, for: .normal)
-        } else {
-           print("")
-        }
-            
+        guard let categoryText = categoryList?[indexPath.row] else { return }
+        delegate?.didSelectCategory(category: categoryText)
         dismiss(animated: true, completion: nil)
-        
     }
 
 }
+
+

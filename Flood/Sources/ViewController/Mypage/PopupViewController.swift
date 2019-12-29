@@ -12,7 +12,7 @@ class PopupViewController : UIViewController {
     
     // MARK: - UI components
 
-    @IBOutlet weak var pupupView: UIView!
+    @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var popupCV: UICollectionView!
     
     // MARK: - Variables and Properties
@@ -25,17 +25,17 @@ class PopupViewController : UIViewController {
         popupCV.delegate = self
         popupCV.dataSource = self
         
-        pupupView.transform = .init(translationX: 0, y: pupupView.bounds.height)
+        popupView.transform = .init(translationX: 0, y: popupView.bounds.height)
     
         setupGesture()
-
+        setupCornerRound()
     }
 
     // MARK: -Helpers
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
-        self.pupupView.transform = .identity
+        self.popupView.transform = .identity
       })
     }
     
@@ -47,10 +47,17 @@ class PopupViewController : UIViewController {
     
     @objc func handle(_ gesture: UITapGestureRecognizer) {
       UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
-        self.pupupView.transform = .init(translationX: 0, y: self.pupupView.bounds.height)
+        self.popupView.transform = .init(translationX: 0, y: self.popupView.bounds.height)
       }) { _ in
         self.dismiss(animated: true)
       }
+    }
+    
+    func setupCornerRound() {
+        popupView.clipsToBounds = true
+        popupView.layer.cornerRadius = 10
+        popupView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
     }
     
 }
@@ -80,7 +87,7 @@ extension PopupViewController : UICollectionViewDataSource {
 extension PopupViewController: UIGestureRecognizerDelegate {
   
   func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-    if (touch.view?.isDescendant(of: pupupView))! {
+    if (touch.view?.isDescendant(of: popupView))! {
       return false
     }
     return true

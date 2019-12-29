@@ -68,7 +68,7 @@ extension NewsSharePostDetailView: UITableViewDelegate {
             else {
                   //이 appro어쩌구 값이 label의 width 최대 값이라고 생각하면되는데
                   //왼쪽 오른쪽 마진이 나의 메세지이든 상대방 메세지이든 스토리보드에 보면 16하고 32로 설정되어있어. 그래서 아래 값을 저렇게 해준거임.
-                let approximateWidthOfText = commentTextField.frame.width - 270 - 69
+                let approximateWidthOfText = view.frame.width - 37 - 69
                   
                   let size = CGSize(width: approximateWidthOfText, height: 1000)
                   let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]

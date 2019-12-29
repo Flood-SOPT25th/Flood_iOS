@@ -42,8 +42,16 @@ class MainViewController: UIViewController {
         self.tabBarController?.tabBar.backgroundColor = .white
         self.tabBarController?.tabBar.isTranslucent = false
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
     }
     
     // MARK: -Helpers
@@ -54,8 +62,10 @@ class MainViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true)
         
+        if let tbc = self.tabBarController {
+            tbc.present(vc, animated: true)
+        }
     }
 }
 
@@ -215,6 +225,7 @@ extension MainViewController: UITableViewDataSource {
                     
                     newssharepostCell.newsshareCatarogy.text = "카테고리"
                     newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
                     newssharepostCell.newsshareCatarogy.textColor = .electricBlue
                     newssharepostCell.newsshareprofileImg.image = UIImage(named: "")
                     newssharepostCell.newsshareName.text = "이름"

@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>gilroy-extrabold</string>
+		<string>gilroy-light</string>
+		<string>NotoSansCJKkr-Black</string>
+		<string>NotoSansCJKkr-Bold</string>
+		<string>NotoSansCJKkr-DemiLight</string>
+		<string>NotoSansCJKkr-Light</string>
+		<string>NotoSansCJKkr-Medium</string>
+		<string>NotoSansCJKkr-Regular</string>
+		<string>NotoSansCJKkr-Thin</string>
+		<string>NotoSansMonoCJKkr-Bold</string>
+		<string>NotoSansMonoCJKkr-Regular</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>For upload image</string>
 	<key>NSCameraUsageDescription</key>

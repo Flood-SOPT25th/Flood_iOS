@@ -47,12 +47,16 @@ class MainViewController: UIViewController {
     }
     
     // MARK: -Helpers
-    /*
-     @IBAction func BookmarkAction(_ sender: UIButton) {
-     let view = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-     view.modalPresentationStyle = .fullScreen
-     self.present(view, animated: true, completion: nil)
-     }*/
+ 
+    
+    @IBAction func popupAction(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
+        
+    }
 }
 
 // MARK: - UICollectionViewDelegate
@@ -135,9 +139,9 @@ extension MainViewController: UITableViewDataSource {
                 if indexPath.row == 0 {
                     let thisweekCell1 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell1", for: indexPath) as! ThisWeekCell
                     
-                    thisweekCell1.thisweekImg.image = UIImage(named: "41")
+                    thisweekCell1.thisweekImg.image = UIImage(named: "15")
                     thisweekCell1.thisweekTitle.text = "기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀"
-                    thisweekCell1.thisweekTitle.font = UIFont(name: "NotoSansCJKkr-Bold", size: 32)
+                    thisweekCell1.thisweekTitle.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell1.thisweekTitle.textColor = .white
                     thisweekCell1.thisweekflipCount.text = "플립수"
                     thisweekCell1.thisweekflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
@@ -158,9 +162,9 @@ extension MainViewController: UITableViewDataSource {
                 else if indexPath.row == 1 {
                     let thisweekCell2 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell2", for: indexPath) as! ThisWeekCell2
                     
-                    thisweekCell2.thisweekImg2.image = UIImage(named: "41")
+                    thisweekCell2.thisweekImg2.image = UIImage(named: "15")
                     thisweekCell2.thisweekTitle2.text = "기사타이틀2"
-                    thisweekCell2.thisweekTitle2.font = UIFont(name: "NotoSansCJKkr-Bold", size: 32)
+                    thisweekCell2.thisweekTitle2.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell2.thisweekTitle2.textColor = .white
                     thisweekCell2.thisweekflipCount2.text = "플립수2"
                     thisweekCell2.thisweekflipCount2.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
@@ -182,9 +186,9 @@ extension MainViewController: UITableViewDataSource {
                 else {
                     let thisweekCell3 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell3", for: indexPath) as! ThisWeekCell3
                     
-                    thisweekCell3.thisweekImg3.image = UIImage(named: "41")
+                    thisweekCell3.thisweekImg3.image = UIImage(named: "15")
                     thisweekCell3.thisweekTitle3.text = "기사타이틀3"
-                    thisweekCell3.thisweekTitle3.font = UIFont(name: "NotoSansCJKkr-Bold", size: 32)
+                    thisweekCell3.thisweekTitle3.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell3.thisweekTitle3.textColor = .white
                     thisweekCell3.thisweekflipCount3.text = "플립수3"
                     thisweekCell3.thisweekflipCount3.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
@@ -210,6 +214,8 @@ extension MainViewController: UITableViewDataSource {
                     let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
                     
                     newssharepostCell.newsshareCatarogy.text = "카테고리"
+                    newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    newssharepostCell.newsshareCatarogy.textColor = .electricBlue
                     newssharepostCell.newsshareprofileImg.image = UIImage(named: "")
                     newssharepostCell.newsshareName.text = "이름"
                     newssharepostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
@@ -218,14 +224,14 @@ extension MainViewController: UITableViewDataSource {
                     newssharepostCell.newsshareTime.textColor = .veryLightPink
                     newssharepostCell.newsPost.text = "게시글"
                     newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    newssharepostCell.newsshareMore.image = UIImage(named: "icMoreWhite")
+                    newssharepostCell.newsshareMore.image = UIImage(named: "icMoreGray")
                     newssharepostCell.newsTitle.text = "제목"
                     newssharepostCell.newsPost.text = "게시글"
                     newssharepostCell.newsImg.image = UIImage(named: "")
                     newssharepostCell.newsflipCount.text = "플립수"
                     newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     newssharepostCell.newsflipCount.textColor = .veryLightPink
-                    newssharepostCell.newsshareBookmark.image = UIImage(named: "icBookmarkWhite")
+                    newssharepostCell.newsshareBookmark.image = UIImage(named: "icBookmarkBlack")
                     
                     return newssharepostCell
                 }
@@ -233,6 +239,8 @@ extension MainViewController: UITableViewDataSource {
                     let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
                     
                     picturepostCell.picturepostCatagory.text = "카테고리"
+                    picturepostCell.picturepostCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    picturepostCell.picturepostCatagory.textColor = .electricBlue
                     picturepostCell.picturepostprofileImg.image = UIImage(named: "")
                     picturepostCell.picturepostName.text = "이름"
                     picturepostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
@@ -241,14 +249,14 @@ extension MainViewController: UITableViewDataSource {
                     picturepostCell.picturepostTime.textColor = .veryLightPink
                     picturepostCell.picturepostPost.text = "게시글"
                     picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    picturepostCell.picturepostMore.image = UIImage(named: "icMoreWhite")
+                    picturepostCell.picturepostMore.image = UIImage(named: "icMoreGray")
                     picturepostCell.picture1.image = UIImage(named: "")
                     picturepostCell.picture2.image = UIImage(named: "")
                     picturepostCell.picture3.image = UIImage(named: "")
                     picturepostCell.picturefilpCount.text = "플립수"
                     picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     picturepostCell.picturefilpCount.textColor = .veryLightPink
-                    picturepostCell.picturepostBookmark.image = UIImage(named: "icBookmarkWhite")
+                    picturepostCell.picturepostBookmark.image = UIImage(named: "icBookmarkBlack")
                     
                     return picturepostCell
                 }
@@ -256,6 +264,8 @@ extension MainViewController: UITableViewDataSource {
                     let PostCell = postTV.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
                     
                     PostCell.postCatagory.text = "카테고리"
+                    PostCell.postCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    PostCell.postCatagory.textColor = .electricBlue
                     PostCell.postprofileImg.image = UIImage(named: "")
                     PostCell.postName.text = "이름"
                     PostCell.postName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
@@ -264,13 +274,12 @@ extension MainViewController: UITableViewDataSource {
                     PostCell.postTime.textColor = .veryLightPink
                     PostCell.postPost.text = "게시글"
                     PostCell.postPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    PostCell.postMore.image = UIImage(named: "icMoreWhite")
+                    PostCell.postMore.image = UIImage(named: "icMoreGray")
                     PostCell.postfilpCount.text = "플립수"
                     PostCell.postfilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     PostCell.postfilpCount.textColor = .veryLightPink
-                    //PostCell.postBookmark.image = UIImage(named: "icBookmarkWhite")
+                    PostCell.postBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
                     
-                    PostCell.delegate = self
                     return PostCell
                 }
             }

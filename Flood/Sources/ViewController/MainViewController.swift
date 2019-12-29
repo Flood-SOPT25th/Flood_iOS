@@ -16,7 +16,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var postTV: UITableView!
     
     // MARK: - Variables and Properties
-    
+    var PostTop3dataset : PostTop3!
+    //var top3List = [topArr] = []
     
     // MARK: - Life Cycle
     
@@ -54,6 +55,31 @@ class MainViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+    /*
+    PostTop3Services.shared.getPostTop3 {
+        responsedata in
+        
+        switch responsedata {
+        
+        // NetworkResult 의 요소들
+        case .success(let data):
+            
+            print("data",data)
+            self.PostTop3dataset = data as? PostTop3
+            self.top3List = self.PostTop3dataset.data!
+
+     
+        case .requestErr(_):
+            print("request error")
+        case .pathErr:
+            print(".pathErr")
+        case .serverErr:
+            print(".serverErr")
+        case .networkFail :
+            print("failure")
+        }
+    }
+    */
     // MARK: -Helpers
  
     
@@ -146,26 +172,34 @@ extension MainViewController: UITableViewDataSource {
         switch tableView {
         case self.thisweekTV:
             if indexPath.section == 0 {
+                //  let top3post = top3List[indexPath.row]
                 if indexPath.row == 0 {
                     let thisweekCell1 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell1", for: indexPath) as! ThisWeekCell
-                    
+
                     thisweekCell1.thisweekImg.image = UIImage(named: "15")
                     thisweekCell1.thisweekTitle.text = "기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀"
+                    //top3List.title
                     thisweekCell1.thisweekTitle.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell1.thisweekTitle.textColor = .white
-                    thisweekCell1.thisweekflipCount.text = "플립수"
+                    thisweekCell1.thisweekflipCount.text = "Flips Comments"
+                    //thisweekCell1.thisweekflipCount.text = "Flips \((top3List?.bookmark)!) Comments \((top3List?.comments_count)!)"
                     thisweekCell1.thisweekflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     thisweekCell1.thisweekflipCount.textColor = .white
                     thisweekCell1.thisweekMore.setImage(UIImage(named: "icMoreWhite"), for: .normal)
                     thisweekCell1.thisweekBookmark.setImage(UIImage(named: "icBookmarkWhite"), for: .normal)
                     thisweekCell1.thisweekprofileImg.image = UIImage(named: "40")
                     thisweekCell1.thisweekName.text = "이름"
+                    //top3List.writer
                     thisweekCell1.thisweekName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     thisweekCell1.thisweekTime.text = "시간"
+                    //top3List.postDate
                     thisweekCell1.thisweekTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
                     thisweekCell1.thisweekTime.textColor = .veryLightPink
                     thisweekCell1.thisweekPost.text = "게시글"
+                    //top3List.postContent
                     thisweekCell1.thisweekPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+                    
+                    
                     
                     return thisweekCell1
                 }

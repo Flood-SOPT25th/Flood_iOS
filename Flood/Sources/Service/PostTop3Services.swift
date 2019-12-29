@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+//(get)
+/*
 class PostTop3Services {
     
     //다른 class에서 방해하는 것을 막아주는 구문
@@ -34,7 +36,7 @@ class PostTop3Services {
                 do{
                     let decoder = JSONDecoder()
                     
-                    let object = try decoder.decode(MainArticle.self, from: data)
+                    let object = try decoder.decode(PostTop3.self, from: data)
                     
                     if object.success == true {
                         print("성공")
@@ -57,3 +59,4 @@ class PostTop3Services {
         }
     }
 }
+*/

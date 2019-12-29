@@ -13,30 +13,36 @@
 
 struct APIConstants {
     
-    static let base = "http://flooddocker-env.3gfczrrijh.ap-northeast-2.elasticbeanstalk.com"
+    static let BaseURL = "http://flooddocker-env.3gfczrrijh.ap-northeast-2.elasticbeanstalk.com"
     
     // MARK: - Main 피드 화면
-    static let PostTop3 = base + "/post/top" // GET , Top3 피드 조회
-    static let PostPid = base + "/post"                 // GET , 게시물 전체 피드
-    static let PostHash = base + "/post/hash"           // GET , 게시물 전체 피드
-    static let PostDetail = base + "/post/detail/:idx"  // GET , 해당 게시물 조회 및 조회수 증가
+    static let PostTop3 = BaseURL + "/post/top"                        // GET , Top3 피드 조회
+    static let PostPid = BaseURL + "/post"                             // GET , 게시물 전체 피드
+    static let PostHash = BaseURL + "/post/hash"                       // GET , 게시물 전체 피드
+    static let PostDetail = BaseURL + "/post/detail/:idx"              // GET , 해당 게시물 조회 및 조회수 증가
+    
+    
     
     // MARK: - 게시물 업로드
-    static let PostUpload = base + "/post"              // POST , 업로드
-    static let GroupCategory = base + "/group/category" // GET  , 그룹 카테고리 조회
+    static let PostUpload = BaseURL + "/post"                          // POST , 업로드
+    static let GroupCategory = BaseURL + "/group/category"             // GET  , 그룹 카테고리 조회
+    
+    
     
     // MARK: - 회원 가입
-    static let SignUp = base + "/auth/signup" // POST , 조직 생성
-    static let SignIn = base + "/auth/signin" // POST , 그룹 카테고리 조회 , 로그인
-    // 그룹 카테고리 조회 들어감
-    static let Organization = base + "/auth/signup/organization" // POST , 조직 생성
+    static let SignUp = BaseURL + "/auth/signup"                       // POST , 조직 생성
+    static let SignIn = BaseURL + "/auth/signin"                       // POST , 그룹 카테고리 조회 , 로그인
+                                // 그룹 카테고리 조회 들어감
+    static let Organization = BaseURL + "/auth/signup/organization"    // POST , 조직 생성
+    
+    
     
     // MARK: - 북마크
-    static let BookmarkList = base + "/post/bookmark" // GET , 북마크 리스트 조회
-    static let BookmarkDetail = base + "/post/bookmark/detail" // GET , 해당 북마크된 리스트 조회
-    static let BookmarkAdd = base + "/post/bookmark/add" // POST , 북마크 추가
-    static let BookmarkCancle = base + "/post/bookmark/cancel" // POST , 북마크 삭제
-    static let BookmarkModify = base + "/post/bookmark" // POST , 북마크 카테고리 추가 수정 삭제
+    static let BookmarkList = BaseURL + "/post/bookmark"               // GET , 북마크 리스트 조회
+    static let BookmarkDetail = BaseURL + "/post/bookmark/detail"      // GET , 해당 북마크된 리스트 조회
+    static let BookmarkAdd = BaseURL + "/post/bookmark/add"            // POST , 북마크 추가
+    static let BookmarkCancle = BaseURL + "/post/bookmark/cancel"      // POST , 북마크 삭제
+    static let BookmarkModify = BaseURL + "/post/bookmark"             // POST , 북마크 카테고리 추가 수정 삭제
    
  
 }

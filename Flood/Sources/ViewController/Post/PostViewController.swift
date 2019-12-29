@@ -55,6 +55,7 @@ class PostViewController: UIViewController {
         backBtn.addTarget(self, action: #selector(cancelPosting), for: .touchUpInside)
         imagePickerBtn.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
         categoryBtn.addTarget(self, action: #selector(category), for: .touchUpInside)
+        PostBtn.addTarget(self, action: #selector(posting), for: .touchUpInside)
         
         // delegate 주입
         postTextView.delegate = self
@@ -63,11 +64,11 @@ class PostViewController: UIViewController {
         postImageCV.dataSource = self
         picker.delegate = self
         
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         
         // keyboard show
         addKeyboardNotification()
@@ -100,26 +101,39 @@ class PostViewController: UIViewController {
     
     // X 버튼 function
     @objc func cancelPosting(){
-        tabBarController!.selectedIndex = 0
         
         // 다른화면에서 돌아올때 초기화
         self.urlTextField.text = ""
         self.postTextView.text = ""
-        self.categoryBtn.setTitle("+", for: .normal)
+        self.categoryBtn.setTitle("", for: .normal)
+        self.pickedIMG = []
+        self.categoryBtn.setImage(UIImage(named: "icPlusCircle"), for: .normal)
+        self.postImageCV.reloadData()
+
+        tabBarController!.selectedIndex = 0
+        dismiss(animated: true, completion: nil)
     }
     
     // 게시 버튼 function
     @objc func posting() {
-        
+        print(canOpenURL(string: urlTextField.text!))
     }
     
     @objc func category() {
         let presentView = self.storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
         presentView.categoryList = categoryList
         presentView.delegate = self
+        categoryBtn.setImage(UIImage(), for: .normal)
         categoryBtn.titleLabel?.font = UIFont(name: "NotoSansCJKkr-Medium", size: 1)
+
         self.present(presentView, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(view, animated: true)
+    }
+
+    // URL 확인 정규표현식
+    func canOpenURL(string: String?) -> Bool {
+        let regEx = "((https|http)://)((\\w|-)+)(([.]|[/])((\\w|-)+))+"
+        let predicate = NSPredicate(format:"SELF MATCHES %@", argumentArray:[regEx])
+        return predicate.evaluate(with: self.urlTextField.text!)
     }
         
 //    @objc func pickImage() {
@@ -218,15 +232,20 @@ extension PostViewController : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostImageCVC", for: indexPath) as! PostImageCVC
         // 셀 확인을 위한 컬러
-        cell.backgroundColor = .black
         cell.postIMG.image = pickedIMG[indexPath.row]
-        cell.postIMG.backgroundColor = .black
-//        cell.postIMGBtn.
+        cell.postIMG.cornerRadius = 10
+
         
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostImageCVC", for: indexPath) as! PostImageCVC
+        cell.postIMG.image = nil
+        pickedIMG.remove(at: indexPath.row)
+        
+        self.postImageCV.reloadData()
+    }
 }
     
 // MARK: - ImagePickerDelegate
@@ -243,8 +262,12 @@ extension PostViewController : UINavigationControllerDelegate, UIImagePickerCont
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let selectImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            self.pickedIMG.append(selectImage)
-            self.postImageCV.reloadData()
+            if pickedIMG.count <= 10 {
+                self.pickedIMG.append(selectImage)
+                self.postImageCV.reloadData()
+            } else {
+                defaultAlert(title: "확인", message: "이미지 갯수가 제한 갯수인 10개를 넘어갔습니다")
+            }
             //tmpImage = selectImage
         }
 //        self.pickedIMG.insert(tmpImage!, at: 0)
@@ -282,3 +305,11 @@ extension PostViewController: CategoryDelegate {
 }
 
 
+extension String {
+    func isValidUrl() -> Bool {
+        let regex : String = "((https|http)://)((\\w|-)+)(([.]|[/])((\\w|-)+))+"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        let e = predicate.evaluate(with: self)
+        return e
+    }
+}

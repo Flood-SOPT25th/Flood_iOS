@@ -85,10 +85,11 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPP-ep-IGe">
-                                                <rect key="frame" x="298" y="41" width="53" height="30"/>
-                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="17"/>
-                                                <state key="normal" title="+"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPP-ep-IGe">
+                                                <rect key="frame" x="303" y="40" width="44" height="32"/>
+                                                <state key="normal" image="icPlusCircle">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="0.0"/>
@@ -126,7 +127,7 @@
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awS-B8-goj">
-                                                                    <rect key="frame" x="54" y="2" width="24" height="24"/>
+                                                                    <rect key="frame" x="65" y="0.0" width="15" height="15"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <state key="normal" image="icXSmall"/>
                                                                 </button>
@@ -288,6 +289,7 @@
     <resources>
         <image name="icPicture" width="28" height="28"/>
         <image name="icPlus" width="28" height="28"/>
+        <image name="icPlusCircle" width="28" height="28"/>
         <image name="icX" width="28" height="28"/>
         <image name="icXSmall" width="24" height="24"/>
     </resources>

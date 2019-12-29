@@ -21,11 +21,9 @@ class CategoryViewController: UIViewController {
     // MARK: - Variables and Properties
 
     var categoryList : [String]!
-        
     var delegate: CategoryDelegate?
     
     // MARK: - Dummy Data
-    
     
     
     // MARK: - Life Cycle
@@ -36,11 +34,6 @@ class CategoryViewController: UIViewController {
         categoryTableView.delegate = self
         self.categoryTableView.separatorStyle = .none
         setNavBar()
-                
-        print(categoryList)
-        print(categoryList!)
-        print(categoryList.count)
-
         
     }
     

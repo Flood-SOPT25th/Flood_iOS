@@ -39,8 +39,8 @@ class ShareViewController: SLComposeServiceViewController, CategoryViewProtocol{
       self.item.value = "None"
 
       self.item.tapHandler = {
-       // self.categoryPickerVC = CategoryTableViewController()
-       // self.pushConfigurationViewController(self.categoryPickerVC)
+        self.CategoryPickerVC = CategoryTableViewController()
+        self.pushConfigurationViewController(self.CategoryPickerVC)
       }
 
       return [self.item]

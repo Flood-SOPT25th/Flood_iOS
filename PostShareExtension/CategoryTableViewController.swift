@@ -38,11 +38,16 @@ class CategoryTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         
-        cell.textLabel!.text = self.categoryList[indexPath.item]
+        var cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as? UITableViewCell
         
-        return cell
+        if (cell == nil) {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "CategoryCell")
+        }
+        
+        cell?.textLabel!.text = self.categoryList[indexPath.item]
+        
+        return cell!
     }
     
 }

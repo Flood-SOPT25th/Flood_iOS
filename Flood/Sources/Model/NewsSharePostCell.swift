@@ -15,14 +15,13 @@ class NewsSharePostCell: UITableViewCell {
     @IBOutlet weak var newsshareName: UILabel!
     @IBOutlet weak var newsshareTime: UILabel!
     @IBOutlet weak var newssharePost: UILabel!
-    @IBOutlet weak var newsshareMore: UIImageView!
+    @IBOutlet weak var newsshareMore: UIButton!
     
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsPost: UILabel!
     @IBOutlet weak var newsImg: UIImageView!
     
     @IBOutlet weak var newsflipCount: UILabel!
-    @IBOutlet weak var newsshareBookmark: UIImageView!
-    
+    @IBOutlet weak var newsshareBookmark: UIButton!
 }
 

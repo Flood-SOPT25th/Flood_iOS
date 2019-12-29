@@ -15,7 +15,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postName: UILabel!
     @IBOutlet weak var postTime: UILabel!
     @IBOutlet weak var postPost: UILabel!
-    @IBOutlet weak var postMore: UIImageView!
+    @IBOutlet weak var postMore: UIButton!
     @IBOutlet weak var postBookmark: UIButton!
     @IBOutlet weak var postfilpCount: UILabel!
     

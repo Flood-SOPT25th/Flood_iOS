@@ -33,8 +33,8 @@ class NewsSharePostDetailView : UIViewController {
         newssharepostTV.dataSource = self
         
         navigationController?.isNavigationBarHidden = false
-        //self.navigationController?.navigationBar.topItem?.title = ""
-        //self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)
 
     }
     

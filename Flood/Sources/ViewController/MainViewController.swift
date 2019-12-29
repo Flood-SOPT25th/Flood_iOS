@@ -77,7 +77,7 @@ extension MainViewController: UICollectionViewDelegate {
 extension MainViewController: UICollectionViewDataSource {
     //섹션 내에 속한 셀의 갯수(필수)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 10
         //appDelegate.workList.count
     }
     //각 항복에 대한 셀 객체 공급(필수)
@@ -224,8 +224,9 @@ extension MainViewController: UITableViewDataSource {
                     let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
                     
                     newssharepostCell.newsshareCatarogy.text = "카테고리"
-                    newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
                     newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
+                    newssharepostCell.newsshareCatarogy.setRounded(radius: 10)
                     newssharepostCell.newsshareCatarogy.textColor = .electricBlue
                     newssharepostCell.newsshareprofileImg.image = UIImage(named: "")
                     newssharepostCell.newsshareName.text = "이름"
@@ -235,14 +236,14 @@ extension MainViewController: UITableViewDataSource {
                     newssharepostCell.newsshareTime.textColor = .veryLightPink
                     newssharepostCell.newsPost.text = "게시글"
                     newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    newssharepostCell.newsshareMore.image = UIImage(named: "icMoreGray")
+                    newssharepostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
                     newssharepostCell.newsTitle.text = "제목"
                     newssharepostCell.newsPost.text = "게시글"
                     newssharepostCell.newsImg.image = UIImage(named: "")
                     newssharepostCell.newsflipCount.text = "플립수"
                     newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     newssharepostCell.newsflipCount.textColor = .veryLightPink
-                    newssharepostCell.newsshareBookmark.image = UIImage(named: "icBookmarkBlack")
+                    newssharepostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
                     
                     return newssharepostCell
                 }
@@ -260,14 +261,14 @@ extension MainViewController: UITableViewDataSource {
                     picturepostCell.picturepostTime.textColor = .veryLightPink
                     picturepostCell.picturepostPost.text = "게시글"
                     picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    picturepostCell.picturepostMore.image = UIImage(named: "icMoreGray")
+                    picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
                     picturepostCell.picture1.image = UIImage(named: "")
                     picturepostCell.picture2.image = UIImage(named: "")
                     picturepostCell.picture3.image = UIImage(named: "")
                     picturepostCell.picturefilpCount.text = "플립수"
                     picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     picturepostCell.picturefilpCount.textColor = .veryLightPink
-                    picturepostCell.picturepostBookmark.image = UIImage(named: "icBookmarkBlack")
+                    picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
                     
                     return picturepostCell
                 }
@@ -285,7 +286,7 @@ extension MainViewController: UITableViewDataSource {
                     PostCell.postTime.textColor = .veryLightPink
                     PostCell.postPost.text = "게시글"
                     PostCell.postPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    PostCell.postMore.image = UIImage(named: "icMoreGray")
+                    PostCell.postMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
                     PostCell.postfilpCount.text = "플립수"
                     PostCell.postfilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     PostCell.postfilpCount.textColor = .veryLightPink

@@ -15,7 +15,7 @@ class PicturePostCell: UITableViewCell {
     @IBOutlet weak var picturepostName: UILabel!
     @IBOutlet weak var picturepostTime: UILabel!
     @IBOutlet weak var picturepostPost: UILabel!
-    @IBOutlet weak var picturepostMore: UIImageView!
+    @IBOutlet weak var picturepostMore: UIButton!
     
     
     @IBOutlet weak var picture1: UIImageView!
@@ -23,6 +23,5 @@ class PicturePostCell: UITableViewCell {
     @IBOutlet weak var picture3: UIImageView!
     
     @IBOutlet weak var picturefilpCount: UILabel!
-    @IBOutlet weak var picturepostBookmark: UIImageView!
-    
+    @IBOutlet weak var picturepostBookmark: UIButton!
 }

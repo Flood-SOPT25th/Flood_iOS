@@ -68,6 +68,8 @@
 		A19D25BA23B4D0A400B929A6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19D25B923B4D0A400B929A6 /* PostCell.swift */; };
 		A1CA098623B85F3800FA146F /* PopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA098523B85F3800FA146F /* PopupCell.swift */; };
 		A1CA098823B8603700FA146F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA098723B8603700FA146F /* PopupViewController.swift */; };
+		A1CA098A23B8A94500FA146F /* PostTop3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA098923B8A94500FA146F /* PostTop3.swift */; };
+		A1CA098C23B8AD9000FA146F /* PostTop3Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CA098B23B8AD9000FA146F /* PostTop3Services.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,8 @@
 		A19D25B923B4D0A400B929A6 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		A1CA098523B85F3800FA146F /* PopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupCell.swift; sourceTree = "<group>"; };
 		A1CA098723B8603700FA146F /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		A1CA098923B8A94500FA146F /* PostTop3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTop3.swift; sourceTree = "<group>"; };
+		A1CA098B23B8AD9000FA146F /* PostTop3Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTop3Services.swift; sourceTree = "<group>"; };
 		B350A24B804B2C72EA66E070 /* Pods-Flood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flood.debug.xcconfig"; path = "Target Support Files/Pods-Flood/Pods-Flood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,6 +325,8 @@
 			children = (
 				5ED2094A23B0D1A000540877 /* APIConstants.swift */,
 				5E3D1AC623B78902005F7861 /* NetworkResult.swift */,
+				A1CA098923B8A94500FA146F /* PostTop3.swift */,
+				A1CA098B23B8AD9000FA146F /* PostTop3Services.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -580,6 +586,8 @@
 				5E64E08E23B3265500A54B9A /* UITextView+Extension.swift in Sources */,
 				5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */,
 				5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */,
+				A1CA098A23B8A94500FA146F /* PostTop3.swift in Sources */,
+				A1CA098C23B8AD9000FA146F /* PostTop3Services.swift in Sources */,
 				5ED2093E23B03C6E00540877 /* MainViewController.swift in Sources */,
 				A19D25B623B4C9B800B929A6 /* NewsSharePostCell.swift in Sources */,
 				5ED2094023B03C7700540877 /* BookmarkViewController.swift in Sources */,

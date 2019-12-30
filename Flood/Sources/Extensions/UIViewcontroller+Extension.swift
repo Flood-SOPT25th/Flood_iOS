@@ -11,10 +11,11 @@ import UIKit
 extension UIViewController {
     
     // 2칸인 alert title - up, message - down
-    func defaultAlert(title: String, message: String){
+    func simpleAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let okAction = UIAlertAction(title: "확인",style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 
     // 누르면 앱이 종료되는 alert

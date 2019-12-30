@@ -68,6 +68,25 @@ class MypageViewController: UIViewController {
     
 }
 
+extension MypageViewController : UITableViewDelegate {
+    
+}
+
+extension MypageViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return UITableViewCell()
+    }
+    
+    
+}
+
 // MARK: - CollectionViewDelegate
 
 extension MypageViewController : UICollectionViewDelegate {

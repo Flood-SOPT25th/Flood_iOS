@@ -45,10 +45,10 @@ class PostViewController: UIViewController {
         // 뷰 기본 세팅
         initSetting()
         
-        // code for share extension
-        let defaults = UserDefaults(suiteName: "group.com.flood.share")
-        defaults?.set("sss", forKey: "share")
-        defaults?.synchronize()
+//        // code for share extension
+//        let defaults = UserDefaults(suiteName: "group.com.flood.share")
+//        defaults?.set("sss", forKey: "share")
+//        defaults?.synchronize()
 
         
         // button funtion
@@ -116,25 +116,39 @@ class PostViewController: UIViewController {
     
     // 게시 버튼 function
     @objc func posting() {
-        print(canOpenURL(string: urlTextField.text!))
+        if canOpenURLHTTP(string: urlTextField.text!){
+            print("http")
+        } else if canOpenURL(string: urlTextField.text!){
+            print("not http")
+        } else {
+            self.simpleAlert(title: "정확한 URL이 아닙니다", message: "")
+        }
+        
     }
     
+    // 카테고리 버튼 function
     @objc func category() {
         let presentView = self.storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
         presentView.categoryList = categoryList
         presentView.delegate = self
-        categoryBtn.setImage(UIImage(), for: .normal)
         categoryBtn.titleLabel?.font = UIFont(name: "NotoSansCJKkr-Medium", size: 1)
 
         self.present(presentView, animated: true, completion: nil)
     }
 
     // URL 확인 정규표현식
-    func canOpenURL(string: String?) -> Bool {
+    func canOpenURLHTTP(string: String?) -> Bool {
         let regEx = "((https|http)://)((\\w|-)+)(([.]|[/])((\\w|-)+))+"
         let predicate = NSPredicate(format:"SELF MATCHES %@", argumentArray:[regEx])
         return predicate.evaluate(with: self.urlTextField.text!)
     }
+
+    func canOpenURL(string: String?) -> Bool {
+        let regEx = "((\\w|-)+)(([.]|[/])((\\w|-)+))+"
+        let predicate = NSPredicate(format:"SELF MATCHES %@", argumentArray:[regEx])
+        return predicate.evaluate(with: self.urlTextField.text!)
+    }
+
         
 //    @objc func pickImage() {
 //        self.present(self.picker, animated: true) // Controller이기 때문에 present 메서드를 이용해서 컨트롤러 뷰를 띄워준다!
@@ -266,40 +280,19 @@ extension PostViewController : UINavigationControllerDelegate, UIImagePickerCont
                 self.pickedIMG.append(selectImage)
                 self.postImageCV.reloadData()
             } else {
-                defaultAlert(title: "확인", message: "이미지 갯수가 제한 갯수인 10개를 넘어갔습니다")
+                simpleAlert(title: "이미지 갯수가 제한 갯수인 10개를 넘어갔습니다", message: "")
+                dismiss(animated: true, completion: nil)
             }
-            //tmpImage = selectImage
         }
-//        self.pickedIMG.insert(tmpImage!, at: 0)
-//
-//        testIMG.image = tmpImage!
-//        if testIMG.image != nil {
-//            testBtn.isHidden = false
-//        }
         
         dismiss(animated: true, completion:  nil)
     }
-    
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        var newImage: UIImage? = nil
-//
-//        if let selectImage = info["UIImagePickerControllerEditedImage"] as? UIImage { // 수정된 이미지가 있을 경우
-//            newImage = selectImage
-//        } else if let selectImage = info["UIImagePickerControllerOriginalImage"] as? UIImage { // 오리지널 이미지가 있을 경우
-//            newImage = selectImage
-//        }
-//
-//        pickedIMG[imageCnt] = newImage!
-//        testIMG.image = newImage!
-//        // 받아온 이미지를 이미지 뷰에 넣어준다.
-//        imageCnt += 1
-//        picker.dismiss(animated: true) // 그리고 picker를 닫아준다.
-//    }
 }
 
 // Category뷰에서 받아오는 delegate
 extension PostViewController: CategoryDelegate {
     func didSelectCategory(category: String) {
+        categoryBtn.setImage(UIImage(), for: .normal)
         self.categoryBtn.setTitle(category, for: .normal)
     }
 }

@@ -172,35 +172,34 @@ extension MainViewController: UITableViewDataSource {
         switch tableView {
         case self.thisweekTV:
             if indexPath.section == 0 {
-                  let top3post = top3List[indexPath.row]
-            
+                  //let top3post = top3List[indexPath.row]
 
                 if indexPath.row == 0 {
                     let thisweekCell1 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell1", for: indexPath) as! ThisWeekCell
 
-                    //thisweekCell1.thisweekImg.image = UIImage(named: "15")
-                    thisweekCell1.thisweekImg.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
-                    //thisweekCell1.thisweekTitle.text = "기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀"
-                    thisweekCell1.thisweekTitle.text = top3post.title
+                    thisweekCell1.thisweekImg.image = UIImage(named: "15")
+                    //thisweekCell1.thisweekImg.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
+                    thisweekCell1.thisweekTitle.text = "기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀"
+                    //thisweekCell1.thisweekTitle.text = top3post.title
                     thisweekCell1.thisweekTitle.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell1.thisweekTitle.textColor = .white
-                    //thisweekCell1.thisweekflipCount.text = "Flips Comments"
-                    thisweekCell1.thisweekflipCount.text = "Flips \((top3post.bookmark)) Comments \((top3post.comments_count))"
+                    thisweekCell1.thisweekflipCount.text = "Flips Comments"
+                    //thisweekCell1.thisweekflipCount.text = "Flips \((top3post.bookmark)) Comments \((top3post.comments_count))"
                     thisweekCell1.thisweekflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     thisweekCell1.thisweekflipCount.textColor = .white
                     thisweekCell1.thisweekMore.setImage(UIImage(named: "icMoreWhite"), for: .normal)
                     thisweekCell1.thisweekBookmark.setImage(UIImage(named: "icBookmarkWhite"), for: .normal)
-                    //thisweekCell1.thisweekprofileImg.image = UIImage(named: "40")
-                    thisweekCell1.thisweekprofileImg.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
-                    //thisweekCell1.thisweekName.text = "이름"
-                    thisweekCell1.thisweekName.text = top3post.writer
+                    thisweekCell1.thisweekprofileImg.image = UIImage(named: "40")
+                    //thisweekCell1.thisweekprofileImg.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
+                    thisweekCell1.thisweekName.text = "이름"
+                    //thisweekCell1.thisweekName.text = top3post.writer
                     thisweekCell1.thisweekName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    //thisweekCell1.thisweekTime.text = "시간"
-                    thisweekCell1.thisweekTime.text = top3post.postDate
+                    thisweekCell1.thisweekTime.text = "시간"
+                    //thisweekCell1.thisweekTime.text = top3post.postDate
                     thisweekCell1.thisweekTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
                     thisweekCell1.thisweekTime.textColor = .veryLightPink
-                    //thisweekCell1.thisweekPost.text = "게시글"
-                    thisweekCell1.thisweekPost.text = top3post.postContent
+                    thisweekCell1.thisweekPost.text = "게시글"
+                    //thisweekCell1.thisweekPost.text = top3post.postContent
                     thisweekCell1.thisweekPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     
                     return thisweekCell1
@@ -208,29 +207,29 @@ extension MainViewController: UITableViewDataSource {
                 else if indexPath.row == 1 {
                     let thisweekCell2 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell2", for: indexPath) as! ThisWeekCell2
                     
-                    //thisweekCell2.thisweekImg2.image = UIImage(named: "15")
-                    thisweekCell2.thisweekImg2.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
-                    //thisweekCell2.thisweekTitle2.text = "기사타이틀2"
-                    thisweekCell2.thisweekTitle2.text = top3post.title
+                    thisweekCell2.thisweekImg2.image = UIImage(named: "15")
+                    //thisweekCell2.thisweekImg2.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
+                    thisweekCell2.thisweekTitle2.text = "기사타이틀2"
+                    //thisweekCell2.thisweekTitle2.text = top3post.title
                     thisweekCell2.thisweekTitle2.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell2.thisweekTitle2.textColor = .white
-                    //thisweekCell2.thisweekflipCount2.text = "플립수2"
-                    thisweekCell2.thisweekflipCount2.text = "Flips \((top3post.bookmark)) Comments \((top3post.comments_count))"
+                    thisweekCell2.thisweekflipCount2.text = "플립수2"
+                    //thisweekCell2.thisweekflipCount2.text = "Flips \((top3post.bookmark)) Comments \((top3post.comments_count))"
                     thisweekCell2.thisweekflipCount2.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     thisweekCell2.thisweekflipCount2.textColor = .white
                     thisweekCell2.thisweekMore2.setImage(UIImage(named: "icMoreWhite"), for: .normal)
                     thisweekCell2.thisweekBookmark2.setImage(UIImage(named: "icBookmarkWhite"), for: .normal)
-                    //thisweekCell2.thisweekprofileImg2.image = UIImage(named: "40")
-                    thisweekCell2.thisweekprofileImg2.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
-                    //thisweekCell2.thisweekName2.text = "이름"
-                    thisweekCell2.thisweekName2.text = top3post.writer
+                    thisweekCell2.thisweekprofileImg2.image = UIImage(named: "40")
+                    //thisweekCell2.thisweekprofileImg2.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
+                    thisweekCell2.thisweekName2.text = "이름"
+                    //thisweekCell2.thisweekName2.text = top3post.writer
                     thisweekCell2.thisweekName2.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    //thisweekCell2.thisweekTime2.text = "시간"
-                    thisweekCell2.thisweekTime2.text = top3post.postDate
+                    thisweekCell2.thisweekTime2.text = "시간"
+                    //thisweekCell2.thisweekTime2.text = top3post.postDate
                     thisweekCell2.thisweekTime2.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
                     thisweekCell2.thisweekTime2.textColor = .veryLightPink
-                    //thisweekCell2.thisweekPost2.text = "게시글"
-                    thisweekCell2.thisweekPost2.text = top3post.postContent
+                    thisweekCell2.thisweekPost2.text = "게시글"
+                    //thisweekCell2.thisweekPost2.text = top3post.postContent
                     thisweekCell2.thisweekPost2.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     
                     return thisweekCell2
@@ -238,29 +237,29 @@ extension MainViewController: UITableViewDataSource {
                 else {
                     let thisweekCell3 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell3", for: indexPath) as! ThisWeekCell3
                     
-                    //thisweekCell3.thisweekImg3.image = UIImage(named: "15")
-                    thisweekCell3.thisweekImg3.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
-                    //thisweekCell3.thisweekTitle3.text = "기사타이틀3"
-                    thisweekCell3.thisweekTitle3.text = top3post.title
+                    thisweekCell3.thisweekImg3.image = UIImage(named: "15")
+                    //thisweekCell3.thisweekImg3.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
+                    thisweekCell3.thisweekTitle3.text = "기사타이틀3"
+                    //thisweekCell3.thisweekTitle3.text = top3post.title
                     thisweekCell3.thisweekTitle3.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell3.thisweekTitle3.textColor = .white
-                    //thisweekCell3.thisweekflipCount3.text = "플립수3"
-                    thisweekCell3.thisweekflipCount3.text = "Flips \((top3post.bookmark)) Comments \((top3post.comments_count))"
+                    thisweekCell3.thisweekflipCount3.text = "플립수3"
+                    //thisweekCell3.thisweekflipCount3.text = "Flips \((top3post.bookmark)) Comments \((top3post.comments_count))"
                     thisweekCell3.thisweekflipCount3.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     thisweekCell3.thisweekflipCount3.textColor = .white
                     thisweekCell3.thisweekMore3.setImage(UIImage(named: "icMoreWhite"), for: .normal)
                     thisweekCell3.thisweekBookmark3.setImage(UIImage(named: "icBookmarkWhite"), for: .normal)
-                    //thisweekCell3.thisweekprofileImg3.image = UIImage(named: "40")
-                    thisweekCell3.thisweekprofileImg3.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
-                    //thisweekCell3.thisweekName3.text = "이름"
-                    thisweekCell3.thisweekName3.text = top3post.writer
+                    thisweekCell3.thisweekprofileImg3.image = UIImage(named: "40")
+                    //thisweekCell3.thisweekprofileImg3.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
+                    thisweekCell3.thisweekName3.text = "이름"
+                    //thisweekCell3.thisweekName3.text = top3post.writer
                     thisweekCell3.thisweekName3.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    //thisweekCell3.thisweekTime3.text = "시간"
-                    thisweekCell3.thisweekTime3.text = top3post.postDate
+                    thisweekCell3.thisweekTime3.text = "시간"
+                    //thisweekCell3.thisweekTime3.text = top3post.postDate
                     thisweekCell3.thisweekTime3.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
                     thisweekCell3.thisweekTime3.textColor = .veryLightPink
-                    //thisweekCell3.thisweekPost3.text = "게시글"
-                    thisweekCell3.thisweekPost3.text = top3post.postContent
+                    thisweekCell3.thisweekPost3.text = "게시글"
+                    //thisweekCell3.thisweekPost3.text = top3post.postContent
                     thisweekCell3.thisweekPost3.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     
                     return thisweekCell3
@@ -367,4 +366,6 @@ extension UIImageView {
         }
     }
 }
+
+//DispatchQueue.main.async { }
 

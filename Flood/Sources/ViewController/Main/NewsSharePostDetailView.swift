@@ -118,23 +118,26 @@ extension NewsSharePostDetailView: UITableViewDataSource {
                 NewsSharePostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
                 NewsSharePostCell.newsshareCatarogy.setRounded(radius: 10)
                 NewsSharePostCell.newsshareCatarogy.textColor = .electricBlue
-                NewsSharePostCell.newsshareprofileImg.image = UIImage(named: "")
+                NewsSharePostCell.newsshareprofileImg.image = UIImage(named: "14")
+                NewsSharePostCell.newsshareprofileImg.setRounded(radius: 10)
                 NewsSharePostCell.newsshareName.text = "이름"
                 NewsSharePostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                 NewsSharePostCell.newsshareTime.text = "시간"
-                NewsSharePostCell.newsshareTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                NewsSharePostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                 NewsSharePostCell.newsshareTime.textColor = .veryLightPink
-                NewsSharePostCell.newsPost.text = "게시글"
+                NewsSharePostCell.newssharePost.text = "게시글"
                 NewsSharePostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                 //NewsSharePostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
                 NewsSharePostCell.newsTitle.text = "제목"
-                NewsSharePostCell.newsPost.text = "게시글"
-                NewsSharePostCell.newsImg.image = UIImage(named: "")
+                NewsSharePostCell.newsPost.text = "뉴스글"
+                NewsSharePostCell.newsImg.image = UIImage(named: "26")
                 NewsSharePostCell.newsflipCount.text = "플립수"
                 NewsSharePostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                 NewsSharePostCell.newsflipCount.textColor = .veryLightPink
                 //NewsSharePostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-                
+                NewsSharePostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+                NewsSharePostCell.newsshareView.setRounded(radius: 10)
+                 
                 return NewsSharePostCell
             }
             else {

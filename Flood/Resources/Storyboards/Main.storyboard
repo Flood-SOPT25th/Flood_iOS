@@ -640,7 +640,7 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M41-U4-gil">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M41-U4-gil">
                                                                             <rect key="frame" x="18" y="151" width="291" height="132"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="291" id="N4s-Wb-sX2"/>
@@ -744,6 +744,7 @@
                                                             <outlet property="newsshareName" destination="jDJ-j3-3m2" id="l2z-cG-d7r"/>
                                                             <outlet property="newssharePost" destination="p0l-sF-dvm" id="bK8-UL-DAU"/>
                                                             <outlet property="newsshareTime" destination="Dh7-Bl-Byl" id="D4T-im-Q6i"/>
+                                                            <outlet property="newsshareView" destination="sKN-Cl-u6Z" id="lgf-g9-6wT"/>
                                                             <outlet property="newsshareprofileImg" destination="BXS-rE-c9q" id="qs9-G7-rgn"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -822,21 +823,21 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZc-cK-Bp3">
                                                                     <rect key="frame" x="24" y="135" width="327" height="216"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irH-Fx-RXH">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="irH-Fx-RXH">
                                                                             <rect key="frame" x="0.0" y="0.0" width="218" height="216"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="218" id="VP6-Ad-EAB"/>
                                                                                 <constraint firstAttribute="height" constant="216" id="dpd-tV-tqX"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HYk-nu-WMe">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HYk-nu-WMe">
                                                                             <rect key="frame" x="220" y="0.0" width="107" height="107"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="107" id="2l0-fa-cBl"/>
                                                                                 <constraint firstAttribute="width" constant="107" id="lbE-7U-Ph7"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7A-Hi-aBr">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7A-Hi-aBr">
                                                                             <rect key="frame" x="220" y="109" width="107" height="107"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="107" id="dK8-8b-tXw"/>
@@ -918,6 +919,7 @@
                                                             <outlet property="picturepostName" destination="G0K-Mb-HyE" id="oLx-mv-q2q"/>
                                                             <outlet property="picturepostPost" destination="igP-6W-Kp0" id="IBC-aw-mUt"/>
                                                             <outlet property="picturepostTime" destination="2q0-KX-Jtx" id="dFb-Qg-EmE"/>
+                                                            <outlet property="picturepostView" destination="sZc-cK-Bp3" id="lwM-JC-8Zo"/>
                                                             <outlet property="picturepostprofileImg" destination="kdt-kV-CWs" id="n97-Ty-kGS"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -1249,7 +1251,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmg-W6-pzr">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmg-W6-pzr">
                                                             <rect key="frame" x="18" y="151" width="291" height="132"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="132" id="JoY-d9-cQU"/>
@@ -1325,7 +1327,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="newsImg" destination="nmg-W6-pzr" id="IBy-9q-sUR"/>
+                                            <outlet property="newsImg" destination="nmg-W6-pzr" id="uKC-ZE-5eo"/>
                                             <outlet property="newsPost" destination="gYA-9Q-KiP" id="ZaE-Ik-qfP"/>
                                             <outlet property="newsTitle" destination="oS3-pc-fKA" id="6yg-aD-XeR"/>
                                             <outlet property="newsflipCount" destination="9Lh-pv-J9l" id="S3u-pl-H6Z"/>
@@ -1333,6 +1335,7 @@
                                             <outlet property="newsshareName" destination="phh-1R-Y4d" id="Ncg-7t-d3h"/>
                                             <outlet property="newssharePost" destination="czF-3J-RTF" id="xhc-Xl-Uqa"/>
                                             <outlet property="newsshareTime" destination="yrm-pH-Cm5" id="imp-w4-1l8"/>
+                                            <outlet property="newsshareView" destination="4Kg-bP-vWO" id="nIp-qv-Nnl"/>
                                             <outlet property="newsshareprofileImg" destination="KEl-LX-jG1" id="ezY-jz-8jo"/>
                                         </connections>
                                     </tableViewCell>
@@ -1467,11 +1470,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="1Xg-oR-GwM">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" systemItem="add" id="MB9-9G-hoZ">
-                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <barButtonItem image="icMoreBlack" style="plain" id="MB9-9G-hoZ">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
-                            <barButtonItem style="plain" systemItem="play" id="zxc-aW-3YE">
-                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <barButtonItem image="icBookmarkBlack" style="plain" id="zxc-aW-3YE">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -1612,7 +1615,9 @@
     </scenes>
     <resources>
         <image name="24" width="32" height="32"/>
+        <image name="icBookmarkBlack" width="28" height="28"/>
         <image name="icBookmarkWhite" width="28" height="28"/>
+        <image name="icMoreBlack" width="28" height="28"/>
         <image name="icMoreWhite" width="28" height="28"/>
         <image name="icTabFeed" width="48" height="48"/>
     </resources>

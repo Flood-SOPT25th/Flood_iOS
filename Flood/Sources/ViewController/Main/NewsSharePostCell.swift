@@ -23,5 +23,8 @@ class NewsSharePostCell: UITableViewCell {
     
     @IBOutlet weak var newsflipCount: UILabel!
     @IBOutlet weak var newsshareBookmark: UIButton!
+    
+    @IBOutlet weak var newsshareView: UIView!
+    
 }
 

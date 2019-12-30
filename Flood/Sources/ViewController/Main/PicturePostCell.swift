@@ -24,4 +24,7 @@ class PicturePostCell: UITableViewCell {
     
     @IBOutlet weak var picturefilpCount: UILabel!
     @IBOutlet weak var picturepostBookmark: UIButton!
+    
+    @IBOutlet weak var picturepostView: UIView!
+    
 }

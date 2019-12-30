@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet var maincatarogyCV: UICollectionView!
     @IBOutlet weak var thisweekTV: UITableView!
     @IBOutlet weak var postTV: UITableView!
+
     
     // MARK: - Variables and Properties
     var PostTop3dataset : PostTop3!
@@ -103,6 +104,8 @@ class MainViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }
+    
+
 
     
     // MARK: -Helpers
@@ -222,7 +225,7 @@ extension MainViewController: UITableViewDataSource {
                     thisweekCell1.thisweekName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     thisweekCell1.thisweekTime.text = "시간"
                     //thisweekCell1.thisweekTime.text = top3post.postDate
-                    thisweekCell1.thisweekTime.font = UIFont(name: "NotoSansCJKkr-Regular", size: 12)
+                    thisweekCell1.thisweekTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     thisweekCell1.thisweekTime.textColor = .veryLightPink
                     thisweekCell1.thisweekPost.text = "게시글"
                     //thisweekCell1.thisweekPost.text = top3post.postContent
@@ -252,7 +255,7 @@ extension MainViewController: UITableViewDataSource {
                     thisweekCell2.thisweekName2.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     thisweekCell2.thisweekTime2.text = "시간"
                     //thisweekCell2.thisweekTime2.text = top3post.postDate
-                    thisweekCell2.thisweekTime2.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    thisweekCell2.thisweekTime2.font = UIFont.systemFont(ofSize: CGFloat(12))
                     thisweekCell2.thisweekTime2.textColor = .veryLightPink
                     thisweekCell2.thisweekPost2.text = "게시글"
                     //thisweekCell2.thisweekPost2.text = top3post.postContent
@@ -282,7 +285,7 @@ extension MainViewController: UITableViewDataSource {
                     thisweekCell3.thisweekName3.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     thisweekCell3.thisweekTime3.text = "시간"
                     //thisweekCell3.thisweekTime3.text = top3post.postDate
-                    thisweekCell3.thisweekTime3.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    thisweekCell3.thisweekTime3.font = UIFont.systemFont(ofSize: CGFloat(12))
                     thisweekCell3.thisweekTime3.textColor = .veryLightPink
                     thisweekCell3.thisweekPost3.text = "게시글"
                     //thisweekCell3.thisweekPost3.text = top3post.postContent
@@ -302,22 +305,25 @@ extension MainViewController: UITableViewDataSource {
                     newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
                     newssharepostCell.newsshareCatarogy.setRounded(radius: 10)
                     newssharepostCell.newsshareCatarogy.textColor = .electricBlue
-                    newssharepostCell.newsshareprofileImg.image = UIImage(named: "")
+                    newssharepostCell.newsshareprofileImg.image = UIImage(named: "14")
+                    newssharepostCell.newsshareprofileImg.setRounded(radius: 10)
                     newssharepostCell.newsshareName.text = "이름"
                     newssharepostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     newssharepostCell.newsshareTime.text = "시간"
-                    newssharepostCell.newsshareTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    newssharepostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     newssharepostCell.newsshareTime.textColor = .veryLightPink
-                    newssharepostCell.newsPost.text = "게시글"
+                    newssharepostCell.newssharePost.text = "게시글"
                     newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     newssharepostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
                     newssharepostCell.newsTitle.text = "제목"
-                    newssharepostCell.newsPost.text = "게시글"
-                    newssharepostCell.newsImg.image = UIImage(named: "")
+                    newssharepostCell.newsPost.text = "뉴스글"
+                    newssharepostCell.newsImg.image = UIImage(named: "26")
                     newssharepostCell.newsflipCount.text = "플립수"
                     newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     newssharepostCell.newsflipCount.textColor = .veryLightPink
                     newssharepostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                    newssharepostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+                    newssharepostCell.newsshareView.setRounded(radius: 10)
                     
                     return newssharepostCell
                 }
@@ -327,22 +333,31 @@ extension MainViewController: UITableViewDataSource {
                     picturepostCell.picturepostCatagory.text = "카테고리"
                     picturepostCell.picturepostCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
                     picturepostCell.picturepostCatagory.textColor = .electricBlue
-                    picturepostCell.picturepostprofileImg.image = UIImage(named: "")
+                    picturepostCell.picturepostprofileImg.image = UIImage(named: "25")
                     picturepostCell.picturepostName.text = "이름"
                     picturepostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     picturepostCell.picturepostTime.text = "시간"
-                    picturepostCell.picturepostTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    picturepostCell.picturepostTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     picturepostCell.picturepostTime.textColor = .veryLightPink
                     picturepostCell.picturepostPost.text = "게시글"
                     picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                    picturepostCell.picture1.image = UIImage(named: "")
-                    picturepostCell.picture2.image = UIImage(named: "")
-                    picturepostCell.picture3.image = UIImage(named: "")
+                    picturepostCell.picture1.image = UIImage(named: "39")
+                    picturepostCell.picture2.image = UIImage(named: "40")
+                    picturepostCell.picture3.image = UIImage(named: "41")
+                    picturepostCell.picture1.layer.cornerRadius = 10
+                    picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                    picturepostCell.picture2.layer.cornerRadius = 10
+                    picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+                    picturepostCell.picture3.layer.cornerRadius = 10
+                    picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
                     picturepostCell.picturefilpCount.text = "플립수"
                     picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     picturepostCell.picturefilpCount.textColor = .veryLightPink
                     picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                    
+                    
+
                     
                     return picturepostCell
                 }
@@ -352,11 +367,11 @@ extension MainViewController: UITableViewDataSource {
                     PostCell.postCatagory.text = "카테고리"
                     PostCell.postCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
                     PostCell.postCatagory.textColor = .electricBlue
-                    PostCell.postprofileImg.image = UIImage(named: "")
+                    PostCell.postprofileImg.image = UIImage(named: "44")
                     PostCell.postName.text = "이름"
                     PostCell.postName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     PostCell.postTime.text = "시간"
-                    PostCell.postTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    PostCell.postTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     PostCell.postTime.textColor = .veryLightPink
                     PostCell.postPost.text = "게시글"
                     PostCell.postPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)

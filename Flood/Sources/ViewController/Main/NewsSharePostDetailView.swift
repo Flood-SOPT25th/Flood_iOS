@@ -112,6 +112,29 @@ extension NewsSharePostDetailView: UITableViewDataSource {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 let NewsSharePostCell = newssharepostTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
+                
+                NewsSharePostCell.newsshareCatarogy.text = "카테고리"
+                NewsSharePostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
+                NewsSharePostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
+                NewsSharePostCell.newsshareCatarogy.setRounded(radius: 10)
+                NewsSharePostCell.newsshareCatarogy.textColor = .electricBlue
+                NewsSharePostCell.newsshareprofileImg.image = UIImage(named: "")
+                NewsSharePostCell.newsshareName.text = "이름"
+                NewsSharePostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
+                NewsSharePostCell.newsshareTime.text = "시간"
+                NewsSharePostCell.newsshareTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                NewsSharePostCell.newsshareTime.textColor = .veryLightPink
+                NewsSharePostCell.newsPost.text = "게시글"
+                NewsSharePostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+                //NewsSharePostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
+                NewsSharePostCell.newsTitle.text = "제목"
+                NewsSharePostCell.newsPost.text = "게시글"
+                NewsSharePostCell.newsImg.image = UIImage(named: "")
+                NewsSharePostCell.newsflipCount.text = "플립수"
+                NewsSharePostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+                NewsSharePostCell.newsflipCount.textColor = .veryLightPink
+                //NewsSharePostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                
                 return NewsSharePostCell
             }
             else {

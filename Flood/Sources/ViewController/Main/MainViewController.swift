@@ -19,6 +19,8 @@ class MainViewController: UIViewController {
     // MARK: - Variables and Properties
     var PostTop3dataset : PostTop3!
     var top3List : [topArr] = []
+    var PostPiddataset : PostPid!
+    var PidList : [pidArr] = []
     
     // MARK: - Life Cycle
     
@@ -55,6 +57,29 @@ class MainViewController: UIViewController {
                 print("data",data)
                 self.PostTop3dataset = data as? PostTop3
                 self.top3List = self.PostTop3dataset.data!
+
+            case .requestErr(_):
+                print("request error")
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail :
+                print("failure")
+            }
+        }
+        
+        PostPidServices.shared.getPostPid {
+            responsedata in
+            
+            switch responsedata {
+            
+            // NetworkResult 의 요소들
+            case .success(let data):
+                
+                print("data",data)
+                self.PostPiddataset = data as? PostPid
+                self.PidList = self.PostPiddataset.data!
 
             case .requestErr(_):
                 print("request error")
@@ -114,6 +139,7 @@ extension MainViewController: UICollectionViewDataSource {
         MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
         MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
         MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
+        
         
         return MainCatarogyCell
     }
@@ -179,7 +205,7 @@ extension MainViewController: UITableViewDataSource {
 
                     thisweekCell1.thisweekImg.image = UIImage(named: "15")
                     //thisweekCell1.thisweekImg.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
-                    thisweekCell1.thisweekTitle.text = "기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀"
+                    thisweekCell1.thisweekTitle.text = "기사타이틀1"
                     //thisweekCell1.thisweekTitle.text = top3post.title
                     thisweekCell1.thisweekTitle.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell1.thisweekTitle.textColor = .white
@@ -196,7 +222,7 @@ extension MainViewController: UITableViewDataSource {
                     thisweekCell1.thisweekName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     thisweekCell1.thisweekTime.text = "시간"
                     //thisweekCell1.thisweekTime.text = top3post.postDate
-                    thisweekCell1.thisweekTime.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    thisweekCell1.thisweekTime.font = UIFont(name: "NotoSansCJKkr-Regular", size: 12)
                     thisweekCell1.thisweekTime.textColor = .veryLightPink
                     thisweekCell1.thisweekPost.text = "게시글"
                     //thisweekCell1.thisweekPost.text = top3post.postContent

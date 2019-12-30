@@ -659,7 +659,6 @@
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLM-dc-vnK">
                                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="301"/>
-                                                                            <state key="normal" title="Button"/>
                                                                             <connections>
                                                                                 <segue destination="MWl-sm-us1" kind="show" id="af3-Mo-33b"/>
                                                                             </connections>

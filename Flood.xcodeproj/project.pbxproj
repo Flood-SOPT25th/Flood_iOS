@@ -58,6 +58,9 @@
 		5ED2097823B26E6000540877 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2097723B26E6000540877 /* CGFloat+Extension.swift */; };
 		A13763C423B74334001E7EB8 /* ThisWeekCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13763C323B74334001E7EB8 /* ThisWeekCell2.swift */; };
 		A13763C623B74344001E7EB8 /* ThisWeekCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13763C523B74344001E7EB8 /* ThisWeekCell3.swift */; };
+		A152680F23B9D5DB0000642F /* PostPid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152680E23B9D5DB0000642F /* PostPid.swift */; };
+		A152681123B9D5FB0000642F /* PostHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152681023B9D5FB0000642F /* PostHash.swift */; };
+		A152681323B9F4290000642F /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A152681223B9F4290000642F /* PostDetail.swift */; };
 		A164663823B5B78000F18A87 /* NewsSharePostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164663723B5B78000F18A87 /* NewsSharePostDetailView.swift */; };
 		A164663A23B5B7BE00F18A87 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164663923B5B7BE00F18A87 /* CommentCell.swift */; };
 		A164663C23B5C18300F18A87 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A164663B23B5C18300F18A87 /* Comment.swift */; };
@@ -155,6 +158,9 @@
 		5ED2097723B26E6000540877 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		A13763C323B74334001E7EB8 /* ThisWeekCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisWeekCell2.swift; sourceTree = "<group>"; };
 		A13763C523B74344001E7EB8 /* ThisWeekCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisWeekCell3.swift; sourceTree = "<group>"; };
+		A152680E23B9D5DB0000642F /* PostPid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPid.swift; sourceTree = "<group>"; };
+		A152681023B9D5FB0000642F /* PostHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHash.swift; sourceTree = "<group>"; };
+		A152681223B9F4290000642F /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
 		A164663723B5B78000F18A87 /* NewsSharePostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSharePostDetailView.swift; sourceTree = "<group>"; };
 		A164663923B5B7BE00F18A87 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		A164663B23B5C18300F18A87 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -330,6 +336,9 @@
 				5E3D1AC623B78902005F7861 /* NetworkResult.swift */,
 				A1CA098923B8A94500FA146F /* PostTop3.swift */,
 				A1CA098B23B8AD9000FA146F /* PostTop3Services.swift */,
+				A152680E23B9D5DB0000642F /* PostPid.swift */,
+				A152681023B9D5FB0000642F /* PostHash.swift */,
+				A152681223B9F4290000642F /* PostDetail.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -583,11 +592,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19D25B423B4C40100B929A6 /* MainCatarogyCell.swift in Sources */,
+				A152681323B9F4290000642F /* PostDetail.swift in Sources */,
 				5EA3E04E23AF9A0200CAB6F2 /* AppDelegate.swift in Sources */,
 				5EA3E05023AF9A0200CAB6F2 /* SceneDelegate.swift in Sources */,
 				5ED2094923B05A1500540877 /* MainTabBarController.swift in Sources */,
 				A13763C423B74334001E7EB8 /* ThisWeekCell2.swift in Sources */,
 				5E64E08E23B3265500A54B9A /* UITextView+Extension.swift in Sources */,
+				A152680F23B9D5DB0000642F /* PostPid.swift in Sources */,
 				5ED2094423B03C9400540877 /* AlarmViewController.swift in Sources */,
 				5ED2093C23B03C6200540877 /* InitViewController.swift in Sources */,
 				A1CA098A23B8A94500FA146F /* PostTop3.swift in Sources */,
@@ -612,6 +623,7 @@
 				A19D25B223B4C28A00B929A6 /* ThisWeekCell.swift in Sources */,
 				5ED2094223B03C8300540877 /* PostViewController.swift in Sources */,
 				A19D25B823B4D08A00B929A6 /* PicturePostCell.swift in Sources */,
+				A152681123B9D5FB0000642F /* PostHash.swift in Sources */,
 				5ED2097823B26E6000540877 /* CGFloat+Extension.swift in Sources */,
 				5ED2095423B185F200540877 /* EditFlipViewController.swift in Sources */,
 				5ED2094F23B0D1B200540877 /* UIView+Exension.swift in Sources */,

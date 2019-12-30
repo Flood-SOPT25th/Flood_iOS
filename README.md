@@ -5,6 +5,10 @@
 
 서비스 work flow
 ---------------
+<h3>정보를 공유하는 가장 쉬운 방법
+
+기업에서 어떤 정보들을 공유하는지 알고 싶지 않나요?
+플러드는 기업에서 어떤 정보들을 공유하는지 시각화된 자료로 여러분께 보여드립니다.
 
 앱 아이콘
 ------------
@@ -12,6 +16,11 @@
 
 스크린 샷
 ------------
+ <img src="/IMG/newsFeed.png" width="300">
+ <img src="/IMG/newsFeedFlip.png" width="300"> 
+ <img src="/IMG/postView.png" width="300">
+ <img src="/IMG/postSetting.png" width="300">
+ <img src="/IMG/postCategory.png" width="300">
 
 개발 환경
 ------------
@@ -62,14 +71,29 @@
         return predicate.evaluate(with: self.urlTextField.text!)
     }
 ```
+
+* **문제2**
+ 키보드동작 시킬 때 탭바뷰컨트롤러가 함께 있는 경우, 탭바의 높이 만큼 키보드와 텍스트필드 사이에 간격이 생김
+
+```swift
+  @objc func keyboardWillShow(_ notificatoin: Notification) {
+    let duration = notificatoin.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+    let curve = notificatoin.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as! UInt
+    let keyboardSize = (notificatoin.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+    let height = keyboardSize.height - (self.tabBarController?.tabBar.frame.size.height ?? 0.0)
+```
+
+height를 정할때 키보드의 높이에서 탭바의 높이만큼 뺀 후 넘겨주어 해결
  
 
 팀원 소개
 ------------
-* 팀원1 : 오준현<br>
-> SOPT 25기 
-> TO DO : 소개글 작성
 
-* 팀원2 : 유현지<br>
-> SOPT 25기 
-> TO DO : 소개글 작성
+* 유현지
+> SOPT 25기 iOS 파트원으로  ‘Flood’라는 서비스에 참여하게 되었습니다. 
+> 저는 메인파트인 뉴스피드를 맡아 개발하고있으며 일주일 정도 남은 기간동안 더 발전할 수 있도록 열심히 하겠습니다!
+
+* 오준현
+> SOPT 25기 iOS YB 이번 앱잼에서 리드 개발자로 참여하고 있습니다!! 
+> 이번 앱잼 즐기면서 최대한의 성과를 내기위해서 노력하고 있습니다!!
+> 앱잼이후에도 플러드 다같이 오래오래 갔으면 좋겠어요!!!

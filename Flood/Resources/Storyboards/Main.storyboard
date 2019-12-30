@@ -1502,7 +1502,7 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lhl-Uj-e5q">
                                         <rect key="frame" x="0.0" y="65" width="375" height="172"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EJ4-uh-CNt">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="10" id="EJ4-uh-CNt">
                                             <size key="itemSize" width="97" height="122"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1567,10 +1567,9 @@
                                     <constraint firstAttribute="bottom" secondItem="Lhl-Uj-e5q" secondAttribute="bottom" constant="34" id="04e-2H-lT3"/>
                                     <constraint firstAttribute="trailing" secondItem="Lhl-Uj-e5q" secondAttribute="trailing" id="4Ug-MZ-ncy"/>
                                     <constraint firstItem="Lhl-Uj-e5q" firstAttribute="leading" secondItem="tt1-hA-ewr" secondAttribute="leading" id="6HF-o6-vzM"/>
-                                    <constraint firstAttribute="trailing" secondItem="ibr-gW-xVA" secondAttribute="trailing" constant="148" id="PHa-rb-MV1"/>
                                     <constraint firstItem="Lhl-Uj-e5q" firstAttribute="top" secondItem="ibr-gW-xVA" secondAttribute="bottom" constant="21" id="c9a-2K-t51"/>
+                                    <constraint firstItem="ibr-gW-xVA" firstAttribute="centerX" secondItem="tt1-hA-ewr" secondAttribute="centerX" id="e1n-Xr-WuS"/>
                                     <constraint firstAttribute="height" constant="271" id="hNw-ol-gQ9"/>
-                                    <constraint firstItem="ibr-gW-xVA" firstAttribute="leading" secondItem="tt1-hA-ewr" secondAttribute="leading" constant="148" id="heb-XC-b2j"/>
                                     <constraint firstItem="ibr-gW-xVA" firstAttribute="top" secondItem="tt1-hA-ewr" secondAttribute="top" constant="20" id="iii-Pf-wLu"/>
                                 </constraints>
                             </view>

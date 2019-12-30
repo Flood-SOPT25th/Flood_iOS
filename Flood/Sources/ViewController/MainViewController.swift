@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainViewController: UIViewController {
     
@@ -177,6 +178,7 @@ extension MainViewController: UITableViewDataSource {
                     let thisweekCell1 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell1", for: indexPath) as! ThisWeekCell
 
                     thisweekCell1.thisweekImg.image = UIImage(named: "15")
+                    //thisweekCell1.thisweekImg.imageFromUrl(top3post.postImages, defaultImgPath : "http:// ~~ ")
                     thisweekCell1.thisweekTitle.text = "기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀기사타이틀"
                     //top3List.title
                     thisweekCell1.thisweekTitle.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
@@ -188,6 +190,7 @@ extension MainViewController: UITableViewDataSource {
                     thisweekCell1.thisweekMore.setImage(UIImage(named: "icMoreWhite"), for: .normal)
                     thisweekCell1.thisweekBookmark.setImage(UIImage(named: "icBookmarkWhite"), for: .normal)
                     thisweekCell1.thisweekprofileImg.image = UIImage(named: "40")
+                    //thisweekCell1.thisweekprofileImg.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
                     thisweekCell1.thisweekName.text = "이름"
                     //top3List.writer
                     thisweekCell1.thisweekName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
@@ -333,5 +336,22 @@ extension MainViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         return UITableViewCell()
+    }
+}
+
+// MARK: - Kingfisher: UIImageView
+
+extension UIImageView {
+    public func imageFromUrl(_ urlString: String?, defaultImgPath : String) {
+        let defaultImg = UIImage(named: defaultImgPath)
+        if let url = urlString {
+            if url.isEmpty {
+                self.image = defaultImg
+            } else {
+                self.kf.setImage(with: URL(string: url), placeholder: defaultImg, options: [.transition(ImageTransition.fade(0.5))])
+            }
+        } else {
+            self.image = defaultImg
+        }
     }
 }

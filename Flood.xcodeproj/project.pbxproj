@@ -348,6 +348,7 @@
 		5EA3E06323B031A100CAB6F2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5EA3E06623B031EE00CAB6F2 /* Service */,
 				5EA3E06723B031F500CAB6F2 /* ViewController */,
 				5EA3E06523B031EA00CAB6F2 /* Model */,
 				5EA3E06423B031E000CAB6F2 /* Extensions */,
@@ -378,7 +379,6 @@
 				A152681223B9F4290000642F /* PostDetail.swift */,
 				A152680E23B9D5DB0000642F /* PostPid.swift */,
 				A152681023B9D5FB0000642F /* PostHash.swift */,
-				5EA3E06623B031EE00CAB6F2 /* Service */,
 				A164663B23B5C18300F18A87 /* Comment.swift */,
 				5E6145FB23BA5F7400E24DBD /* ResponseArray.swift */,
 				5E6145F923BA4D1900E24DBD /* GroupCategory.swift */,

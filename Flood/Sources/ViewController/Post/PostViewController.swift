@@ -45,7 +45,7 @@ class PostViewController: UIViewController {
         // 뷰 기본 세팅
         initSetting()
         
-//        // code for share extension
+//        code for share extension
 //        let defaults = UserDefaults(suiteName: "group.com.flood.share")
 //        defaults?.set("sss", forKey: "share")
 //        defaults?.synchronize()
@@ -116,7 +116,10 @@ class PostViewController: UIViewController {
     
     // 게시 버튼 function
     @objc func posting() {
-        if canOpenURLHTTP(string: urlTextField.text!){
+        
+        if categoryBtn.titleLabel!.text == nil {
+            simpleAlert(title: "카테고리를 선택해주세요!!", message: "")
+        } else if canOpenURLHTTP(string: urlTextField.text!){
             print("http")
         } else if canOpenURL(string: urlTextField.text!){
             print("not http")
@@ -304,5 +307,39 @@ extension String {
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         let e = predicate.evaluate(with: self)
         return e
+    }
+}
+
+extension PostViewController {
+    func setCategory(){
+        PostService.shared.groupCategory(){
+            [weak self]
+            data in
+            
+            guard let `self` = self else { return }
+            
+            switch data {
+                
+            // 매개변수에 어떤 값을 가져올 것인지
+            case .success(let res):
+                print("카테고리 조회 성공")
+                
+                let response = res as! ResponseArray<GroupCategory>
+//                self.categoryList = response.data as! [GroupCategory]
+                
+            case .requestErr(let message):
+                self.simpleAlert(title: "카테고리 조회 실패", message: "\(message)")
+                
+            case .pathErr:
+                print(".pathErr")
+                
+            case .serverErr:
+                print(".serverErr")
+                
+            case .networkFail:
+                self.simpleAlert(title: "카테고리 조회 실패", message: "네트워크 상태를 확인해주세요.")
+            }
+
+        }
     }
 }

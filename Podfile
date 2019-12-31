@@ -6,7 +6,8 @@ target 'Flood' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.8.2'
-  pod ‘Kingfisher’, '~> 4.10.1’
+  pod 'Kingfisher', '~> 4.10.1'
+  pod 'SwiftyJSON'
 # pod 'Tagging'
 # pod 'FMPhotoPicker', '~> 0.8'
 

@@ -18,7 +18,7 @@ class PostTop3Services {
     
     static let shared = PostTop3Services()
     
-    //(completion: @escaping (enum으로선언한것<[Data첫번째구조체이름.두번째구조체이름], Error(swift타입)>) -> Void)
+    // (completion: @escaping (enum으로선언한것<[Data첫번째구조체이름.두번째구조체이름], Error(swift타입)>) -> Void)
     func getPostTop3(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let URL = APIConstants.PostTop3
@@ -30,7 +30,6 @@ class PostTop3Services {
             case .success:
                 // parameter 위치
                 if let value = response.result.value {
-                    
                     //response의 respones안에 있는 statusCode를 추출
                     if let status = response.response?.statusCode {
                         

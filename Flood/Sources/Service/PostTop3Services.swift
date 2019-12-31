@@ -22,7 +22,12 @@ class PostTop3Services {
     func getPostTop3(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let URL = APIConstants.PostTop3
-        Alamofire.request(URL).responseJSON {
+        let headers: [String: String] = [
+            "Content-Type": "application/json",
+            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVoZGduczE3NjZAZ21haWwuY29tIiwibmFtZSI6IuydtOuPme2biCIsImlhdCI6MTU3NzQwNzg1NiwiZXhwIjoxNTc5OTk5ODU2LCJpc3MiOiJGbG9vZFNlcnZlciJ9.Zf_LNfQIEdFl84r-tPQpT1nLaxdotkFutOxwNQy-w58"
+        ]
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData {
             response in
             
             switch response.result {
@@ -32,17 +37,18 @@ class PostTop3Services {
                 if let value = response.result.value {
                     //response의 respones안에 있는 statusCode를 추출
                     if let status = response.response?.statusCode {
-                        
+                        print(status)
                         switch status {
                         case 200:
                             do{
                                 //decoding 시작
-                                let decoder = JSONDecoder()
-                                let object = try decoder.decode(PostTop3.self, from: value as! Data)
                                 
-                                if object.data != nil {
-            
-                                    completion(.success(object.data))
+                                let decoder = JSONDecoder()
+                                let object = try decoder.decode(PostTop3.self, from: value)
+                                
+                                if let data = object.data {
+                                    
+                                    completion(.success(data.topArr))
                                 }
                                     
                                 else {

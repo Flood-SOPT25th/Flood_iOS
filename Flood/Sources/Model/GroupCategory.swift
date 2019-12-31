@@ -11,10 +11,10 @@ import Foundation
 // MARK: - GroupCategory
 struct GroupCategory: Codable {
     let message: String
-    let data: DataClass
+    let data: categoryData
 }
 
 // MARK: - DataClass
-struct DataClass: Codable {
+struct categoryData: Codable {
     let category: [String]
 }

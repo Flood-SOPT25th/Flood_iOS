@@ -348,9 +348,9 @@
 		5EA3E06323B031A100CAB6F2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5EA3E06623B031EE00CAB6F2 /* Service */,
 				5EA3E06723B031F500CAB6F2 /* ViewController */,
 				5EA3E06523B031EA00CAB6F2 /* Model */,
+				5EA3E06623B031EE00CAB6F2 /* Service */,
 				5EA3E06423B031E000CAB6F2 /* Extensions */,
 			);
 			path = Sources;

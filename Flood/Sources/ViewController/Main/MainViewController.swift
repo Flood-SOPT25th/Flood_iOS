@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     // MARK: - Variables and Properties
     
     var Categorydataset : GroupCategory!
-    var CategoryList : [DataClass] = []
+    var CategoryList : categoryData?
     var PostTop3dataset : PostTop3!
     var top3List : [topArr] = []
     var PostPiddataset : PostPid!

@@ -177,13 +177,17 @@ extension NewsSharePostDetailView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-        if indexPath.row == 0 {
-        guard let url = URL(string: "https://www.google.com"),
-        UIApplication.shared.canOpenURL(url) else {return}
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        func tableView(_ tableView: UITableView, didSelectRowAt
+            indexPath: IndexPath) {
+            if indexPath.section == 0 {
+                if indexPath.row == 0 {
+                   print("select cell")
+                    if let url = URL(string: "https://www.google.com") {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                }
+            }
         }
-    }
     }
     
 

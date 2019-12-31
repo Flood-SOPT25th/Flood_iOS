@@ -20,8 +20,9 @@ class CategoryViewController: UIViewController {
     
     // MARK: - Variables and Properties
 
+//    var Groupcategory : [GroupCategory]
+    var delegate : CategoryDelegate?
     var categoryList : [String]!
-    var delegate: CategoryDelegate?
     
     // MARK: - Dummy Data
     
@@ -75,7 +76,7 @@ extension CategoryViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath) as! CategoryTableViewCell
         
         cell.categoryLabel.textColor = .veryLightPink
-        cell.categoryLabel.text = categoryList![indexPath.row]
+        cell.categoryLabel.text = categoryList[indexPath.row]
         
         return cell
     }

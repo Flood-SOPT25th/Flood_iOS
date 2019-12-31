@@ -32,19 +32,35 @@ class MypageViewController: UIViewController {
         
         setRadius()
         setBorder()
+        initSetting()
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
+
+        self.tabBarController?.tabBar.backgroundColor = .white
+        self.tabBarController?.tabBar.isTranslucent = false
+
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationController?.isNavigationBarHidden = true
+
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        navigationController?.isNavigationBarHidden = false
+//
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: -Helpers
+    
+    func initSetting() {
+    }
     
     // 마이페이지에서 둥글게 하는 function
     func setRadius() {

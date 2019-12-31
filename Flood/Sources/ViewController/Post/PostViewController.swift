@@ -27,14 +27,15 @@ class PostViewController: UIViewController {
     
     
     // MARK: - Variables and Properties
-    var attachmentViewYPosition:CGFloat = 0
+    var attachmentViewYPosition : CGFloat = 0
     let picker = UIImagePickerController()
     var pickedIMG : [UIImage] = []
     var tmpImage : UIImage? = nil
     var imageCnt : Int = 0
     
     // 카테고리 리스트
-    var categoryList : [String]?
+    var category : categoryData? = nil
+    var categoryList : [String] = ["123"]
     
     
     // MARK: - Life Cycle
@@ -54,7 +55,7 @@ class PostViewController: UIViewController {
         // button funtion
         backBtn.addTarget(self, action: #selector(cancelPosting), for: .touchUpInside)
         imagePickerBtn.addTarget(self, action: #selector(showImagePickerController), for: .touchUpInside)
-        categoryBtn.addTarget(self, action: #selector(category), for: .touchUpInside)
+        categoryBtn.addTarget(self, action: #selector(categorySelect), for: .touchUpInside)
         PostBtn.addTarget(self, action: #selector(posting), for: .touchUpInside)
         
         // delegate 주입
@@ -64,6 +65,7 @@ class PostViewController: UIViewController {
         postImageCV.dataSource = self
         picker.delegate = self
         
+        setCategory()
 
     }
     
@@ -96,7 +98,7 @@ class PostViewController: UIViewController {
     @objc func initSetting() {
         attachmentView.layer.addBorder([.top, .bottom], color: .veryLightPinkTwo, width: 1)
         categoryBtn.tintColor = .veryLightPink
-        categoryList = ["IT","경제","주식","사회","네이버","카카오","NHN","가고싶다"]
+//        categoryList = ["IT","경제","주식","사회","네이버","카카오","NHN","가고싶다"]
     }
     
     // X 버튼 function
@@ -120,18 +122,30 @@ class PostViewController: UIViewController {
         if categoryBtn.titleLabel!.text == nil {
             simpleAlert(title: "카테고리를 선택해주세요!!", message: "")
         } else if canOpenURLHTTP(string: urlTextField.text!){
-            print("http")
+            postContent(images: pickedIMG, url: urlTextField.text!, category: categoryBtn.titleLabel!.text!, postContent: postTextView.text)
+            simpleAlert(title: "게시 성공", message: "")
+            self.dismiss(animated: true, completion: nil)
+            self.tabBarController!.selectedIndex = 0
         } else if canOpenURL(string: urlTextField.text!){
-            print("not http")
-        } else {
-            self.simpleAlert(title: "정확한 URL이 아닙니다", message: "")
+            postContent(images: pickedIMG, url: "http://"+urlTextField.text!, category: categoryBtn.titleLabel!.text!, postContent: postTextView.text)
+            simpleAlert(title: "게시 성공", message: "")
+            self.dismiss(animated: true, completion: nil)
+            self.tabBarController!.selectedIndex = 0
+        } else if urlTextField.text == "" {
+            if postTextView.text == "" {
+                self.simpleAlert(title: "URL 혹은 내용 둘중 하나를 채워주세요", message: "")
+            } else {
+                postContent(images: pickedIMG, url: "", category: categoryBtn.titleLabel!.text!, postContent: postTextView.text)
+
+            }
         }
         
     }
     
     // 카테고리 버튼 function
-    @objc func category() {
+    @objc func categorySelect() {
         let presentView = self.storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
+        
         presentView.categoryList = categoryList
         presentView.delegate = self
         categoryBtn.titleLabel?.font = UIFont(name: "NotoSansCJKkr-Medium", size: 1)
@@ -311,6 +325,34 @@ extension String {
 }
 
 extension PostViewController {
+    func postContent(images: [UIImage], url: String, category: String, postContent: String){
+        PostService.shared.uploadPost(pictures: images, url: url, category: category, postContent: postContent){
+                [weak self]
+                data in
+
+                guard let `self` = self else { return }
+                
+                switch data {
+                case .success:
+                    self.simpleAlert(title: "성공", message: "")
+
+                    
+                case .requestErr:
+                    self.simpleAlert(title: "실패", message: "")
+                    
+                case .pathErr:
+                    print(".pathErr")
+                    
+                case .serverErr:
+                    print(".serverErr")
+                    
+                case .networkFail:
+                    print(".networkFail")
+                    
+            }
+        }
+        
+    }
     func setCategory(){
         PostService.shared.groupCategory(){
             [weak self]
@@ -324,8 +366,9 @@ extension PostViewController {
             case .success(let res):
                 print("카테고리 조회 성공")
                 
-                let response = res as! ResponseArray<GroupCategory>
-//                self.categoryList = response.data as! [GroupCategory]
+                let response = res as! GroupCategory
+                self.category = response.data as? categoryData
+                self.categoryList = (self.category?.category as? [String])!
                 
             case .requestErr(let message):
                 self.simpleAlert(title: "카테고리 조회 실패", message: "\(message)")

@@ -9,8 +9,8 @@
 import Foundation
 
 struct ResponseArray<T: Codable>: Codable  {
-    let status: Int
-    let success: Bool
+//    let status: Int
+//    let success: Bool
     let message: String
     let data: [T]?
 }

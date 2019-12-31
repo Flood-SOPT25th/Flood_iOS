@@ -18,6 +18,9 @@ class NewsSharePostDetailView : UIViewController {
     @IBOutlet weak var commentViewBottomConstraint: NSLayoutConstraint!
     
     // MARK: - Variables and Properties
+    let contentType = [0, 1]
+    var PostDetaildataset : PostDetail!
+    var PostDetailList : [pidArr2] = []
     var comments: [Comment] = []
     
     // MARK: - Life Cycle
@@ -59,10 +62,23 @@ class NewsSharePostDetailView : UIViewController {
 extension NewsSharePostDetailView: UITableViewDelegate {
     //이 부분 대충은 알고는 있을텐데
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      //let postdetail = PostDetailList[indexPath.row]
       let comment = comments[indexPath.row]
       
         if indexPath.section == 0 {
             if indexPath.row == 0 {
+                /*
+                let approximateWidthOfText = view.frame.width - 33 - 33
+                  
+                  let size = CGSize(width: approximateWidthOfText, height: 1000)
+                  let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
+                let estimatedFrame = NSString(string: postdetail.postContent).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+                  
+                  // 이제 이건 순수 레이블의 height 값에다가 위아래 마진 값 16을 더했고
+                  // 여분으로 4포인트 정도를 더 줘서 텍스트가 레이블안에서 안짤리도록 한 것!
+                  // 저 총합의 값들이 한 셀의 높이가 되는겁니당
+                  return estimatedFrame.height + 60 + 4
+                 */
                 return 546
             }
             else {
@@ -77,7 +93,8 @@ extension NewsSharePostDetailView: UITableViewDelegate {
                   // 이제 이건 순수 레이블의 height 값에다가 위아래 마진 값 16을 더했고
                   // 여분으로 4포인트 정도를 더 줘서 텍스트가 레이블안에서 안짤리도록 한 것!
                   // 저 총합의 값들이 한 셀의 높이가 되는겁니당
-                  return estimatedFrame.height + 98 + 4
+                  return estimatedFrame.height + 108 + 4
+                //98
                 }
             }
             return 0
@@ -113,6 +130,15 @@ extension NewsSharePostDetailView: UITableViewDataSource {
             if indexPath.row == 0 {
                 let NewsSharePostCell = newssharepostTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
                 
+                /*
+                if contentType[indexPath.row] == 0 {
+                  NewsSharePostCell.newsshareView.isHidden = false
+                  NewsSharePostCell.picturepostView.isHidden = true
+                } else {
+                  NewsSharePostCell.newsshareView.isHidden = true
+                  NewsSharePostCell.picturepostView.isHidden = false
+                }
+                */
                 NewsSharePostCell.newsshareCatarogy.text = "카테고리"
                 NewsSharePostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
                 NewsSharePostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
@@ -149,6 +175,18 @@ extension NewsSharePostDetailView: UITableViewDataSource {
     
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+        if indexPath.row == 0 {
+        guard let url = URL(string: "https://www.google.com"),
+        UIApplication.shared.canOpenURL(url) else {return}
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    }
+    
+
 }
 
 // MARK: - NewsSharePostDetailView

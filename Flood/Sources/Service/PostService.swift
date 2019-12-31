@@ -29,9 +29,9 @@ struct PostService {
             "postContent" : postContent
         ]
         
-        Alamofire.upload(.POST, APIConstants.PostUpload, multipartFormData: {
+        //Alamofire.upload(.POST, APIConstants.PostUpload, multipartFormData: {
             
-        })
+        //})
     }
     func groupCategory(completion: @escaping(NetworkResult<Any>)->Void) {
             

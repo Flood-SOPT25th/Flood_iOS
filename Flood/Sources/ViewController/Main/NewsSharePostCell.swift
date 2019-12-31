@@ -25,6 +25,6 @@ class NewsSharePostCell: UITableViewCell {
     @IBOutlet weak var newsshareBookmark: UIButton!
     
     @IBOutlet weak var newsshareView: UIView!
-    
+    @IBOutlet weak var picturepostView: UIView!
 }
 

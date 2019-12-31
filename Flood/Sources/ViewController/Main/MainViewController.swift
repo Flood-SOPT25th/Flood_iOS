@@ -18,6 +18,9 @@ class MainViewController: UIViewController {
 
     
     // MARK: - Variables and Properties
+    
+    var Categorydataset : GroupCategory!
+    var CategoryList : [DataClass] = []
     var PostTop3dataset : PostTop3!
     var top3List : [topArr] = []
     var PostPiddataset : PostPid!
@@ -125,20 +128,33 @@ class MainViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 extension MainViewController: UICollectionViewDelegate {
+/*
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let categoryCell = maincatarogyCV.cellForItem(at: indexPath) as? MainCatarogyCell else {return}
+        self.CategoryList[indexPath.item].isClick = true
+    }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let categoryCell = maincatarogyCV.cellForItem(at: indexPath) as? MainCatarogyCell else {return}
+        self.CategoryList![indexPath.item].isClick = false
+    }
+*/
 }
 // MARK: - UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     //섹션 내에 속한 셀의 갯수(필수)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-        //appDelegate.workList.count
+        return 5
+        //CategoryList.count
     }
     //각 항복에 대한 셀 객체 공급(필수)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let MainCatarogyCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCatarogyCell", for: indexPath) as! MainCatarogyCell
         
+        //let catagorypost = CategoryList[indexPath.row]
+        MainCatarogyCell.maincatarogy?.setTitle("Flood", for: .normal)
+        // = catagorypost["category"] as! String
         MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
         MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
         MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
@@ -389,6 +405,7 @@ extension MainViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
+    
 }
 
 // MARK: - Kingfisher: UIImageView

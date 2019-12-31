@@ -118,7 +118,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="410"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S6l-K4-hf2">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S6l-K4-hf2">
                                                                     <rect key="frame" x="0.0" y="20" width="375" height="282"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="282" id="cMr-cR-7Lp"/>
@@ -658,9 +658,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLM-dc-vnK">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="301"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="143"/>
                                                                             <connections>
-                                                                                <segue destination="MWl-sm-us1" kind="show" id="af3-Mo-33b"/>
+                                                                                <action selector="webConncet:" destination="7mq-0b-9BZ" eventType="touchUpInside" id="e6d-SM-Hec"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
@@ -677,11 +677,11 @@
                                                                         <constraint firstAttribute="trailing" secondItem="lLM-dc-vnK" secondAttribute="trailing" id="Xie-19-GNn"/>
                                                                         <constraint firstItem="lLM-dc-vnK" firstAttribute="top" secondItem="sKN-Cl-u6Z" secondAttribute="top" id="Zeq-1a-aVm"/>
                                                                         <constraint firstItem="uoy-o4-4JD" firstAttribute="top" secondItem="Qvh-zy-IY0" secondAttribute="bottom" constant="13" id="b9r-2y-13g"/>
+                                                                        <constraint firstItem="M41-U4-gil" firstAttribute="top" secondItem="lLM-dc-vnK" secondAttribute="bottom" constant="8" id="dDd-wO-oTU"/>
                                                                         <constraint firstAttribute="trailing" secondItem="uoy-o4-4JD" secondAttribute="trailing" constant="16" id="ngp-Pc-imo"/>
                                                                         <constraint firstAttribute="width" constant="327" id="ogk-1N-8Wj"/>
                                                                         <constraint firstItem="lLM-dc-vnK" firstAttribute="leading" secondItem="sKN-Cl-u6Z" secondAttribute="leading" id="pbD-EV-BKc"/>
                                                                         <constraint firstItem="Qvh-zy-IY0" firstAttribute="leading" secondItem="sKN-Cl-u6Z" secondAttribute="leading" constant="18" id="sNH-2Y-qKN"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="lLM-dc-vnK" secondAttribute="bottom" id="z1B-Dc-Uq1"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siB-i2-6EW">
@@ -1174,13 +1174,13 @@
         <!--News Share Post Detail View-->
         <scene sceneID="50F-7d-wq8">
             <objects>
-                <viewController id="MWl-sm-us1" customClass="NewsSharePostDetailView" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsSharePostDetailView" id="MWl-sm-us1" customClass="NewsSharePostDetailView" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sVf-hK-Koi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-7r-eXb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="671"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsSharePostCell" rowHeight="546" id="nbE-xb-zDh" customClass="NewsSharePostCell" customModule="Flood" customModuleProvider="target">
@@ -1460,7 +1460,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-ZY-fku">
-                                <rect key="frame" x="0.0" y="671" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="720" width="375" height="58"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-Oa-Yum">
                                         <rect key="frame" x="317" y="9" width="40" height="40"/>

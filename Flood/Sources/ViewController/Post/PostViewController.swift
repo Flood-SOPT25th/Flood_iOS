@@ -101,17 +101,21 @@ class PostViewController: UIViewController {
 //        categoryList = ["IT","경제","주식","사회","네이버","카카오","NHN","가고싶다"]
     }
     
-    // X 버튼 function
-    @objc func cancelPosting(){
-        
-        // 다른화면에서 돌아올때 초기화
+    func setDefault() {
         self.urlTextField.text = ""
         self.postTextView.text = ""
         self.categoryBtn.setTitle("", for: .normal)
         self.pickedIMG = []
         self.categoryBtn.setImage(UIImage(named: "icPlusCircle"), for: .normal)
         self.postImageCV.reloadData()
-
+    }
+    
+    
+    // X 버튼 function
+    @objc func cancelPosting(){
+        
+        // 다른화면에서 돌아올때 초기화
+        setDefault()
         tabBarController!.selectedIndex = 0
         dismiss(animated: true, completion: nil)
     }
@@ -123,12 +127,14 @@ class PostViewController: UIViewController {
             simpleAlert(title: "카테고리를 선택해주세요!!", message: "")
         } else if canOpenURLHTTP(string: urlTextField.text!){
             postContent(images: pickedIMG, url: urlTextField.text!, category: categoryBtn.titleLabel!.text!, postContent: postTextView.text)
-            simpleAlert(title: "게시 성공", message: "")
+            self.simpleAlert(title: "게시 되었습니다", message: "")
+            setDefault()
             self.dismiss(animated: true, completion: nil)
             self.tabBarController!.selectedIndex = 0
         } else if canOpenURL(string: urlTextField.text!){
             postContent(images: pickedIMG, url: "http://"+urlTextField.text!, category: categoryBtn.titleLabel!.text!, postContent: postTextView.text)
-            simpleAlert(title: "게시 성공", message: "")
+            self.simpleAlert(title: "게시 되었습니다", message: "")
+            setDefault()
             self.dismiss(animated: true, completion: nil)
             self.tabBarController!.selectedIndex = 0
         } else if urlTextField.text == "" {

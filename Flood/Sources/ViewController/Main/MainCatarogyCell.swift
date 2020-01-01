@@ -28,6 +28,8 @@ class MainCatarogyCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        maincatarogy?.intrinsicContentSize.width
+
     }
 
 }

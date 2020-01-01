@@ -69,8 +69,6 @@ class MainViewController: UIViewController {
     }
     
     
-    
-    
     // MARK: -Helpers
     
     @IBAction func webConncet(_ sender: UIButton) {
@@ -123,6 +121,7 @@ extension MainViewController: UICollectionViewDataSource {
         MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
         MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
         MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
+        
         
         
         return MainCatarogyCell

@@ -18,7 +18,8 @@ class CommentCell: UITableViewCell {
     
     override func awakeFromNib() {
       super.awakeFromNib()
-      
+      commentName.sizeToFit()
+      commentTime.sizeToFit()
     }
     
 }

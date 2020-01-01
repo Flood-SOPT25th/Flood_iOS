@@ -31,6 +31,9 @@ class NewsSharePostCell: UITableViewCell {
         super.awakeFromNib()
         // initialize
         newsshareCatarogy.sizeToFit()
+        newsshareName.sizeToFit()
+        newsshareTime.sizeToFit()
+        newsflipCount.sizeToFit()
     }
 }
 

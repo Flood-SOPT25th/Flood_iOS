@@ -22,6 +22,10 @@ class PostCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        postCatagory.sizeToFit()
+        postName.sizeToFit()
+        postTime.sizeToFit()
+        postfilpCount.sizeToFit()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -26,7 +26,6 @@ class MainViewController: UIViewController {
     var top3List : [topArr] = []
     var PostPiddataset : PostPid!
     var PidList : [pidArr] = []
-    var test = ["flood", "IT", "스타트업"]
     
     
     // MARK: - Life Cycle
@@ -127,7 +126,7 @@ extension MainViewController: UICollectionViewDataSource {
     //섹션 내에 속한 셀의 갯수(필수)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return CategoryViewList.count
-        //CategoryList.count
+        
     }
     //각 항복에 대한 셀 객체 공급(필수)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -136,7 +135,6 @@ extension MainViewController: UICollectionViewDataSource {
         
         //let catagorypost = CategoryList[indexPath.row]
         MainCatarogyCell.maincatarogy?.setTitle(CategoryViewList[indexPath.row], for: .normal)
-        // = catagorypost["category"] as! String
         MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
         MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
         MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
@@ -222,39 +220,95 @@ extension MainViewController: UITableViewDataSource {
             
         case self.postTV:
             let pidpost = PidList[indexPath.row]
-            let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
-            
-            newssharepostCell.newsshareCatarogy.text = "카테고리"
-            newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
-            newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
-            newssharepostCell.newsshareCatarogy.setRounded(radius: 10)
-            newssharepostCell.newsshareCatarogy.textColor = .electricBlue
-            //newssharepostCell.newsshareprofileImg.image = UIImage(named: "14")
-            newssharepostCell.newsshareprofileImg.imageFromUrl(pidpost.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
-            newssharepostCell.newsshareprofileImg.setRounded(radius: 10)
-            //newssharepostCell.newsshareName.text = "이름"
-            newssharepostCell.newsshareName.text = pidpost.writer
-            newssharepostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-            //newssharepostCell.newsshareTime.text = "시간"
-            newssharepostCell.newsshareTime.text = pidpost.postDate
-            newssharepostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
-            newssharepostCell.newsshareTime.textColor = .veryLightPink
-            //newssharepostCell.newssharePost.text = "게시글"
-            newssharepostCell.newssharePost.text = pidpost.postContent
-            newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-            newssharepostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-            newssharepostCell.newsTitle.text = pidpost.title //"제목"
-            newssharepostCell.newsPost.text = pidpost.description  //"뉴스글"
-            newssharepostCell.newsImg.image = UIImage(named: "26")
-            newssharepostCell.newsflipCount.text = "플립수"
-            newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
-            newssharepostCell.newsflipCount.textColor = .veryLightPink
-            newssharepostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-            newssharepostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
-            newssharepostCell.newsshareView.setRounded(radius: 10)
-            
-            return newssharepostCell
-
+            if indexPath.section == 0 {
+                if indexPath.row == 0 {
+                    let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
+                    
+                    newssharepostCell.newsshareCatarogy.text = "카테고리"
+                    newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
+                    newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
+                    newssharepostCell.newsshareCatarogy.setRounded(radius: 10)
+                    newssharepostCell.newsshareCatarogy.textColor = .electricBlue
+                    //newssharepostCell.newsshareprofileImg.image = UIImage(named: "14")
+                    newssharepostCell.newsshareprofileImg.imageFromUrl(pidpost.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
+                    newssharepostCell.newsshareprofileImg.setRounded(radius: 10)
+                    //newssharepostCell.newsshareName.text = "이름"
+                    newssharepostCell.newsshareName.text = pidpost.writer
+                    newssharepostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
+                    //newssharepostCell.newsshareTime.text = "시간"
+                    newssharepostCell.newsshareTime.text = pidpost.postDate
+                    newssharepostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
+                    newssharepostCell.newsshareTime.textColor = .veryLightPink
+                    //newssharepostCell.newssharePost.text = "게시글"
+                    newssharepostCell.newssharePost.text = pidpost.postContent
+                    newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+                    newssharepostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
+                    newssharepostCell.newsTitle.text = pidpost.title //"제목"
+                    newssharepostCell.newsPost.text = pidpost.description  //"뉴스글"
+                    newssharepostCell.newsImg.image = UIImage(named: "26")
+                    newssharepostCell.newsflipCount.text = "플립수"
+                    newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+                    newssharepostCell.newsflipCount.textColor = .veryLightPink
+                    newssharepostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                    newssharepostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+                    newssharepostCell.newsshareView.setRounded(radius: 10)
+                    
+                    return newssharepostCell
+                }
+                else if indexPath.row == 1 {
+                    let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
+                    
+                    picturepostCell.picturepostCatagory.text = "카테고리"
+                    picturepostCell.picturepostCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    picturepostCell.picturepostCatagory.textColor = .electricBlue
+                    picturepostCell.picturepostprofileImg.image = UIImage(named: "25")
+                    picturepostCell.picturepostName.text = "이름"
+                    picturepostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
+                    picturepostCell.picturepostTime.text = "시간"
+                    picturepostCell.picturepostTime.font = UIFont.systemFont(ofSize: CGFloat(12))
+                    picturepostCell.picturepostTime.textColor = .veryLightPink
+                    picturepostCell.picturepostPost.text = "게시글"
+                    picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+                    picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
+                    picturepostCell.picture1.image = UIImage(named: "39")
+                    picturepostCell.picture2.image = UIImage(named: "40")
+                    picturepostCell.picture3.image = UIImage(named: "41")
+                    picturepostCell.picture1.layer.cornerRadius = 10
+                    picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                    picturepostCell.picture2.layer.cornerRadius = 10
+                    picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+                    picturepostCell.picture3.layer.cornerRadius = 10
+                    picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
+                    picturepostCell.picturefilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))" //"플립수"
+                    picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+                    picturepostCell.picturefilpCount.textColor = .veryLightPink
+                    picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                    
+                    return picturepostCell
+                }
+                else {
+                    let PostCell = postTV.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+                    
+                    PostCell.postCatagory.text = "카테고리"
+                    PostCell.postCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    PostCell.postCatagory.textColor = .electricBlue
+                    PostCell.postprofileImg.image = UIImage(named: "44")
+                    PostCell.postName.text = "이름"
+                    PostCell.postName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
+                    PostCell.postTime.text = "시간"
+                    PostCell.postTime.font = UIFont.systemFont(ofSize: CGFloat(12))
+                    PostCell.postTime.textColor = .veryLightPink
+                    PostCell.postPost.text = "게시글"
+                    PostCell.postPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+                    PostCell.postMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
+                    PostCell.postfilpCount.text = "플립수"
+                    PostCell.postfilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+                    PostCell.postfilpCount.textColor = .veryLightPink
+                    PostCell.postBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                    
+                    return PostCell
+                }
+            }
         default:
             return UITableViewCell()
         }

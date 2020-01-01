@@ -27,4 +27,14 @@ class PicturePostCell: UITableViewCell {
     
     @IBOutlet weak var picturepostView: UIView!
     
+    override func awakeFromNib() {
+         super.awakeFromNib()
+         // initialize
+         picturepostCatagory.sizeToFit()
+         picturepostName.sizeToFit()
+         picturepostTime.sizeToFit()
+         picturefilpCount.sizeToFit()
+     }
+    
 }
+

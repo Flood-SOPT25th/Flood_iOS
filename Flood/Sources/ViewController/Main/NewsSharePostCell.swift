@@ -26,5 +26,11 @@ class NewsSharePostCell: UITableViewCell {
     
     @IBOutlet weak var newsshareView: UIView!
     @IBOutlet weak var picturepostView: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // initialize
+        newsshareCatarogy.sizeToFit()
+    }
 }
 

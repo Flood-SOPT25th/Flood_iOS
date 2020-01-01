@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet var maincatarogyCV: UICollectionView!
     @IBOutlet weak var thisweekTV: UITableView!
     @IBOutlet weak var postTV: UITableView!
-
+    
     
     // MARK: - Variables and Properties
     
@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
     var top3List : [topArr] = []
     var PostPiddataset : PostPid!
     var PidList : [pidArr] = []
+    var test = ["flood", "IT", "스타트업"]
     
     // MARK: - Life Cycle
     
@@ -54,7 +55,7 @@ class MainViewController: UIViewController {
             responsedata in
             
             switch responsedata {
-            
+                
             // NetworkResult 의 요소들
             case .success(let data):
                 if let top3List = data as? [topArr] {
@@ -76,14 +77,14 @@ class MainViewController: UIViewController {
             responsedata in
             
             switch responsedata {
-            
+                
             // NetworkResult 의 요소들
             case .success(let data):
                 if let pidList = data as? [pidArr] {
                     self.PidList = pidList
                     self.postTV.reloadData()
                 }
-
+                
             case .requestErr(_):
                 print("request error")
             case .pathErr:
@@ -106,15 +107,31 @@ class MainViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // 이 부분은 아래 부분의 didSelectRowAt 부분을 먼저 읽고 다시 와주세요!
+        
+        /*
+            didSelectRowAt 함수에서 해당 셀을 선택하고 음악 상세정보 뷰로 전환되었다가 다시 돌아오면
+            그 셀이 선택된 상태로 남아 있는 현상을 해결합니다. (궁금하다면 이 부분을 주석처리하고 실행해보세요!)
+            viewDidDisappear 안에 선언되어 뷰가 다시 나타날 때 아래 코드가 실행되고
+            현재 선택된 row 의 인덱스를 가져와 그 인덱스에 해당하는 row 를 이용해 deslect 를 해줍니다.
+        */
+        
+        if let index = thisweekTV.indexPathForSelectedRow {
+            thisweekTV.deselectRow(at: index, animated: true)
+        }
+    }
     
-
-
+    
     
     // MARK: -Helpers
- 
+    
+    
     @IBAction func webConncet(_ sender: UIButton) {
         guard let url = URL(string: "https://www.google.com"),
-        UIApplication.shared.canOpenURL(url) else { return }
+            UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
@@ -132,41 +149,48 @@ class MainViewController: UIViewController {
 
 // MARK: - UICollectionViewDelegate
 extension MainViewController: UICollectionViewDelegate {
-/*
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let categoryCell = maincatarogyCV.cellForItem(at: indexPath) as? MainCatarogyCell else {return}
-        self.CategoryList[indexPath.item].isClick = true
-    }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        guard let categoryCell = maincatarogyCV.cellForItem(at: indexPath) as? MainCatarogyCell else {return}
-        self.CategoryList![indexPath.item].isClick = false
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let categoryCell = maincatarogyCV.cellForItem(at: indexPath) as? MainCatarogyCell
+    categoryCell?.maincatarogy?.setTitleColor(.black, for: .normal)
+    self.maincatarogyCV.reloadData()
     }
-*/
+    /*
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    guard let categoryCell = maincatarogyCV.cellForItem(at: indexPath) as? MainCatarogyCell else {return}
+    categoryCell.maincatarogy?.setTitleColor(.white, for: .normal)
+    self.maincatarogyCV.reloadData()
+    }
+    */
+     
 }
+
 // MARK: - UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     //섹션 내에 속한 셀의 갯수(필수)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return test.count
         //CategoryList.count
     }
     //각 항복에 대한 셀 객체 공급(필수)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let MainCatarogyCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCatarogyCell", for: indexPath) as! MainCatarogyCell
-        
-        //let catagorypost = CategoryList[indexPath.row]
-        MainCatarogyCell.maincatarogy?.setTitle("Flood", for: .normal)
+    
+        //let catagorypost = CategoryList[indexPath.item]
+        MainCatarogyCell.maincatarogy?.setTitle(test[indexPath.item], for: .normal)
         // = catagorypost["category"] as! String
         MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
         MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
         MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
-        
-        
+
+
         return MainCatarogyCell
+        
     }
 }
+
 
 // MARK: - UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
@@ -221,11 +245,11 @@ extension MainViewController: UITableViewDataSource {
         switch tableView {
         case self.thisweekTV:
             if indexPath.section == 0 {
-                  let top3post = top3List[indexPath.row]
-
+                let top3post = top3List[indexPath.row]
+                
                 if indexPath.row == 0 {
                     let thisweekCell1 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell1", for: indexPath) as! ThisWeekCell
-
+                    
                     thisweekCell1.thisweekImg.imageFromUrl(top3post.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
                     thisweekCell1.thisweekTitle.text = top3post.title
                     thisweekCell1.thisweekTitle.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
@@ -363,7 +387,7 @@ extension MainViewController: UITableViewDataSource {
                     picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
                     
                     
-
+                    
                     
                     return picturepostCell
                 }
@@ -398,11 +422,11 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-        if indexPath.row == 0 {
-            let NSPostDetailView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsSharePostDetailView") as? NewsSharePostDetailView
-            self.navigationController?.pushViewController(NSPostDetailView!, animated: true)
+            if indexPath.row == 0 {
+                let NSPostDetailView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsSharePostDetailView") as? NewsSharePostDetailView
+                self.navigationController?.pushViewController(NSPostDetailView!, animated: true)
             }
-    }
+        }
     }
     
 }
@@ -423,6 +447,3 @@ extension UIImageView {
         }
     }
 }
-
-//DispatchQueue.main.async { }
-

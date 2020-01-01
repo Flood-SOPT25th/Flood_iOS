@@ -8,18 +8,18 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - PostPid
 struct PostPid: Codable {
     let message: String
-    let data: pidArrs?
+    let data: PostPid2?
 }
 
-// MARK: - DataClass
-struct pidArrs: Codable {
+// MARK: - PostPid2
+struct PostPid2: Codable {
     let pidArr: [pidArr]
 }
 
-// MARK: - TopArr
+// MARK: - PidArr
 struct pidArr: Codable {
     
     let postImages: [String]

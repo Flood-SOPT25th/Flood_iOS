@@ -46,7 +46,6 @@ class PostPidServices {
                         switch status {
                         case 200:
                             do{
-                                //decoding 시작
                                 print("start decode")
                                 let decoder = JSONDecoder()
                                 
@@ -57,7 +56,6 @@ class PostPidServices {
                                 
                                 if let data = object.data {
             
-                                    print("data", data)
                                     completion(.success(data.pidArr))
                                 }
                                     
@@ -65,9 +63,19 @@ class PostPidServices {
                                     completion(.requestErr(object.message))
                                 }
                                 
-                            } catch (let err) {
-                                print(err.localizedDescription)
-                                completion(.pathErr)
+                            } catch let DecodingError.dataCorrupted(context) {
+                                print(context)
+                            } catch let DecodingError.keyNotFound(key, context) {
+                                print("Key '\(key)' not found:", context.debugDescription)
+                                print("codingPath:", context.codingPath)
+                            } catch let DecodingError.valueNotFound(value, context) {
+                                print("Value '\(value)' not found:", context.debugDescription)
+                                print("codingPath:", context.codingPath)
+                            } catch let DecodingError.typeMismatch(type, context)  {
+                                print("Type '\(type)' mismatch:", context.debugDescription)
+                                print("codingPath:", context.codingPath)
+                            } catch {
+                                print("error: ", error)
                             }
                             
                         case 400:

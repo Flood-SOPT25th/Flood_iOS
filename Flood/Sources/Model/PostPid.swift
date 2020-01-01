@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - PostPid
-struct PostPid: Codable {
+struct PostPid : Decodable { 
     let message: String
     let data: PostPid2?
 }
@@ -27,7 +27,7 @@ struct pidArr: Codable {
     let score: Double
     let bookmarked: Bool
     let commentsCount: Int
-    let bookmarkList: [String]
+    let bookmarkList: [String?]
     let postDate, id: String
     let category : String
     let image: String
@@ -50,4 +50,50 @@ struct pidArr: Codable {
         case postTitle, postContent, url, groupCode
         case somethingElse = "_somethingElse"
     }
+    
+    init(from decoder: Decoder) throws {
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        postImages = (try? values.decode([String].self, forKey: .postImages)) ?? []
+        see = (try? values.decode(Int.self, forKey: .see)) ?? 0
+        bookmark = (try? values.decode(Int.self, forKey: .bookmark)) ?? 0
+        score = (try? values.decode(Double.self, forKey: .score)) ?? 0.0
+        bookmarked = (try? values.decode(Bool.self, forKey: .bookmarked)) ?? false
+        commentsCount = (try? values.decode(Int.self, forKey: .commentsCount)) ?? 0
+        bookmarkList = (try? values.decode([String].self, forKey: .bookmarkList)) ?? []
+        postDate  = (try? values.decode(String.self, forKey: .postDate)) ?? ""
+        id = (try? values.decode(String.self, forKey: .id)) ?? ""
+        category = (try? values.decode(String.self, forKey: .category)) ?? ""
+        image = (try? values.decode(String.self, forKey: .image)) ?? ""
+        title = (try? values.decode(String.self, forKey: .title)) ?? ""
+        description = (try? values.decode(String.self, forKey: .description)) ?? ""
+        writer = (try? values.decode(String.self, forKey: .writer)) ?? ""
+        profileImage = (try? values.decode(String.self, forKey: .profileImage)) ?? ""
+        postTitle = (try? values.decode(String.self, forKey: .postTitle)) ?? ""
+        postContent = (try? values.decode(String.self, forKey: .postContent)) ?? ""
+        url = (try? values.decode(String.self, forKey: .url)) ?? ""
+        groupCode = (try? values.decode(String.self, forKey: .groupCode)) ?? ""
+        somethingElse = (try? values.decode(Int.self, forKey: .somethingElse)) ?? 0
+    
+    }
 }
+/*
+extension PostPid: Decodable {
+    // This struct stays very close to the JSON model, to the point
+    // of using snake_case for its properties. Since it's private,
+    // outside code cannot access it (and no need to either)
+    private struct JSONSettings: Decodable {
+        var enabled: String
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case settings
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let settings  = try container.decode(JSONSettings.self, forKey: .settings)
+        isEnabled     = settings.enabled == "1" ? true : false
+    }
+}
+*/

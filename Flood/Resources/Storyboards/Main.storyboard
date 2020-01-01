@@ -1307,6 +1307,9 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-wP-yha">
                                                             <rect key="frame" x="24" y="16" width="42" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="f8A-gI-kE8"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1432,14 +1435,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-ZY-fku">
                                 <rect key="frame" x="0.0" y="720" width="375" height="58"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-Oa-Yum">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-Oa-Yum">
                                         <rect key="frame" x="317" y="9" width="40" height="40"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="BYV-ue-63t"/>
                                             <constraint firstAttribute="height" constant="40" id="PcB-aH-S76"/>
                                         </constraints>
-                                        <state key="normal" title="-&gt;">
+                                        <state key="normal" image="icCircleArrowGray">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -1448,7 +1451,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-9r-JLS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이 포스트에 댓글달기.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-9r-JLS">
                                         <rect key="frame" x="16" y="9" width="291" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="291" id="72n-Ud-fO3"/>
@@ -1631,6 +1634,7 @@
         <image name="24" width="32" height="32"/>
         <image name="icBookmarkBlack" width="28" height="28"/>
         <image name="icBookmarkWhite" width="28" height="28"/>
+        <image name="icCircleArrowGray" width="40" height="40"/>
         <image name="icMoreBlack" width="28" height="28"/>
         <image name="icMoreWhite" width="28" height="28"/>
         <image name="icTabFeed" width="48" height="48"/>

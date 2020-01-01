@@ -224,7 +224,7 @@ extension MainViewController: UITableViewDataSource {
                 if indexPath.row == 0 {
                     let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
                     
-                    newssharepostCell.newsshareCatarogy.text = "카테고리"
+                    newssharepostCell.newsshareCatarogy.text = pidpost.category
                     newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
                     newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
                     newssharepostCell.newsshareCatarogy.setRounded(radius: 10)
@@ -258,13 +258,13 @@ extension MainViewController: UITableViewDataSource {
                 else if indexPath.row == 1 {
                     let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
                     
-                    picturepostCell.picturepostCatagory.text = "카테고리"
+                    picturepostCell.picturepostCatagory.text = pidpost.category
                     picturepostCell.picturepostCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
                     picturepostCell.picturepostCatagory.textColor = .electricBlue
-                    picturepostCell.picturepostprofileImg.image = UIImage(named: "25")
-                    picturepostCell.picturepostName.text = "이름"
+                    // picturepostCell.picturepostprofileImg.imageFromUrl(pidpost.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
+                    picturepostCell.picturepostName.text = pidpost.writer
                     picturepostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    picturepostCell.picturepostTime.text = "시간"
+                    picturepostCell.picturepostTime.text = pidpost.postDate
                     picturepostCell.picturepostTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     picturepostCell.picturepostTime.textColor = .veryLightPink
                     picturepostCell.picturepostPost.text = "게시글"

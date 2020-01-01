@@ -22,7 +22,15 @@ class PostPidServices {
     func getPostPid(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let URL = APIConstants.PostPid
-        Alamofire.request(URL).responseJSON {
+        let headers: [String: String] = [
+            "Content-Type": "application/json",
+            "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVoZGduczE3NjZAZ21haWwuY29tIiwibmFtZSI6IuydtOuPme2biCIsImlhdCI6MTU3NzQwNzg1NiwiZXhwIjoxNTc5OTk5ODU2LCJpc3MiOiJGbG9vZFNlcnZlciJ9.Zf_LNfQIEdFl84r-tPQpT1nLaxdotkFutOxwNQy-w58"
+        ]
+        
+        let query: Parameters = [
+            "page" : 0, "limit" : 10 ]
+        
+        Alamofire.request(URL, method: .get, parameters: query, encoding: JSONEncoding.default, headers: headers).responseData{
             response in
             
             switch response.result {
@@ -33,17 +41,17 @@ class PostPidServices {
                     
                     //response의 respones안에 있는 statusCode를 추출
                     if let status = response.response?.statusCode {
-                        
+//                        print(status + "pid")
                         switch status {
                         case 200:
                             do{
                                 //decoding 시작
                                 let decoder = JSONDecoder()
-                                let object = try decoder.decode(PostPid.self, from: value as! Data)
+                                let object = try decoder.decode(PostPid.self, from: value)
                                 
-                                if object.data != nil {
+                                if let data = object.data {
             
-                                    completion(.success(object.data))
+                                    completion(.success(data.pidArr))
                                 }
                                     
                                 else {

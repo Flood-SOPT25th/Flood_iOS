@@ -37,12 +37,11 @@ class PostTop3Services {
                 if let value = response.result.value {
                     //response의 respones안에 있는 statusCode를 추출
                     if let status = response.response?.statusCode {
-                        print(status)
+                        
                         switch status {
                         case 200:
                             do{
                                 //decoding 시작
-                                
                                 let decoder = JSONDecoder()
                                 let object = try decoder.decode(PostTop3.self, from: value)
                                 

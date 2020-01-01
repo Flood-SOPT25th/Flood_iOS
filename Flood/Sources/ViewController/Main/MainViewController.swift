@@ -79,10 +79,10 @@ class MainViewController: UIViewController {
             
             // NetworkResult 의 요소들
             case .success(let data):
-                
-                print("data",data)
-                self.PostPiddataset = data as? PostPid
-                self.PidList = self.PostPiddataset.data!
+                if let pidList = data as? [pidArr] {
+                    self.PidList = pidList
+                    self.postTV.reloadData()
+                }
 
             case .requestErr(_):
                 print("request error")
@@ -250,6 +250,7 @@ extension MainViewController: UITableViewDataSource {
                     let thisweekCell2 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell2", for: indexPath) as! ThisWeekCell2
                     
                     //thisweekCell2.thisweekImg2.imageFromUrl(top3post.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
+                    thisweekCell2.thisweekImg2.image = UIImage(named: "15")
                     thisweekCell2.thisweekTitle2.text = top3post.title
                     thisweekCell2.thisweekTitle2.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell2.thisweekTitle2.textColor = .white
@@ -272,7 +273,8 @@ extension MainViewController: UITableViewDataSource {
                 else {
                     let thisweekCell3 = thisweekTV.dequeueReusableCell(withIdentifier: "ThisWeekCell3", for: indexPath) as! ThisWeekCell3
                     
-                    thisweekCell3.thisweekImg3.imageFromUrl(top3post.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
+                    //thisweekCell3.thisweekImg3.imageFromUrl(top3post.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
+                    thisweekCell3.thisweekImg3.image = UIImage(named: "15")
                     thisweekCell3.thisweekTitle3.text = top3post.title
                     thisweekCell3.thisweekTitle3.font = UIFont(name: "NotoSansCJKkr-Bold", size: 24)
                     thisweekCell3.thisweekTitle3.textColor = .white
@@ -295,6 +297,7 @@ extension MainViewController: UITableViewDataSource {
             }
             
         case self.postTV:
+            let pidpost = PidList[indexPath.row]
             if indexPath.section == 0 {
                 if indexPath.row == 0 {
                     let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
@@ -304,18 +307,22 @@ extension MainViewController: UITableViewDataSource {
                     newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
                     newssharepostCell.newsshareCatarogy.setRounded(radius: 10)
                     newssharepostCell.newsshareCatarogy.textColor = .electricBlue
-                    newssharepostCell.newsshareprofileImg.image = UIImage(named: "14")
+                    //newssharepostCell.newsshareprofileImg.image = UIImage(named: "14")
+                    newssharepostCell.newsshareprofileImg.imageFromUrl(pidpost.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
                     newssharepostCell.newsshareprofileImg.setRounded(radius: 10)
-                    newssharepostCell.newsshareName.text = "이름"
+                    //newssharepostCell.newsshareName.text = "이름"
+                    newssharepostCell.newsshareName.text = pidpost.writer
                     newssharepostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    newssharepostCell.newsshareTime.text = "시간"
+                    //newssharepostCell.newsshareTime.text = "시간"
+                    newssharepostCell.newsshareTime.text = pidpost.postDate
                     newssharepostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     newssharepostCell.newsshareTime.textColor = .veryLightPink
-                    newssharepostCell.newssharePost.text = "게시글"
+                    //newssharepostCell.newssharePost.text = "게시글"
+                    newssharepostCell.newssharePost.text = pidpost.postContent
                     newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     newssharepostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                    newssharepostCell.newsTitle.text = "제목"
-                    newssharepostCell.newsPost.text = "뉴스글"
+                    newssharepostCell.newsTitle.text = pidpost.title //"제목"
+                    newssharepostCell.newsPost.text = pidpost.description  //"뉴스글"
                     newssharepostCell.newsImg.image = UIImage(named: "26")
                     newssharepostCell.newsflipCount.text = "플립수"
                     newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
@@ -350,7 +357,7 @@ extension MainViewController: UITableViewDataSource {
                     picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
                     picturepostCell.picture3.layer.cornerRadius = 10
                     picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
-                    picturepostCell.picturefilpCount.text = "플립수"
+                    picturepostCell.picturefilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))" //"플립수"
                     picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     picturepostCell.picturefilpCount.textColor = .veryLightPink
                     picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)

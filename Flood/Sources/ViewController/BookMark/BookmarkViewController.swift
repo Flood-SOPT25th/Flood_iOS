@@ -16,6 +16,9 @@ class BookmarkViewController: UIViewController {
     // MARK: - Variables and Properties
 
     
+    // MARK: - Dummy Data
+    
+    
     // MARK: - Life Cycle
 
     override func viewDidLoad() {
@@ -24,6 +27,12 @@ class BookmarkViewController: UIViewController {
     }
     
     // MARK: -Helpers
-
+    func initSetting(){
+        
+    }
+    
+    func setDefault(){
+        
+    }
     
 }

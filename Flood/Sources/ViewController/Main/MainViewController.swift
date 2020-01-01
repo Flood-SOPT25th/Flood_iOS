@@ -8,6 +8,11 @@
 
 import UIKit
 import Kingfisher
+import SwiftyGif
+
+protocol PostDelegate {
+    func didSelectPost(url: String)
+}
 
 class MainViewController: UIViewController {
     
@@ -27,6 +32,8 @@ class MainViewController: UIViewController {
     var PostPiddataset : PostPid!
     var PidList : [pidArr] = []
     
+    let logoAnimationView = LogoAnimationView()
+
     
     // MARK: - Life Cycle
     
@@ -40,27 +47,33 @@ class MainViewController: UIViewController {
         thisweekTV.separatorInset.left = 0
         postTV.delegate = self
         postTV.dataSource = self
-        //tableviewcell 왼쪽라인 채우기
-        postTV.separatorInset.left = 0
         
-        // 네비게이션 바 배경색 설정 및 경계선 없애는 설정
-        self.navigationController?.navigationBar.tintColor = .white
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = false
         
-        // 탭바 배경색 설정
-        self.tabBarController?.tabBar.backgroundColor = .white
-        self.tabBarController?.tabBar.isTranslucent = false
+        initSetting()
         
         // 서버 통신
         setTop3()
         setPostPid()
         setCategroyBar()
+
+        view.addSubview(logoAnimationView)
+        logoAnimationView.pinEdgesToSuperView()
+        logoAnimationView.logoGifImageView.delegate = self
+        
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.hidesBottomBarWhenPushed = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.isNavigationBarHidden = true
+
+        logoAnimationView.logoGifImageView.startAnimatingGif()
+        logoAnimationView.layer.zPosition = 999
+        self.tabBarController?.tabBar.layer.zPosition = -100
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -85,8 +98,22 @@ class MainViewController: UIViewController {
     }
     
     
-    
     // MARK: -Helpers
+    
+    func initSetting(){
+        //tableviewcell 왼쪽라인 채우기
+        postTV.separatorInset.left = 0
+        
+        // 네비게이션 바 배경색 설정 및 경계선 없애는 설정
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        // 탭바 배경색 설정
+        self.tabBarController?.tabBar.backgroundColor = .white
+        self.tabBarController?.tabBar.isTranslucent = false
+
+    }
     
     @IBAction func webConncet(_ sender: UIButton) {
         guard let url = URL(string: "https://www.google.com"),
@@ -94,8 +121,13 @@ class MainViewController: UIViewController {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
+    @objc func toWeb(_ url : String) {
+        guard let url = URL(string : url),
+            UIApplication.shared.canOpenURL(url) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
     @IBAction func popupAction(_ sender: Any) {
-        
         let vc = storyboard?.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
@@ -208,6 +240,8 @@ extension MainViewController: UITableViewDataSource {
             thisweekCell.thisweekMore.setImage(UIImage(named: "icMoreWhite"), for: .normal)
             thisweekCell.thisweekBookmark.setImage(UIImage(named: "icBookmarkWhite"), for: .normal)
             thisweekCell.thisweekprofileImg.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
+            thisweekCell.thisweekprofileImg.setRounded(radius: nil)
+
             thisweekCell.thisweekName.text = top3post.writer
             thisweekCell.thisweekName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
             thisweekCell.thisweekTime.text = top3post.postDate
@@ -227,10 +261,10 @@ extension MainViewController: UITableViewDataSource {
                     newssharepostCell.newsshareCatarogy.text = pidpost.category
                     newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
                     newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
-                    newssharepostCell.newsshareCatarogy.setRounded(radius: 10)
+                    newssharepostCell.newsshareCatarogy.setRounded(radius: 3)
                     newssharepostCell.newsshareCatarogy.textColor = .electricBlue
                     //newssharepostCell.newsshareprofileImg.image = UIImage(named: "14")
-                    newssharepostCell.newsshareprofileImg.imageFromUrl(pidpost.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
+                    newssharepostCell.newsshareprofileImg.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
                     newssharepostCell.newsshareprofileImg.setRounded(radius: 10)
                     //newssharepostCell.newsshareName.text = "이름"
                     newssharepostCell.newsshareName.text = pidpost.writer
@@ -345,9 +379,17 @@ extension MainViewController: UITableViewDataSource {
 
 //DispatchQueue.main.async { }
 
+extension MainViewController: SwiftyGifDelegate {
+    func gifDidStop(sender: UIImageView) {
+        logoAnimationView.isHidden = true
+        self.tabBarController?.tabBar.layer.zPosition = 0
+//        self.tabBarController?.tabBar.barTintColor = .white
+    }
+}
+
 extension MainViewController {
     func setTop3() {
-        PostTop3Services.shared.getPostTop3 { responsedata in
+        FeedService.shared.getPostTop3 { responsedata in
             
             switch responsedata {
                 
@@ -370,7 +412,7 @@ extension MainViewController {
     }
     
     func setPostPid(){
-        PostPidServices.shared.getPostPid { responsedata in
+        FeedService.shared.getPostPid { responsedata in
             
             switch responsedata {
                 

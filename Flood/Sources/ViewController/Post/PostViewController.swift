@@ -35,7 +35,7 @@ class PostViewController: UIViewController {
     
     // 카테고리 리스트
     var category : categoryData? = nil
-    var categoryList : [String] = ["123"]
+    var categoryList : [String] = []
     
     
     // MARK: - Life Cycle
@@ -98,7 +98,6 @@ class PostViewController: UIViewController {
     @objc func initSetting() {
         attachmentView.layer.addBorder([.top, .bottom], color: .veryLightPinkTwo, width: 1)
         categoryBtn.tintColor = .veryLightPink
-//        categoryList = ["IT","경제","주식","사회","네이버","카카오","NHN","가고싶다"]
     }
     
     func setDefault() {

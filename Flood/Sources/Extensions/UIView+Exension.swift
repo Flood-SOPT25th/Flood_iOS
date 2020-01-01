@@ -10,6 +10,15 @@ import UIKit
 
 @IBDesignable extension UIView {
     
+    func pinEdgesToSuperView() {
+        guard let superView = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+        topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
+        leftAnchor.constraint(equalTo: superView.leftAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 55).isActive = true
+        rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
+    }
+    
     func setRounded(radius : CGFloat?){
         
         // UIView 의 모서리가 둥근 정도를 설정

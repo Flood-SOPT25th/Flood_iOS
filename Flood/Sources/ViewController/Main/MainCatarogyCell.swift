@@ -28,7 +28,6 @@ class MainCatarogyCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        maincatarogy?.sizeToFit()
 
     }
 

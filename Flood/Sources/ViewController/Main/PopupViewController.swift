@@ -81,6 +81,11 @@ extension PopupViewController : UICollectionViewDataSource {
         return popupCell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+    }
+    
     
 }
 

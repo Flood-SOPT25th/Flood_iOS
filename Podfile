@@ -8,6 +8,7 @@ target 'Flood' do
   pod 'Alamofire', '~> 4.8.2'
   pod 'Kingfisher', '~> 4.10.1'
   pod 'SwiftyJSON'
+  pod 'SwiftyGif'
 # pod 'Tagging'
 # pod 'FMPhotoPicker', '~> 0.8'
 

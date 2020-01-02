@@ -9,11 +9,11 @@
 import UIKit
 import Kingfisher
 import SwiftyGif
-
-protocol PostDelegate {
-    func didSelectPost(url: String)
-}
-
+/*
+ protocol PostDelegate {
+ func didSelectPost(url: String)
+ }
+ */
 class MainViewController: UIViewController {
     
     // MARK: - UI components
@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
     var PidList : [pidArr] = []
     
     let logoAnimationView = LogoAnimationView()
-
+    
     
     // MARK: - Life Cycle
     
@@ -55,13 +55,13 @@ class MainViewController: UIViewController {
         setTop3()
         setPostPid()
         setCategroyBar()
-
+        
         view.addSubview(logoAnimationView)
         logoAnimationView.pinEdgesToSuperView()
         logoAnimationView.logoGifImageView.delegate = self
         
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.hidesBottomBarWhenPushed = true
     }
@@ -69,11 +69,11 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.isNavigationBarHidden = true
-
+        
         logoAnimationView.logoGifImageView.startAnimatingGif()
         logoAnimationView.layer.zPosition = 999
         self.tabBarController?.tabBar.layer.zPosition = -100
-
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -86,15 +86,19 @@ class MainViewController: UIViewController {
         // 이 부분은 아래 부분의 didSelectRowAt 부분을 먼저 읽고 다시 와주세요!
         
         /*
-            didSelectRowAt 함수에서 해당 셀을 선택하고 음악 상세정보 뷰로 전환되었다가 다시 돌아오면
-            그 셀이 선택된 상태로 남아 있는 현상을 해결합니다. (궁금하다면 이 부분을 주석처리하고 실행해보세요!)
-            viewDidDisappear 안에 선언되어 뷰가 다시 나타날 때 아래 코드가 실행되고
-            현재 선택된 row 의 인덱스를 가져와 그 인덱스에 해당하는 row 를 이용해 deslect 를 해줍니다.
-        */
+         didSelectRowAt 함수에서 해당 셀을 선택하고 음악 상세정보 뷰로 전환되었다가 다시 돌아오면
+         그 셀이 선택된 상태로 남아 있는 현상을 해결합니다. (궁금하다면 이 부분을 주석처리하고 실행해보세요!)
+         viewDidDisappear 안에 선언되어 뷰가 다시 나타날 때 아래 코드가 실행되고
+         현재 선택된 row 의 인덱스를 가져와 그 인덱스에 해당하는 row 를 이용해 deslect 를 해줍니다.
+         */
         
         if let index = thisweekTV.indexPathForSelectedRow {
             thisweekTV.deselectRow(at: index, animated: true)
         }
+        else if let index = postTV.indexPathForSelectedRow {
+            postTV.deselectRow(at: index, animated: true)
+        }
+        
     }
     
     
@@ -112,7 +116,7 @@ class MainViewController: UIViewController {
         // 탭바 배경색 설정
         self.tabBarController?.tabBar.backgroundColor = .white
         self.tabBarController?.tabBar.isTranslucent = false
-
+        
     }
     
     @IBAction func webConncet(_ sender: UIButton) {
@@ -120,13 +124,13 @@ class MainViewController: UIViewController {
             UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
-    
-    @objc func toWeb(_ url : String) {
-        guard let url = URL(string : url),
-            UIApplication.shared.canOpenURL(url) else { return }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
-    
+    /*
+     @objc func toWeb(_ url : String) {
+     guard let url = URL(string : url),
+     UIApplication.shared.canOpenURL(url) else { return }
+     UIApplication.shared.open(url, options: [:], completionHandler: nil)
+     }
+     */
     @IBAction func popupAction(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
         vc.modalPresentationStyle = .overCurrentContext
@@ -164,14 +168,27 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let MainCatarogyCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCatarogyCell", for: indexPath) as! MainCatarogyCell
-        
-        //let catagorypost = CategoryList[indexPath.row]
         MainCatarogyCell.maincatarogy?.setTitle(CategoryViewList[indexPath.row], for: .normal)
-        MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
-        MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
-        MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
-        return MainCatarogyCell
         
+        if indexPath.item == 0 {
+            MainCatarogyCell.maincatarogy?.setTitleColor(.white, for: .normal)
+            MainCatarogyCell.maincatarogy?.backgroundColor = .electricBlue
+            MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
+            MainCatarogyCell.maincatarogy?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.1, radius: 2)
+            return MainCatarogyCell
+        }
+        else {
+            MainCatarogyCell.maincatarogy?.setTitleColor(.veryLightPinkThree, for: .normal)
+            MainCatarogyCell.maincatarogy?.backgroundColor = .white
+            MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
+            MainCatarogyCell.maincatarogy?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.08, radius: 2)
+
+            //MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
+            //MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
+            return MainCatarogyCell
+            
+        }
+        return UICollectionViewCell()
     }
 }
 
@@ -240,8 +257,7 @@ extension MainViewController: UITableViewDataSource {
             thisweekCell.thisweekMore.setImage(UIImage(named: "icMoreWhite"), for: .normal)
             thisweekCell.thisweekBookmark.setImage(UIImage(named: "icBookmarkWhite"), for: .normal)
             thisweekCell.thisweekprofileImg.imageFromUrl(top3post.profileImage, defaultImgPath : "http:// ~~ ")
-            thisweekCell.thisweekprofileImg.setRounded(radius: nil)
-
+            thisweekCell.thisweekprofileImg.layer.cornerRadius = 10
             thisweekCell.thisweekName.text = top3post.writer
             thisweekCell.thisweekName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
             thisweekCell.thisweekTime.text = top3post.postDate
@@ -259,28 +275,26 @@ extension MainViewController: UITableViewDataSource {
                     let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
                     
                     newssharepostCell.newsshareCatarogy.text = pidpost.category
-                    newssharepostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
-                    newssharepostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
-                    newssharepostCell.newsshareCatarogy.setRounded(radius: 3)
+                    newssharepostCell.newsshareCatarogy.font = UIFont.systemFont(ofSize: CGFloat(12))
                     newssharepostCell.newsshareCatarogy.textColor = .electricBlue
-                    //newssharepostCell.newsshareprofileImg.image = UIImage(named: "14")
+                    newssharepostCell.newsshareCatagoryView.layer.borderWidth = 1
+                    newssharepostCell.newsshareCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
+                    newssharepostCell.newsshareCatagoryView.setRounded(radius: 11)
                     newssharepostCell.newsshareprofileImg.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
-                    newssharepostCell.newsshareprofileImg.setRounded(radius: 10)
-                    //newssharepostCell.newsshareName.text = "이름"
+                    newssharepostCell.newsshareprofileImg.layer.cornerRadius = 10
                     newssharepostCell.newsshareName.text = pidpost.writer
                     newssharepostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    //newssharepostCell.newsshareTime.text = "시간"
                     newssharepostCell.newsshareTime.text = pidpost.postDate
                     newssharepostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     newssharepostCell.newsshareTime.textColor = .veryLightPink
-                    //newssharepostCell.newssharePost.text = "게시글"
                     newssharepostCell.newssharePost.text = pidpost.postContent
                     newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     newssharepostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                    newssharepostCell.newsTitle.text = pidpost.title //"제목"
-                    newssharepostCell.newsPost.text = pidpost.description  //"뉴스글"
+                    newssharepostCell.newsTitle.text = pidpost.title
+                    newssharepostCell.newsPost.text = pidpost.description
                     newssharepostCell.newsImg.image = UIImage(named: "26")
-                    newssharepostCell.newsflipCount.text = "플립수"
+                    newssharepostCell.newsImg.layer.cornerRadius = 10
+                    newssharepostCell.newsflipCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
                     newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     newssharepostCell.newsflipCount.textColor = .veryLightPink
                     newssharepostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
@@ -293,15 +307,19 @@ extension MainViewController: UITableViewDataSource {
                     let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
                     
                     picturepostCell.picturepostCatagory.text = pidpost.category
-                    picturepostCell.picturepostCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    picturepostCell.picturepostCatagory.font = UIFont.systemFont(ofSize: CGFloat(12))
                     picturepostCell.picturepostCatagory.textColor = .electricBlue
+                    picturepostCell.picturepostCatagoryView.layer.borderWidth = 1
+                    picturepostCell.picturepostCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
+                    picturepostCell.picturepostCatagoryView.setRounded(radius: 11)
                     // picturepostCell.picturepostprofileImg.imageFromUrl(pidpost.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
+                    picturepostCell.picturepostprofileImg.layer.cornerRadius = 10
                     picturepostCell.picturepostName.text = pidpost.writer
                     picturepostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                     picturepostCell.picturepostTime.text = pidpost.postDate
                     picturepostCell.picturepostTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     picturepostCell.picturepostTime.textColor = .veryLightPink
-                    picturepostCell.picturepostPost.text = "게시글"
+                    picturepostCell.picturepostPost.text = pidpost.postContent
                     picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
                     picturepostCell.picture1.image = UIImage(named: "39")
@@ -313,7 +331,7 @@ extension MainViewController: UITableViewDataSource {
                     picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
                     picturepostCell.picture3.layer.cornerRadius = 10
                     picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
-                    picturepostCell.picturefilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))" //"플립수"
+                    picturepostCell.picturefilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
                     picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     picturepostCell.picturefilpCount.textColor = .veryLightPink
                     picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
@@ -323,19 +341,23 @@ extension MainViewController: UITableViewDataSource {
                 else {
                     let PostCell = postTV.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
                     
-                    PostCell.postCatagory.text = "카테고리"
-                    PostCell.postCatagory.font = UIFont(name: "NotoSansCJKkr-Medium", size: 12)
+                    PostCell.postCatagory.text = pidpost.category
+                    PostCell.postCatagory.font = UIFont.systemFont(ofSize: CGFloat(12))
                     PostCell.postCatagory.textColor = .electricBlue
+                    PostCell.postCatagoryView.layer.borderWidth = 1
+                    PostCell.postCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
+                    PostCell.postCatagoryView.setRounded(radius: 11)
                     PostCell.postprofileImg.image = UIImage(named: "44")
-                    PostCell.postName.text = "이름"
+                    PostCell.postprofileImg.layer.cornerRadius = 10
+                    PostCell.postName.text = pidpost.writer
                     PostCell.postName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    PostCell.postTime.text = "시간"
+                    PostCell.postTime.text = pidpost.postDate
                     PostCell.postTime.font = UIFont.systemFont(ofSize: CGFloat(12))
                     PostCell.postTime.textColor = .veryLightPink
-                    PostCell.postPost.text = "게시글"
+                    PostCell.postPost.text = pidpost.postContent
                     PostCell.postPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                     PostCell.postMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                    PostCell.postfilpCount.text = "플립수"
+                    PostCell.postfilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
                     PostCell.postfilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                     PostCell.postfilpCount.textColor = .veryLightPink
                     PostCell.postBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
@@ -350,12 +372,10 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                let NSPostDetailView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsSharePostDetailView") as? NewsSharePostDetailView
-                self.navigationController?.pushViewController(NSPostDetailView!, animated: true)
-            }
-        }
+        
+        let NSPostDetailView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsSharePostDetailView") as? NewsSharePostDetailView
+        self.navigationController?.pushViewController(NSPostDetailView!, animated: true)
+        
     }
     
 }
@@ -383,7 +403,7 @@ extension MainViewController: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         logoAnimationView.isHidden = true
         self.tabBarController?.tabBar.layer.zPosition = 0
-//        self.tabBarController?.tabBar.barTintColor = .white
+        //        self.tabBarController?.tabBar.barTintColor = .white
     }
 }
 

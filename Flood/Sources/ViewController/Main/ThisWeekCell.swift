@@ -48,11 +48,12 @@ class ThisWeekCell: UITableViewCell {
     }
     
 }
-
+/*
 extension ThisWeekCell : PostDelegate {
     func didSelectPost(url : String) {
 //        thisweekView.addGestureRecognizer((UITapGestureRecognizer(target: self, action: #selector(toWeb(url: url)))))
         
     }
-    
+
 }
+*/

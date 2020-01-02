@@ -11,6 +11,7 @@ import UIKit
 class PostCell: UITableViewCell {
     
     @IBOutlet weak var postCatagory: UILabel!
+    @IBOutlet weak var postCatagoryView: UIView!
     @IBOutlet weak var postprofileImg: UIImageView!
     @IBOutlet weak var postName: UILabel!
     @IBOutlet weak var postTime: UILabel!

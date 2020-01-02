@@ -10,6 +10,7 @@
 
 서비스 work flow
 ---------------
+<img src="/IMG/workflow.png" width= "800">
 
 앱 아이콘
 ------------
@@ -32,7 +33,6 @@
 3. 사용한 라이브러리
 > * Alamofire 4.8.2
 > * Kingfisher 4.10.1
-> * SwiftyJSON
 > * SwiftyGif
 
 > * ~~Tagging~~ 

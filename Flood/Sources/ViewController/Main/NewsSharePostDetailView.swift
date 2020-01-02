@@ -27,6 +27,11 @@ class NewsSharePostDetailView : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "icLeftArrow")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "icLeftArrow")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        
         setupSampleData()
         setupGestureRecognizer()
         
@@ -36,8 +41,13 @@ class NewsSharePostDetailView : UIViewController {
         newssharepostTV.dataSource = self
         
         navigationController?.isNavigationBarHidden = false
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)
+        //self.navigationController?.navigationBar.topItem?.title = ""
+
+        //self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)
+        
+        commentTextField.layer.cornerRadius = 19
+        commentTextField.layer.borderWidth = 1
+        commentTextField.layer.borderColor = UIColor.veryLightPinkTwo.cgColor
 
     }
     
@@ -141,9 +151,10 @@ extension NewsSharePostDetailView: UITableViewDataSource {
                 */
                 NewsSharePostCell.newsshareCatarogy.text = "카테고리"
                 NewsSharePostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
-                NewsSharePostCell.newsshareCatarogy.setBorder(borderColor: .electricBlue, borderWidth: 1)
-                NewsSharePostCell.newsshareCatarogy.setRounded(radius: 10)
                 NewsSharePostCell.newsshareCatarogy.textColor = .electricBlue
+                NewsSharePostCell.newsshareCatagoryView.layer.borderWidth = 1
+                NewsSharePostCell.newsshareCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
+                NewsSharePostCell.newsshareCatagoryView.setRounded(radius: 11)
                 NewsSharePostCell.newsshareprofileImg.image = UIImage(named: "14")
                 NewsSharePostCell.newsshareprofileImg.setRounded(radius: 10)
                 NewsSharePostCell.newsshareName.text = "이름"
@@ -157,6 +168,7 @@ extension NewsSharePostDetailView: UITableViewDataSource {
                 NewsSharePostCell.newsTitle.text = "제목"
                 NewsSharePostCell.newsPost.text = "뉴스글"
                 NewsSharePostCell.newsImg.image = UIImage(named: "26")
+                NewsSharePostCell.newsImg.layer.cornerRadius = 10
                 NewsSharePostCell.newsflipCount.text = "플립수"
                 NewsSharePostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
                 NewsSharePostCell.newsflipCount.textColor = .veryLightPink

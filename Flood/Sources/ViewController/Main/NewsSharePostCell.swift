@@ -11,6 +11,7 @@ import UIKit
 class NewsSharePostCell: UITableViewCell {
     
     @IBOutlet weak var newsshareCatarogy: UILabel!
+    @IBOutlet weak var newsshareCatagoryView: UIView!
     @IBOutlet weak var newsshareprofileImg: UIImageView!
     @IBOutlet weak var newsshareName: UILabel!
     @IBOutlet weak var newsshareTime: UILabel!

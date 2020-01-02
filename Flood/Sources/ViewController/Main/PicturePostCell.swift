@@ -11,6 +11,8 @@ import UIKit
 class PicturePostCell: UITableViewCell {
     
     @IBOutlet weak var picturepostCatagory: UILabel!
+    
+    @IBOutlet weak var picturepostCatagoryView: UIView!
     @IBOutlet weak var picturepostprofileImg: UIImageView!
     @IBOutlet weak var picturepostName: UILabel!
     @IBOutlet weak var picturepostTime: UILabel!

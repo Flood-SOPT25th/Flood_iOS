@@ -89,7 +89,7 @@ extension NewsSharePostDetailView: UITableViewDelegate {
                   // 저 총합의 값들이 한 셀의 높이가 되는겁니당
                   return estimatedFrame.height + 60 + 4
                  */
-                return 546
+                return 762
             }
             else {
                   //이 appro어쩌구 값이 label의 width 최대 값이라고 생각하면되는데
@@ -150,13 +150,13 @@ extension NewsSharePostDetailView: UITableViewDataSource {
                 }
                 */
                 NewsSharePostCell.newsshareCatarogy.text = "카테고리"
-                NewsSharePostCell.newsshareCatarogy.font = UIFont(name: "NotoSansCJKkr-Regular", size:12)
+                NewsSharePostCell.newsshareCatarogy.font = UIFont.systemFont(ofSize: CGFloat(12))
                 NewsSharePostCell.newsshareCatarogy.textColor = .electricBlue
                 NewsSharePostCell.newsshareCatagoryView.layer.borderWidth = 1
                 NewsSharePostCell.newsshareCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
                 NewsSharePostCell.newsshareCatagoryView.setRounded(radius: 11)
                 NewsSharePostCell.newsshareprofileImg.image = UIImage(named: "14")
-                NewsSharePostCell.newsshareprofileImg.setRounded(radius: 10)
+                NewsSharePostCell.newsshareprofileImg.layer.cornerRadius = 10
                 NewsSharePostCell.newsshareName.text = "이름"
                 NewsSharePostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
                 NewsSharePostCell.newsshareTime.text = "시간"
@@ -165,6 +165,15 @@ extension NewsSharePostDetailView: UITableViewDataSource {
                 NewsSharePostCell.newssharePost.text = "게시글"
                 NewsSharePostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                 //NewsSharePostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
+                NewsSharePostCell.picture1.image = UIImage(named: "26")
+                NewsSharePostCell.picture2.image = UIImage(named: "26")
+                NewsSharePostCell.picture3.image = UIImage(named: "26")
+                NewsSharePostCell.picture1.layer.cornerRadius = 10
+                NewsSharePostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                NewsSharePostCell.picture2.layer.cornerRadius = 10
+                NewsSharePostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+                NewsSharePostCell.picture3.layer.cornerRadius = 10
+                NewsSharePostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
                 NewsSharePostCell.newsTitle.text = "제목"
                 NewsSharePostCell.newsPost.text = "뉴스글"
                 NewsSharePostCell.newsImg.image = UIImage(named: "26")
@@ -175,6 +184,7 @@ extension NewsSharePostDetailView: UITableViewDataSource {
                 //NewsSharePostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
                 NewsSharePostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
                 NewsSharePostCell.newsshareView.setRounded(radius: 10)
+                
                  
                 return NewsSharePostCell
             }

@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet var maincatarogyCV: UICollectionView!
     @IBOutlet weak var thisweekTV: UITableView!
     @IBOutlet weak var postTV: UITableView!
-    
+
     
     // MARK: - Variables and Properties
     
@@ -64,7 +64,7 @@ class MainViewController: UIViewController {
         view.addSubview(logoAnimationView)
         logoAnimationView.pinEdgesToSuperView()
         logoAnimationView.logoGifImageView.delegate = self
-        
+    
         
     }
     
@@ -130,13 +130,14 @@ class MainViewController: UIViewController {
             UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
-    /*
-     @objc func toWeb(_ url : String) {
-     guard let url = URL(string : url),
-     UIApplication.shared.canOpenURL(url) else { return }
-     UIApplication.shared.open(url, options: [:], completionHandler: nil)
-     }
-     */
+    
+    @IBAction func NavigateDetailVC(_ sender: UIButton) {
+        let NSPostDetailView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsSharePostDetailView") as? NewsSharePostDetailView
+        self.navigationController?.pushViewController(NSPostDetailView!, animated: true)
+    }
+    
+    
+    
     @IBAction func popupAction(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
         vc.modalPresentationStyle = .overCurrentContext
@@ -353,13 +354,6 @@ extension MainViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let NSPostDetailView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsSharePostDetailView") as? NewsSharePostDetailView
-        self.navigationController?.pushViewController(NSPostDetailView!, animated: true)
-        
     }
     
 }

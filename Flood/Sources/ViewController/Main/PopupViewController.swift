@@ -29,7 +29,7 @@ class PopupViewController : UIViewController {
         
         popupView.transform = .init(translationX: 0, y: popupView.bounds.height)
     
-//        getBookmark()
+        //getBookmark()
         setupGesture()
         setupCornerRound()
     }
@@ -102,29 +102,29 @@ extension PopupViewController: UIGestureRecognizerDelegate {
     return true
   }
 }
+/*
+extension PopupViewController {
+    func getBookmark() {
+        BookmarkService.shared.getBookmark { responsedata in
 
-//extension PopupViewController {
-//    func getBookmark() {
-//        BookmarkService.shared.getBookmark { responsedata in
-//
-//            switch responsedata {
-//
-//            // NetworkResult 의 요소들
-//            case .success(let data):
-//                if let bookmarkList = data as? [Category] {
-//                    self.bookmarkList = bookmarkList
-//                    self.popupCV.reloadData()
-//                }
-//            case .requestErr(_):
-//                print("request error")
-//            case .pathErr:
-//                print(".pathErr")
-//            case .serverErr:
-//                print(".serverErr")
-//            case .networkFail :
-//                print("failure")
-//            }
-//        }
-//    }
-//}
-//
+            switch responsedata {
+
+            // NetworkResult 의 요소들
+            case .success(let data):
+                if let bookmarkList = data as? [Category] {
+                    self.bookmarkList = bookmarkList
+                    self.popupCV.reloadData()
+                }
+            case .requestErr(_):
+                print("request error")
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail :
+                print("failure")
+            }
+        }
+    }
+}
+*/

@@ -105,7 +105,7 @@
                                                     <constraint firstItem="bB2-KZ-BEa" firstAttribute="top" secondItem="euX-CV-UDV" secondAttribute="bottom" constant="3" id="wwI-jt-kTH"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKl-ul-4gl">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKl-ul-4gl">
                                                 <rect key="frame" x="0.0" y="161" width="375" height="1230"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1230" id="Mih-TH-8Dr"/>

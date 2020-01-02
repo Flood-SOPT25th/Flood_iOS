@@ -127,7 +127,13 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func webConncet(_ sender: UIButton) {
-        guard let url = URL(string: "https://www.google.com"),
+        guard let url = URL(string: "http://google.com"),
+            UIApplication.shared.canOpenURL(url) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    func toWeb(_ url : String) {
+        guard let url = URL(string: url),
             UIApplication.shared.canOpenURL(url) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
@@ -144,6 +150,7 @@ class MainViewController: UIViewController {
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.bookmarkList = bookmarkList
+//        vc.postId =
         print(bookmarkList)
         
         

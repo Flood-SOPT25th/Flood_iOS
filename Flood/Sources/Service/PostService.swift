@@ -13,6 +13,8 @@ struct PostService {
     
     static let shared = PostService()
     
+    // MARK: - 포스트 업로드
+    
     func uploadPost(pictures: [UIImage], url: String, category: String, postContent: String, completion: @escaping(NetworkResult<Any>)->Void) {
         
         let token = UserDefaults.standard
@@ -50,6 +52,7 @@ struct PostService {
         }
     }
     
+    // MARK: - 그룹 카테고리 조회
     
     func groupCategory(completion: @escaping(NetworkResult<Any>)->Void) {
         

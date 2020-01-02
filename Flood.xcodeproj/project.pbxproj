@@ -27,6 +27,7 @@
 		5E75A5FF23BD16CC003F9263 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75A5FE23BD16CC003F9263 /* EditPasswordViewController.swift */; };
 		5E75A60123BD16E0003F9263 /* EditAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75A60023BD16E0003F9263 /* EditAlarmViewController.swift */; };
 		5E75A60323BD1710003F9263 /* InviteEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75A60223BD1710003F9263 /* InviteEmployeeViewController.swift */; };
+		5E75A60523BE0489003F9263 /* BookmarkAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75A60423BE0489003F9263 /* BookmarkAdd.swift */; };
 		5E7F1E3D23BCD72B00980B7B /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F1E3C23BCD72B00980B7B /* LogoAnimationView.swift */; };
 		5E7F1E4023BCD75C00980B7B /* splash_ios.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F1E3E23BCD75C00980B7B /* splash_ios.gif */; };
 		5E7F1E4123BCD75C00980B7B /* loading_blue 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5E7F1E3F23BCD75C00980B7B /* loading_blue 2.gif */; };
@@ -122,6 +123,7 @@
 		5E75A5FE23BD16CC003F9263 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		5E75A60023BD16E0003F9263 /* EditAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmViewController.swift; sourceTree = "<group>"; };
 		5E75A60223BD1710003F9263 /* InviteEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteEmployeeViewController.swift; sourceTree = "<group>"; };
+		5E75A60423BE0489003F9263 /* BookmarkAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkAdd.swift; sourceTree = "<group>"; };
 		5E7F1E3C23BCD72B00980B7B /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
 		5E7F1E3E23BCD75C00980B7B /* splash_ios.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash_ios.gif; sourceTree = "<group>"; };
 		5E7F1E3F23BCD75C00980B7B /* loading_blue 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading_blue 2.gif"; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				A164663B23B5C18300F18A87 /* Comment.swift */,
 				5E6145F923BA4D1900E24DBD /* GroupCategory.swift */,
 				5E75A5FA23BD0900003F9263 /* BookmarkList.swift */,
+				5E75A60423BE0489003F9263 /* BookmarkAdd.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				5E6145EF23B9AE5600E24DBD /* PostService.swift in Sources */,
 				5E75A5FF23BD16CC003F9263 /* EditPasswordViewController.swift in Sources */,
 				A1CA098823B8603700FA146F /* PopupViewController.swift in Sources */,
+				5E75A60523BE0489003F9263 /* BookmarkAdd.swift in Sources */,
 				5E64E09223B4A3D500A54B9A /* UINavigationController+Extension.swift in Sources */,
 				A164663823B5B78000F18A87 /* NewsSharePostDetailView.swift in Sources */,
 				A19D25B223B4C28A00B929A6 /* ThisWeekCell.swift in Sources */,

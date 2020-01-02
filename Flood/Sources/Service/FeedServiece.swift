@@ -15,7 +15,8 @@ struct FeedService {
     
     static let shared = FeedService()
     
-    // (completion: @escaping (enum으로선언한것<[Data첫번째구조체이름.두번째구조체이름], Error(swift타입)>) -> Void)
+    // MARK: - Top3 피드 조회
+    
     func getPostTop3(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let token = UserDefaults.standard
@@ -73,7 +74,8 @@ struct FeedService {
         }
     }
     
-    //(completion: @escaping (enum으로선언한것<[Data첫번째구조체이름.두번째구조체이름], Error(swift타입)>) -> Void)
+    // MARK: - 게시물 전체 피드
+    
     func getPostPid(completion: @escaping (NetworkResult<Any>) -> Void) {
         
         let token = UserDefaults.standard
@@ -149,6 +151,8 @@ struct FeedService {
             }
         }
     }
+    
+    // MARK: - 게시물 전체 피드
     
     func getPostHash(_ category: String, completion: @escaping (NetworkResult<Any>) -> Void) {
             let token = UserDefaults.standard

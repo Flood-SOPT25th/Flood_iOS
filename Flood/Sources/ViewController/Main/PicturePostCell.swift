@@ -24,10 +24,16 @@ class PicturePostCell: UITableViewCell {
     @IBOutlet weak var picture2: UIImageView!
     @IBOutlet weak var picture3: UIImageView!
     
+    @IBOutlet weak var newsTitle: UILabel!
+    @IBOutlet weak var newsPost: UILabel!
+    @IBOutlet weak var newsImg: UIImageView!
+    
     @IBOutlet weak var picturefilpCount: UILabel!
     @IBOutlet weak var picturepostBookmark: UIButton!
     
     @IBOutlet weak var picturepostView: UIView!
+    @IBOutlet weak var newsshareView: UIView!
+    
     
     override func awakeFromNib() {
          super.awakeFromNib()

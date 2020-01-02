@@ -77,7 +77,7 @@ class MainViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         
         logoAnimationView.logoGifImageView.startAnimatingGif()
-//        logoAnimationView.layer.zPosition = 999
+        //        logoAnimationView.layer.zPosition = 999
         self.tabBarController?.tabBar.layer.zPosition = -100
         
     }
@@ -191,7 +191,7 @@ extension MainViewController: UICollectionViewDataSource {
             MainCatarogyCell.maincatarogy?.backgroundColor = .white
             MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
             MainCatarogyCell.maincatarogy?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.08, radius: 2)
-
+            
             //MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
             //MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
             return MainCatarogyCell
@@ -209,11 +209,11 @@ extension MainViewController: UICollectionViewDataSource {
         thisweekTV.isHidden = true
         PidList = hostList as! [pidArr]
         
-//        var chooseCategory = categoryCell.maincatarogy?.titleLabel?.text
-//
-//        func findCategory(findString :String) -> Bool {
-//            return findString == chooseCategory
-//        }
+        //        var chooseCategory = categoryCell.maincatarogy?.titleLabel?.text
+        //
+        //        func findCategory(findString :String) -> Bool {
+        //            return findString == chooseCategory
+        //        }
     }
 }
 
@@ -249,15 +249,7 @@ extension MainViewController: UITableViewDataSource {
             
         case postTV:
             if indexPath.section == 0 {
-                if indexPath.row == 0 {
-                    return 501
-                }
-                else if indexPath.row == 1 {
-                    return 416
-                }
-                else {
-                    return 200
-                }
+                return 725
             }
         default:
             return 0
@@ -295,101 +287,68 @@ extension MainViewController: UITableViewDataSource {
             
         case self.postTV:
             let pidpost = PidList[indexPath.row]
-            if indexPath.section == 0 {
-                if indexPath.row == 0 {
-                    let newssharepostCell = postTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
-                    
-                    newssharepostCell.newsshareCatarogy.text = pidpost.category
-                    newssharepostCell.newsshareCatarogy.font = UIFont.systemFont(ofSize: CGFloat(12))
-                    newssharepostCell.newsshareCatarogy.textColor = .electricBlue
-                    newssharepostCell.newsshareCatagoryView.layer.borderWidth = 1
-                    newssharepostCell.newsshareCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
-                    newssharepostCell.newsshareCatagoryView.setRounded(radius: 11)
-                    newssharepostCell.newsshareprofileImg.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
-                    newssharepostCell.newsshareprofileImg.layer.cornerRadius = 10
-                    newssharepostCell.newsshareName.text = pidpost.writer
-                    newssharepostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    newssharepostCell.newsshareTime.text = pidpost.postDate
-                    newssharepostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
-                    newssharepostCell.newsshareTime.textColor = .veryLightPink
-                    newssharepostCell.newssharePost.text = pidpost.postContent
-                    newssharepostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    newssharepostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                    newssharepostCell.newsTitle.text = pidpost.title
-                    newssharepostCell.newsPost.text = pidpost.description
-                    newssharepostCell.newsImg.image = UIImage(named: "26")
-                    newssharepostCell.newsImg.layer.cornerRadius = 10
-                    newssharepostCell.newsflipCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
-                    newssharepostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
-                    newssharepostCell.newsflipCount.textColor = .veryLightPink
-                    newssharepostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-                    newssharepostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
-                    newssharepostCell.newsshareView.setRounded(radius: 10)
-                    
-                    return newssharepostCell
-                }
-                else if indexPath.section == 1 {
-                    let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
-                    
-                    picturepostCell.picturepostCatagory.text = pidpost.category
-                    picturepostCell.picturepostCatagory.font = UIFont.systemFont(ofSize: CGFloat(12))
-                    picturepostCell.picturepostCatagory.textColor = .electricBlue
-                    picturepostCell.picturepostCatagoryView.layer.borderWidth = 1
-                    picturepostCell.picturepostCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
-                    picturepostCell.picturepostCatagoryView.setRounded(radius: 11)
-                    // picturepostCell.picturepostprofileImg.imageFromUrl(pidpost.postImages[indexPath.row], defaultImgPath : "http:// ~~ ")
-                    picturepostCell.picturepostprofileImg.layer.cornerRadius = 10
-                    picturepostCell.picturepostName.text = pidpost.writer
-                    picturepostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    picturepostCell.picturepostTime.text = pidpost.postDate
-                    picturepostCell.picturepostTime.font = UIFont.systemFont(ofSize: CGFloat(12))
-                    picturepostCell.picturepostTime.textColor = .veryLightPink
-                    picturepostCell.picturepostPost.text = pidpost.postContent
-                    picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                    picturepostCell.picture1.image = UIImage(named: "39")
-                    picturepostCell.picture2.image = UIImage(named: "40")
-                    picturepostCell.picture3.image = UIImage(named: "41")
-                    picturepostCell.picture1.layer.cornerRadius = 10
-                    picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-                    picturepostCell.picture2.layer.cornerRadius = 10
-                    picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
-                    picturepostCell.picture3.layer.cornerRadius = 10
-                    picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
-                    picturepostCell.picturefilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
-                    picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
-                    picturepostCell.picturefilpCount.textColor = .veryLightPink
-                    picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-                    
-                    return picturepostCell
-                }
-                else {
-                    let PostCell = postTV.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
-                    
-                    PostCell.postCatagory.text = pidpost.category
-                    PostCell.postCatagory.font = UIFont.systemFont(ofSize: CGFloat(12))
-                    PostCell.postCatagory.textColor = .electricBlue
-                    PostCell.postCatagoryView.layer.borderWidth = 1
-                    PostCell.postCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
-                    PostCell.postCatagoryView.setRounded(radius: 11)
-                    PostCell.postprofileImg.image = UIImage(named: "44")
-                    PostCell.postprofileImg.layer.cornerRadius = 10
-                    PostCell.postName.text = pidpost.writer
-                    PostCell.postName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                    PostCell.postTime.text = pidpost.postDate
-                    PostCell.postTime.font = UIFont.systemFont(ofSize: CGFloat(12))
-                    PostCell.postTime.textColor = .veryLightPink
-                    PostCell.postPost.text = pidpost.postContent
-                    PostCell.postPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
-                    PostCell.postMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                    PostCell.postfilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
-                    PostCell.postfilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
-                    PostCell.postfilpCount.textColor = .veryLightPink
-                    PostCell.postBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-                    
-                    return PostCell
-                }
+            let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
+            
+            if pidpost.image != nil && pidpost.postImages != nil {
+              picturepostCell.picturepostView.isHidden = false
+              picturepostCell.newsshareView.isHidden = false
             }
+            else if pidpost.image == nil && pidpost.postImages != nil {
+              picturepostCell.picturepostView.isHidden = false
+              picturepostCell.newsshareView.isHidden = true
+            }
+            else if pidpost.image != nil && pidpost.postImages == nil{
+              picturepostCell.picturepostView.isHidden = true
+              picturepostCell.newsshareView.isHidden = false
+            }
+            else {
+              picturepostCell.picturepostView.isHidden = true
+              picturepostCell.newsshareView.isHidden = true
+            }
+            
+            
+            picturepostCell.picturepostCatagory.text = pidpost.category
+            picturepostCell.picturepostCatagory.font = UIFont.systemFont(ofSize: CGFloat(12))
+            picturepostCell.picturepostCatagory.textColor = .electricBlue
+            picturepostCell.picturepostCatagoryView.layer.borderWidth = 1
+            picturepostCell.picturepostCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
+            picturepostCell.picturepostCatagoryView.setRounded(radius: 11)
+            picturepostCell.picturepostprofileImg.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+            picturepostCell.picturepostprofileImg.layer.cornerRadius = 10
+            picturepostCell.picturepostName.text = pidpost.writer
+            picturepostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
+            picturepostCell.picturepostTime.text = pidpost.postDate
+            picturepostCell.picturepostTime.font = UIFont.systemFont(ofSize: CGFloat(12))
+            picturepostCell.picturepostTime.textColor = .veryLightPink
+            picturepostCell.picturepostPost.text = pidpost.postContent
+            picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+            picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
+            
+            
+            
+            
+            picturepostCell.picture1.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+            picturepostCell.picture2.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+            picturepostCell.picture3.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+            picturepostCell.picture1.layer.cornerRadius = 10
+            picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+            picturepostCell.picture2.layer.cornerRadius = 10
+            picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+            picturepostCell.picture3.layer.cornerRadius = 10
+            picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
+            picturepostCell.newsTitle.text = pidpost.title
+            picturepostCell.newsPost.text = pidpost.description
+            picturepostCell.newsImg.imageFromUrl(pidpost.image, defaultImgPath : "http:// ~~ ")
+            picturepostCell.newsImg.layer.cornerRadius = 10
+            picturepostCell.picturefilpCount.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
+            picturepostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+            picturepostCell.picturefilpCount.textColor = .veryLightPink
+            picturepostCell.picturepostBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+            picturepostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+            picturepostCell.newsshareView.setRounded(radius: 10)
+            
+            return picturepostCell
+            
         default:
             return UITableViewCell()
         }
@@ -427,8 +386,8 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         logoAnimationView.isHidden = true
-//        self.tabBarController?.tabBar.layer.zPosition = 0
-//        self.tabBarController?.tabBar.barTintColor = .white
+        //        self.tabBarController?.tabBar.layer.zPosition = 0
+        //        self.tabBarController?.tabBar.barTintColor = .white
     }
 }
 
@@ -519,24 +478,24 @@ extension MainViewController {
     
     func setCategory(_ category : String ) {
         FeedService.shared.getPostHash(category) { responsedata in
-        
-        switch responsedata {
             
-        // NetworkResult 의 요소들
-        case .success(let data):
-            if let hostList = data as? [PIDArr] {
-                self.hostList = hostList
+            switch responsedata {
+                
+            // NetworkResult 의 요소들
+            case .success(let data):
+                if let hostList = data as? [PIDArr] {
+                    self.hostList = hostList
+                }
+            case .requestErr(_):
+                print("request error")
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail :
+                print("failure")
             }
-        case .requestErr(_):
-            print("request error")
-        case .pathErr:
-            print(".pathErr")
-        case .serverErr:
-            print(".serverErr")
-        case .networkFail :
-            print("failure")
-        }
-
+            
             
         }
     }
@@ -563,5 +522,5 @@ extension MainViewController {
             }
         }
     }
-
+    
 }

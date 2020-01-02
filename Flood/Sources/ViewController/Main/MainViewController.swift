@@ -204,6 +204,7 @@ extension MainViewController: UICollectionViewDataSource {
         return UICollectionViewCell()
     }
     
+<<<<<<< Updated upstream
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let categoryCell = mainCatagoryCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
@@ -214,13 +215,23 @@ extension MainViewController: UICollectionViewDataSource {
         
         //        thisweekTV.isHidden = true
         //        PidList = hostList as! [pidArr]
+=======
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//
+//        let categoryCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
+//
+//        setCategory((categoryCell.maincatarogy?.titleLabel!.text)!)
+//
+//        thisweekTV.isHidden = true
+//        PidList = hostList as! [pidArr]
+>>>>>>> Stashed changes
         
         //        var chooseCategory = categoryCell.maincatarogy?.titleLabel?.text
         //
         //        func findCategory(findString :String) -> Bool {
         //            return findString == chooseCategory
         //        }
-    }
+//    }
 }
 
 
@@ -330,9 +341,8 @@ extension MainViewController: UITableViewDataSource {
             picturepostCell.picturepostPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
             picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
             
-            
-            
-            
+            //사진분기처리?
+        /*
             picturepostCell.picture1.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
             picturepostCell.picture2.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
             picturepostCell.picture3.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
@@ -342,6 +352,8 @@ extension MainViewController: UITableViewDataSource {
             picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
             picturepostCell.picture3.layer.cornerRadius = 10
             picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
+       */
+            
             picturepostCell.newsTitle.text = pidpost.title
             picturepostCell.newsPost.text = pidpost.description
             picturepostCell.newsImg.imageFromUrl(pidpost.image, defaultImgPath : "http:// ~~ ")

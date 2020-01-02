@@ -28,10 +28,7 @@ class NewsSharePostDetailView : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "icLeftArrow")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "icLeftArrow")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-        
+
         setupSampleData()
         setupGestureRecognizer()
         
@@ -41,9 +38,10 @@ class NewsSharePostDetailView : UIViewController {
         newssharepostTV.dataSource = self
         
         navigationController?.isNavigationBarHidden = false
-        //self.navigationController?.navigationBar.topItem?.title = ""
 
-        //self.navigationController?.navigationBar.tintColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "icLeftArrow")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "icLeftArrow")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         
         commentTextField.layer.cornerRadius = 19
         commentTextField.layer.borderWidth = 1

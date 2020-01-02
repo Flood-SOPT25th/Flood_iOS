@@ -46,22 +46,8 @@ struct BookmarkService {
                                 
                                 let result = try
                                     decoder.decode(BookmarkList.self, from: value)
-                                // print("finish decode")
-                                completion(.success(result))
-                                print("성공성공")
-                                print("value", result.data.categorys)
-                                
-                                switch result.message {
-                                    
-                                case "북마크 조회 완료":
-                                    completion(.success(result))
-                                    
-                                case "invaild data": completion(.requestErr(result))
-                                    
-                                default:
-                                    break
-                                    
-                                }
+                                let data = result.data.categorys
+                                completion(.success(data))
                             } catch {
                                 completion(.pathErr)
                                 // print(error.localizedDescription)   // 에러 출력
@@ -73,7 +59,6 @@ struct BookmarkService {
                         case 500:
                             print("실패 500")
                             completion(.serverErr)
-                            
                         default:
                             break
                         }

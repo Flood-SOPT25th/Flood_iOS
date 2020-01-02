@@ -30,7 +30,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-vZ-FpJ">
                                         <rect key="frame" x="0.0" y="17" width="375" height="3227"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gb8-vj-VEK">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gb8-vj-VEK" userLabel="MaincatagoryCV">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -67,7 +67,7 @@
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <connections>
-                                                            <outlet property="maincatarogy" destination="Rt2-Th-7iv" id="fGQ-3e-pA1"/>
+                                                            <outlet property="mainCategory" destination="Rt2-Th-7iv" id="fGQ-3e-pA1"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -879,7 +879,7 @@
                     <navigationItem key="navigationItem" id="aGK-fR-G9i"/>
                     <size key="freeformSize" width="375" height="3200"/>
                     <connections>
-                        <outlet property="maincatarogyCV" destination="Gb8-vj-VEK" id="Mo2-LN-dTD"/>
+                        <outlet property="mainCatagoryCV" destination="Gb8-vj-VEK" id="Mo2-LN-dTD"/>
                         <outlet property="postTV" destination="aaI-fE-78X" id="FRy-48-AH5"/>
                         <outlet property="thisweekTV" destination="tKl-ul-4gl" id="jgq-WQ-1cm"/>
                     </connections>

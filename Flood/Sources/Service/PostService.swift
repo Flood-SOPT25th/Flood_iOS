@@ -24,8 +24,8 @@ struct PostService {
         Alamofire.upload(multipartFormData: { (multipartFormData) in
             
             for image in pictures {
-                if let imageData = image.jpegData(compressionQuality: 1) {
-                    multipartFormData.append(imageData, withName: "images", fileName: "image", mimeType: "image/jpeg")
+                if let imageData = image.jpegData(compressionQuality: 0.2) {
+                    multipartFormData.append(imageData, withName: "images", fileName: "image.jpg", mimeType: "image/jpg")
                     
                 }
             }

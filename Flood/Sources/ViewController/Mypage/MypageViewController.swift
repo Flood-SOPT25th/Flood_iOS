@@ -11,8 +11,6 @@ import UIKit
 class MypageViewController: UIViewController {
     
     // MARK: - UI components
-    //    @IBOutlet weak var mypageTableView: UITableView!
-//    @IBOutlet weak var flipCollectionView: UICollectionView!
     
     // MARK: - Variables and Properties
     
@@ -25,14 +23,6 @@ class MypageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//                self.flipCollectionView.delegate = self
-//                self.flipCollectionView.dataSource = self
-        //        self.flipCollectionView.reloadData()
-        
-        setRadius()
-        setBorder()
-        initSetting()
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = false
@@ -40,21 +30,16 @@ class MypageViewController: UIViewController {
         self.tabBarController?.tabBar.backgroundColor = .white
         self.tabBarController?.tabBar.isTranslucent = false
         
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-        
-        //        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
-        //
-        //        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // MARK: -Helpers
@@ -142,3 +127,25 @@ extension MypageViewController : UICollectionViewDataSource {
     
 }
 
+//extension MypageViewController : UITableViewDelegate {
+//    
+//}
+//
+//
+//extension MypageViewController : UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath) as! CategoryTableViewCell
+//        
+//        cell.categoryLabel.textColor = .veryLightPink
+//        cell.categoryLabel.text = categoryList[indexPath.row]
+//
+//        return UITableViewCell
+//    }
+//    
+//    
+//}

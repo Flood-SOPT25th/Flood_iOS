@@ -10,17 +10,17 @@ import UIKit
 
 class MainCatarogyCell: UICollectionViewCell {
     
-    @IBOutlet var maincatarogy: UIButton?
+    @IBOutlet var mainCategory: UIButton?
     
     var isClick: Bool = true {
         willSet {
             if newValue {
-                self.maincatarogy?.backgroundColor = UIColor(red: 0, green: 87, blue: 255, alpha: 1)
-                self.maincatarogy?.setTitleColor(.white, for: .normal)
+                self.mainCategory?.backgroundColor = UIColor(red: 0, green: 87, blue: 255, alpha: 1)
+                self.mainCategory?.setTitleColor(.white, for: .normal)
                    }
             else {
-                self.maincatarogy?.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
-                self.maincatarogy?.setTitleColor(.veryLightPink, for: .normal)
+                self.mainCategory?.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+                self.mainCategory?.setTitleColor(.veryLightPink, for: .normal)
             }
             self.layoutIfNeeded()
         }

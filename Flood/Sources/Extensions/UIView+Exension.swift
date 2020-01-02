@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable extension UIView {
     
+    // superview에 맟춰 주기
     func pinEdgesToSuperView() {
         guard let superView = superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
@@ -18,6 +19,7 @@ import UIKit
         bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 55).isActive = true
         rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
     }
+    
     
     func setRounded(radius : CGFloat?){
         
@@ -31,6 +33,7 @@ import UIKit
         
         self.layer.masksToBounds = true
     }
+    
     
     func setBorder(borderColor : UIColor?, borderWidth : CGFloat?) {
         

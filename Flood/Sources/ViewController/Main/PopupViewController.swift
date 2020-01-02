@@ -21,6 +21,7 @@ class PopupViewController : UIViewController {
 
     
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,8 +29,7 @@ class PopupViewController : UIViewController {
         popupCV.dataSource = self
         
         popupView.transform = .init(translationX: 0, y: popupView.bounds.height)
-    
-        //getBookmark()
+
         setupGesture()
         setupCornerRound()
     }
@@ -66,9 +66,13 @@ class PopupViewController : UIViewController {
     
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension PopupViewController : UICollectionViewDelegate {
     
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension PopupViewController : UICollectionViewDataSource {
     
@@ -93,6 +97,8 @@ extension PopupViewController : UICollectionViewDataSource {
     
 }
 
+// MARK: -UIGestureRecognizerDelegate
+
 extension PopupViewController: UIGestureRecognizerDelegate {
   
   func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -102,29 +108,11 @@ extension PopupViewController: UIGestureRecognizerDelegate {
     return true
   }
 }
-/*
+
+// 준현
+// Todo : bookmark_add 서버 통신
+
 extension PopupViewController {
-    func getBookmark() {
-        BookmarkService.shared.getBookmark { responsedata in
 
-            switch responsedata {
 
-            // NetworkResult 의 요소들
-            case .success(let data):
-                if let bookmarkList = data as? [Category] {
-                    self.bookmarkList = bookmarkList
-                    self.popupCV.reloadData()
-                }
-            case .requestErr(_):
-                print("request error")
-            case .pathErr:
-                print(".pathErr")
-            case .serverErr:
-                print(".serverErr")
-            case .networkFail :
-                print("failure")
-            }
-        }
-    }
 }
-*/

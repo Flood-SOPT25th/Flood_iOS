@@ -17,10 +17,9 @@ import SwiftyGif
 class MainViewController: UIViewController {
     
     // MARK: - UI components
-    @IBOutlet var maincatarogyCV: UICollectionView!
+    @IBOutlet var mainCatagoryCV: UICollectionView!
     @IBOutlet weak var thisweekTV: UITableView!
     @IBOutlet weak var postTV: UITableView!
-
     
     // MARK: - Variables and Properties
     
@@ -44,8 +43,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        maincatarogyCV.delegate = self
-        maincatarogyCV.dataSource = self
+        mainCatagoryCV.delegate = self
+        mainCatagoryCV.dataSource = self
         thisweekTV.delegate = self
         thisweekTV.dataSource = self
         thisweekTV.separatorInset.left = 0
@@ -53,13 +52,15 @@ class MainViewController: UIViewController {
         postTV.dataSource = self
         
         
+        
         initSetting()
         
         // 서버 통신
         setTop3()
         setPostPid()
-        setCategroyBar()
+        setCategoryBar()
         getBookmark()
+        
         
         view.addSubview(logoAnimationView)
         logoAnimationView.pinEdgesToSuperView()
@@ -139,10 +140,12 @@ class MainViewController: UIViewController {
     
     
     @IBAction func popupAction(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
+        let vc = storyboard?.instantiateViewController(identifier:  "PopupViewController") as! PopupViewController
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.bookmarkList = bookmarkList
+        print(bookmarkList)
+        
         
         if let tbc = self.tabBarController {
             tbc.present(vc, animated: true)
@@ -175,23 +178,23 @@ extension MainViewController: UICollectionViewDataSource {
     //각 항복에 대한 셀 객체 공급(필수)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let MainCatarogyCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCatagoryCell", for: indexPath) as! MainCatarogyCell
+        let MainCatarogyCell = mainCatagoryCV.dequeueReusableCell(withReuseIdentifier: "MainCatagoryCell", for: indexPath) as! MainCatarogyCell
         
         //let catagorypost = CategoryList[indexPath.row]
-        MainCatarogyCell.maincatarogy?.setTitle(CategoryViewList[indexPath.row], for: .normal)
+        MainCatarogyCell.mainCategory?.setTitle(CategoryViewList[indexPath.row], for: .normal)
         
         if indexPath.item == 0 {
-            MainCatarogyCell.maincatarogy?.setTitleColor(.white, for: .normal)
-            MainCatarogyCell.maincatarogy?.backgroundColor = .electricBlue
-            MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
-            MainCatarogyCell.maincatarogy?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.1, radius: 2)
+            MainCatarogyCell.mainCategory?.setTitleColor(.white, for: .normal)
+            MainCatarogyCell.mainCategory?.backgroundColor = .electricBlue
+            MainCatarogyCell.mainCategory?.makeRounded(cornerRadius: 18)
+            MainCatarogyCell.mainCategory?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.1, radius: 2)
             return MainCatarogyCell
         }
         else {
-            MainCatarogyCell.maincatarogy?.setTitleColor(.veryLightPinkThree, for: .normal)
-            MainCatarogyCell.maincatarogy?.backgroundColor = .white
-            MainCatarogyCell.maincatarogy?.makeRounded(cornerRadius: 18)
-            MainCatarogyCell.maincatarogy?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.08, radius: 2)
+            MainCatarogyCell.mainCategory?.setTitleColor(.veryLightPinkThree, for: .normal)
+            MainCatarogyCell.mainCategory?.backgroundColor = .white
+            MainCatarogyCell.mainCategory?.makeRounded(cornerRadius: 18)
+            MainCatarogyCell.mainCategory?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.08, radius: 2)
             
             //MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
             //MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
@@ -203,12 +206,14 @@ extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let categoryCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
+        let categoryCell = mainCatagoryCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
         
-        setCategory((categoryCell.maincatarogy?.titleLabel!.text)!)
         
-        thisweekTV.isHidden = true
-        PidList = hostList as! [pidArr]
+        
+        //        setCategory((categoryCell.maincatarogy?.titleLabel!.text)!)
+        
+        //        thisweekTV.isHidden = true
+        //        PidList = hostList as! [pidArr]
         
         //        var chooseCategory = categoryCell.maincatarogy?.titleLabel?.text
         //
@@ -291,20 +296,20 @@ extension MainViewController: UITableViewDataSource {
             let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
             
             if pidpost.image != nil && pidpost.postImages != nil {
-              picturepostCell.picturepostView.isHidden = false
-              picturepostCell.newsshareView.isHidden = false
+                picturepostCell.picturepostView.isHidden = false
+                picturepostCell.newsshareView.isHidden = false
             }
             else if pidpost.image == nil && pidpost.postImages != nil {
-              picturepostCell.picturepostView.isHidden = false
-              picturepostCell.newsshareView.isHidden = true
+                picturepostCell.picturepostView.isHidden = false
+                picturepostCell.newsshareView.isHidden = true
             }
             else if pidpost.image != nil && pidpost.postImages == nil{
-              picturepostCell.picturepostView.isHidden = true
-              picturepostCell.newsshareView.isHidden = false
+                picturepostCell.picturepostView.isHidden = true
+                picturepostCell.newsshareView.isHidden = false
             }
             else {
-              picturepostCell.picturepostView.isHidden = true
-              picturepostCell.newsshareView.isHidden = true
+                picturepostCell.picturepostView.isHidden = true
+                picturepostCell.newsshareView.isHidden = true
             }
             
             
@@ -433,7 +438,7 @@ extension MainViewController {
         }
     }
     
-    func setCategroyBar() {
+    func setCategoryBar() {
         PostService.shared.groupCategory { responsedata in
             PostService.shared.groupCategory(){
                 [weak self]
@@ -450,7 +455,7 @@ extension MainViewController {
                     let response = res as! GroupCategory
                     self.CategoryList = response.data as? categoryData
                     self.CategoryViewList = (self.CategoryList?.category as? [String])!
-                    self.maincatarogyCV.reloadData()
+                    self.mainCatagoryCV.reloadData()
                     
                 case .requestErr(let message):
                     self.simpleAlert(title: "카테고리 조회 실패", message: "\(message)")
@@ -494,25 +499,26 @@ extension MainViewController {
         }
     }
     
-    
     func getBookmark() {
-        BookmarkService.shared.getBookmark { responsedata in
+        BookmarkService.shared.getBookmark {
+            responsedata in
             
             switch responsedata {
                 
             // NetworkResult 의 요소들
             case .success(let data):
-                if let bookmarkList = data as? [Category] {
-                    self.bookmarkList = bookmarkList
-                }
+                guard let data = data as? [Category] else { return }
+                self.bookmarkList = data
+                
+                
             case .requestErr(_):
-                print("request error")
+                print("getBookmark request error")
             case .pathErr:
-                print(".pathErr")
+                print("getBookmark .pathErr")
             case .serverErr:
-                print(".serverErr")
+                print("getBookmark .serverErr")
             case .networkFail :
-                print("failure")
+                print("getBookmark failure")
             }
         }
     }

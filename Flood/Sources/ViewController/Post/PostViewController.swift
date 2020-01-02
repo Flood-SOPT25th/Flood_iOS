@@ -141,7 +141,9 @@ class PostViewController: UIViewController {
                 self.simpleAlert(title: "URL 혹은 내용 둘중 하나를 채워주세요", message: "")
             } else {
                 postContent(images: pickedIMG, url: "", category: categoryBtn.titleLabel!.text!, postContent: postTextView.text)
-
+                self.simpleAlert(title: "게시 되었습니다", message: "")
+                setDefault()
+                self.dismiss(animated: true, completion: nil)
             }
         }
         
@@ -314,7 +316,7 @@ extension PostViewController : UINavigationControllerDelegate, UIImagePickerCont
 // Category뷰에서 받아오는 delegate
 extension PostViewController: CategoryDelegate {
     func didSelectCategory(category: String) {
-        categoryBtn.setImage(UIImage(), for: .normal)
+        self.categoryBtn.setImage(UIImage(), for: .normal)
         self.categoryBtn.setTitle(category, for: .normal)
     }
 }

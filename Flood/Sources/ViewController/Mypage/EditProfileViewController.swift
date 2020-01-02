@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MypageSettingViewController: UIViewController {
+class EditProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

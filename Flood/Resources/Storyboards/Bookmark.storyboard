@@ -26,7 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VeM-EK-h6E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icTabBookmark" id="Vf8-OO-9wt"/>
+                    <tabBarItem key="tabBarItem" title="" image="icTabEarthBlue" id="Vf8-OO-9wt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Xa-G4-6mx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icTabBookmark" width="48" height="48"/>
+        <image name="icTabEarthBlue" width="48" height="48"/>
     </resources>
 </document>

@@ -31,6 +31,10 @@ class MainViewController: UIViewController {
     var top3List : [topArr] = []
     var PostPiddataset : PostPid!
     var PidList : [pidArr] = []
+    // 카테고리 선택시 변경을 위한 기사 배열
+    var choosePidList : [pidArr] = []
+    var bookmarkList : [Category] = []
+    var hostList : [PIDArr] = []
     
     let logoAnimationView = LogoAnimationView()
     
@@ -55,10 +59,12 @@ class MainViewController: UIViewController {
         setTop3()
         setPostPid()
         setCategroyBar()
+        getBookmark()
         
         view.addSubview(logoAnimationView)
         logoAnimationView.pinEdgesToSuperView()
         logoAnimationView.logoGifImageView.delegate = self
+        
         
     }
     
@@ -71,7 +77,7 @@ class MainViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         
         logoAnimationView.logoGifImageView.startAnimatingGif()
-        logoAnimationView.layer.zPosition = 999
+//        logoAnimationView.layer.zPosition = 999
         self.tabBarController?.tabBar.layer.zPosition = -100
         
     }
@@ -135,6 +141,7 @@ class MainViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(identifier: "PopupViewController") as! PopupViewController
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
+        vc.bookmarkList = bookmarkList
         
         if let tbc = self.tabBarController {
             tbc.present(vc, animated: true)
@@ -167,7 +174,9 @@ extension MainViewController: UICollectionViewDataSource {
     //각 항복에 대한 셀 객체 공급(필수)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let MainCatarogyCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCatarogyCell", for: indexPath) as! MainCatarogyCell
+        let MainCatarogyCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCatagoryCell", for: indexPath) as! MainCatarogyCell
+        
+        //let catagorypost = CategoryList[indexPath.row]
         MainCatarogyCell.maincatarogy?.setTitle(CategoryViewList[indexPath.row], for: .normal)
         
         if indexPath.item == 0 {
@@ -189,6 +198,22 @@ extension MainViewController: UICollectionViewDataSource {
             
         }
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let categoryCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
+        
+        setCategory((categoryCell.maincatarogy?.titleLabel!.text)!)
+        
+        thisweekTV.isHidden = true
+        PidList = hostList as! [pidArr]
+        
+//        var chooseCategory = categoryCell.maincatarogy?.titleLabel?.text
+//
+//        func findCategory(findString :String) -> Bool {
+//            return findString == chooseCategory
+//        }
     }
 }
 
@@ -303,7 +328,7 @@ extension MainViewController: UITableViewDataSource {
                     
                     return newssharepostCell
                 }
-                else if indexPath.row == 1 {
+                else if indexPath.section == 1 {
                     let picturepostCell = postTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
                     
                     picturepostCell.picturepostCatagory.text = pidpost.category
@@ -402,8 +427,8 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         logoAnimationView.isHidden = true
-        self.tabBarController?.tabBar.layer.zPosition = 0
-        //        self.tabBarController?.tabBar.barTintColor = .white
+//        self.tabBarController?.tabBar.layer.zPosition = 0
+//        self.tabBarController?.tabBar.barTintColor = .white
     }
 }
 
@@ -491,4 +516,52 @@ extension MainViewController {
         }
         
     }
+    
+    func setCategory(_ category : String ) {
+        FeedService.shared.getPostHash(category) { responsedata in
+        
+        switch responsedata {
+            
+        // NetworkResult 의 요소들
+        case .success(let data):
+            if let hostList = data as? [PIDArr] {
+                self.hostList = hostList
+            }
+        case .requestErr(_):
+            print("request error")
+        case .pathErr:
+            print(".pathErr")
+        case .serverErr:
+            print(".serverErr")
+        case .networkFail :
+            print("failure")
+        }
+
+            
+        }
+    }
+    
+    
+    func getBookmark() {
+        BookmarkService.shared.getBookmark { responsedata in
+            
+            switch responsedata {
+                
+            // NetworkResult 의 요소들
+            case .success(let data):
+                if let bookmarkList = data as? [Category] {
+                    self.bookmarkList = bookmarkList
+                }
+            case .requestErr(_):
+                print("request error")
+            case .pathErr:
+                print(".pathErr")
+            case .serverErr:
+                print(".serverErr")
+            case .networkFail :
+                print("failure")
+            }
+        }
+    }
+
 }

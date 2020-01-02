@@ -12,4 +12,19 @@ class PopupCell: UICollectionViewCell {
     
     @IBOutlet weak var bookmarkImg: UIImageView!
     @IBOutlet weak var bookmarkName: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+        bookmarkImg.setRounded(radius: 10)
+        
+    }
+
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
+
 }

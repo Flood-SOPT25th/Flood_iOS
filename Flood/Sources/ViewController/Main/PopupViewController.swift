@@ -17,6 +17,8 @@ class PopupViewController : UIViewController {
     
     // MARK: - Variables and Properties
 
+    var bookmarkList : [Category] = []
+
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -27,11 +29,11 @@ class PopupViewController : UIViewController {
         
         popupView.transform = .init(translationX: 0, y: popupView.bounds.height)
     
+//        getBookmark()
         setupGesture()
         setupCornerRound()
     }
 
-    // MARK: -Helpers
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
@@ -39,6 +41,8 @@ class PopupViewController : UIViewController {
       })
     }
     
+    // MARK: -Helpers
+
     func setupGesture() {
       let tap = UITapGestureRecognizer(target: self, action: #selector(handle(_:)))
       tap.delegate = self
@@ -69,14 +73,14 @@ extension PopupViewController : UICollectionViewDelegate {
 extension PopupViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return bookmarkList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let popupCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopupCell", for: indexPath) as! PopupCell
         
-        popupCell.bookmarkName.text = "스타트업"
-        popupCell.bookmarkImg.image = UIImage(named: "41")
+        popupCell.bookmarkName.text = bookmarkList[indexPath.row].categoryName
+        popupCell.bookmarkImg.imageFromUrl(bookmarkList[indexPath.row].thumb , defaultImgPath: "http:// ~~ ")
         
         return popupCell
     }
@@ -98,3 +102,29 @@ extension PopupViewController: UIGestureRecognizerDelegate {
     return true
   }
 }
+
+//extension PopupViewController {
+//    func getBookmark() {
+//        BookmarkService.shared.getBookmark { responsedata in
+//
+//            switch responsedata {
+//
+//            // NetworkResult 의 요소들
+//            case .success(let data):
+//                if let bookmarkList = data as? [Category] {
+//                    self.bookmarkList = bookmarkList
+//                    self.popupCV.reloadData()
+//                }
+//            case .requestErr(_):
+//                print("request error")
+//            case .pathErr:
+//                print(".pathErr")
+//            case .serverErr:
+//                print(".serverErr")
+//            case .networkFail :
+//                print("failure")
+//            }
+//        }
+//    }
+//}
+//

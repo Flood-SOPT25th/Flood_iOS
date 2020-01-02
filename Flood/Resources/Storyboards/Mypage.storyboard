@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mypage View Controller-->
         <scene sceneID="nvJ-EG-eZb">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="jyR-O7-yLe" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MypageViewController" storyboardIdentifier="MypageViewController" wantsFullScreenLayout="YES" id="jyR-O7-yLe" customClass="MypageViewController" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xab-jB-2eB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,10 +26,84 @@
             </objects>
             <point key="canvasLocation" x="5146.3999999999996" y="778.81773399014787"/>
         </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="afj-c3-3jo">
+            <objects>
+                <viewController restorationIdentifier="EditProfileViewController" storyboardIdentifier="EditProfileViewController" id="1MW-z2-w2F" customClass="EditProfileViewController" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VlQ-TV-8OK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bev-Cs-9Y7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbp-lD-Z2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6046" y="1064"/>
+        </scene>
+        <!--Edit Password View Controller-->
+        <scene sceneID="dan-Xh-6JG">
+            <objects>
+                <viewController restorationIdentifier="EditPasswordViewController" storyboardIdentifier="EditPasswordViewController" id="OS3-ZZ-lAr" customClass="EditPasswordViewController" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJ8-OA-oWo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="D9x-td-4zR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gk4-Qv-XFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6891" y="950"/>
+        </scene>
+        <!--Edit Alarm View Controller-->
+        <scene sceneID="7hv-ma-Oz9">
+            <objects>
+                <viewController restorationIdentifier="EditAlarmViewController" storyboardIdentifier="EditAlarmViewController" id="h8r-rI-POR" customClass="EditAlarmViewController" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X0R-Gh-AOG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3ed-iH-9fB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYG-7Z-HvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6890" y="1626"/>
+        </scene>
+        <!--Invite Employee View Controller-->
+        <scene sceneID="ug9-MV-egF">
+            <objects>
+                <viewController restorationIdentifier="InviteEmployeeViewController" storyboardIdentifier="InviteEmployeeViewController" id="Xdm-Iy-lyK" customClass="InviteEmployeeViewController" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Jf-uS-2mU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Scn-Hc-2KM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHd-Ct-irh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6890" y="2296"/>
+        </scene>
+        <!--Edit Flip View Controller-->
+        <scene sceneID="6mV-Hg-0Ml">
+            <objects>
+                <viewController restorationIdentifier="EditFlipViewController" storyboardIdentifier="EditFlipViewController" id="MOD-MF-pxG" customClass="EditFlipViewController" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I0v-8K-fDx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XVJ-mh-pHE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAe-Fi-XEP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6047" y="353"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3wX-Qi-Yve">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T12-NF-6T4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Igo-uS-rwD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="icTabMypage" id="6bw-uk-Ug7"/>
                     <toolbarItems/>
@@ -42,6 +116,7 @@
                         <segue destination="jyR-O7-yLe" kind="relationship" relationship="rootViewController" id="rb0-s8-cuH"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T12-NF-6T4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4204" y="778.81773399014787"/>
         </scene>

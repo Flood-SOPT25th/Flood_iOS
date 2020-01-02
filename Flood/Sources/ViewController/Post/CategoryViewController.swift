@@ -32,7 +32,7 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        categoryTableView.delegate = self
+        self.categoryTableView.delegate = self
         self.categoryTableView.separatorStyle = .none
         setNavBar()
         

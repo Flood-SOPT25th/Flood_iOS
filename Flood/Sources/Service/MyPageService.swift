@@ -46,8 +46,8 @@ struct MyPageSerivce {
                                 let decoder = JSONDecoder()
                                 print("mypost in service : ", String(data:value, encoding: .utf8))
                                 let result = try decoder.decode(MypageMyPID.self, from: value)
-                                let pidData = result.data
-                                completion(.success(pidData))
+                                print("mypost in service result : ", String(data: value, encoding: .utf8))
+                                completion(.success(result.data.pidArr))
                             } catch {
                                 completion(.pathErr)
                             }
@@ -101,7 +101,7 @@ struct MyPageSerivce {
                                 print("info in service : ", String(data:value, encoding: .utf8))
                                 let decoder = JSONDecoder()
                                 let result = try decoder.decode(MypageMainInfo.self, from: value)
-                                let infoData = result.data
+                                let infoData = result.data.userInfo
                                 completion(.success(infoData))
                             } catch {
                                 completion(.pathErr)

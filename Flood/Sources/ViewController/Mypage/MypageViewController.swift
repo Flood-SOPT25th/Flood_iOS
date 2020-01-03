@@ -17,11 +17,9 @@ class MypageViewController: UIViewController {
     private let spacing : CGFloat = 16.0
     var bookmarkList : [Category] = []
     var myPid : [PIDArray] = []
-    var infoData : [InfoData] = []
-    var userInfo : [UserInfo] = []
+    var userInfo : UserInfo?
 
     // MARK: - Dummy Data
-    
     
     
     // MARK: - Life Cycle
@@ -31,9 +29,6 @@ class MypageViewController: UIViewController {
         
         initSetting()
         
-        getBookmark()
-        getMyPost()
-        getMyInfo()
 //        userInfo =
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -44,13 +39,16 @@ class MypageViewController: UIViewController {
         
         mypageCollectionView.delegate = self
         mypageCollectionView.dataSource = self
+        
+        mypageCollectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-
+        getBookmark()
         getMyPost()
+        getMyInfo()
 
     }
     
@@ -112,12 +110,13 @@ extension MypageViewController : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MypageFlipCollectionViewCell", for: indexPath) as! MypageFlipCollectionViewCell
         
-        cell.flipSubLabel.textColor = .veryLightPinkTwo
-        cell.backgroundColor = .veryLightPink
+        cell.flipSubLabel.textColor = .veryLightPink
+//        cell.backgroundColor = .veryLightPink
+//        cell.flipImageView.backgroundColor = .veryLightPinkThree
         
-//        cell.flipImageView.imageFromUrl(bookmarkList[indexPath.row].thumb, defaultImgPath: "")
-//        cell.flipLabel.text = bookmarkList[indexPath.row].categoryName
-//        cell.flipSubLabel.text = String(bookmarkList[indexPath.row].count) + " flips"
+//        cell.flipImageView.imageFromUrl(bookmarkList[indexPath.row].thumb , defaultImgPath: "http:// ~~ ")
+        cell.flipLabel.text = bookmarkList[indexPath.row].categoryName
+        cell.flipSubLabel.text = String(bookmarkList[indexPath.row].count) + " flips"
         
         
         return cell
@@ -156,8 +155,9 @@ extension MypageViewController : UICollectionViewDataSource {
             headerView.postView.layer.addBorder([.top, .bottom], color: .veryLightPinkTwo, width: 1)
             headerView.postCnt.text! = String(myPid.count)
             
-            headerView.profileIMG.imageFromUrl("", defaultImgPath: "")
-//            headerView.profileName.text = infoData
+            headerView.profileIMG.imageFromUrl(userInfo?.profileImage, defaultImgPath: "")
+            headerView.profileName?.text = userInfo?.name
+            headerView.profileDepartment.text = userInfo?.groupDepartment
 
             return headerView
         default:
@@ -182,6 +182,8 @@ extension MypageViewController {
                 guard let data = data as? [Category] else { return }
                 print("getBookmark() : ", data)
                 self.bookmarkList = data
+                
+                self.mypageCollectionView.reloadData()
                 
             case .requestErr(_):
                 print("getBookmark request error")
@@ -229,11 +231,10 @@ extension MypageViewController {
                 
             // NetworkResult 의 요소들
             case .success(let data):
-                guard let data = data as? [InfoData] else { return }
+                guard let data = data as? UserInfo else { return }
                 print("infoData in viewcon : ", data)
-                print("infoData in viewcon : ", data.count)
-                self.infoData = data
-                print("infoData : ", self.infoData.count)
+                self.userInfo = data
+                self.mypageCollectionView.reloadData()
 
             case .requestErr(_):
                 print("getMyInfo request error")

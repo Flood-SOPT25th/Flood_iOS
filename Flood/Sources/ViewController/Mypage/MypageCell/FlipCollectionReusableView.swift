@@ -21,5 +21,10 @@ class FlipCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var postCnt: UILabel!
     @IBOutlet weak var postView: UIView!
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        profileName.sizeToFit()
+        profileDepartment.sizeToFit()
+        postCnt.sizeToFit()
+    }
 }

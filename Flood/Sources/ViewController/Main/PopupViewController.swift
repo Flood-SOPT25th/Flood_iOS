@@ -91,6 +91,7 @@ extension PopupViewController : UICollectionViewDataSource {
         popupCell.bookmarkName.text = bookmarkList[indexPath.row+1].categoryName
         popupCell.bookmarkImg.imageFromUrl(bookmarkList[indexPath.row+1].thumb , defaultImgPath: "http:// ~~ ")
         
+        
         return popupCell
     }
     

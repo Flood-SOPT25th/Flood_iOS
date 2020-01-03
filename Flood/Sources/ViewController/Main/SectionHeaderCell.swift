@@ -10,6 +10,11 @@ import UIKit
 
 class SectionHeaderCell: UITableViewCell {
 
+    @IBOutlet weak var day: UILabel!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subtitle: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

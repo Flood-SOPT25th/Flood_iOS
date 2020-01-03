@@ -114,7 +114,7 @@ extension MypageViewController : UICollectionViewDataSource {
 //        cell.backgroundColor = .veryLightPink
 //        cell.flipImageView.backgroundColor = .veryLightPinkThree
         
-//        cell.flipImageView.imageFromUrl(bookmarkList[indexPath.row].thumb , defaultImgPath: "http:// ~~ ")
+        cell.flipImageView.imageFromUrl(bookmarkList[indexPath.row].thumb , defaultImgPath: "http:// ~~ ")
         cell.flipLabel.text = bookmarkList[indexPath.row].categoryName
         cell.flipSubLabel.text = String(bookmarkList[indexPath.row].count) + " flips"
         
@@ -153,7 +153,7 @@ extension MypageViewController : UICollectionViewDataSource {
             headerView.postCnt.backgroundColor = .black
             headerView.profileIMG.setRounded(radius: 28)
             headerView.postView.layer.addBorder([.top, .bottom], color: .veryLightPinkTwo, width: 1)
-            headerView.postCnt.text! = String(myPid.count)
+//            headerView.postCnt.text! = String(myPid.count)
             
             headerView.profileIMG.imageFromUrl(userInfo?.profileImage, defaultImgPath: "")
             headerView.profileName?.text = userInfo?.name

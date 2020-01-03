@@ -65,6 +65,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <outlet property="flipImageView" destination="pxZ-di-bpx" id="72h-O2-ZFl"/>
                                             <outlet property="flipLabel" destination="uYx-FX-GPi" id="Irq-x5-Zsa"/>
                                             <outlet property="flipSubLabel" destination="YuG-kE-VRT" id="WZZ-2y-zg1"/>
                                         </connections>

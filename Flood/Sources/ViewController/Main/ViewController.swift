@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     var choosePidList : [pidArr] = []
     var bookmarkList : [Category] = []
     var hostList : [PIDArr] = []
+    var checkBookmark : [Bool] = []
     
     let logoAnimationView = LogoAnimationView()
     
@@ -69,7 +70,8 @@ class ViewController: UIViewController {
         logoAnimationView.logoGifImageView.startAnimatingGif()
         //        logoAnimationView.layer.zPosition = 999
         self.tabBarController?.tabBar.layer.zPosition = -100
-        
+        setTop3()
+        setPostPid()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -109,6 +111,7 @@ class ViewController: UIViewController {
         // 탭바 배경색 설정
         self.tabBarController?.tabBar.backgroundColor = .white
         self.tabBarController?.tabBar.isTranslucent = false
+        
         
     }
     

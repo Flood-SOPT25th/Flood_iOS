@@ -105,9 +105,6 @@
                                                         <constraint firstAttribute="width" constant="50" id="I2k-Ge-ezO"/>
                                                     </constraints>
                                                     <state key="normal" image="icSetting"/>
-                                                    <connections>
-                                                        <segue destination="1MW-z2-w2F" kind="show" id="qtV-Ap-wNC"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -152,9 +149,6 @@
                                                         <constraint firstAttribute="height" constant="50" id="jpz-L1-t4B"/>
                                                     </constraints>
                                                     <state key="normal" image="icRightArrow"/>
-                                                    <connections>
-                                                        <segue destination="MOD-MF-pxG" kind="show" id="sUa-2Y-JgT"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -186,9 +180,6 @@
                                                         <constraint firstAttribute="height" constant="50" id="gxV-hG-A65"/>
                                                     </constraints>
                                                     <state key="normal" image="icPlus"/>
-                                                    <connections>
-                                                        <segue destination="vpe-UI-KWX" kind="show" id="lyz-F5-l9L"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

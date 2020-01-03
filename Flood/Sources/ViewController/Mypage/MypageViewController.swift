@@ -66,29 +66,22 @@ class MypageViewController: UIViewController {
     // 프로필 수정하는 페이지로 모달하는 function
     @objc func editProfile() {
         let vc = storyboard?.instantiateViewController(identifier:  "EditProfileViewController") as! EditProfileViewController
-        vc.modalPresentationStyle = .fullScreen
-        navigationController?.isNavigationBarHidden = false
-
-        self.present(vc, animated: true)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // 내가 작성한 글의 페이지로 모달하는 function
     @objc func toMyPost() {
         let vc = storyboard?.instantiateViewController(identifier:  "MyPostViewController") as! MyPostViewController
-        vc.modalPresentationStyle = .fullScreen
-        navigationController?.isNavigationBarHidden = false
-
-        self.present(vc, animated: true)
+    
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // 내 플립을 수정하는 페이지로 모달하는 function
     @objc func editMyFlip() {
         let vc = storyboard?.instantiateViewController(identifier:  "EditFlipViewController") as! EditFlipViewController
-        vc.modalPresentationStyle = .fullScreen
-        navigationController?.isNavigationBarHidden = false
-
-        self.present(vc, animated: true)
         
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

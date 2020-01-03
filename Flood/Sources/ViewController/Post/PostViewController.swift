@@ -145,6 +145,9 @@ class PostViewController: UIViewController {
                 setDefault()
                 self.dismiss(animated: true, completion: nil)
             }
+        } else {
+            self.simpleAlert(title: "정상적인 URL이 아닙니다", message: "")
+            setDefault()
         }
         
     }

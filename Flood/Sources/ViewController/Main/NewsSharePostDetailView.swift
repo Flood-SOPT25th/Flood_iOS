@@ -28,7 +28,6 @@ class NewsSharePostDetailView : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         setupSampleData()
         setupGestureRecognizer()
         
@@ -49,8 +48,6 @@ class NewsSharePostDetailView : UIViewController {
 
     }
     
-    
-    
     // MARK: -Helpers
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +61,6 @@ class NewsSharePostDetailView : UIViewController {
     }
     
 }
-
 
 // MARK: - UITableViewDelegate
 extension NewsSharePostDetailView: UITableViewDelegate {
@@ -136,7 +132,7 @@ extension NewsSharePostDetailView: UITableViewDataSource {
         
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                let NewsSharePostCell = newssharepostTV.dequeueReusableCell(withIdentifier: "NewsSharePostCell", for: indexPath) as! NewsSharePostCell
+                let picturePostCell = newssharepostTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
                 
                 /*
                 if contentType[indexPath.row] == 0 {
@@ -147,44 +143,206 @@ extension NewsSharePostDetailView: UITableViewDataSource {
                   NewsSharePostCell.picturepostView.isHidden = false
                 }
                 */
-                NewsSharePostCell.newsshareCatarogy.text = "카테고리"
-                NewsSharePostCell.newsshareCatarogy.font = UIFont.systemFont(ofSize: CGFloat(12))
-                NewsSharePostCell.newsshareCatarogy.textColor = .electricBlue
-                NewsSharePostCell.newsshareCatagoryView.layer.borderWidth = 1
-                NewsSharePostCell.newsshareCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
-                NewsSharePostCell.newsshareCatagoryView.setRounded(radius: 11)
-                NewsSharePostCell.newsshareprofileImg.image = UIImage(named: "14")
-                NewsSharePostCell.newsshareprofileImg.layer.cornerRadius = 10
-                NewsSharePostCell.newsshareName.text = "이름"
-                NewsSharePostCell.newsshareName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
-                NewsSharePostCell.newsshareTime.text = "시간"
-                NewsSharePostCell.newsshareTime.font = UIFont.systemFont(ofSize: CGFloat(12))
-                NewsSharePostCell.newsshareTime.textColor = .veryLightPink
-                NewsSharePostCell.newssharePost.text = "게시글"
-                NewsSharePostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+                picturePostCell.picturepostCatagory.text = "카테고리"
+                picturePostCell.picturepostCatagory.font = UIFont.systemFont(ofSize: CGFloat(12))
+                picturePostCell.picturepostCatagory.textColor = .electricBlue
+                picturePostCell.picturepostCatagoryView.layer.borderWidth = 1
+                picturePostCell.picturepostCatagoryView.layer.borderColor = UIColor.electricBlue.cgColor
+                picturePostCell.picturepostCatagoryView.setRounded(radius: 11)
+                picturePostCell.picturepostprofileImg.image = UIImage(named: "14")
+                picturePostCell.picturepostprofileImg.layer.cornerRadius = 10
+                picturePostCell.picturepostName.text = "이름"
+                picturePostCell.picturepostName.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
+                picturePostCell.picturepostTime.text = "시간"
+                picturePostCell.picturepostTime.font = UIFont.systemFont(ofSize: CGFloat(12))
+                picturePostCell.picturepostTime.textColor = .veryLightPink
+                picturePostCell.picturepostPost.text = "게시글"
+                picturePostCell.newsPost.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
                 //NewsSharePostCell.newsshareMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
-                NewsSharePostCell.picture1.image = UIImage(named: "26")
-                NewsSharePostCell.picture2.image = UIImage(named: "26")
-                NewsSharePostCell.picture3.image = UIImage(named: "26")
-                NewsSharePostCell.picture1.layer.cornerRadius = 10
-                NewsSharePostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-                NewsSharePostCell.picture2.layer.cornerRadius = 10
-                NewsSharePostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
-                NewsSharePostCell.picture3.layer.cornerRadius = 10
-                NewsSharePostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
-                NewsSharePostCell.newsTitle.text = "제목"
-                NewsSharePostCell.newsPost.text = "뉴스글"
-                NewsSharePostCell.newsImg.image = UIImage(named: "26")
-                NewsSharePostCell.newsImg.layer.cornerRadius = 10
-                NewsSharePostCell.newsflipCount.text = "플립수"
-                NewsSharePostCell.newsflipCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
-                NewsSharePostCell.newsflipCount.textColor = .veryLightPink
+                picturePostCell.picture1.image = UIImage(named: "26")
+                picturePostCell.picture2.image = UIImage(named: "26")
+                picturePostCell.picture3.image = UIImage(named: "26")
+                picturePostCell.picture1.layer.cornerRadius = 10
+                picturePostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                picturePostCell.picture2.layer.cornerRadius = 10
+                picturePostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+                picturePostCell.picture3.layer.cornerRadius = 10
+                picturePostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
+                picturePostCell.newsTitle.text = "제목"
+                picturePostCell.newsPost.text = "뉴스글"
+                //picturePostCell.newsImg.image = UIImage(named: "26")
+                //picturePostCell.newsImg.layer.cornerRadius = 10
+                picturePostCell.picturefilpCount.text = "플립수"
+                picturePostCell.picturefilpCount.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+                picturePostCell.picturefilpCount.textColor = .veryLightPink
                 //NewsSharePostCell.newsshareBookmark.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-                NewsSharePostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
-                NewsSharePostCell.newsshareView.setRounded(radius: 10)
+                picturePostCell.newsshareView.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+                picturePostCell.newsshareView.setRounded(radius: 10)
                 
+                /*
+                 // 게시글과 게시사진 유무
+                     if pidpost.postContent == "" && pidpost.postImages == []    {
+                         picturepostCell.postpostView.isHidden = true
+                         picturepostCell.picturepostView.isHidden = true
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                     else if pidpost.postContent != "" && pidpost.postImages == []   {
+                         picturepostCell.postpostView.isHidden = false
+                         picturepostCell.picturepostView.isHidden = true
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                     else if pidpost.postContent == "" && pidpost.postImages != []  {
+                         picturepostCell.postpostView.isHidden = true
+                         picturepostCell.picturepostView.isHidden = false
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                     else {
+                         picturepostCell.postpostView.isHidden = false
+                         picturepostCell.picturepostView.isHidden = false
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                     
+                     // url에 따른 뉴스기사 유무
+                     if pidpost.url == "" {
+                         if pidpost.postTitle == "" {
+                             picturepostCell.newtitleView.isHidden = true
+                             if pidpost.description == "" {
+                                 picturepostCell.newsshareView.isHidden = true
+                                 if pidpost.image == "" {
+                                     picturepostCell.newsImg?.isHidden = true
+                                 }
+                                 else{
+                                     picturepostCell.newsImg.isHidden = false
+                                 }
+                             }
+                             else {
+                                 picturepostCell.newsshareView.isHidden = false
+                                 if pidpost.image == "" {
+                                     picturepostCell.newsImg.isHidden = true
+                                 }
+                                 else{
+                                     picturepostCell.newsImg.isHidden = false
+                                 }
+                             }
+                         }
+                         else {
+                             picturepostCell.newtitleView.isHidden = true
+                             if pidpost.description == "" {
+                                 picturepostCell.newsshareView.isHidden = true
+                                 if pidpost.image == "" {
+                                     picturepostCell.newsImg.isHidden = true
+                                 }
+                                 else{
+                                     picturepostCell.newsImg.isHidden = false
+                                 }
+                             }
+                             else {
+                                 picturepostCell.newsshareView.isHidden = false
+                                 if pidpost.image == "" {
+                                     picturepostCell.newsImg.isHidden = true
+                                 }
+                                 else{
+                                     picturepostCell.newsImg.isHidden = false
+                                 }
+                             }
+                         }
+                     }
+                     else {
+                         picturepostCell.newsshareView.isHidden = true
+                     }
+                     
+                     
+                     if pidpost.postContent == "" && pidpost.postImages == []    {
+                         picturepostCell.postpostView.isHidden = true
+                         picturepostCell.picturepostView.isHidden = true
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                     else if pidpost.postContent != "" && pidpost.postImages == []   {
+                         picturepostCell.postpostView.isHidden = false
+                         picturepostCell.picturepostView.isHidden = true
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                     else if pidpost.postContent == "" && pidpost.postImages != []  {
+                         picturepostCell.postpostView.isHidden = true
+                         picturepostCell.picturepostView.isHidden = false
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                         // 둘 다 있을 때
+                     else {
+                         picturepostCell.postpostView.isHidden = false
+                         picturepostCell.picturepostView.isHidden = false
+                         //picturepostCell.newsshareView.isHidden = false
+                     }
+                     
+                     picturepostCell.picturepostCatagory?.text = pidpost.category
+                     picturepostCell.picturepostCatagory?.font = UIFont.systemFont(ofSize: CGFloat(12))
+                     picturepostCell.picturepostCatagory?.textColor = .electricBlue
+                     picturepostCell.picturepostCatagoryView?.layer.borderWidth = 1
+                     picturepostCell.picturepostCatagoryView?.layer.borderColor = UIColor.electricBlue.cgColor
+                     picturepostCell.picturepostCatagoryView?.setRounded(radius: 11)
+                     picturepostCell.picturepostprofileImg?.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+                     picturepostCell.picturepostprofileImg?.layer.cornerRadius = 10
+                     picturepostCell.picturepostName?.text = pidpost.writer
+                     picturepostCell.picturepostName?.font = UIFont(name: "NotoSansCJKkr-Bold", size: 16)
+                     picturepostCell.picturepostTime?.text = pidpost.postDate
+                     picturepostCell.picturepostTime?.font = UIFont.systemFont(ofSize: CGFloat(12))
+                     picturepostCell.picturepostTime?.textColor = .veryLightPink
+                     picturepostCell.picturepostPost?.text = pidpost.postContent
+                     picturepostCell.picturepostPost?.font = UIFont(name: "NotoSansCJKkr-Regular", size: 14)
+                     picturepostCell.picturepostMore?.setImage(UIImage(named: "icMoreGray"), for: .normal)
+                     
+                     
+                     //사진분기처리?
+                     if pidpost.postImages.count == 0 {
+                         picturepostCell.picturepostView.isHidden = true
+                     } else if pidpost.postImages.count == 1 {
+                         picturepostCell.picture1.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
+                         picturepostCell.pictureStackview.isHidden = true
+                         picturepostCell.picture1.layer.cornerRadius = 10
+                         picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+                     }
+                     else if pidpost.postImages.count == 2 {
+                         picturepostCell.picture1.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
+                         picturepostCell.picture2.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
+                         picturepostCell.pictureStackview.isHidden = false
+                         picturepostCell.picture3.isHidden = true
+                         picturepostCell.pictureStackviewWidth.constant = 127.5
+                         picturepostCell.picture1.layer.cornerRadius = 10
+                         picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                         picturepostCell.picture2.layer.cornerRadius = 10
+                         picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+                     }
+                     else {
+                         picturepostCell.picture1.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
+                         picturepostCell.picture2.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
+                         picturepostCell.picture3.imageFromUrl(pidpost.postImages[2], defaultImgPath : "http:// ~~ ")
+                         picturepostCell.pictureStackview.isHidden  = false
+                         picturepostCell.picture3.isHidden = false
+                         picturepostCell.pictureStackviewWidth.constant = 107
+                         picturepostCell.picture1.layer.cornerRadius = 10
+                         picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                         picturepostCell.picture2.layer.cornerRadius = 10
+                         picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+                         picturepostCell.picture3.layer.cornerRadius = 10
+                         picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
+                     }
+                     
+                     picturepostCell.newsTitle?.text = pidpost.postTitle
+                     picturepostCell.newsPost?.text = pidpost.description
+                     picturepostCell.newsImg?.imageFromUrl(pidpost.image, defaultImgPath : "http:// ~~ ")
+                     picturepostCell.newsImg?.layer.cornerRadius = 10
+                     picturepostCell.picturefilpCount?.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
+                     picturepostCell.picturefilpCount?.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+                     picturepostCell.picturefilpCount?.textColor = .veryLightPink
+                     picturepostCell.picturepostBookmark?.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                     picturepostCell.newsshareView?.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+                     picturepostCell.newsshareView?.setRounded(radius: 10)
+                     
+    
                  
-                return NewsSharePostCell
+                 */
+        
+                return picturePostCell
             }
             else {
                 //let comments = comments[indexPath.row]

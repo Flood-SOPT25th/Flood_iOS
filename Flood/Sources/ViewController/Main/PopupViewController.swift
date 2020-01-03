@@ -26,8 +26,8 @@ class PopupViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getBookmark()
         popupCV.reloadData()
+        getBookmark()
         
         popupCV.delegate = self
         popupCV.dataSource = self
@@ -36,8 +36,6 @@ class PopupViewController : UIViewController {
         
         setupGesture()
         setupCornerRound()
-
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,7 +94,7 @@ extension PopupViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        postFlip("5e009585beecc40d80a4c835", bookmarkList[indexPath.row+1].categoryID!)
+        let message = postFlip("5e009585beecc40d80a4c835", bookmarkList[indexPath.row+1].categoryID!)
         
 //        if successAdd == true{
 //            simpleAlert(title: "북마크 추가에 성공했습나다", message: "")

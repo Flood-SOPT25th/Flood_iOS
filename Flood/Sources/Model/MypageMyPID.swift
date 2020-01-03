@@ -47,6 +47,29 @@ struct PIDArray: Codable {
         case postContent, profileImage, url
         case somethingElse = "_somethingElse"
     }
-    
+        init(from decoder: Decoder) throws {
+            let values = try decoder.container(keyedBy: CodingKeys.self)
+            postImages = (try? values.decode([String].self, forKey: .postImages)) ?? []
+            see = (try? values.decode(Int.self, forKey: .see)) ?? 0
+            bookmark = (try? values.decode(Int.self, forKey: .bookmark)) ?? 0
+            comments = (try? values.decode([String].self, forKey: .comments)) ?? []
+            score = (try? values.decode(Int.self, forKey: .score)) ?? 0
+            commentsCount = (try? values.decode(Int.self, forKey: .commentsCount)) ?? 0
+            bookmarkList = (try? values.decode([String].self, forKey: .bookmarkList)) ?? []
+            postDate  = (try? values.decode(String.self, forKey: .postDate)) ?? ""
+            id = (try? values.decode(String.self, forKey: .id)) ?? ""
+            category = (try? values.decode(String.self, forKey: .category)) ?? ""
+            image = (try? values.decode(String.self, forKey: .image)) ?? ""
+            title = (try? values.decode(String.self, forKey: .title)) ?? ""
+            pidArrDescription = (try? values.decode(String.self, forKey: .pidArrDescription)) ?? ""
+            writer = (try? values.decode(String.self, forKey: .writer)) ?? ""
+            writerEmail = (try? values.decode(String.self, forKey: .writerEmail)) ?? ""
+            profileImage = (try? values.decode(String.self, forKey: .profileImage)) ?? ""
+            postContent = (try? values.decode(String.self, forKey: .postContent)) ?? ""
+            url = (try? values.decode(String.self, forKey: .url)) ?? ""
+            groupCode = (try? values.decode(String.self, forKey: .groupCode)) ?? ""
+            somethingElse = (try? values.decode(Int.self, forKey: .somethingElse)) ?? 0
+
+    }
 }
 

@@ -151,7 +151,8 @@ extension MypageViewController : UICollectionViewDataSource {
             headerView.profileIMG.imageFromUrl(userInfo?.profileImage, defaultImgPath: "")
             headerView.profileName?.text = userInfo?.name
             headerView.profileDepartment.text = userInfo?.groupDepartment
-
+            headerView.postCnt.text = String(myPid.count)
+            
             return headerView
         default:
             assert(false, "Invalid element type")

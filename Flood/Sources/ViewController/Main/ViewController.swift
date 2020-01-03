@@ -275,7 +275,78 @@ extension ViewController: UITableViewDataSource {
             let pidpost = PidList[indexPath.row]
             let picturepostCell = FeedTV.dequeueReusableCell(withIdentifier: "PicturePostCell", for: indexPath) as! PicturePostCell
             
-            // 둘다 없을 때
+            // 게시글과 게시사진 유무
+            if pidpost.postContent == "" && pidpost.postImages == []    {
+                picturepostCell.postpostView.isHidden = true
+                picturepostCell.picturepostView.isHidden = true
+                //picturepostCell.newsshareView.isHidden = false
+            }
+            else if pidpost.postContent != "" && pidpost.postImages == []   {
+                picturepostCell.postpostView.isHidden = false
+                picturepostCell.picturepostView.isHidden = true
+                //picturepostCell.newsshareView.isHidden = false
+            }
+            else if pidpost.postContent == "" && pidpost.postImages != []  {
+                picturepostCell.postpostView.isHidden = true
+                picturepostCell.picturepostView.isHidden = false
+                //picturepostCell.newsshareView.isHidden = false
+            }
+            else {
+                picturepostCell.postpostView.isHidden = false
+                picturepostCell.picturepostView.isHidden = false
+                //picturepostCell.newsshareView.isHidden = false
+            }
+            
+            // url에 따른 뉴스기사 유무
+            if pidpost.url == "" {
+                if pidpost.postTitle == "" {
+                    picturepostCell.newtitleView.isHidden = true
+                    if pidpost.description == "" {
+                        picturepostCell.newsshareView.isHidden = true
+                        if pidpost.image == "" {
+                            picturepostCell.newsImg?.isHidden = true
+                        }
+                        else{
+                            picturepostCell.newsImg.isHidden = false
+                        }
+                    }
+                    else {
+                        picturepostCell.newsshareView.isHidden = false
+                        if pidpost.image == "" {
+                            picturepostCell.newsImg.isHidden = true
+                        }
+                        else{
+                            picturepostCell.newsImg.isHidden = false
+                        }
+                    }
+                }
+                else {
+                    picturepostCell.newtitleView.isHidden = true
+                    if pidpost.description == "" {
+                        picturepostCell.newsshareView.isHidden = true
+                        if pidpost.image == "" {
+                            picturepostCell.newsImg.isHidden = true
+                        }
+                        else{
+                            picturepostCell.newsImg.isHidden = false
+                        }
+                    }
+                    else {
+                        picturepostCell.newsshareView.isHidden = false
+                        if pidpost.image == "" {
+                            picturepostCell.newsImg.isHidden = true
+                        }
+                        else{
+                            picturepostCell.newsImg.isHidden = false
+                        }
+                    }
+                }
+            }
+            else {
+                picturepostCell.newsshareView.isHidden = true
+            }
+            
+            
             if pidpost.postContent == "" && pidpost.postImages == []    {
                 picturepostCell.postpostView.isHidden = true
                 picturepostCell.picturepostView.isHidden = true
@@ -338,29 +409,29 @@ extension ViewController: UITableViewDataSource {
             }
             else {
                 picturepostCell.picture1.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
-                               picturepostCell.picture2.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
-                               picturepostCell.picture3.imageFromUrl(pidpost.postImages[2], defaultImgPath : "http:// ~~ ")
-                               picturepostCell.pictureStackview.isHidden  = false
-                               picturepostCell.picture3.isHidden = false
-                               picturepostCell.pictureStackviewWidth.constant = 107
-                               picturepostCell.picture1.layer.cornerRadius = 10
-                               picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-                               picturepostCell.picture2.layer.cornerRadius = 10
-                               picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
-                               picturepostCell.picture3.layer.cornerRadius = 10
-                               picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
+                picturepostCell.picture2.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
+                picturepostCell.picture3.imageFromUrl(pidpost.postImages[2], defaultImgPath : "http:// ~~ ")
+                picturepostCell.pictureStackview.isHidden  = false
+                picturepostCell.picture3.isHidden = false
+                picturepostCell.pictureStackviewWidth.constant = 107
+                picturepostCell.picture1.layer.cornerRadius = 10
+                picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                picturepostCell.picture2.layer.cornerRadius = 10
+                picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+                picturepostCell.picture3.layer.cornerRadius = 10
+                picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
             }
             
-                 picturepostCell.newsTitle?.text = pidpost.postTitle
-                   picturepostCell.newsPost?.text = pidpost.description
-                   picturepostCell.newsImg?.imageFromUrl(pidpost.image, defaultImgPath : "http:// ~~ ")
-                   picturepostCell.newsImg?.layer.cornerRadius = 10
-                   picturepostCell.picturefilpCount?.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
-                   picturepostCell.picturefilpCount?.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
-                   picturepostCell.picturefilpCount?.textColor = .veryLightPink
-                   picturepostCell.picturepostBookmark?.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-                   picturepostCell.newsshareView?.setBorder(borderColor: .veryLightPink, borderWidth: 1)
-                   picturepostCell.newsshareView?.setRounded(radius: 10)
+            picturepostCell.newsTitle?.text = pidpost.postTitle
+            picturepostCell.newsPost?.text = pidpost.description
+            picturepostCell.newsImg?.imageFromUrl(pidpost.image, defaultImgPath : "http:// ~~ ")
+            picturepostCell.newsImg?.layer.cornerRadius = 10
+            picturepostCell.picturefilpCount?.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
+            picturepostCell.picturefilpCount?.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+            picturepostCell.picturefilpCount?.textColor = .veryLightPink
+            picturepostCell.picturepostBookmark?.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+            picturepostCell.newsshareView?.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+            picturepostCell.newsshareView?.setRounded(radius: 10)
             
             return picturepostCell
             

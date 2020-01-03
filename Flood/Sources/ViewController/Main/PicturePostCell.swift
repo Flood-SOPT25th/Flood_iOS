@@ -39,6 +39,10 @@ class PicturePostCell: UITableViewCell {
     @IBOutlet weak var picturepostView: UIView!
     @IBOutlet weak var newsshareView: UIView!
     
+    @IBOutlet weak var newtitleView: UIView!
+    @IBOutlet weak var newspostView: UIView!
+    @IBOutlet weak var newsImgView: UIImageView!
+    
     @IBOutlet weak var detailConnectBtn: UIButton!
     
     

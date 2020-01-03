@@ -308,4 +308,10 @@ extension NewsSharePostDetailView {
     let chat5 = Comment(type: .myChat, message: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software, and gaming. Check out our conference.이렇게 긴 메세지도 가능~")
     comments = [chat1, chat2, chat3, chat4, chat5]
   }
+
+}
+
+extension NewsSharePostDetailView {
+    
+    
 }

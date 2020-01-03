@@ -955,11 +955,11 @@
             <objects>
                 <viewController storyboardIdentifier="NewsSharePostDetailView" id="MWl-sm-us1" customClass="NewsSharePostDetailView" customModule="Flood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sVf-hK-Koi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-7r-eXb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1408"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsSharePostCell" rowHeight="750" id="nbE-xb-zDh" customClass="NewsSharePostCell" customModule="Flood" customModuleProvider="target">
@@ -1251,7 +1251,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ort-ZY-fku">
-                                <rect key="frame" x="0.0" y="720" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="1408" width="375" height="58"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0K-Oa-Yum">
                                         <rect key="frame" x="317" y="9" width="40" height="40"/>
@@ -1313,7 +1313,7 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="812"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="commentBtn" destination="J0K-Oa-Yum" id="RIW-g8-v7Q"/>
                         <outlet property="commentTextField" destination="yQd-9r-JLS" id="coM-PR-Yif"/>
@@ -1337,7 +1337,7 @@
                                 <rect key="frame" x="0.0" y="541" width="375" height="271"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lhl-Uj-e5q">
-                                        <rect key="frame" x="0.0" y="65" width="375" height="172"/>
+                                        <rect key="frame" x="0.0" y="59.666666666666643" width="375" height="177.33333333333337"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="10" id="EJ4-uh-CNt">
                                             <size key="itemSize" width="97" height="122"/>
@@ -1347,10 +1347,10 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopupCell" id="bY9-nj-dhz" customClass="PopupCell" customModule="Flood" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="25" width="97" height="122"/>
+                                                <rect key="frame" x="25" y="27.666666666666668" width="97" height="122.00000000000001"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cHM-9C-EtJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="122"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="122.00000000000001"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddo-Em-xbY">
@@ -1393,7 +1393,7 @@
                                         </cells>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="플립에 저장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibr-gW-xVA">
-                                        <rect key="frame" x="148" y="20" width="79" height="24"/>
+                                        <rect key="frame" x="150.66666666666666" y="20" width="73.666666666666657" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

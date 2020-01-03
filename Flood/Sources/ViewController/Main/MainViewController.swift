@@ -9,11 +9,13 @@
 import UIKit
 import Kingfisher
 import SwiftyGif
+
 /*
  protocol PostDelegate {
  func didSelectPost(url: String)
  }
  */
+
 class MainViewController: UIViewController {
     
     // MARK: - UI components
@@ -36,6 +38,7 @@ class MainViewController: UIViewController {
     var hostList : [PIDArr] = []
     
     let logoAnimationView = LogoAnimationView()
+    
     
     
     // MARK: - Life Cycle
@@ -65,7 +68,7 @@ class MainViewController: UIViewController {
         view.addSubview(logoAnimationView)
         logoAnimationView.pinEdgesToSuperView()
         logoAnimationView.logoGifImageView.delegate = self
-    
+        
         
     }
     
@@ -123,7 +126,7 @@ class MainViewController: UIViewController {
         // 탭바 배경색 설정
         self.tabBarController?.tabBar.backgroundColor = .white
         self.tabBarController?.tabBar.isTranslucent = false
-        
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     @IBAction func webConncet(_ sender: UIButton) {
@@ -138,6 +141,7 @@ class MainViewController: UIViewController {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
+    
     @IBAction func NavigateDetailVC(_ sender: UIButton) {
         let NSPostDetailView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NewsSharePostDetailView") as? NewsSharePostDetailView
         self.navigationController?.pushViewController(NSPostDetailView!, animated: true)
@@ -150,7 +154,6 @@ class MainViewController: UIViewController {
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         vc.bookmarkList = bookmarkList
-//        vc.postId =
         print(bookmarkList)
         
         
@@ -195,6 +198,7 @@ extension MainViewController: UICollectionViewDataSource {
             MainCatarogyCell.mainCategory?.backgroundColor = .electricBlue
             MainCatarogyCell.mainCategory?.makeRounded(cornerRadius: 18)
             MainCatarogyCell.mainCategory?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.1, radius: 2)
+            
             return MainCatarogyCell
         }
         else {
@@ -203,50 +207,41 @@ extension MainViewController: UICollectionViewDataSource {
             MainCatarogyCell.mainCategory?.makeRounded(cornerRadius: 18)
             MainCatarogyCell.mainCategory?.dropShadow(color: .blackTwo, offSet: CGSize(width: 2, height: 2), opacity: 0.08, radius: 2)
             
-            //MainCatarogyCell.maincatarogy?.layer.shadowColor = UIColor.black.cgColor
-            //MainCatarogyCell.maincatarogy?.layer.shadowRadius = 5
+            
             return MainCatarogyCell
             
         }
+        
+        
         return UICollectionViewCell()
     }
     
-<<<<<<< Updated upstream
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let categoryCell = mainCatagoryCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
-        
-        
-        
-        //        setCategory((categoryCell.maincatarogy?.titleLabel!.text)!)
-        
-        //        thisweekTV.isHidden = true
-        //        PidList = hostList as! [pidArr]
-=======
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//        let categoryCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
-//
-//        setCategory((categoryCell.maincatarogy?.titleLabel!.text)!)
-//
-//        thisweekTV.isHidden = true
-//        PidList = hostList as! [pidArr]
->>>>>>> Stashed changes
-        
-        //        var chooseCategory = categoryCell.maincatarogy?.titleLabel?.text
-        //
-        //        func findCategory(findString :String) -> Bool {
-        //            return findString == chooseCategory
-        //        }
-//    }
+    //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    //
+    //        let categoryCell = maincatarogyCV.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! MainCatarogyCell
+    //
+    //        setCategory((categoryCell.maincatarogy?.titleLabel!.text)!)
+    //
+    //        thisweekTV.isHidden = true
+    //        PidList = hostList as! [pidArr]
+    
+    //        var chooseCategory = categoryCell.maincatarogy?.titleLabel?.text
+    //
+    //        func findCategory(findString :String) -> Bool {
+    //            return findString == chooseCategory
+    //        }
+    //    }
+
 }
 
 
 // MARK: - UITableViewDelegate
+
 extension MainViewController: UITableViewDelegate {
     
 }
 // MARK: - UITableViewDataSource
+
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -349,17 +344,17 @@ extension MainViewController: UITableViewDataSource {
             picturepostCell.picturepostMore.setImage(UIImage(named: "icMoreGray"), for: .normal)
             
             //사진분기처리?
-        /*
-            picturepostCell.picture1.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
-            picturepostCell.picture2.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
-            picturepostCell.picture3.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
-            picturepostCell.picture1.layer.cornerRadius = 10
-            picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-            picturepostCell.picture2.layer.cornerRadius = 10
-            picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
-            picturepostCell.picture3.layer.cornerRadius = 10
-            picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
-       */
+            /*
+             picturepostCell.picture1.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+             picturepostCell.picture2.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+             picturepostCell.picture3.imageFromUrl(pidpost.profileImage, defaultImgPath : "http:// ~~ ")
+             picturepostCell.picture1.layer.cornerRadius = 10
+             picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+             picturepostCell.picture2.layer.cornerRadius = 10
+             picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+             picturepostCell.picture3.layer.cornerRadius = 10
+             picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
+             */
             
             picturepostCell.newsTitle.text = pidpost.title
             picturepostCell.newsPost.text = pidpost.description
@@ -404,6 +399,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         logoAnimationView.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         //        self.tabBarController?.tabBar.layer.zPosition = 0
         //        self.tabBarController?.tabBar.barTintColor = .white
     }
@@ -527,8 +523,8 @@ extension MainViewController {
             // NetworkResult 의 요소들
             case .success(let data):
                 guard let data = data as? [Category] else { return }
+                print(data)
                 self.bookmarkList = data
-                
                 
             case .requestErr(_):
                 print("getBookmark request error")

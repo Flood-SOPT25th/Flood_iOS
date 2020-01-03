@@ -11,8 +11,8 @@ import UIKit
 class MypageFlipCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var flipImageView: UIImageView!
-    @IBOutlet weak var flipLabel: UILabel!
     @IBOutlet weak var flipSubLabel: UILabel!
+    @IBOutlet weak var flipLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

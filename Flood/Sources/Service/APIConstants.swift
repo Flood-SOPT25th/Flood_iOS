@@ -38,4 +38,19 @@ struct APIConstants {
     static let BookmarkCancle = BaseURL + "/post/bookmark/cancel"      // POST , 북마크 삭제
     static let BookmarkModify = BaseURL + "/post/bookmark"             // POST , 북마크 카테고리 추가 수정 삭제
     
+    // MARK: - 마이페이지 , 메인
+    static let MyPageMainInfo = BaseURL + "/mypage/main"               // GET , 마이페이지 유저 정보
+    static let MyPageMyPid = BaseURL + "/post/me"                      // GET , 내가 쓴 글 조회
+    
+    // MARK: - 마이페이지 , 프로필 수정
+    static let MyPageSettingMain = BaseURL + "/mypage/setting"         // GET , 마이페이지 프로필설정 기본화면
+    static let MyPageSettingInfo = BaseURL + "/mypage/setting"         // PUT , 마이페이지 프로필설정 변경
+    static let MypageSettingImage = BaseURL + "/mypage/setting/image"  // PUT , 마이페이지 프로필설정 사진 변경
+    static let MypageSettingPW = BaseURL + "/mypage/setting/password"  // PUT , 마이페이지 프로필설정 비밀번호 변경
+     
+    // MARK: - 마이페이지, 조직설정
+    static let MemberSettingMain = BaseURL + "/mypage/member"          // GET , 조직설정 기본화면
+    static let MemberSettingAdd = BaseURL + "/mypage/member/add"       // PUT , 조직설정 Admin 계정추가
+    static let MemberSettingDelete = BaseURL + "/mypage/member/delete" // PUT , 조직설정 계정삭제
+
 }

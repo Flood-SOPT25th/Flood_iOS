@@ -13,7 +13,7 @@ class SectionHeaderCell: UITableViewCell {
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subtitle: UILabel!
-    
+    @IBOutlet weak var decorationImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

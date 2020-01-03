@@ -173,11 +173,13 @@ extension ViewController: UITableViewDataSource {
         else if indexPath.section == 1 {
             if indexPath.row == 0 {
                 let sectionHeaderCell = FeedTV.dequeueReusableCell(withIdentifier: "SectionHeaderCell", for: indexPath) as! SectionHeaderCell
+                sectionHeaderCell.day.isHidden = false
+                sectionHeaderCell.title.isHidden = false
+                sectionHeaderCell.subtitle.isHidden = false
+                sectionHeaderCell.decorationImg.isHidden = true
                 sectionHeaderCell.day.text = "2nd decem"
                 sectionHeaderCell.title.text = "This Week"
                 sectionHeaderCell.subtitle.text = "Top3"
-                sectionHeaderCell.decorationImg.isHidden = true
-                return sectionHeaderCell
             }
         }
             
@@ -260,11 +262,12 @@ extension ViewController: UITableViewDataSource {
         else if indexPath.section == 3 {
             if indexPath.row == 0 {
                 let sectionHeaderCell = FeedTV.dequeueReusableCell(withIdentifier: "SectionHeaderCell", for: indexPath) as! SectionHeaderCell
-                
                 sectionHeaderCell.day.isHidden = true
-                sectionHeaderCell.title.text = "Today"
+                sectionHeaderCell.title.isHidden = false
                 sectionHeaderCell.subtitle.isHidden = true
-                //sectionHeaderCell.decorationImg = UIImageView(named: "apple.png")
+                sectionHeaderCell.decorationImg.isHidden = false
+                sectionHeaderCell.title.text = "Today"
+                sectionHeaderCell.decorationImg.image = UIImage(named: "24")
                 return sectionHeaderCell
             }
         }
@@ -319,40 +322,45 @@ extension ViewController: UITableViewDataSource {
             } else if pidpost.postImages.count == 1 {
                 picturepostCell.picture1.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
                 picturepostCell.pictureStackview.isHidden = true
+                picturepostCell.picture1.layer.cornerRadius = 10
+                picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
             }
             else if pidpost.postImages.count == 2 {
                 picturepostCell.picture1.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
-                picturepostCell.picture1.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
+                picturepostCell.picture2.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
                 picturepostCell.pictureStackview.isHidden = false
                 picturepostCell.picture3.isHidden = true
                 picturepostCell.pictureStackviewWidth.constant = 127.5
+                picturepostCell.picture1.layer.cornerRadius = 10
+                picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                picturepostCell.picture2.layer.cornerRadius = 10
+                picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
             }
             else {
                 picturepostCell.picture1.imageFromUrl(pidpost.postImages[0], defaultImgPath : "http:// ~~ ")
-                picturepostCell.picture1.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
-                picturepostCell.picture1.imageFromUrl(pidpost.postImages[2], defaultImgPath : "http:// ~~ ")
-                picturepostCell.pictureStackview.isHidden  = false
-                picturepostCell.picture3.isHidden = false
-                picturepostCell.pictureStackviewWidth.constant = 107
+                               picturepostCell.picture2.imageFromUrl(pidpost.postImages[1], defaultImgPath : "http:// ~~ ")
+                               picturepostCell.picture3.imageFromUrl(pidpost.postImages[2], defaultImgPath : "http:// ~~ ")
+                               picturepostCell.pictureStackview.isHidden  = false
+                               picturepostCell.picture3.isHidden = false
+                               picturepostCell.pictureStackviewWidth.constant = 107
+                               picturepostCell.picture1.layer.cornerRadius = 10
+                               picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+                               picturepostCell.picture2.layer.cornerRadius = 10
+                               picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
+                               picturepostCell.picture3.layer.cornerRadius = 10
+                               picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
             }
             
-            picturepostCell.picture1.layer.cornerRadius = 10
-            picturepostCell.picture1.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-            picturepostCell.picture2.layer.cornerRadius = 10
-            picturepostCell.picture2.layer.maskedCorners = [.layerMaxXMinYCorner]
-            picturepostCell.picture3.layer.cornerRadius = 10
-            picturepostCell.picture3.layer.maskedCorners = [.layerMaxXMaxYCorner]
-            
-            picturepostCell.newsTitle?.text = pidpost.title
-            picturepostCell.newsPost?.text = pidpost.description
-            picturepostCell.newsImg?.imageFromUrl(pidpost.image, defaultImgPath : "http:// ~~ ")
-            picturepostCell.newsImg?.layer.cornerRadius = 10
-            picturepostCell.picturefilpCount?.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
-            picturepostCell.picturefilpCount?.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
-            picturepostCell.picturefilpCount?.textColor = .veryLightPink
-            picturepostCell.picturepostBookmark?.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
-            picturepostCell.newsshareView?.setBorder(borderColor: .veryLightPink, borderWidth: 1)
-            picturepostCell.newsshareView?.setRounded(radius: 10)
+                 picturepostCell.newsTitle?.text = pidpost.postTitle
+                   picturepostCell.newsPost?.text = pidpost.description
+                   picturepostCell.newsImg?.imageFromUrl(pidpost.image, defaultImgPath : "http:// ~~ ")
+                   picturepostCell.newsImg?.layer.cornerRadius = 10
+                   picturepostCell.picturefilpCount?.text = "Flips \((pidpost.bookmark)) Comments \((pidpost.commentsCount))"
+                   picturepostCell.picturefilpCount?.font = UIFont(name: "Gilroy-ExtraBold", size: 12)
+                   picturepostCell.picturefilpCount?.textColor = .veryLightPink
+                   picturepostCell.picturepostBookmark?.setImage(UIImage(named: "icBookmarkBlack"), for: .normal)
+                   picturepostCell.newsshareView?.setBorder(borderColor: .veryLightPink, borderWidth: 1)
+                   picturepostCell.newsshareView?.setRounded(radius: 10)
             
             return picturepostCell
             

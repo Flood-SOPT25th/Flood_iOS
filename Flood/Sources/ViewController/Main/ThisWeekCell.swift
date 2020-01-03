@@ -23,6 +23,9 @@ class ThisWeekCell: UITableViewCell {
     @IBOutlet weak var thisweekMore: UIButton!
     @IBOutlet weak var thisweekBookmark: UIButton!
     
+    @IBOutlet weak var webConnectBtn: UIButton!
+    @IBOutlet weak var detailConnectBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

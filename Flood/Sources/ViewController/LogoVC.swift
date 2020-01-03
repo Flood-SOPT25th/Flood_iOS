@@ -34,7 +34,7 @@ extension LogoVC: SwiftyGifDelegate {
     func gifDidStop(sender: UIImageView) {
         logoAnimationView.isHidden = true
         
-        let vc = storyboard?.instantiateViewController(identifier: "MainViewController") as! MainViewController
+        let vc = storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
         

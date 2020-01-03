@@ -39,6 +39,9 @@ class PicturePostCell: UITableViewCell {
     @IBOutlet weak var picturepostView: UIView!
     @IBOutlet weak var newsshareView: UIView!
     
+    @IBOutlet weak var detailConnectBtn: UIButton!
+    
+    
     
     override func awakeFromNib() {
          super.awakeFromNib()

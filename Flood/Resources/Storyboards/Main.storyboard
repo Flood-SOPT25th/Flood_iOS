@@ -685,7 +685,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="day" destination="8M6-dG-BTE" id="itu-lo-5ho"/>
-                                            <outlet property="decorationImg" destination="TEt-aF-cuV" id="hSA-dX-xe2"/>
+                                            <outlet property="decorationImg" destination="TEt-aF-cuV" id="tE0-UT-ygB"/>
                                             <outlet property="subtitle" destination="4o9-8z-4v8" id="5eg-8h-OgD"/>
                                             <outlet property="title" destination="9Na-nZ-lXS" id="6Yj-j4-Icl"/>
                                         </connections>
@@ -844,6 +844,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="detailConnectBtn" destination="vDj-cQ-Vu8" id="gQp-xp-jNt"/>
                                             <outlet property="thisweekBookmark" destination="blw-lf-RXq" id="k6o-EF-pTq"/>
                                             <outlet property="thisweekImg" destination="vtd-Kg-RJs" id="OVa-3i-bE3"/>
                                             <outlet property="thisweekMore" destination="2YY-rP-8At" id="mU5-kA-xt9"/>
@@ -854,6 +855,7 @@
                                             <outlet property="thisweekView" destination="bXF-oA-oNZ" id="vLH-p7-PUm"/>
                                             <outlet property="thisweekflipCount" destination="l7y-t3-GDv" id="6bv-gJ-Dv8"/>
                                             <outlet property="thisweekprofileImg" destination="MjM-Ib-j8a" id="zHA-aZ-SKd"/>
+                                            <outlet property="webConnectBtn" destination="kQu-wY-OJs" id="RM3-qH-5ZM"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PicturePostCell" rowHeight="723" id="QQE-Dh-9IR" customClass="PicturePostCell" customModule="Flood" customModuleProvider="target">
@@ -914,6 +916,10 @@
                                                                         <constraint firstItem="rrQ-xb-QUv" firstAttribute="top" secondItem="E4i-Lz-eE4" secondAttribute="top" constant="1" id="a0M-sa-6kZ"/>
                                                                     </constraints>
                                                                 </view>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5p-ke-0J5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="88"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="kdt-kV-CWs" firstAttribute="leading" secondItem="Wwz-1I-8Q5" secondAttribute="leading" id="46w-sS-bok"/>
@@ -921,11 +927,15 @@
                                                                 <constraint firstItem="G0K-Mb-HyE" firstAttribute="leading" secondItem="kdt-kV-CWs" secondAttribute="trailing" constant="8" id="8m5-dT-FRI"/>
                                                                 <constraint firstAttribute="bottom" secondItem="uor-hO-e7a" secondAttribute="bottom" constant="15" id="HM8-wp-NSf"/>
                                                                 <constraint firstAttribute="bottom" secondItem="2q0-KX-Jtx" secondAttribute="bottom" constant="17" id="JSc-pe-Fc9"/>
+                                                                <constraint firstItem="O5p-ke-0J5" firstAttribute="leading" secondItem="Wwz-1I-8Q5" secondAttribute="leading" id="LFo-cR-KYm"/>
                                                                 <constraint firstItem="2q0-KX-Jtx" firstAttribute="leading" secondItem="G0K-Mb-HyE" secondAttribute="trailing" constant="8" id="QCC-Vh-Ig7"/>
                                                                 <constraint firstAttribute="bottom" secondItem="kdt-kV-CWs" secondAttribute="bottom" constant="14" id="QgC-i2-EPh"/>
+                                                                <constraint firstAttribute="bottom" secondItem="O5p-ke-0J5" secondAttribute="bottom" id="RsK-WL-wmJ"/>
                                                                 <constraint firstAttribute="right" secondItem="uor-hO-e7a" secondAttribute="right" id="TBM-dF-C5h"/>
+                                                                <constraint firstItem="O5p-ke-0J5" firstAttribute="top" secondItem="Wwz-1I-8Q5" secondAttribute="top" id="Yft-BQ-iam"/>
                                                                 <constraint firstAttribute="height" constant="88" id="mKB-Pj-euM"/>
                                                                 <constraint firstItem="kdt-kV-CWs" firstAttribute="top" secondItem="E4i-Lz-eE4" secondAttribute="bottom" constant="8" id="oQP-e0-F0z"/>
+                                                                <constraint firstAttribute="trailing" secondItem="O5p-ke-0J5" secondAttribute="trailing" id="x1g-Ki-Tcz"/>
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98x-0K-hOo">
@@ -1086,6 +1096,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="detailConnectBtn" destination="O5p-ke-0J5" id="sXC-RR-c6i"/>
                                             <outlet property="newsImg" destination="M41-U4-gil" id="6dR-iT-Z35"/>
                                             <outlet property="newsPost" destination="uoy-o4-4JD" id="XKm-ug-zSv"/>
                                             <outlet property="newsShareHight" destination="fus-Ci-zCs" id="Dcc-YW-kd0"/>

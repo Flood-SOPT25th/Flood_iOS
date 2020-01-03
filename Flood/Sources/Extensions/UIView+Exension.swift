@@ -8,7 +8,28 @@
 
 import UIKit
 
-extension UIView {
+@IBDesignable extension UIView {
+    
+    // superview에 맟춰 주기
+    func pinEdgesToSuperView() {
+        guard let superView = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+        topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
+        leftAnchor.constraint(equalTo: superView.leftAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 55).isActive = true
+        rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
+    }
+    
+    func pinEdgesToSuperViewReal() {
+        guard let superView = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+        topAnchor.constraint(equalTo: superView.topAnchor).isActive = true
+        leftAnchor.constraint(equalTo: superView.leftAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: superView.bottomAnchor).isActive = true
+        rightAnchor.constraint(equalTo: superView.rightAnchor).isActive = true
+    }
+
+    
     
     func setRounded(radius : CGFloat?){
         
@@ -22,6 +43,7 @@ extension UIView {
         
         self.layer.masksToBounds = true
     }
+    
     
     func setBorder(borderColor : UIColor?, borderWidth : CGFloat?) {
         
@@ -43,6 +65,35 @@ extension UIView {
         
     }
     
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+
     
     
 }

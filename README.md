@@ -18,8 +18,13 @@
 
 스크린 샷
 ------------
- <img src="/IMG/newsFeed.png" width="300">
- <img src="/IMG/newsFeedFlip.png" width="300"> 
+<img src="/IMG/splash.png" width="300">
+<img src="/IMG/splash2.png" width="300">
+ <img src="/IMG/feed.png" width="300">
+ <img src="/IMG/feed2.png" width="300"> 
+ <img src="/IMG/feed3.png" width="300"> 
+ <img src="/IMG/mypage.png" width="300"> 
+ <img src="/IMG/mypage2.png" width="300"> 
  <img src="/IMG/postView.png" width="300">
  <img src="/IMG/postSetting.png" width="300">
  <img src="/IMG/postCategory.png" width="300">
@@ -42,12 +47,28 @@
 ------------
 |  <center>기능</center> |  <center>개발 여부</center> |  <center> 기타 사항 </center> | <center> 담당 </center> |
 |:--------:|:--------:|:--------:|:--------:|
-|<center> 로그인/회원가입 </center> | <center> - </center> |<center> 2순위 </center>|<center> - </center>|
-|<center> 뉴스피드 </center> | <center> 뷰 구현 중 </center> |<center> 1순위 </center> |<center> 현지 </center>|
-|<center> 북마크 </center> | <center> - </center> |<center> 2순위 </center> |<center> - </center>|
-|<center> 게시글 작성 </center> | <center> 뷰 구현 중 </center> |<center> 1순위 </center> |<center> 준현 </center>|
-|<center> 알림 </center> | <center> - </center> |<center> 3순위 </center> |<center> - </center>|
-|<center> 마이페이지 </center> | <center> 뷰 구현 중 </center> |<center> 2순위 </center> |<center> 준현 </center>|
+|<center> 로그인/회원가입 </center> | <center> x </center> |<center> 2순위 </center>|<center> - </center>|
+|<center> 뉴스피드 </center> | <center> ○ </center> |<center> 1순위 </center> |<center> 현지 </center>|
+|<center> 뉴스피드 세부 뷰 </center> | <center> △ </center> |<center> 1순위 </center> |<center> 현지 </center>|
+|<center> 뉴스피드 카테고리 분류 </center> | <center> △ </center> |<center> 1순위 </center> |<center> 현지 </center>|
+|<center> 기업정보 </center> | <center> x </center> |<center> 2순위 </center> |<center> - </center>|
+|<center> 게시글 작성 </center> | <center> ○ </center> |<center> 1순위 </center> |<center> 준현 </center>|
+|<center> 알림 </center> | <center> x </center> |<center> 3순위 </center> |<center> - </center>|
+|<center> 마이페이지 </center> | <center> △ </center> |<center> 2순위 </center> |<center> 준현 </center>|
+
+
+사용한 Extension
+------------
+> * CALayer : 각종 view의 세부적인 border 설정
+> * CGFloat :
+> * UIButton : button border, shadow
+> * UIColor : 각종 색 주입, hex로 조절
+> * UIImage : image 투명도 조절
+> * UIImageView : Kingfisher 사용
+> * UITextView : textview의 placeholder추가, textview의 동적인 움직임 
+> * UIView : superview에 맞는 autolayout , rounding, border
+> * UIViewcontroller : alertcontroller 
+
 
 문제점과 해결 방법 report
 ------------
